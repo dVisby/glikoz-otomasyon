@@ -1,0 +1,17 @@
+{
+  "id": "000",
+  "slug": "",
+  "title": "",
+  "coverTitle": "",
+  "coverSub": "",
+  "date": "",
+  "voice": {"name": "AURA VOX", "voice_id": "jk1pqab9OzEmS07w0u2T", "model": "eleven_v4"},
+  "scenes": [
+    {"type": "statement", "big": "", "label": "", "title": "", "source": "", "lines": ["Açılış cümlesi."]},
+    {"type": "close", "title": "ARALIKTA KAL", "lines": ["Kapanış cümlesi."]}
+  ],
+  "caption": "",
+  "sources": [],
+  "hashtags": ["#glikozgünlüğü", "#kanşekeri", "#diyabet", "#sağlıklıbeslenme"],
+  "notes": ""
+}
