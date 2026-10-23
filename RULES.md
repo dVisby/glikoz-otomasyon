@@ -9,7 +9,7 @@
 - Marka/ürün adı yalnızca kaynak olarak geçer, reklam dili yok.
 
 ## Biçim
-- 1080×1920, 30 fps, H.264 + AAC; 40–60 sn.
+- 1080×1920, 30 fps, H.264 + AAC; konuşma 40–55 sn, logo kartı dahil toplam ≤ 62 sn.
 - İçerik güvenli alanı: y 250–1450; sağ kenarda Instagram butonları için boşluk.
 - Her video logo + çağrı kartıyla biter (otomatik). `cta` metinleri konuya özel yazılır.
 - Ses: AURA VOX (ElevenLabs, eleven_v4), voice_offset 0,4 sn.

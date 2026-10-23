@@ -1,7 +1,7 @@
 # Glikoz Günlüğüm — Reels otomasyonu (Claude için çalışma talimatı)
 
 Muharrem günlük bir konu verir; sen araştırır, senaryoyu yazar, ElevenLabs ile seslendirir, videoyu üretir ve teslim edersin.
-Instagram hesabı ve marka: **Glikoz Günlüğüm** (logodaki gibi). Dil: Türkçe. Süre: 40–60 sn. Format: 1080×1920, 30 fps.
+Instagram hesabı ve marka: **Glikoz Günlüğüm** (logodaki gibi). Dil: Türkçe. Süre: konuşma 40–55 sn, logo kartı (≈6,5 sn) dahil toplam ≤ 62 sn. Format: 1080×1920, 30 fps.
 
 ## Günlük akış
 1. **Araştır.** Konudaki her sayıyı birincil/kurumsal kaynaktan doğrula (DSÖ, ADA, IDF, hakemli makale, TÜRKDEP/TURDEP, ürün etiketi). Kaynağı bulamadığın sayıyı kullanma.
