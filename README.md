@@ -1,4 +1,4 @@
-# Glikoz Günlüğü — Reels otomasyonu
+# Glikoz Günlüğüm — Reels otomasyonu
 
 Günlük Instagram Reels üretim hattı. Konu → araştırma → senaryo (episode.json) → ElevenLabs seslendirme → sese kilitli animasyon → MP4 + kapak + açıklama.
 

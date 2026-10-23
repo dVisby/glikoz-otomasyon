@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Glikoz Günlüğü — Reels pipeline.
+"""Glikoz Günlüğüm — Reels pipeline.
 
   python3 tools/glikoz.py new <slug> "<Başlık>"     create episodes/NNN-<slug>/episode.json from the template
   python3 tools/glikoz.py voicetext <ep>             write episodes/<ep>/voice.txt (text to send to ElevenLabs)
@@ -121,7 +121,7 @@ async def _browser_job(e, timing, job):
         async def page():
             pg = await b.new_page(viewport={'width': 1080, 'height': 1920})
             await pg.goto(ENGINE.as_uri()); await pg.evaluate('window.ready')
-            await pg.evaluate('([e, t]) => setup(e, t)', [e, timing]); return pg
+            info = await pg.evaluate('([e, t]) => setup(e, t)', [e, timing]); timing['total'] = info['total']; return pg
         r = await job(page); await b.close(); return r
 
 
@@ -134,6 +134,7 @@ def contact_sheet(e, timing, out_png, from_video=None):
     from PIL import Image
     caps = [l['text'] for l in spoken_lines(e)]
     times = [(l['start'] + l['end']) / 2 for l in timing['lines']]
+    if timing.get('total'): times.append(timing['total'] - 1.0)  # end card
     tmp = out_png.parent / '_cs'; tmp.mkdir(exist_ok=True)
     if from_video:
         for i, t in enumerate(times):
@@ -188,10 +189,9 @@ def cmd_render(ep, workers=6):
     out = ep / 'out'; frames = out / 'frames'
     if frames.exists(): shutil.rmtree(frames)
     frames.mkdir(parents=True)
-    n = int(timing['total'] * FPS)
-
     async def job(page):
         pgs = [await page() for _ in range(workers)]
+        n = int(timing['total'] * FPS)
         evs = await pgs[0].evaluate('audioEvents()')
         await _grab(pgs[0], 'renderCover()', out / 'kapak.jpg')
         async def work(k, pg):

@@ -11,5 +11,6 @@
 ## Biçim
 - 1080×1920, 30 fps, H.264 + AAC; 40–60 sn.
 - İçerik güvenli alanı: y 250–1450; sağ kenarda Instagram butonları için boşluk.
+- Her video logo + çağrı kartıyla biter (otomatik). `cta` metinleri konuya özel yazılır.
 - Ses: AURA VOX (ElevenLabs, eleven_v4), voice_offset 0,4 sn.
 - Teslimden önce contact sheet ve kapak gözle kontrol edilir.

@@ -1,4 +1,4 @@
-/* Glikoz Günlüğü — scene library.
+/* Glikoz Günlüğüm — scene library.
  * Entry points (called by tools/glikoz.py through Playwright):
  *   setup(episode, timing)  -> builds the timeline
  *   render(t)               -> draws frame at real time t (seconds)
@@ -436,11 +436,115 @@ SCENES.close = {
 };
 
 /* ======================================================================
+ * END CARD: animated "Glikoz Günlüğüm" logo on a cream badge + CTA rows.
+ * Always appended after the last spoken line. Episode may set
+ * cta: {save, comment, share}.
+ * ====================================================================== */
+const ENDCARD_DUR = 5.6;
+const LOGO = { cream: '#F8F4EE', ink: '#1D2424', olive: '#5E6B3B', oliveSoft: 'rgba(94,107,59,.55)' };
+const CTA_DEFAULT = {
+  save: 'Kaydet — sonra lazım olacak.',
+  comment: 'Sende nasıl? Yorumlara yaz.',
+  share: 'Bilmesi gereken birine gönder.'
+};
+function logoWaveY(x) { // logo units: disc radius = 205, origin at disc centre
+  return -32 + 3 * Math.sin((x + 104) / 14) - 46 * Math.exp(-Math.pow((x - 11) / 10, 2)) + 10 * Math.exp(-Math.pow((x - 27) / 7, 2));
+}
+function drawLogo(cx, cy, R, lt) {
+  const k = R / 205;
+  const P = (x, y) => [cx + x * k, cy + y * k];
+  // badge
+  const a0 = easeOut(prog(lt, 0, .6)), sc = .92 + .08 * a0;
+  ctx.save(); ctx.globalAlpha *= a0;
+  ctx.translate(cx, cy); ctx.scale(sc, sc); ctx.translate(-cx, -cy);
+  ctx.shadowColor = 'rgba(0,0,0,.55)'; ctx.shadowBlur = 60; ctx.shadowOffsetY = 18;
+  ctx.fillStyle = LOGO.cream; ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
+  ctx.shadowColor = 'transparent';
+  const vg = ctx.createRadialGradient(cx - R * .3, cy - R * .4, R * .1, cx, cy, R);
+  vg.addColorStop(0, 'rgba(255,255,255,.35)'); vg.addColorStop(1, 'rgba(200,190,175,.18)');
+  ctx.fillStyle = vg; ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
+  // serif G
+  text('G', ...P(-17, -26), { font: `400 ${Math.round(178 * k)}px Serif`, color: LOGO.ink, align: 'center', alpha: easeOut(prog(lt, 1.0, 1.6)) });
+  // dotted arc from top of G to the ring
+  const nd = 12, arcA = prog(lt, .9, 1.7);
+  for (let i = 0; i < nd; i++) {
+    if (i / nd > arcA) break;
+    const th = -Math.PI / 2 + (i / (nd - 1)) * (Math.PI / 2 - .18);
+    const [x, y] = P(-5 + 100 * Math.cos(th), -66 + 100 * Math.sin(th) - 6);
+    ctx.fillStyle = LOGO.ink; ctx.beginPath(); ctx.arc(x, y, 2.6 * k, 0, Math.PI * 2); ctx.fill();
+  }
+  // glucose wave drawing itself
+  const wx = lerp(-104, 93, ease(prog(lt, .4, 1.6)));
+  ctx.strokeStyle = LOGO.olive; ctx.lineWidth = 3.2 * k; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  ctx.beginPath();
+  for (let x = -104; x <= wx; x += 1) { const [px, py] = P(x, logoWaveY(x)); x === -104 ? ctx.moveTo(px, py) : ctx.lineTo(px, py); }
+  ctx.stroke();
+  ctx.fillStyle = LOGO.olive; ctx.beginPath(); ctx.arc(...P(-104, logoWaveY(-104)), 5 * k, 0, Math.PI * 2); ctx.fill();
+  // ring at the end + one pulse
+  if (wx >= 92) {
+    const [rx, ry] = P(100, logoWaveY(93));
+    ctx.strokeStyle = LOGO.olive; ctx.lineWidth = 2.6 * k; ctx.beginPath(); ctx.arc(rx, ry, 8 * k, 0, Math.PI * 2); ctx.stroke();
+    ctx.fillStyle = LOGO.olive; ctx.beginPath(); ctx.arc(rx, ry, 3.4 * k, 0, Math.PI * 2); ctx.fill();
+    const pp = prog(lt, 1.6, 2.4);
+    if (pp > 0 && pp < 1) { ctx.strokeStyle = `rgba(94,107,59,${(1 - pp) * .7})`; ctx.lineWidth = 2 * k; ctx.beginPath(); ctx.arc(rx, ry, (8 + pp * 26) * k, 0, Math.PI * 2); ctx.stroke(); }
+  }
+  // wordmark
+  const wa = prog(lt, 1.5, 2.1), wd = (1 - easeOut(wa)) * 10;
+  text('Glikoz', ...P(0, 88 + wd), { font: `500 ${Math.round(66 * k)}px Sans`, color: LOGO.ink, align: 'center', alpha: wa, spacing: -1 });
+  const ga = prog(lt, 1.8, 2.4);
+  text('GÜNLÜĞÜM', ...P(4, 124), { font: `400 ${Math.round(17 * k)}px Sans`, color: LOGO.olive, align: 'center', alpha: ga, spacing: 7 * k });
+  ctx.save(); ctx.globalAlpha *= ga; ctx.fillStyle = LOGO.ink; const [dx, dy] = P(0, 150); ctx.fillRect(dx - 12 * k, dy, 24 * k, 1.6 * k); ctx.restore();
+  ctx.restore();
+}
+function icon(kind, x, y, s, color) {
+  ctx.save(); ctx.strokeStyle = color; ctx.lineWidth = 3; ctx.lineJoin = 'round'; ctx.lineCap = 'round'; ctx.beginPath();
+  if (kind === 'save') { // bookmark
+    ctx.moveTo(x - s * .38, y - s * .5); ctx.lineTo(x + s * .38, y - s * .5); ctx.lineTo(x + s * .38, y + s * .5);
+    ctx.lineTo(x, y + s * .2); ctx.lineTo(x - s * .38, y + s * .5); ctx.closePath();
+  } else if (kind === 'comment') { // speech bubble
+    ctx.arc(x, y - s * .02, s * .44, Math.PI * .72, Math.PI * .62 + Math.PI * 2);
+    ctx.lineTo(x - s * .44, y + s * .46); ctx.closePath();
+  } else { // paper plane
+    ctx.moveTo(x - s * .5, y - s * .42); ctx.lineTo(x + s * .5, y - s * .42); ctx.lineTo(x - s * .05, y + s * .5); ctx.lineTo(x - s * .12, y - .02 * s); ctx.closePath();
+    ctx.moveTo(x - s * .12, y - .02 * s); ctx.lineTo(x + s * .5, y - s * .42);
+  }
+  ctx.stroke(); ctx.restore();
+}
+function drawEndcard(lt) {
+  const R = 300, cx = 540, cy = 780;
+  drawLogo(cx, cy, R, lt);
+  const cta = Object.assign({}, CTA_DEFAULT, EP.cta || {});
+  const rows = [
+    { k: 'save', txt: cta.save, t: 2.5, size: 56, font: '400 40px Jost', color: C.gold, txtColor: C.ink },
+    { k: 'comment', txt: cta.comment, t: 3.1, size: 42, font: '300 34px Jost', color: C.gray, txtColor: '#BDB8AF' },
+    { k: 'share', txt: cta.share, t: 3.6, size: 42, font: '300 34px Jost', color: C.gray, txtColor: '#BDB8AF' }
+  ];
+  let y = 1215;
+  rows.forEach((r, i) => {
+    const a = easeOut(prog(lt, r.t, r.t + .5)), dx = (1 - a) * 20;
+    ctx.save(); ctx.globalAlpha *= a;
+    if (i === 0) { // highlighted pill for the main CTA
+      ctx.fillStyle = 'rgba(200,176,122,0.10)'; ctx.strokeStyle = 'rgba(200,176,122,0.45)'; ctx.lineWidth = 2;
+      roundRect(120, y - 58, 840, 104, 52); ctx.fill(); ctx.stroke();
+      if (lt > r.t + .6) { const b = .5 + .5 * Math.sin((lt - r.t) * 4); icon('save', 200, y - 6, r.size * (1 + .05 * b), C.gold); }
+      else icon('save', 200, y - 6, r.size, C.gold);
+    } else icon(r.k, 200, y - 6, r.size, r.color);
+    let font = r.font; const m = font.match(/^(\d+) (\d+)px (.+)$/);
+    for (let px = +m[2]; px > 22 && measure(r.txt, font) > 660; px -= 1) font = `${m[1]} ${px}px ${m[3]}`;
+    text(r.txt, 260 + dx, y + 8, { font, color: r.txtColor });
+    ctx.restore();
+    y += i === 0 ? 120 : 88;
+  });
+}
+
+/* ======================================================================
  * TIMELINE
  * ====================================================================== */
 let EP = null, TL = null;
 function setup(episode, timing) {
-  EP = episode; TL = { total: timing.total, scenes: [], captions: [] };
+  EP = episode;
+  const endStart = timing.lines[timing.lines.length - 1].end + 0.9;
+  TL = { total: endStart + ENDCARD_DUR, endStart, scenes: [], captions: [] };
   let li = 0;
   episode.scenes.forEach(sc => {
     const n = sc.lines.length, lines = timing.lines.slice(li, li + n);
@@ -458,19 +562,20 @@ function setup(episode, timing) {
     li += n;
   });
   TL.scenes.forEach((s, i) => {
-    s._end = i + 1 < TL.scenes.length ? TL.scenes[i + 1]._start + .35 : timing.total;
+    s._end = i + 1 < TL.scenes.length ? TL.scenes[i + 1]._start + .35 : TL.endStart + .4;
     s.dur = s._end - s._start; s.L = s._lines.map(l => l.start - s._start);
   });
-  TL.captions.forEach((c, i) => { c.end = i + 1 < TL.captions.length ? TL.captions[i + 1].start : timing.total - .2; });
-  return { scenes: TL.scenes.length, captions: TL.captions.length };
+  TL.captions.forEach((c, i) => { c.end = i + 1 < TL.captions.length ? TL.captions[i + 1].start : TL.endStart + .2; });
+  return { scenes: TL.scenes.length, captions: TL.captions.length, total: TL.total };
 }
 function background() {
   ctx.globalAlpha = 1; ctx.shadowBlur = 0;
   ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H);
   const g = ctx.createRadialGradient(540, 900, 50, 540, 900, 900);
   g.addColorStop(0, 'rgba(40,36,30,0.35)'); g.addColorStop(1, 'rgba(0,0,0,0)'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
-  text(EP.brand || 'GLİKOZ GÜNLÜĞÜ', 1008, 345, { font: '400 26px Jost', color: C.brand, align: 'right', spacing: 4 });
-  if (EP.id) text('#' + EP.id, 1008, 380, { font: '400 20px Mono', color: C.grayDim, align: 'right', spacing: 2 });
+  const ba = TL && TL.endStart != null && background.t != null ? 1 - prog(background.t, TL.endStart - .2, TL.endStart + .3) : 1;
+  text(EP.brand || 'GLİKOZ GÜNLÜĞÜM', 1008, 345, { font: '400 26px Jost', color: C.brand, align: 'right', spacing: 4, alpha: ba });
+  if (EP.id) text('#' + EP.id, 1008, 380, { font: '400 20px Mono', color: C.grayDim, align: 'right', spacing: 2, alpha: ba });
 }
 function drawCaptions(t) {
   for (const c of TL.captions) {
@@ -481,13 +586,15 @@ function drawCaptions(t) {
   }
 }
 function render(t) {
-  background();
+  background.t = t; background();
   TL.scenes.forEach((s, i) => {
     const isLast = i === TL.scenes.length - 1;
     const a = fadeWin(t, s._start, s._end, isLast ? .8 : .45); if (a <= 0) return;
     ctx.save(); ctx.globalAlpha = a; SCENES[s.type].draw(s, t - s._start, a); ctx.restore();
   });
   drawCaptions(t);
+  if (t > TL.endStart - .3) { ctx.save(); ctx.globalAlpha = fadeWin(t, TL.endStart, TL.total + 5, .4); drawEndcard(t - TL.endStart); ctx.restore(); }
+  if (t > TL.total - .5) { ctx.save(); ctx.globalAlpha = prog(t, TL.total - .5, TL.total); ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H); ctx.restore(); }
 }
 function audioEvents() {
   const ev = [];
@@ -495,6 +602,9 @@ function audioEvents() {
     if (i > 0) ev.push({ t: s._start + .3, swell: true });
     (SCENES[s.type].events(s) || []).forEach(e => ev.push(Object.assign({}, e, { t: e.t + s._start })));
   });
+  const e0 = TL.endStart;
+  ev.push({ t: e0 + .1, swell: true }, { t: e0 + 1.6, f: 880, a: .16, d: .35 }, { t: e0 + 1.75, f: 1320, a: .10, d: .4 },
+          { t: e0 + 2.5, f: 1100, a: .10, d: .06 }, { t: e0 + 3.1, f: 990, a: .07, d: .05 }, { t: e0 + 3.6, f: 990, a: .07, d: .05 });
   return ev;
 }
 function renderCover() {
@@ -509,4 +619,5 @@ function renderCover() {
   if (EP.coverSub) text(EP.coverSub, 540, y0 + lines.length * 110 + 30, { font: '300 46px Jost', color: C.ink, align: 'center' });
 }
 window.setup = setup; window.render = render; window.audioEvents = audioEvents; window.renderCover = renderCover;
-window.ready = Promise.all(['500 150px Mono', '400 30px Mono', '300 50px Jost', '400 26px Jost'].map(f => document.fonts.load(f, 'AİŞĞÜÇÖıa1')));
+window.getTotal = () => TL.total;
+window.ready = Promise.all(['500 150px Mono', '400 30px Mono', '300 50px Jost', '400 26px Jost', '400 40px Jost', '400 100px Serif', '500 60px Sans', '400 20px Sans'].map(f => document.fonts.load(f, 'AİŞĞÜÇÖıa1')));

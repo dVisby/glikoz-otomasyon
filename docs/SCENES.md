@@ -15,3 +15,6 @@ Her sahnede `lines` (cümleler) zorunlu. Satır metninde ` | ` altyazıyı ikiye
 | `flatten` | Eğrinin bir alışkanlıkla yumuşaması | `counter`, `unit`, `label`, `from`, `to`, `steps` |
 | `statement` | Genel metin sahnesi: büyük sayı/başlık + madde listesi | `big?`, `unit?`, `red?`, `label?`, `title?`, `bullets:[text | {text, line}]` |
 | `close` | Seri kapanışı + yasal not (her bölümde son sahne) | `title`, `disclaimer` |
+
+## Logo ve çağrı kartı (otomatik)
+Son cümleden 0,9 sn sonra 5,6 sn süren kart eklenir: krem rozet üzerinde animasyonlu "Glikoz Günlüğüm" logosu (dalga çizilir, halka atar, G ve yazı belirir), altında üç satır: **Kaydet** (vurgulu), **Yorum**, **Paylaş**. Metinler episode.json `cta` alanından; yoksa genel varsayılanlar kullanılır. Uzun metin otomatik küçültülür.

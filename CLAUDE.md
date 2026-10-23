@@ -1,7 +1,7 @@
-# Glikoz Günlüğü — Reels otomasyonu (Claude için çalışma talimatı)
+# Glikoz Günlüğüm — Reels otomasyonu (Claude için çalışma talimatı)
 
 Muharrem günlük bir konu verir; sen araştırır, senaryoyu yazar, ElevenLabs ile seslendirir, videoyu üretir ve teslim edersin.
-Instagram hesabı: **Glikoz Günlüğü**. Dil: Türkçe. Süre: 40–60 sn. Format: 1080×1920, 30 fps.
+Instagram hesabı ve marka: **Glikoz Günlüğüm** (logodaki gibi). Dil: Türkçe. Süre: 40–60 sn. Format: 1080×1920, 30 fps.
 
 ## Günlük akış
 1. **Araştır.** Konudaki her sayıyı birincil/kurumsal kaynaktan doğrula (DSÖ, ADA, IDF, hakemli makale, TÜRKDEP/TURDEP, ürün etiketi). Kaynağı bulamadığın sayıyı kullanma.
@@ -10,7 +10,8 @@ Instagram hesabı: **Glikoz Günlüğü**. Dil: Türkçe. Süre: 40–60 sn. For
    - Ekrandaki her sayı için `source` satırı yaz. Temsili grafikleri "TEMSİLİ" diye etiketle.
    - Küçük çalışmaları büyütme: örneklem küçükse kaynak satırında belirt (ör. "11 KİŞİ").
    - Öneri/sınır ifadelerini kaynaktaki gibi kur ("ideal hedef" ile "üst sınır" farkı gibi).
-   - Son sahne her zaman `close` (tıbbi tavsiye değildir notu).
+   - Son sahne her zaman `close` (tıbbi tavsiye değildir notu). Ardından logo + çağrı kartı otomatik eklenir.
+   - `cta` yaz: `{"save": "...", "comment": "...", "share": "..."}` — konuya özel; kaydet satırı bir gerekçe, yorum satırı bir soru taşısın.
    - Rakamların okunuşu sorunluysa satıra `"say"` alanı ekle (ör. "yüzde otuz yedi").
 4. **Sessiz önizleme.** `python3 tools/glikoz.py preview <ep>` → `out/preview.png`; kontrol et (taşma, çakışma, boş sahne).
 5. **Seslendir.** `python3 tools/glikoz.py voicetext <ep>` → voice.txt. ElevenLabs connector:

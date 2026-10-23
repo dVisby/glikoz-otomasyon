@@ -5,39 +5,155 @@
   "coverTitle": "Şekerini görebilir misin?",
   "coverSub": "Sensör, kola ve 3 alışkanlık",
   "date": "2026-10-23",
-  "voice": {"name": "AURA VOX", "voice_id": "jk1pqab9OzEmS07w0u2T", "model": "eleven_v4"},
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
   "scenes": [
-    {"type": "cubes", "unit": "g", "perIcon": 4.2, "limit": 25, "limitLabel": "SINIR 25 g", "max": 40,
-     "lines": ["Dünya Sağlık Örgütü’ne göre günde en fazla 25 gram ilave şeker.",
-               "Bu, yaklaşık 6 çay kaşığı demek.",
-               "Tek bir kutu kolada ise 35 gram var.",
-               "Günlük sınır, tek kutuyla aşılıyor."],
-     "steps": [
-       {"line": 0, "value": 25, "label": "GÜNLÜK İLAVE ŞEKER SINIRI · DSÖ", "sub": "≈ 6 ÇAY KAŞIĞI", "subLine": 1, "source": "WHO · GUIDELINE: SUGARS INTAKE · 2015"},
-       {"line": 2, "value": 35, "label": "TEK KUTU KOLA · 330 ml", "sub": "≈ 8 ÇAY KAŞIĞI", "subLine": 3, "source": "ÜRÜN ETİKETİ · 10,6 g / 100 ml · 1 ÇAY KAŞIĞI ≈ 4,2 g"}
-     ]},
-    {"type": "people", "big": "1 / 7", "of": 7, "k": 1, "label": "YETİŞKİNLERDE DİYABET · TÜRKİYE", "sub": "%13,7",
-     "source": "TURDEP-II · SATMAN ve ark. · EUR J EPIDEMIOL 2013",
-     "lines": ["Türkiye’de yaklaşık her 7 yetişkinden biri diyabetli."]},
-    {"type": "sensor", "value": 1440, "label": "ÖLÇÜM / GÜN · SÜREKLİ GLUKOZ SENSÖRÜ", "source": "ABBOTT · FREESTYLE LIBRE · DAKİKADA BİR ÖLÇÜM",
-     "lines": ["Peki şekerinizi gerçekten görebilir misiniz?",
-               "Kola takılan küçük bir sensör, deri altındaki ince bir uçla gün boyu ölçüm yapar."]},
-    {"type": "day", "label": "mg/dL · TEMSİLİ BİR GÜN", "source": "TEMSİLİ VERİ · DİYABETİ OLMAYAN KİŞİDE TİPİK ARALIK 70–140 mg/dL",
-     "meals": [{"h": 8, "amp": 42, "label": "KAHVALTI"}, {"h": 13, "amp": 92, "tau": 0.55, "label": "KOLA", "red": true}, {"h": 20, "amp": 52, "tau": 0.75, "label": "AKŞAM"}],
-     "lines": ["Ve gününüzü bir eğriye dönüştürür.", "Her öğün, kendi izini bırakır."]},
-    {"type": "spike", "amp": 92, "label": "mg/dL · ANİ YÜKSELİŞ", "items": ["DAMARLAR", "BÖBREKLER", "GÖZLER"], "itemsLine": 1,
-     "source": "ADA · IDF · DİYABET KOMPLİKASYONLARI",
-     "lines": ["Her ani yükselişte pankreas insülin salgılar.", "Yıllarca tekrarlanırsa damarlar, böbrekler ve gözler zarar görebilir."]},
-    {"type": "compare", "counter": 37, "prefix": "−%", "bigLine": 1, "label": "ŞEKER ARTIŞI · 60. DAKİKA",
-     "a": {"amp": 100, "label": "ÖNCE KARBONHİDRAT"}, "b": {"amp": 63, "label": "ÖNCE SEBZE + PROTEİN"},
-     "source": "SHUKLA ve ark. · DIABETES CARE 2015 · TİP 2 DİYABETLİ 11 KİŞİ",
-     "lines": ["Önce sebze ve protein, sonra karbonhidrat.", "Bir çalışmada şeker artışı yüzde 37 daha düşük çıktı."]},
-    {"type": "flatten", "counter": 10, "unit": "dk", "label": "YEMEK SONRASI YÜRÜYÜŞ", "from": 95, "to": 55,
-     "source": "REYNOLDS ve ark. · DIABETOLOGIA 2016",
-     "lines": ["Yemekten sonra 10 dakikalık bir yürüyüş, | kaslarınızın şekeri kullanmasını sağlar."]},
-    {"type": "close", "title": "ARALIKTA KAL",
-     "disclaimer": ["BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR", "SENSÖR VE TEDAVİ İÇİN DOKTORUNUZA DANIŞIN"],
-     "lines": ["Sensör size sadece bir sayı göstermez.", "Sizi neyin yükselttiğini gösterir."]}
+    {
+      "type": "cubes",
+      "unit": "g",
+      "perIcon": 4.2,
+      "limit": 25,
+      "limitLabel": "SINIR 25 g",
+      "max": 40,
+      "lines": [
+        "Dünya Sağlık Örgütü’ne göre günde en fazla 25 gram ilave şeker.",
+        "Bu, yaklaşık 6 çay kaşığı demek.",
+        "Tek bir kutu kolada ise 35 gram var.",
+        "Günlük sınır, tek kutuyla aşılıyor."
+      ],
+      "steps": [
+        {
+          "line": 0,
+          "value": 25,
+          "label": "GÜNLÜK İLAVE ŞEKER SINIRI · DSÖ",
+          "sub": "≈ 6 ÇAY KAŞIĞI",
+          "subLine": 1,
+          "source": "WHO · GUIDELINE: SUGARS INTAKE · 2015"
+        },
+        {
+          "line": 2,
+          "value": 35,
+          "label": "TEK KUTU KOLA · 330 ml",
+          "sub": "≈ 8 ÇAY KAŞIĞI",
+          "subLine": 3,
+          "source": "ÜRÜN ETİKETİ · 10,6 g / 100 ml · 1 ÇAY KAŞIĞI ≈ 4,2 g"
+        }
+      ]
+    },
+    {
+      "type": "people",
+      "big": "1 / 7",
+      "of": 7,
+      "k": 1,
+      "label": "YETİŞKİNLERDE DİYABET · TÜRKİYE",
+      "sub": "%13,7",
+      "source": "TURDEP-II · SATMAN ve ark. · EUR J EPIDEMIOL 2013",
+      "lines": [
+        "Türkiye’de yaklaşık her 7 yetişkinden biri diyabetli."
+      ]
+    },
+    {
+      "type": "sensor",
+      "value": 1440,
+      "label": "ÖLÇÜM / GÜN · SÜREKLİ GLUKOZ SENSÖRÜ",
+      "source": "ABBOTT · FREESTYLE LIBRE · DAKİKADA BİR ÖLÇÜM",
+      "lines": [
+        "Peki şekerinizi gerçekten görebilir misiniz?",
+        "Kola takılan küçük bir sensör, deri altındaki ince bir uçla gün boyu ölçüm yapar."
+      ]
+    },
+    {
+      "type": "day",
+      "label": "mg/dL · TEMSİLİ BİR GÜN",
+      "source": "TEMSİLİ VERİ · DİYABETİ OLMAYAN KİŞİDE TİPİK ARALIK 70–140 mg/dL",
+      "meals": [
+        {
+          "h": 8,
+          "amp": 42,
+          "label": "KAHVALTI"
+        },
+        {
+          "h": 13,
+          "amp": 92,
+          "tau": 0.55,
+          "label": "KOLA",
+          "red": true
+        },
+        {
+          "h": 20,
+          "amp": 52,
+          "tau": 0.75,
+          "label": "AKŞAM"
+        }
+      ],
+      "lines": [
+        "Ve gününüzü bir eğriye dönüştürür.",
+        "Her öğün, kendi izini bırakır."
+      ]
+    },
+    {
+      "type": "spike",
+      "amp": 92,
+      "label": "mg/dL · ANİ YÜKSELİŞ",
+      "items": [
+        "DAMARLAR",
+        "BÖBREKLER",
+        "GÖZLER"
+      ],
+      "itemsLine": 1,
+      "source": "ADA · IDF · DİYABET KOMPLİKASYONLARI",
+      "lines": [
+        "Her ani yükselişte pankreas insülin salgılar.",
+        "Yıllarca tekrarlanırsa damarlar, böbrekler ve gözler zarar görebilir."
+      ]
+    },
+    {
+      "type": "compare",
+      "counter": 37,
+      "prefix": "−%",
+      "bigLine": 1,
+      "label": "ŞEKER ARTIŞI · 60. DAKİKA",
+      "a": {
+        "amp": 100,
+        "label": "ÖNCE KARBONHİDRAT"
+      },
+      "b": {
+        "amp": 63,
+        "label": "ÖNCE SEBZE + PROTEİN"
+      },
+      "source": "SHUKLA ve ark. · DIABETES CARE 2015 · TİP 2 DİYABETLİ 11 KİŞİ",
+      "lines": [
+        "Önce sebze ve protein, sonra karbonhidrat.",
+        "Bir çalışmada şeker artışı yüzde 37 daha düşük çıktı."
+      ]
+    },
+    {
+      "type": "flatten",
+      "counter": 10,
+      "unit": "dk",
+      "label": "YEMEK SONRASI YÜRÜYÜŞ",
+      "from": 95,
+      "to": 55,
+      "source": "REYNOLDS ve ark. · DIABETOLOGIA 2016",
+      "lines": [
+        "Yemekten sonra 10 dakikalık bir yürüyüş, | kaslarınızın şekeri kullanmasını sağlar."
+      ]
+    },
+    {
+      "type": "close",
+      "title": "ARALIKTA KAL",
+      "disclaimer": [
+        "BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR",
+        "SENSÖR VE TEDAVİ İÇİN DOKTORUNUZA DANIŞIN"
+      ],
+      "lines": [
+        "Sensör size sadece bir sayı göstermez.",
+        "Sizi neyin yükselttiğini gösterir."
+      ]
+    }
   ],
   "caption": "Şekerinizi gerçekten görebilir misiniz? 🩸\nTek kutu kola, günlük ideal şeker hedefini aşıyor. Sürekli glukoz sensörü ise gün boyu neyin sizi yükselttiğini gösteriyor. Eğriyi düzleştiren iki basit alışkanlık: önce sebze ve protein, yemekten sonra 10 dakika yürüyüş.",
   "sources": [
@@ -47,6 +163,19 @@
     "Shukla AP ve ark., Diabetes Care 2015",
     "Reynolds AN ve ark., Diabetologia 2016"
   ],
-  "hashtags": ["#glikozgünlüğü", "#kanşekeri", "#diyabet", "#insülindirenci", "#sağlıklıbeslenme", "#cgm", "#şeker"],
-  "notes": "Açık konu: 1. ve 4. cümle 25 g'ı üst sınır gibi sunuyor; DSÖ'de 25 g ideal hedef (%5), güçlü öneri %10 ≈ 50 g. Ses yeniden üretilirse metni düzelt."
+  "hashtags": [
+    "#glikozgünlüğü",
+    "#kanşekeri",
+    "#diyabet",
+    "#insülindirenci",
+    "#sağlıklıbeslenme",
+    "#cgm",
+    "#şeker"
+  ],
+  "notes": "Açık konu: 1. ve 4. cümle 25 g'ı üst sınır gibi sunuyor; DSÖ'de 25 g ideal hedef (%5), güçlü öneri %10 ≈ 50 g. Ses yeniden üretilirse metni düzelt.",
+  "cta": {
+    "save": "Kaydet: market alışverişinde lazım olacak.",
+    "comment": "Sen günde kaç şekerli içecek içiyorsun?",
+    "share": "Kola seven birine gönder."
+  }
 }
