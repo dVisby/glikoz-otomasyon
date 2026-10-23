@@ -1,0 +1,218 @@
+{
+  "id": "002",
+  "slug": "portakal-suyu",
+  "title": "Portakal mı, portakal suyu mu?",
+  "coverTitle": "Portakal mı, suyu mu?",
+  "coverSub": "Aynı meyve, farklı şeker",
+  "date": "2026-10-23",
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "scenes": [
+    {
+      "type": "statement",
+      "big": "?",
+      "label": "SABAH KAHVALTISI",
+      "title": "PORTAKAL MI, PORTAKAL SUYU MU?",
+      "lines": [
+        "Sabah bir bardak taze portakal suyu… sağlıklı, değil mi?",
+        "İkisi de aynı meyve. | Ama vücudunuz için aynı şey değil."
+      ]
+    },
+    {
+      "type": "bars",
+      "unit": "g",
+      "label": "TOPLAM ŞEKER",
+      "max": 24,
+      "items": [
+        {
+          "label": "1 PORTAKAL · 131 g",
+          "value": 12.2,
+          "dec": 1,
+          "line": 0
+        },
+        {
+          "label": "1 BARDAK PORTAKAL SUYU · 248 g",
+          "value": 20.8,
+          "dec": 1,
+          "red": true,
+          "line": 1
+        }
+      ],
+      "source": "USDA FOODDATA CENTRAL · FDC 169097 · 169098",
+      "lines": [
+        {
+          "text": "Bir portakalda yaklaşık 12 gram şeker var.",
+          "say": "Bir portakalda yaklaşık on iki gram şeker var."
+        },
+        {
+          "text": "Bir bardak portakal suyunda ise yaklaşık 21 gram.",
+          "say": "Bir bardak portakal suyunda ise yaklaşık yirmi bir gram."
+        }
+      ]
+    },
+    {
+      "type": "bars",
+      "unit": "g",
+      "label": "LİF",
+      "max": 3.6,
+      "items": [
+        {
+          "label": "1 PORTAKAL",
+          "value": 3.1,
+          "dec": 1
+        },
+        {
+          "label": "1 BARDAK PORTAKAL SUYU",
+          "value": 0.5,
+          "dec": 1,
+          "red": true
+        }
+      ],
+      "source": "USDA FOODDATA CENTRAL · FDC 169097 · 169098",
+      "lines": [
+        {
+          "text": "Portakalda 3 gram lif var, | bir bardak suyunda yalnızca yarım gram.",
+          "say": "Portakalda üç gram lif var, bir bardak suyunda yalnızca yarım gram."
+        }
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "LİF NE YAPAR?",
+      "title": "EMİLİM YAVAŞLAR",
+      "bullets": [
+        {
+          "text": "LİF → ŞEKER DAHA YAVAŞ EMİLİR",
+          "line": 0
+        },
+        {
+          "text": "SIKINCA → LİF POSADA KALIR",
+          "line": 1
+        }
+      ],
+      "source": "ADA · STANDARDS OF CARE · BESLENME ÖNERİLERİ",
+      "lines": [
+        "Lif, şekerin kana karışmasını yavaşlatır.",
+        "Meyveyi sıktığınızda ise lifin çoğu posada kalır."
+      ]
+    },
+    {
+      "type": "statement",
+      "big": "SERBEST",
+      "red": true,
+      "label": "DÜNYA SAĞLIK ÖRGÜTÜ",
+      "title": "ŞEKER",
+      "bullets": [
+        {
+          "text": "BAL · ŞURUP · MEYVE SUYU",
+          "line": 0
+        }
+      ],
+      "source": "WHO · GUIDELINE: SUGARS INTAKE · 2015",
+      "lines": [
+        "Dünya Sağlık Örgütü, meyve suyundaki şekeri serbest şeker sayar."
+      ]
+    },
+    {
+      "type": "cubes",
+      "unit": "g",
+      "perIcon": 4.2,
+      "limit": 25,
+      "limitLabel": "İDEAL HEDEF 25 g",
+      "max": 32,
+      "lines": [
+        {
+          "text": "Tek bardak, günlük 25 gramlık ideal hedefin yaklaşık beşte dördü.",
+          "say": "Tek bardak, günlük yirmi beş gramlık ideal hedefin yaklaşık beşte dördü."
+        }
+      ],
+      "steps": [
+        {
+          "line": 0,
+          "value": 20.8,
+          "label": "1 BARDAK PORTAKAL SUYU",
+          "sub": "≈ 5 ÇAY KAŞIĞI",
+          "source": "WHO 2015 · <%5 ENERJİ ≈ 25 g · 1 ÇAY KAŞIĞI ≈ 4,2 g"
+        }
+      ]
+    },
+    {
+      "type": "statement",
+      "big": "+%8",
+      "red": true,
+      "label": "TİP 2 DİYABET RİSKİ · 187 BİN KİŞİ",
+      "title": "HAFTADA 3 BARDAK MEYVE SUYU",
+      "source": "MURAKI ve ark. · BMJ 2013 · 3 KOHORT · GÖZLEMSEL",
+      "lines": [
+        {
+          "text": "Yaklaşık 187 bin kişinin izlendiği bir çalışmada,",
+          "say": "Yaklaşık yüz seksen yedi bin kişinin izlendiği bir çalışmada,"
+        },
+        {
+          "text": "haftada 3 bardak meyve suyu, | tip 2 diyabet riskinde yüzde 8 artışla ilişkili bulundu.",
+          "say": "haftada üç bardak meyve suyu, tip iki diyabet riskinde yüzde sekiz artışla ilişkili bulundu."
+        }
+      ]
+    },
+    {
+      "type": "statement",
+      "big": "−%7",
+      "label": "MEYVE SUYU YERİNE BÜTÜN MEYVE",
+      "title": "HAFTADA 3 PORSİYON",
+      "source": "MURAKI ve ark. · BMJ 2013 · GÖZLEMSEL · NEDENSELLİK GÖSTERMEZ",
+      "lines": [
+        {
+          "text": "Aynı miktarı bütün meyveyle değiştirmek, | riskte yüzde 7 düşüşle ilişkiliydi.",
+          "say": "Aynı miktarı bütün meyveyle değiştirmek, riskte yüzde yedi düşüşle ilişkiliydi."
+        }
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "PRATİK",
+      "title": "MEYVEYİ İÇME, YE",
+      "bullets": [
+        {
+          "text": "BÜTÜN MEYVE · LİFİYLE",
+          "line": 0
+        }
+      ],
+      "lines": [
+        "Meyveyi bütün olarak, lifiyle birlikte yiyin."
+      ]
+    },
+    {
+      "type": "close",
+      "title": "ARALIKTA KAL",
+      "disclaimer": [
+        "BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR",
+        "BESLENME PLANI İÇİN DOKTORUNUZA DANIŞIN"
+      ],
+      "lines": [
+        "Aynı meyve, iki farklı eğri.",
+        "Tercih sizin."
+      ]
+    }
+  ],
+  "caption": "Portakal mı, portakal suyu mu? 🍊\nBir bardak portakal suyunda bir portakalın yaklaşık 1,7 katı şeker var, lifin ise çoğu posada kalıyor. Dünya Sağlık Örgütü meyve suyundaki şekeri bal ve şurup gibi \"serbest şeker\" sayıyor. 187 bin kişilik gözlemsel bir çalışmada meyve suyu yerine bütün meyve tercih etmek, daha düşük tip 2 diyabet riskiyle ilişkili bulundu.\nMeyveyi içme, ye. 🍽️",
+  "sources": [
+    "USDA FoodData Central — Oranges, raw (FDC 169097); Orange juice, raw (FDC 169098)",
+    "WHO, Guideline: Sugars intake for adults and children (2015)",
+    "Muraki I. ve ark., Fruit consumption and risk of type 2 diabetes, BMJ 2013;347:f5001",
+    "American Diabetes Association, Standards of Care in Diabetes — beslenme önerileri"
+  ],
+  "hashtags": [
+    "#glikozgünlüğü",
+    "#kanşekeri",
+    "#diyabet",
+    "#insülindirenci",
+    "#sağlıklıbeslenme",
+    "#portakalsuyu",
+    "#lif",
+    "#meyvesuyu"
+  ],
+  "notes": "Muraki 2013: HR 1,08 (1,05–1,11) / haftada 3 porsiyon meyve suyu; bütün meyveyle ikame −%7 (4–9). Gözlemsel. Değerler USDA SR Legacy (taze sıkılmış)."
+}

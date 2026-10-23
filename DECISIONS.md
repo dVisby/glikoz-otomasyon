@@ -6,3 +6,4 @@
 - 2026-10-23 — Ses: ElevenLabs AURA VOX (Türkçe kadın, sakin anlatım), eleven_v4.
 - 2026-10-23 — Kalıcı depolama GitHub (bu repo); bulut çalışma ortamı her oturumda sıfırlanır. Video/ses dosyaları git dışında, kullanıcının ~/Movies/glikoz-gunlugu klasöründe arşivlenir.
 - 2026-10-23 — Görsel dil referans Reels'ten: siyah zemin, altın vurgu, yakut kırmızı, mono etiketler, her sahnede kaynak satırı.
+- 2026-10-23 — Ses 60 sn'yi aşarsa yeniden üretmek yerine tam cümleler, cümle arası duraklamanın ortasından çıkarılabilir (hız/ton değişmez). Cümle aralıkları kısaysa hizalama ElevenLabs Scribe kelime zaman damgalarıyla yapılır.
