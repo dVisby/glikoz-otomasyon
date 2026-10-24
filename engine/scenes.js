@@ -7,12 +7,25 @@
  * timing = {total, lines:[{start, end}]} : one entry per spoken line, real seconds in the final video.
  */
 const W = 1080, H = 1920;
-const C = {
-  bg: '#070707', gold: '#C8B07A', ink: '#DDD8CE', gray: '#8A8780', grayDim: '#4A4844',
-  faint: '#2A2927', red: '#E0344F', redDeep: '#8E1729', brand: '#9C9282'
+const THEMES = {
+  dark: {
+    bg: '#070707', gold: '#C8B07A', ink: '#DDD8CE', gray: '#8A8780', grayDim: '#4A4844', gray2: '#BDB8AF',
+    faint: '#2A2927', red: '#E0344F', redDeep: '#8E1729', redLight: '#FF7A8C', brand: '#9C9282',
+    gRGB: '200,176,122', rRGB: '224,52,79', off: '#3B3934', skin1: '#2B201D', skin2: '#1B1513', skin3: '#120E0D',
+    bandFill: 'rgba(200,176,122,0.07)', bandLine: 'rgba(200,176,122,0.25)',
+    glow: true, capBox: false, badge: true, decor: false, sans: false, fade: '#000'
+  },
+  krem: {
+    bg: '#F3ECE1', gold: '#4E5B34', ink: '#22261E', gray: '#6E6A60', grayDim: '#9A9488', gray2: '#5F5B52',
+    faint: '#DDD5C7', red: '#D2643F', redDeep: '#9E4026', redLight: '#EE9A7C', brand: '#4E5B34',
+    gRGB: '78,91,52', rRGB: '210,100,63', off: '#D6CEBF', skin1: '#E7D3C1', skin2: '#DCC3AE', skin3: '#D0B49D',
+    bandFill: 'rgba(160,190,130,0.30)', bandLine: 'rgba(78,91,52,0.35)',
+    glow: false, capBox: true, badge: false, decor: true, sans: true, fade: '#F3ECE1'
+  }
 };
+const C = Object.assign({}, THEMES.dark);
 const cv = document.getElementById('c');
-const ctx = cv.getContext('2d');
+let ctx = cv.getContext('2d');
 const LEAD = 0.15;      // caption appears this much before the spoken line
 const SCENE_LEAD = 0.35; // scene fades in this much before its first line
 
@@ -33,8 +46,18 @@ function mixColor(c1, c2, k) {
   const a = p(c1), b = p(c2);
   return 'rgb(' + a.map((v, i) => Math.round(lerp(v, b[i], k))).join(',') + ')';
 }
+function F(font) { // map the dark-theme type scale to the krem (bold sans) scale
+  if (!C.sans) return font;
+  const m = font.match(/^(\d+) (\d+)px (Mono|Jost)$/); if (!m) return font;
+  const w = +m[1], px = +m[2], fam = m[3];
+  let nw;
+  if (fam === 'Mono') nw = w >= 500 ? 800 : (px >= 26 ? 600 : 500);
+  else nw = (w >= 400 || px >= 48) ? 700 : 500;
+  return `${nw} ${px}px Sans`;
+}
 function text(str, x, y, o = {}) {
-  const { font = '400 30px Mono', color = C.gray, align = 'left', spacing = 0, alpha = 1, glow = null } = o;
+  let { font = '400 30px Mono', color = C.gray, align = 'left', spacing = 0, alpha = 1, glow = null } = o;
+  font = F(font); if (!C.glow) glow = null;
   if (alpha <= 0 || !str) return;
   ctx.save();
   ctx.globalAlpha *= alpha; ctx.font = font; ctx.fillStyle = color; ctx.textAlign = align;
@@ -43,7 +66,7 @@ function text(str, x, y, o = {}) {
   ctx.fillText(str, x, y); ctx.restore();
 }
 function measure(str, font, spacing = 0) {
-  ctx.save(); ctx.font = font; ctx.letterSpacing = spacing + 'px';
+  ctx.save(); ctx.font = F(font); ctx.letterSpacing = spacing + 'px';
   const w = ctx.measureText(str).width; ctx.restore(); return w;
 }
 function wrapLines(str, font, maxW) {
@@ -61,17 +84,49 @@ function roundRect(x, y, w, h, r) {
 function ruby(x, y, r, a = 1, glow = 1) {
   if (a <= 0) return;
   ctx.save(); ctx.globalAlpha *= a;
-  ctx.shadowColor = 'rgba(224,52,79,0.85)'; ctx.shadowBlur = 28 * glow;
+  ctx.shadowColor = `rgba(${C.rRGB},0.85)`; ctx.shadowBlur = 28 * glow;
   const g = ctx.createRadialGradient(x - r * .3, y - r * .3, r * .1, x, y, r);
-  g.addColorStop(0, '#FF7A8C'); g.addColorStop(.55, C.red); g.addColorStop(1, C.redDeep);
+  g.addColorStop(0, C.redLight); g.addColorStop(.55, C.red); g.addColorStop(1, C.redDeep);
   ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
   ctx.shadowBlur = 0; ctx.strokeStyle = 'rgba(255,190,200,0.55)'; ctx.lineWidth = Math.max(1, r * .12);
   ctx.beginPath(); ctx.arc(x, y, r * .5, 0, Math.PI * 2); ctx.stroke(); ctx.restore();
 }
+function bean(x, y, r, ang, color, a) {
+  if (a <= 0) return;
+  ctx.save(); ctx.globalAlpha *= a; ctx.translate(x, y); ctx.rotate(ang);
+  ctx.fillStyle = color; ctx.beginPath(); ctx.ellipse(0, 0, r, r * .62, 0, 0, Math.PI * 2); ctx.fill();
+  ctx.strokeStyle = 'rgba(255,255,255,.35)'; ctx.lineWidth = Math.max(1.5, r * .1);
+  ctx.beginPath(); ctx.ellipse(-r * .1, -r * .12, r * .55, r * .25, 0, Math.PI * 1.1, Math.PI * 1.8); ctx.stroke();
+  ctx.restore();
+}
+function check(x, y, s, color, a) {
+  if (a <= 0) return;
+  ctx.save(); ctx.globalAlpha *= a; ctx.strokeStyle = color; ctx.lineWidth = s * .16; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  const k = easeOut(clamp(a * 1.4)); ctx.beginPath(); ctx.moveTo(x - s * .4, y);
+  ctx.lineTo(x - s * .1, y + s * .3 * Math.min(1, k * 2)); if (k > .5) ctx.lineTo(x - s * .1 + s * .55 * (k - .5) * 2, y + s * .3 - s * .7 * (k - .5) * 2);
+  ctx.stroke(); ctx.restore();
+}
+function bowl(cx, cy, w, n, color, label, a, lt) {
+  if (a <= 0) return;
+  ctx.save(); ctx.globalAlpha *= a;
+  // grains
+  for (let i = 0; i < n; i++) {
+    const ap = prog(lt, i * .02, i * .02 + .3); if (ap <= 0) continue;
+    const u = ((i * 0.618034) % 1) - .5, v = ((i * 0.7548 + .13) % 1);
+    const hmax = Math.sqrt(Math.max(0, .25 - u * u)) * 2 * 95;   // dome profile
+    const gx = cx + u * w * .82, gy = cy + 6 - v * hmax;
+    bean(gx, gy, 15, (i * 1.7) % 3 - 1.5, color, ap);
+  }
+  ctx.fillStyle = C.sans ? '#FFFFFF' : '#2A2927'; ctx.strokeStyle = C.faint; ctx.lineWidth = 3;
+  ctx.beginPath(); ctx.moveTo(cx - w / 2, cy); ctx.quadraticCurveTo(cx, cy + w * .62, cx + w / 2, cy); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle = C.faint; ctx.fillRect(cx - w * .18, cy + w * .3, w * .36, 10);
+  ctx.restore();
+  text(label, cx, cy + w * .3 + 60, { font: '400 26px Mono', color: C.ink, align: 'center', spacing: 2, alpha: a });
+}
 /* standard layout pieces */
 function bigNumber(str, o = {}) {
   const { alpha = 1, color = C.gold, size = 150, unit = null } = o;
-  const glow = color === C.red ? 'rgba(224,52,79,.55)' : null;
+  const glow = color === C.red ? `rgba(${C.rRGB},.55)` : null;
   text(str, 72, 545, { font: `500 ${size}px Mono`, color, alpha, spacing: -2, glow });
   if (unit) text(unit, 72 + measure(str, `500 ${size}px Mono`, -2) + 14, 545, { font: '400 64px Mono', color, alpha });
 }
@@ -84,8 +139,8 @@ const bump = (x, amp, tau) => x <= 0 ? 0 : amp * (x / tau) * Math.exp(1 - x / ta
 function chart(x0, y0, w, h, gmin, gmax, band = [70, 140]) {
   const Y = v => y0 + h - (v - gmin) / (gmax - gmin) * h;
   if (band) {
-    ctx.fillStyle = 'rgba(200,176,122,0.07)'; ctx.fillRect(x0, Y(band[1]), w, Y(band[0]) - Y(band[1]));
-    ctx.strokeStyle = 'rgba(200,176,122,0.25)'; ctx.lineWidth = 1; ctx.setLineDash([6, 8]);
+    ctx.fillStyle = C.bandFill; ctx.fillRect(x0, Y(band[1]), w, Y(band[0]) - Y(band[1]));
+    ctx.strokeStyle = C.bandLine; ctx.lineWidth = 1; ctx.setLineDash([6, 8]);
     band.forEach(v => { ctx.beginPath(); ctx.moveTo(x0, Y(v)); ctx.lineTo(x0 + w, Y(v)); ctx.stroke(); });
     ctx.setLineDash([]);
     band.forEach(v => text(String(v), x0 - 12, Y(v) + 7, { font: '400 20px Mono', color: C.grayDim, align: 'right' }));
@@ -128,7 +183,7 @@ SCENES.cubes = {
     const over = prog(v, lim, lim + 2);
     const col = mixColor(C.gold, C.red, over);
     const vs = String(Math.round(v));
-    text(vs, 72, 545, { font: '500 150px Mono', color: col, spacing: -2, glow: over > 0 ? `rgba(224,52,79,${.5 * over})` : null });
+    text(vs, 72, 545, { font: '500 150px Mono', color: col, spacing: -2, glow: over > 0 ? `rgba(${C.rRGB},${.5 * over})` : null });
     if (s.unit) text(s.unit, 72 + measure(vs, '500 150px Mono', -2) + 14, 545, { font: '400 64px Mono', color: col });
     s.steps.forEach((st, i) => {
       const t0 = s.L[st.line] - .1, t1 = i + 1 < s.steps.length ? s.L[s.steps[i + 1].line] - .1 : s.dur + 1;
@@ -152,7 +207,7 @@ SCENES.cubes = {
       const bx = 76, bw = 928, by = 1090, max = s.max || maxV * 1.15;
       ctx.fillStyle = C.faint; ctx.fillRect(bx, by, bw, 14);
       ctx.fillStyle = C.gold; ctx.fillRect(bx, by, bw * Math.min(v, lim) / max, 14);
-      if (v > lim) { ctx.save(); ctx.shadowColor = 'rgba(224,52,79,.8)'; ctx.shadowBlur = 20; ctx.fillStyle = C.red; ctx.fillRect(bx + bw * lim / max, by, bw * (v - lim) / max, 14); ctx.restore(); }
+      if (v > lim) { ctx.save(); ctx.shadowColor = `rgba(${C.rRGB},.8)`; ctx.shadowBlur = 20; ctx.fillStyle = C.red; ctx.fillRect(bx + bw * lim / max, by, bw * (v - lim) / max, 14); ctx.restore(); }
       const lx = bx + bw * lim / max;
       ctx.fillStyle = C.ink; ctx.fillRect(lx - 1.5, by - 22, 3, 58);
       text(s.limitLabel || `SINIR ${lim} ${s.unit || ''}`, lx, by - 34, { font: '400 22px Mono', color: C.ink, align: 'center', spacing: 1.5, alpha: prog(v, lim * .8, lim) });
@@ -163,10 +218,10 @@ SCENES.cubes = {
     if (a <= 0) return;
     const k = easeOut(clamp(a)), sc = .6 + .4 * k, cx = x + sz / 2, cy = y + sz / 2, ss = sz * sc;
     ctx.save(); ctx.globalAlpha *= k;
-    if (red) { ctx.shadowColor = 'rgba(224,52,79,0.7)'; ctx.shadowBlur = 30; }
+    if (red) { ctx.shadowColor = `rgba(${C.rRGB},0.7)`; ctx.shadowBlur = 30; }
     roundRect(cx - ss / 2, cy - ss / 2, ss, ss, 16 * sc); ctx.strokeStyle = red ? C.red : C.gold; ctx.lineWidth = 3; ctx.stroke();
     ctx.shadowBlur = 0; ctx.save(); roundRect(cx - ss / 2, cy - ss / 2, ss, ss, 16 * sc); ctx.clip();
-    ctx.fillStyle = red ? 'rgba(224,52,79,0.28)' : 'rgba(200,176,122,0.16)';
+    ctx.fillStyle = red ? `rgba(${C.rRGB},0.28)` : `rgba(${C.gRGB},0.16)`;
     const fh = ss * fill; ctx.fillRect(cx - ss / 2, cy + ss / 2 - fh, ss, fh); ctx.restore();
     ctx.fillStyle = red ? 'rgba(255,160,175,0.5)' : 'rgba(230,214,170,0.45)';
     for (let i = 0; i < 9; i++) {
@@ -190,8 +245,8 @@ SCENES.people = {
   person(x, y, red, a) {
     if (a <= 0) return;
     ctx.save(); ctx.globalAlpha *= easeOut(a); const dy = (1 - easeOut(a)) * 12;
-    if (red) { ctx.shadowColor = 'rgba(224,52,79,.9)'; ctx.shadowBlur = 26; }
-    ctx.fillStyle = red ? C.red : '#3B3934';
+    if (red) { ctx.shadowColor = `rgba(${C.rRGB},.9)`; ctx.shadowBlur = 26; }
+    ctx.fillStyle = red ? C.red : C.off;
     ctx.beginPath(); ctx.arc(x, y - 18 + dy, 11, 0, Math.PI * 2); ctx.fill();
     ctx.beginPath(); ctx.arc(x, y + 22 + dy, 21, Math.PI, 0); ctx.closePath(); ctx.fill(); ctx.restore();
   },
@@ -223,12 +278,13 @@ SCENES.dots = {
     const k = ease(prog(lt, L0 + .3, L0 + 2.3));
     bigNumber(s.big || trNum(Math.round(hi * k)), { unit: s.unit });
     label(s.label, 600); if (s.sub) label(s.sub, 642, prog(lt, L0 + 2.5, L0 + 2.9), C.gold);
-    const rows = Math.ceil(tot / cols), gx = 860 / (cols - 1), gy = Math.min(48, 500 / Math.max(rows - 1, 1));
+    const rows = Math.ceil(tot / cols), gx = 860 / (cols - 1), gy = Math.min(s.shape === 'bean' ? 112 : 48, 500 / Math.max(rows - 1, 1));
     for (let i = 0; i < tot; i++) {
       const c = i % cols, r = Math.floor(i / cols), x = 110 + c * gx, y = 720 + r * gy;
       const ap = prog(lt, L0 + .1 + i * (1.6 / tot), L0 + .4 + i * (1.6 / tot));
+      if (s.shape === 'bean') { bean(x, y, Math.min(34, gx * .24), ((i * 37) % 7 - 3) * .12, i < hi ? C.gold : C.off, ap * (i < hi * k + .5 || i >= hi ? 1 : .25)); continue; }
       if (i < hi * k + .5 && i < hi) ruby(x, y, Math.min(13, gx * .2), ap, .7);
-      else { ctx.save(); ctx.globalAlpha *= ap; ctx.fillStyle = '#34322E'; ctx.beginPath(); ctx.arc(x, y, Math.min(9, gx * .14), 0, Math.PI * 2); ctx.fill(); ctx.restore(); }
+      else { ctx.save(); ctx.globalAlpha *= ap; ctx.fillStyle = C.off; ctx.beginPath(); ctx.arc(x, y, Math.min(9, gx * .14), 0, Math.PI * 2); ctx.fill(); ctx.restore(); }
     }
     if (s.source) source(s.source);
   },
@@ -252,7 +308,7 @@ SCENES.bars = {
       text(it.label, x0, y + 26, { font: '400 24px Mono', color: C.ink, spacing: 1.5, alpha: a });
       text(trNum(it.value * k, it.dec || 0) + (s.unit ? ' ' + s.unit : ''), x0 + bw, y + 26, { font: '400 24px Mono', color: it.red ? C.red : C.gold, align: 'right', alpha: a });
       ctx.fillStyle = C.faint; ctx.fillRect(x0, y + 42, bw, 14);
-      ctx.save(); if (it.red) { ctx.shadowColor = 'rgba(224,52,79,.8)'; ctx.shadowBlur = 18; }
+      ctx.save(); if (it.red) { ctx.shadowColor = `rgba(${C.rRGB},.8)`; ctx.shadowBlur = 18; }
       ctx.fillStyle = it.red ? C.red : C.gold; ctx.fillRect(x0, y + 42, bw * it.value / max * k, 14); ctx.restore();
     });
     if (s.limit != null) {
@@ -273,13 +329,13 @@ SCENES.sensor = {
     bigNumber(trNum(lerp(0, s.value || 1440, ease(prog(lt, L0 + 2.6, tEnd)))));
     label(s.label, 600);
     const top = 860;
-    ctx.fillStyle = '#2B201D'; ctx.fillRect(60, top, 960, 34);
-    ctx.fillStyle = '#1B1513'; ctx.fillRect(60, top + 34, 960, 86);
-    ctx.fillStyle = '#120E0D'; ctx.fillRect(60, top + 120, 960, 190);
-    ctx.strokeStyle = 'rgba(200,176,122,0.08)'; ctx.lineWidth = 2;
+    ctx.fillStyle = C.skin1; ctx.fillRect(60, top, 960, 34);
+    ctx.fillStyle = C.skin2; ctx.fillRect(60, top + 34, 960, 86);
+    ctx.fillStyle = C.skin3; ctx.fillRect(60, top + 120, 960, 190);
+    ctx.strokeStyle = `rgba(${C.gRGB},0.08)`; ctx.lineWidth = 2;
     for (let i = 0; i < 9; i++) { ctx.beginPath(); ctx.ellipse(130 + i * 105 + (i % 2) * 30, top + 200 + (i % 3) * 30, 44, 30, (i % 4) * .4, 0, Math.PI * 2); ctx.stroke(); }
     for (const p of this.P) {
-      ctx.fillStyle = 'rgba(200,176,122,0.75)'; ctx.beginPath();
+      ctx.fillStyle = `rgba(${C.gRGB},0.75)`; ctx.beginPath();
       ctx.arc(60 + ((p.x + lt * 30 * p.v) % 960), p.y + Math.sin(lt * 1.5 + p.ph) * 8, 3.4, 0, Math.PI * 2); ctx.fill();
     }
     small('DERİ', 1004, top + 24, { align: 'right', font: '400 19px Mono' });
@@ -298,7 +354,7 @@ SCENES.sensor = {
     if (lt > L0 + 2.2) {
       for (let k = 0; k < 3; k++) {
         const pt = ((lt - L0 - 2.2) + k * .5) % 1.5 / 1.5;
-        ctx.strokeStyle = `rgba(200,176,122,${(1 - pt) * .6})`; ctx.lineWidth = 2;
+        ctx.strokeStyle = `rgba(${C.gRGB},${(1 - pt) * .6})`; ctx.lineWidth = 2;
         ctx.beginPath(); ctx.arc(540, top + 190, 10 + pt * 90, 0, Math.PI * 2); ctx.stroke();
       }
       ctx.fillStyle = C.gold; ctx.beginPath(); ctx.arc(540, top + 190, 7, 0, Math.PI * 2); ctx.fill();
@@ -344,7 +400,7 @@ SCENES.spike = {
     for (let i = 0; i < n; i++) {
       const hh = 12.5 + (i + .5) * 3.5 / n; if (hh > head) break;
       const ins = bump(hh - 13.25, 1, .6);
-      ctx.fillStyle = `rgba(200,176,122,${.35 + ins * .6})`; ctx.fillRect(x0 + (i + .2) * w / n, by - (6 + ins * 54), w / n * .6, 6 + ins * 54);
+      ctx.fillStyle = `rgba(${C.gRGB},${.35 + ins * .6})`; ctx.fillRect(x0 + (i + .2) * w / n, by - (6 + ins * 54), w / n * .6, 6 + ins * 54);
     }
     const ti = s.L[s.itemsLine ?? 1] ?? L0 + 3;
     (s.items || []).forEach((it, i) => {
@@ -414,9 +470,11 @@ SCENES.statement = {
     }
     (s.bullets || []).forEach((b, i) => {
       const tb = b.line != null ? s.L[b.line] : L0 + .6 + i * .5, a = prog(lt, tb, tb + .4);
-      const txt = typeof b === 'string' ? b : b.text, y = (s.title ? 1000 : 760) + i * 70;
-      ruby(96, y - 9, 9, a, .7); text(txt, 126, y, { font: '400 30px Mono', color: C.ink, spacing: 1, alpha: a });
+      const txt = typeof b === 'string' ? b : b.text, y = (s.title ? 960 : 760) + i * 96;
+      if (C.sans) { check(104, y - 12, 40, C.gold, a); text(txt, 150, y, { font: '400 38px Mono', color: C.ink, alpha: a }); }
+      else { ruby(96, y - 9, 9, a, .7); text(txt, 126, y, { font: '400 30px Mono', color: C.ink, spacing: 1, alpha: a }); }
     });
+    if (s.bowls) s.bowls.forEach((b, i) => bowl(300 + i * 480, 980, 340, b.n, b.red ? C.red : C.gold, b.label, prog(lt, L0 + i * .5, L0 + .4 + i * .5), lt - L0 - i * .5));
     if (s.source) source(s.source);
   },
   events(s) { return (s.bullets || []).map((b, i) => ({ t: b.line != null ? s.L[b.line] : s.L[0] + .6 + i * .5, f: 900, a: .12, d: .06 })); }
@@ -428,7 +486,7 @@ SCENES.close = {
     const x0 = 130, w = 860, y0 = 760, h = 300, Y = chart(x0, y0, w, h, 50, 210);
     const f = hh => 100 + 10 * Math.sin(hh * 1.3 + lt * .8) + 6 * Math.sin(hh * 3.1);
     strokeCurve(f, x0, w, 0, 24, Y, lerp(0, 24, ease(prog(lt, 0, 2.2))), () => C.gold, 4);
-    text(s.title || 'ARALIKTA KAL', 540, 600, { font: '500 64px Mono', color: C.gold, align: 'center', spacing: 4, alpha: prog(lt, .4, 1), glow: 'rgba(200,176,122,.6)' });
+    text(s.title || 'ARALIKTA KAL', 540, 600, { font: '500 64px Mono', color: C.gold, align: 'center', spacing: 4, alpha: prog(lt, .4, 1), glow: `rgba(${C.gRGB},.6)` });
     const d = s.disclaimer || ['BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR', 'TEDAVİ İÇİN DOKTORUNUZA DANIŞIN'];
     d.forEach((l, i) => small(l, 540, 1225 + i * 33, { align: 'center' }));
   },
@@ -458,11 +516,14 @@ function drawLogo(cx, cy, R, lt) {
   ctx.save(); ctx.globalAlpha *= a0;
   ctx.translate(cx, cy); ctx.scale(sc, sc); ctx.translate(-cx, -cy);
   ctx.shadowColor = 'rgba(0,0,0,.55)'; ctx.shadowBlur = 60; ctx.shadowOffsetY = 18;
-  ctx.fillStyle = LOGO.cream; ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
+  if (C.badge) {
+    ctx.fillStyle = LOGO.cream; ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
+    ctx.shadowColor = 'transparent';
+    const vg = ctx.createRadialGradient(cx - R * .3, cy - R * .4, R * .1, cx, cy, R);
+    vg.addColorStop(0, 'rgba(255,255,255,.35)'); vg.addColorStop(1, 'rgba(200,190,175,.18)');
+    ctx.fillStyle = vg; ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
+  }
   ctx.shadowColor = 'transparent';
-  const vg = ctx.createRadialGradient(cx - R * .3, cy - R * .4, R * .1, cx, cy, R);
-  vg.addColorStop(0, 'rgba(255,255,255,.35)'); vg.addColorStop(1, 'rgba(200,190,175,.18)');
-  ctx.fillStyle = vg; ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
   // serif G
   text('G', ...P(-17, -26), { font: `400 ${Math.round(178 * k)}px Serif`, color: LOGO.ink, align: 'center', alpha: easeOut(prog(lt, 1.0, 1.6)) });
   // dotted arc from top of G to the ring
@@ -516,15 +577,15 @@ function drawEndcard(lt) {
   const cta = Object.assign({}, CTA_DEFAULT, EP.cta || {});
   const rows = [
     { k: 'save', txt: cta.save, t: 2.5, size: 56, font: '400 40px Jost', color: C.gold, txtColor: C.ink },
-    { k: 'comment', txt: cta.comment, t: 3.1, size: 42, font: '300 34px Jost', color: C.gray, txtColor: '#BDB8AF' },
-    { k: 'share', txt: cta.share, t: 3.6, size: 42, font: '300 34px Jost', color: C.gray, txtColor: '#BDB8AF' }
+    { k: 'comment', txt: cta.comment, t: 3.1, size: 42, font: '300 34px Jost', color: C.gray, txtColor: C.gray2 },
+    { k: 'share', txt: cta.share, t: 3.6, size: 42, font: '300 34px Jost', color: C.gray, txtColor: C.gray2 }
   ];
   let y = 1215;
   rows.forEach((r, i) => {
     const a = easeOut(prog(lt, r.t, r.t + .5)), dx = (1 - a) * 20;
     ctx.save(); ctx.globalAlpha *= a;
     if (i === 0) { // highlighted pill for the main CTA
-      ctx.fillStyle = 'rgba(200,176,122,0.10)'; ctx.strokeStyle = 'rgba(200,176,122,0.45)'; ctx.lineWidth = 2;
+      ctx.fillStyle = `rgba(${C.gRGB},0.10)`; ctx.strokeStyle = `rgba(${C.gRGB},0.45)`; ctx.lineWidth = 2;
       roundRect(120, y - 58, 840, 104, 52); ctx.fill(); ctx.stroke();
       if (lt > r.t + .6) { const b = .5 + .5 * Math.sin((lt - r.t) * 4); icon('save', 200, y - 6, r.size * (1 + .05 * b), C.gold); }
       else icon('save', 200, y - 6, r.size, C.gold);
@@ -543,6 +604,7 @@ function drawEndcard(lt) {
 let EP = null, TL = null;
 function setup(episode, timing) {
   EP = episode;
+  Object.assign(C, THEMES[episode.theme || 'krem']);
   const endStart = timing.lines[timing.lines.length - 1].end + 0.9;
   TL = { total: endStart + ENDCARD_DUR, endStart, scenes: [], captions: [] };
   let li = 0;
@@ -568,11 +630,60 @@ function setup(episode, timing) {
   TL.captions.forEach((c, i) => { c.end = i + 1 < TL.captions.length ? TL.captions[i + 1].start : TL.endStart + .2; });
   return { scenes: TL.scenes.length, captions: TL.captions.length, total: TL.total };
 }
+function leaf(x, y, len, wid, ang, c1, c2) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(ang);
+  const g = ctx.createLinearGradient(0, -wid, 0, wid); g.addColorStop(0, c1); g.addColorStop(1, c2);
+  ctx.fillStyle = g; ctx.beginPath(); ctx.moveTo(0, 0);
+  ctx.bezierCurveTo(len * .3, -wid, len * .75, -wid * .8, len, 0); ctx.bezierCurveTo(len * .75, wid * .8, len * .3, wid, 0, 0); ctx.fill();
+  ctx.strokeStyle = 'rgba(40,50,25,.25)'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(4, 0); ctx.lineTo(len * .92, 0); ctx.stroke();
+  ctx.restore();
+}
+function branch(x0, y0, x1, y1, n, t, scale = 1, flip = 1, shade = 0) {
+  const sw = Math.sin(t * .55) * .025;
+  ctx.save(); ctx.translate(x0, y0); ctx.rotate(sw); ctx.translate(-x0, -y0);
+  const cx = (x0 + x1) / 2 + 40 * flip, cy = (y0 + y1) / 2 - 60;
+  ctx.strokeStyle = shade ? 'rgba(60,55,40,1)' : '#6A6A45'; ctx.lineWidth = 3 * scale;
+  ctx.beginPath(); ctx.moveTo(x0, y0); ctx.quadraticCurveTo(cx, cy, x1, y1); ctx.stroke();
+  for (let i = 1; i <= n; i++) {
+    const u = i / (n + 1), px = (1 - u) ** 2 * x0 + 2 * (1 - u) * u * cx + u * u * x1, py = (1 - u) ** 2 * y0 + 2 * (1 - u) * u * cy + u * u * y1;
+    const tx = 2 * (1 - u) * (cx - x0) + 2 * u * (x1 - cx), ty = 2 * (1 - u) * (cy - y0) + 2 * u * (y1 - cy), base = Math.atan2(ty, tx);
+    const side = i % 2 ? 1 : -1, flutter = Math.sin(t * 1.3 + i) * .05;
+    const c1 = shade ? 'rgba(60,55,40,1)' : (i % 3 ? '#8A9668' : '#9AA578'), c2 = shade ? 'rgba(60,55,40,1)' : (i % 3 ? '#56623C' : '#64703F');
+    leaf(px, py, (120 - i * 4) * scale, 24 * scale, base + side * (.75 + flutter), c1, c2);
+  }
+  leaf(x1, y1, 110 * scale, 22 * scale, Math.atan2(y1 - cy, x1 - cx) + Math.sin(t) * .04, shade ? 'rgba(60,55,40,1)' : '#8A9668', shade ? 'rgba(60,55,40,1)' : '#56623C');
+  ctx.restore();
+}
+function decor(t) {
+  const g0 = ctx.createRadialGradient(540, 800, 100, 540, 900, 1200);
+  g0.addColorStop(0, 'rgba(255,255,255,.45)'); g0.addColorStop(1, 'rgba(190,175,150,.25)'); ctx.fillStyle = g0; ctx.fillRect(0, 0, W, H);
+  // leaf shadow cast across the top-right (blurred once into an offscreen layer, then drifted)
+  if (!decor.shadow) {
+    const oc = document.createElement('canvas'); oc.width = W; oc.height = 900;
+    const o = oc.getContext('2d'), keep = ctx; o.filter = 'blur(12px)';
+    ctx = o; branch(1180, 80, 640, 520, 7, 0, 1.5, -1, 1); ctx = keep;
+    decor.shadow = oc;
+  }
+  ctx.save(); ctx.globalAlpha *= .07; ctx.drawImage(decor.shadow, Math.sin(t * .3) * 14, 0); ctx.restore();
+  // terracotta sun
+  ctx.save(); ctx.globalAlpha *= .92; ctx.fillStyle = '#E2875F'; ctx.beginPath(); ctx.arc(905, 205, 78, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+  // branch from the top-left corner
+  branch(-30, 70, 330, 300, 7, t, .95, 1);
+  // hills at the bottom (behind Instagram's caption area)
+  const d = Math.sin(t * .2) * 12;
+  ctx.fillStyle = 'rgba(176,184,150,.75)'; ctx.beginPath(); ctx.moveTo(0, 1640 + d);
+  ctx.bezierCurveTo(260, 1560 + d, 520, 1700, 760, 1640); ctx.bezierCurveTo(900, 1600, 1000, 1580, 1080, 1600); ctx.lineTo(1080, H); ctx.lineTo(0, H); ctx.fill();
+  ctx.fillStyle = 'rgba(88,99,64,.92)'; ctx.beginPath(); ctx.moveTo(380, H);
+  ctx.bezierCurveTo(560, 1820, 700, 1700 - d, 1080, 1680 - d); ctx.lineTo(1080, H); ctx.fill();
+}
 function background() {
-  ctx.globalAlpha = 1; ctx.shadowBlur = 0;
+  ctx.globalAlpha = 1; ctx.shadowBlur = 0; ctx.filter = 'none';
   ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H);
-  const g = ctx.createRadialGradient(540, 900, 50, 540, 900, 900);
-  g.addColorStop(0, 'rgba(40,36,30,0.35)'); g.addColorStop(1, 'rgba(0,0,0,0)'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  if (C.decor) decor(background.t || 0);
+  else {
+    const g = ctx.createRadialGradient(540, 900, 50, 540, 900, 900);
+    g.addColorStop(0, 'rgba(40,36,30,0.35)'); g.addColorStop(1, 'rgba(0,0,0,0)'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  }
   const ba = TL && TL.endStart != null && background.t != null ? 1 - prog(background.t, TL.endStart - .2, TL.endStart + .3) : 1;
   text(EP.brand || 'GLİKOZ GÜNLÜĞÜM', 1008, 345, { font: '400 26px Jost', color: C.brand, align: 'right', spacing: 4, alpha: ba });
   if (EP.id) text('#' + EP.id, 1008, 380, { font: '400 20px Mono', color: C.grayDim, align: 'right', spacing: 2, alpha: ba });
@@ -582,6 +693,11 @@ function drawCaptions(t) {
     const a = fadeWin(t, c.start, c.end, .25); if (a <= 0) continue;
     const font = '300 50px Jost', lines = wrapLines(c.text, font, 860), lh = 66, y0 = 1385 - (lines.length - 1) * lh / 2;
     const dy = (1 - easeOut(prog(t, c.start, c.start + .4))) * 14;
+    if (C.capBox) {
+      const wmax = Math.max(...lines.map(l => measure(l, font)));
+      ctx.save(); ctx.globalAlpha *= a * .86; ctx.fillStyle = '#FFFFFF'; ctx.shadowColor = 'rgba(80,70,50,.12)'; ctx.shadowBlur = 24;
+      roundRect(540 - wmax / 2 - 36, y0 - 56 + dy, wmax + 72, (lines.length - 1) * lh + 84, 26); ctx.fill(); ctx.restore();
+    }
     lines.forEach((l, i) => text(l, 540, y0 + i * lh + dy, { font, color: C.ink, align: 'center', alpha: a }));
   }
 }
@@ -594,7 +710,7 @@ function render(t) {
   });
   drawCaptions(t);
   if (t > TL.endStart - .3) { ctx.save(); ctx.globalAlpha = fadeWin(t, TL.endStart, TL.total + 5, .4); drawEndcard(t - TL.endStart); ctx.restore(); }
-  if (t > TL.total - .5) { ctx.save(); ctx.globalAlpha = prog(t, TL.total - .5, TL.total); ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H); ctx.restore(); }
+  if (t > TL.total - .5) { ctx.save(); ctx.globalAlpha = prog(t, TL.total - .5, TL.total); ctx.fillStyle = C.fade; ctx.fillRect(0, 0, W, H); ctx.restore(); }
 }
 function audioEvents() {
   const ev = [];
@@ -615,9 +731,9 @@ function renderCover() {
   strokeCurve(f, x0, w, 0, 24, Y, 24, gcol(140), 5);
   const t = EP.coverTitle || EP.title, font = '500 92px Mono', lines = wrapLines(t.toLocaleUpperCase('tr-TR'), font, 900);
   const y0 = 820 - (lines.length - 1) * 55;
-  lines.forEach((l, i) => text(l, 540, y0 + i * 110, { font, color: C.gold, align: 'center', glow: 'rgba(200,176,122,.4)' }));
+  lines.forEach((l, i) => text(l, 540, y0 + i * 110, { font, color: C.gold, align: 'center', glow: `rgba(${C.gRGB},.4)` }));
   if (EP.coverSub) text(EP.coverSub, 540, y0 + lines.length * 110 + 30, { font: '300 46px Jost', color: C.ink, align: 'center' });
 }
 window.setup = setup; window.render = render; window.audioEvents = audioEvents; window.renderCover = renderCover;
 window.getTotal = () => TL.total;
-window.ready = Promise.all(['500 150px Mono', '400 30px Mono', '300 50px Jost', '400 26px Jost', '400 40px Jost', '400 100px Serif', '500 60px Sans', '400 20px Sans'].map(f => document.fonts.load(f, 'AİŞĞÜÇÖıa1')));
+window.ready = Promise.all(['800 150px Sans', '700 48px Sans', '600 28px Sans', '500 20px Sans', '500 150px Mono', '400 30px Mono', '300 50px Jost', '400 26px Jost', '400 40px Jost', '400 100px Serif', '500 60px Sans', '400 20px Sans'].map(f => document.fonts.load(f, 'AİŞĞÜÇÖıa1')));

@@ -29,5 +29,5 @@ Instagram hesabı ve marka: **Glikoz Günlüğüm** (logodaki gibi). Dil: Türk�
 
 ## Kurallar
 - `RULES.md` içeriği bağlayıcıdır (sağlık içeriği kuralları dahil).
-- Tasarım dili sabittir: siyah zemin, altın #C8B07A, yakut #E0344F, IBM Plex Mono etiketler, Jost altyazı. Yeni sahne tipi eklersen `docs/SCENES.md`'yi güncelle ve `DECISIONS.md`'ye yaz.
+- Varsayılan tema **krem** (hesabın feed diliyle uyumlu): krem zemin, zeytin dalı + yeşil tepeler + kiremit güneş dekoru, koyu zeytin vurgu #4E5B34, kiremit #D2643F (yüksek/kötü), kalın Inter yazı, beyaz kutulu altyazı, UI tık sesi yok (müzik Instagram'da eklenir). `"theme": "dark"` eski siyah-altın temayı seçer (#C8B07A / #E0344F, IBM Plex Mono, Jost). Yeni sahne tipi eklersen `docs/SCENES.md`'yi güncelle ve `DECISIONS.md`'ye yaz.
 - Kurulum: `pip install --break-system-packages -r requirements.txt` (Chromium/Playwright ve ffmpeg gerekli; `playwright install` çalıştırma, ortamda hazır).

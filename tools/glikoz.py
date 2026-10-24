@@ -68,7 +68,10 @@ def estimate_timing(e):
     return {'total': round(t + TAIL, 3), 'lines': lines, 'estimated': True}
 
 
-def detect_onsets(mp3, n):
+def detect_onsets(mp3, n, expected=None):
+    """Split the voice into n lines at pauses. With `expected` (relative line lengths, e.g. character
+    counts) a dynamic programme picks the pause set whose line durations best match the text, preferring
+    longer pauses; without it the n-1 longest pauses are used."""
     SR = 16000
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', str(mp3), '-ac', '1', '-ar', str(SR), '-f', 's16le', '-'],
                          capture_output=True, check=True).stdout
@@ -84,12 +87,39 @@ def detect_onsets(mp3, n):
         if not voiced[i]:
             j = i
             while j < last and not voiced[j]: j += 1
-            if j - i >= 12: gaps.append((i, j))
+            if j - i >= 10: gaps.append((i, j))
             i = j
         else: i += 1
     if len(gaps) < n - 1:
         sys.exit(f'only {len(gaps)} pauses found for {n} lines — check that voice text matches episode lines')
-    chosen = sorted(sorted(gaps, key=lambda g: g[0] - g[1])[:n - 1])  # longest n-1 pauses, in time order
+    if expected:
+        E = np.array(expected, float); E = E / E.sum() * (last - first - sum(g[1] - g[0] for g in gaps) * 0.6)
+        G = len(gaps); INF = 1e18
+        # bounds: index -1 = start, G = end
+        def seg_cost(a_end, b_start, k):   # line k spans from a_end to b_start (frames)
+            d = b_start - a_end; e = E[k]
+            return ((d - e) / max(e, 40)) ** 2
+        dp = np.full((n, G + 1), INF); back = np.full((n, G + 1), -1, int)
+        for g in range(G):  # first line ends at gap g
+            dp[0][g] = seg_cost(first, gaps[g][0], 0) - 0.04 * (gaps[g][1] - gaps[g][0])
+        for k in range(1, n - 1):
+            for g in range(k, G):
+                best, arg = INF, -1
+                for h in range(k - 1, g):
+                    if dp[k - 1][h] >= INF: continue
+                    c = dp[k - 1][h] + seg_cost(gaps[h][1], gaps[g][0], k) - 0.04 * (gaps[g][1] - gaps[g][0])
+                    if c < best: best, arg = c, h
+                dp[k][g], back[k][g] = best, arg
+        best, arg = INF, -1
+        for h in range(n - 2, G):
+            if dp[n - 2][h] >= INF: continue
+            c = dp[n - 2][h] + seg_cost(gaps[h][1], last, n - 1)
+            if c < best: best, arg = c, h
+        idx = [arg]
+        for k in range(n - 2, 0, -1): idx.append(back[k][idx[-1]])
+        chosen = [gaps[i] for i in sorted(idx)]
+    else:
+        chosen = sorted(sorted(gaps, key=lambda g: g[0] - g[1])[:n - 1])  # longest n-1 pauses, in time order
     starts = [first] + [g[1] for g in chosen]
     ends = [g[0] for g in chosen] + [last]
     report = [{'start': s / 100, 'end': e / 100} for s, e in zip(starts, ends)]
@@ -102,7 +132,7 @@ def cmd_align(ep, mp3=None):
     e = load(ep); n = len(spoken_lines(e))
     src = pathlib.Path(mp3) if mp3 else ep / 'voice.mp3'
     if src.resolve() != (ep / 'voice.mp3').resolve(): shutil.copy(src, ep / 'voice.mp3')
-    lines, dur, shortest, left = detect_onsets(ep / 'voice.mp3', n)
+    lines, dur, shortest, left = detect_onsets(ep / 'voice.mp3', n, [len(l['say']) + 6 for l in spoken_lines(e)])
     timing = {'voice_offset': VOICE_OFFSET, 'voice_duration': round(dur, 3),
               'lines': [{'start': round(l['start'] + VOICE_OFFSET, 3), 'end': round(l['end'] + VOICE_OFFSET, 3)} for l in lines]}
     timing['total'] = round(timing['lines'][-1]['end'] + TAIL, 3)
@@ -110,8 +140,10 @@ def cmd_align(ep, mp3=None):
     for k, (l, s) in enumerate(zip(timing['lines'], spoken_lines(e))):
         print(f"{k + 1:2d} {l['start']:6.2f}-{l['end']:6.2f}  {s['say'][:60]}")
     print(f'lines={n} total={timing["total"]}s  shortest chosen pause={shortest:.2f}s  longest unused pauses={left}')
-    if left and shortest and left[0] > shortest * .9:
-        print('WARNING: an unused pause is almost as long as a chosen one — verify alignment on the contact sheet')
+    tl = timing['lines']; sl = spoken_lines(e)
+    rates = [len(s['say']) / max(.1, l['end'] - l['start']) for l, s in zip(tl, sl)]
+    odd = [k + 1 for k, r in enumerate(rates) if r > 30 or r < 7]
+    if odd: print(f'WARNING: implausible speech rate on lines {odd} — verify alignment on the contact sheet')
 
 
 async def _browser_job(e, timing, job):
@@ -134,7 +166,7 @@ def contact_sheet(e, timing, out_png, from_video=None):
     from PIL import Image
     caps = [l['text'] for l in spoken_lines(e)]
     times = [(l['start'] + l['end']) / 2 for l in timing['lines']]
-    if timing.get('total'): times.append(timing['total'] - 1.0)  # end card
+    times.append(timing['lines'][-1]['end'] + 0.9 + 4.6)  # end card
     tmp = out_png.parent / '_cs'; tmp.mkdir(exist_ok=True)
     if from_video:
         for i, t in enumerate(times):
@@ -199,11 +231,13 @@ def cmd_render(ep, workers=6):
         await asyncio.gather(*(work(k, pg) for k, pg in enumerate(pgs)))
         return evs
     evs = asyncio.run(_browser_job(e, timing, job))
+    krem = e.get('theme', 'krem') == 'krem'
+    if krem: evs = []  # calm theme: no UI ticks; music is added in Instagram
     ambient(evs, timing['total'], out / 'ambient.wav')
     delay = int(timing['voice_offset'] * 1000)
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-framerate', str(FPS), '-i', str(frames / '%05d.jpg'),
                     '-i', str(out / 'ambient.wav'), '-i', str(ep / 'voice.mp3'), '-filter_complex',
-                    f'[1:a]volume=0.45[amb];[2:a]adelay={delay}|{delay}[v];[amb][v]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[a]',
+                    f'[1:a]volume={0.22 if krem else 0.45}[amb];[2:a]adelay={delay}|{delay}[v];[amb][v]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[a]',
                     '-map', '0:v', '-map', '[a]', '-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-pix_fmt', 'yuv420p',
                     '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', str(out / 'reels.mp4')], check=True)
     shutil.rmtree(frames)

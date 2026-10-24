@@ -1,0 +1,206 @@
+{
+  "id": "003",
+  "slug": "lif-bulgur",
+  "title": "Pilav mı, bulgur mu? Lif ve kan şekeri",
+  "theme": "krem",
+  "coverTitle": "Pilav mı, bulgur mu?",
+  "coverSub": "Kan şekeri ve lif",
+  "date": "2026-10-24",
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "scenes": [
+    {
+      "type": "dots",
+      "shape": "bean",
+      "total": 29,
+      "highlight": 25,
+      "cols": 6,
+      "big": "25–29",
+      "unit": "g",
+      "label": "GÜNLÜK LİF HEDEFİ · LANCET 2019",
+      "source": "REYNOLDS ve ark. · LANCET 2019 · 185 GÖZLEMSEL ÇALIŞMA + 58 DENEY",
+      "lines": [
+        "Kan şekerinin en sessiz yardımcısı: lif.",
+        {
+          "text": "Büyük bir analize göre günde en az 25 ile 29 gram lif hedeflenmeli.",
+          "say": "Büyük bir analize göre günde en az yirmi beş ile yirmi dokuz gram lif hedeflenmeli."
+        }
+      ]
+    },
+    {
+      "type": "bars",
+      "big": "−%16",
+      "label": "GÖRELİ RİSK · TİP 2 DİYABET (GÖZLEMSEL)",
+      "max": 110,
+      "items": [
+        {
+          "label": "EN AZ LİF YİYENLER",
+          "value": 100,
+          "red": true,
+          "line": 0
+        },
+        {
+          "label": "EN ÇOK LİF YİYENLER",
+          "value": 84,
+          "line": 0
+        }
+      ],
+      "source": "REYNOLDS ve ark. · LANCET 2019 · RR 0,84",
+      "lines": [
+        {
+          "text": "En çok lif yiyenlerde tip 2 diyabet riski, en az yiyenlere göre yüzde 16 daha düşük bulundu.",
+          "say": "En çok lif yiyenlerde tip iki diyabet riski, en az yiyenlere göre yüzde on altı daha düşük bulundu."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "big": "",
+      "label": "YEMEK SONRASI ŞEKER · TEMSİLİ",
+      "a": {
+        "amp": 100,
+        "label": "LİFSİZ ÖĞÜN"
+      },
+      "b": {
+        "amp": 66,
+        "label": "LİFLİ ÖĞÜN"
+      },
+      "xLabels": [
+        "0",
+        "30",
+        "60",
+        "90",
+        "120 dk"
+      ],
+      "source": "TEMSİLİ EĞRİ · ÇÖZÜNÜR LİF EMİLİMİ YAVAŞLATIR",
+      "lines": [
+        "Lif, bağırsakta şekerin emilimini yavaşlatır.",
+        "Böylece yemekten sonraki eğri daha yumuşak yükselir."
+      ]
+    },
+    {
+      "type": "bars",
+      "unit": "g",
+      "label": "LİF · 100 g PİŞMİŞ",
+      "max": 9,
+      "items": [
+        {
+          "label": "MERCİMEK",
+          "value": 7.9,
+          "dec": 1,
+          "line": 0
+        },
+        {
+          "label": "NOHUT",
+          "value": 7.6,
+          "dec": 1,
+          "line": 1
+        },
+        {
+          "label": "BULGUR",
+          "value": 4.5,
+          "dec": 1,
+          "line": 2
+        },
+        {
+          "label": "BEYAZ PİRİNÇ",
+          "value": 0.4,
+          "dec": 1,
+          "red": true,
+          "line": 2
+        }
+      ],
+      "source": "USDA FOODDATA CENTRAL · SR LEGACY",
+      "lines": [
+        {
+          "text": "Yüz gram pişmiş mercimekte yaklaşık 8 gram lif var.",
+          "say": "Yüz gram pişmiş mercimekte yaklaşık sekiz gram lif var."
+        },
+        "Nohut da neredeyse aynı.",
+        {
+          "text": "Bulgurda 4,5 gram, beyaz pirinçte ise yarım gram bile yok.",
+          "say": "Bulgurda dört buçuk gram, beyaz pirinçte ise yarım gram bile yok."
+        }
+      ]
+    },
+    {
+      "type": "statement",
+      "big": "×11",
+      "label": "BULGUR vs BEYAZ PİRİNÇ · LİF",
+      "bowls": [
+        {
+          "n": 45,
+          "label": "BULGUR · 4,5 g"
+        },
+        {
+          "n": 4,
+          "label": "PİRİNÇ · 0,4 g",
+          "red": true
+        }
+      ],
+      "source": "USDA · 4,5 g / 0,4 g",
+      "lines": [
+        "Yani pilavı bulgurla değiştirmek, lifi on kattan fazla artırır."
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "3 KURAL",
+      "title": "Lifi tabağa taşı",
+      "bullets": [
+        {
+          "text": "Meyveyi kabuğuyla ye",
+          "line": 0
+        },
+        {
+          "text": "Her gün baklagil ya da tam tahıl",
+          "line": 1
+        },
+        {
+          "text": "Yavaş artır, bol su iç",
+          "line": 2
+        }
+      ],
+      "lines": [
+        "Meyveyi kabuğuyla ye.",
+        "Her gün bir öğüne baklagil ya da tam tahıl ekle.",
+        "Lifi yavaş yavaş artır ve bol su iç."
+      ]
+    },
+    {
+      "type": "close",
+      "title": "ARALIKTA KAL",
+      "disclaimer": [
+        "BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR",
+        "BESLENMENİ DEĞİŞTİRMEDEN ÖNCE DOKTORUNA DANIŞ"
+      ],
+      "lines": [
+        "Lif, tabağındaki en ucuz kan şekeri desteği.",
+        "Bugün bir kase baklagille başla."
+      ]
+    }
+  ],
+  "cta": {
+    "save": "Kaydet: market listesine lazım olacak.",
+    "comment": "Senin favori baklagil yemeğin hangisi?",
+    "share": "Pilavsız yapamayan birine gönder."
+  },
+  "caption": "Pilav mı, bulgur mu? 🌾\nLif, şekerin kana geçişini yavaşlatır. Lancet'teki büyük analize göre günde 25–29 gram hedeflenmeli; en çok lif yiyenlerde tip 2 diyabet riski %16 daha düşük bulundu (gözlemsel veri). 100 g pişmiş bulgurda 4,5 g lif var, beyaz pirinçte 0,4 g.",
+  "sources": [
+    "Reynolds A. ve ark., Carbohydrate quality and human health, Lancet 2019",
+    "USDA FoodData Central (SR Legacy): mercimek 175254, nohut, bulgur 170287, beyaz pirinç"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#kanşekeri",
+    "#lif",
+    "#bulgur",
+    "#insülindirenci",
+    "#diyabet",
+    "#sağlıklıbeslenme"
+  ],
+  "notes": "Risk oranı gözlemsel; metinde 'bulundu' dili korunuyor. ×11 = 4,5/0,4."
+}
