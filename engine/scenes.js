@@ -571,9 +571,21 @@ function icon(kind, x, y, s, color) {
   }
   ctx.stroke(); ctx.restore();
 }
+const LOGO_IMG = new Image();
+if (window.LOGO_SRC) LOGO_IMG.src = window.LOGO_SRC;
+function logoBadge(cx, cy, r, shadow = 1) { // the real logo artwork (cream disc), drawn as a badge
+  if (!LOGO_IMG.complete || !LOGO_IMG.naturalWidth) { drawLogo(cx, cy, r, 10); return; }
+  ctx.save();
+  ctx.shadowColor = `rgba(60,50,30,${.22 * shadow})`; ctx.shadowBlur = r * .25; ctx.shadowOffsetY = r * .06;
+  ctx.drawImage(LOGO_IMG, cx - r, cy - r, r * 2, r * 2);
+  ctx.restore();
+}
 function drawEndcard(lt) {
   const R = 300, cx = 540, cy = 780;
-  drawLogo(cx, cy, R, lt);
+  const a0 = easeOut(prog(lt, 0, .7)), sc = .9 + .1 * a0;
+  ctx.save(); ctx.globalAlpha *= a0; logoBadge(cx, cy, R * sc, 1); ctx.restore();
+  const pp = prog(lt, .9, 1.9);   // one soft ring pulse around the badge
+  if (pp > 0 && pp < 1) { ctx.save(); ctx.strokeStyle = `rgba(94,107,59,${(1 - pp) * .45})`; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(cx, cy, R + 10 + pp * 60, 0, Math.PI * 2); ctx.stroke(); ctx.restore(); }
   const cta = Object.assign({}, CTA_DEFAULT, EP.cta || {});
   const rows = [
     { k: 'save', txt: cta.save, t: 2.5, size: 56, font: '400 40px Jost', color: C.gold, txtColor: C.ink },
@@ -666,7 +678,7 @@ function decor(t) {
   }
   ctx.save(); ctx.globalAlpha *= .07; ctx.drawImage(decor.shadow, Math.sin(t * .3) * 14, 0); ctx.restore();
   // terracotta sun
-  ctx.save(); ctx.globalAlpha *= .92; ctx.fillStyle = '#E2875F'; ctx.beginPath(); ctx.arc(905, 205, 78, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+  ctx.save(); ctx.globalAlpha *= .92; ctx.fillStyle = '#E2875F'; ctx.beginPath(); ctx.arc(820, 175, 70, 0, Math.PI * 2); ctx.fill(); ctx.restore();
   // branch from the top-left corner
   branch(-30, 70, 330, 300, 7, t, .95, 1);
   // hills at the bottom (behind Instagram's caption area)
@@ -685,8 +697,8 @@ function background() {
     g.addColorStop(0, 'rgba(40,36,30,0.35)'); g.addColorStop(1, 'rgba(0,0,0,0)'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
   }
   const ba = TL && TL.endStart != null && background.t != null ? 1 - prog(background.t, TL.endStart - .2, TL.endStart + .3) : 1;
-  text(EP.brand || 'GLİKOZ GÜNLÜĞÜM', 1008, 345, { font: '400 26px Jost', color: C.brand, align: 'right', spacing: 4, alpha: ba });
-  if (EP.id) text('#' + EP.id, 1008, 380, { font: '400 20px Mono', color: C.grayDim, align: 'right', spacing: 2, alpha: ba });
+  if (ba > 0 && !background.noCorner) { ctx.save(); ctx.globalAlpha *= ba; logoBadge(940, 352, 72, .7); ctx.restore(); }
+  if (EP.id) text('#' + EP.id, 1012, 462, { font: '400 20px Mono', color: C.grayDim, align: 'right', spacing: 2, alpha: ba });
 }
 function drawCaptions(t) {
   for (const c of TL.captions) {
@@ -724,16 +736,17 @@ function audioEvents() {
   return ev;
 }
 function renderCover() {
-  background();
+  background.noCorner = true; background(); background.noCorner = false;
   // decorative day curve under the title
-  const x0 = 130, w = 820, Y = chart(x0, 1180, w, 240, 50, 210);
+  const x0 = 130, w = 820, Y = chart(x0, 1060, w, 220, 50, 210);
   const f = h => 92 + bump(h - 8, 40, .7) + bump(h - 13, 85, .55) + bump(h - 20, 48, .75) + 3 * Math.sin(h * 1.7);
   strokeCurve(f, x0, w, 0, 24, Y, 24, gcol(140), 5);
   const t = EP.coverTitle || EP.title, font = '500 92px Mono', lines = wrapLines(t.toLocaleUpperCase('tr-TR'), font, 900);
   const y0 = 820 - (lines.length - 1) * 55;
   lines.forEach((l, i) => text(l, 540, y0 + i * 110, { font, color: C.gold, align: 'center', glow: `rgba(${C.gRGB},.4)` }));
   if (EP.coverSub) text(EP.coverSub, 540, y0 + lines.length * 110 + 30, { font: '300 46px Jost', color: C.ink, align: 'center' });
+  logoBadge(540, 1490, 125, 1);
 }
 window.setup = setup; window.render = render; window.audioEvents = audioEvents; window.renderCover = renderCover;
 window.getTotal = () => TL.total;
-window.ready = Promise.all(['800 150px Sans', '700 48px Sans', '600 28px Sans', '500 20px Sans', '500 150px Mono', '400 30px Mono', '300 50px Jost', '400 26px Jost', '400 40px Jost', '400 100px Serif', '500 60px Sans', '400 20px Sans'].map(f => document.fonts.load(f, 'AİŞĞÜÇÖıa1')));
+window.ready = Promise.all([LOGO_IMG.decode ? LOGO_IMG.decode().catch(() => {}) : Promise.resolve(), Promise.all(['800 150px Sans', '700 48px Sans', '600 28px Sans', '500 20px Sans', '500 150px Mono', '400 30px Mono', '300 50px Jost', '400 26px Jost', '400 40px Jost', '400 100px Serif', '500 60px Sans', '400 20px Sans'].map(f => document.fonts.load(f, 'AİŞĞÜÇÖıa1')))]);

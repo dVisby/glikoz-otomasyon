@@ -6,6 +6,7 @@
   python3 tools/glikoz.py preview <ep>               estimated timing, contact sheet only (no voice needed)
   python3 tools/glikoz.py align <ep> [voice.mp3]     detect sentence onsets in the voice -> timing.json
   python3 tools/glikoz.py render <ep>                frames + ambient + voice -> out/reels.mp4, kapak.jpg, aciklama.txt, contact.png
+  python3 tools/glikoz.py cover <ep>                 only re-draw out/kapak.jpg
 
 <ep> is the folder name under episodes/ (e.g. 001-seker-sensoru) or just its number (001).
 """
@@ -249,6 +250,15 @@ def cmd_render(ep, workers=6):
     print(out / 'reels.mp4', f'{timing["total"]:.1f}s')
 
 
+def cmd_cover(ep):
+    e = load(ep); tp = ep / 'timing.json'
+    timing = json.loads(tp.read_text()) if tp.exists() else estimate_timing(e)
+    (ep / 'out').mkdir(exist_ok=True)
+    async def job(page):
+        pg = await page(); await _grab(pg, 'renderCover()', ep / 'out' / 'kapak.jpg')
+    asyncio.run(_browser_job(e, timing, job)); print(ep / 'out' / 'kapak.jpg')
+
+
 if __name__ == '__main__':
     a = sys.argv[1:]
     if not a: print(__doc__); sys.exit()
@@ -258,4 +268,5 @@ if __name__ == '__main__':
     elif c == 'preview': cmd_preview(ep_dir(a[1]))
     elif c == 'align': cmd_align(ep_dir(a[1]), a[2] if len(a) > 2 else None)
     elif c == 'render': cmd_render(ep_dir(a[1]))
+    elif c == 'cover': cmd_cover(ep_dir(a[1]))
     else: print(__doc__)
