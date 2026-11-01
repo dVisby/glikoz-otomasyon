@@ -11,3 +11,4 @@
 - 2026-10-24 — Göreli risk insan ızgarasıyla gösterilmez (mutlak risk gibi okunur); göreli risk çubuk karşılaştırmasıyla verilir.
 - 2026-10-23 — Görsel dil referans Reels'ten: siyah zemin, altın vurgu, yakut kırmızı, mono etiketler, her sahnede kaynak satırı.
 - 2026-10-23 — Ses 60 sn'yi aşarsa yeniden üretmek yerine tam cümleler, cümle arası duraklamanın ortasından çıkarılabilir (hız/ton değişmez). Cümle aralıkları kısaysa hizalama ElevenLabs Scribe kelime zaman damgalarıyla yapılır.
+- 2026-11-01 — Sunucu karakter Ceren (tamamen yapay zekâ; gerçek kişi değil): FLUX LoRA (ceren_v1, güç 0,8, guidance 2,0, yüz tarifiyle) + InfiniteTalk 480p (audio_scale 0,5), ses AURA VOX. Hook (≈8–12 sn) ve kapanış Ceren, orta kısım kaynaklı animasyon sahneleri. Hesapta 'AI ile oluşturuldu' etiketi ve açıklamada not. Tek GPU oturumunda toplu üretim; pod her zaman Terminate edilir.

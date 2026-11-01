@@ -1,0 +1,179 @@
+{
+  "id": "004",
+  "slug": "yemek-sonrasi-seker",
+  "title": "Yemekten sonra kan şekeri neden yükselir?",
+  "coverTitle": "Yemekten sonra şeker neden yükselir?",
+  "coverSub": "Eğriyi yumuşatmanın 3 yolu",
+  "date": "2026-11-01",
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "scenes": [
+    {
+      "type": "statement",
+      "big": "?",
+      "label": "YEMEKTEN SONRA",
+      "title": "KAN ŞEKERİ NEDEN YÜKSELİR?",
+      "host": true,
+      "lines": [
+        "Yemekten sonra kan şekerin neden yükselir?",
+        "Kanıtı olan yumuşatma yollarını anlatıyorum."
+      ]
+    },
+    {
+      "type": "day",
+      "label": "mg/dL · YEMEK SONRASI · TEMSİLİ",
+      "source": "TEMSİLİ EĞRİ · NIDDK",
+      "meals": [
+        {
+          "h": 13,
+          "amp": 55,
+          "tau": 0.8,
+          "label": "ÖĞÜN"
+        }
+      ],
+      "lines": [
+        "Glikoz yiyeceklerden gelir ve kana geçer.",
+        "İnsülin, glikozun hücrelere girmesine yardım eder."
+      ]
+    },
+    {
+      "type": "statement",
+      "big": "<180",
+      "unit": "mg/dL",
+      "label": "ADA · YEMEK SONRASI TEPE DEĞER HEDEFİ",
+      "title": "DİYABETLİ YETİŞKİNLER",
+      "source": "ADA · STANDARDS OF CARE 2023 · ÖĞÜN BAŞLANGICINDAN 1–2 SAAT SONRA",
+      "lines": [
+        {
+          "text": "ADA, diyabetli yetişkinlerde yemek sonrası tepe şekeri için 180 mg/dL altını hedefliyor.",
+          "say": "ADA, diyabetli yetişkinlerde yemek sonrası tepe şekeri için yüz seksen miligram desilitrenin altını hedefliyor."
+        }
+      ]
+    },
+    {
+      "type": "bars",
+      "big": "−%12",
+      "label": "YEMEK SONRASI ŞEKER · TİP 2 DİYABET",
+      "max": 110,
+      "items": [
+        {
+          "label": "GÜNDE TEK 30 DK YÜRÜYÜŞ",
+          "value": 100,
+          "red": true,
+          "line": 1
+        },
+        {
+          "label": "HER ÖĞÜNDEN SONRA 10 DK",
+          "value": 88,
+          "line": 1
+        }
+      ],
+      "source": "REYNOLDS ve ark. · DIABETOLOGIA 2016 · TİP 2 DİYABETLİ 41 KİŞİ",
+      "lines": [
+        {
+          "text": "Tip 2 diyabetli 41 kişide her öğünden sonra 10 dakika yürüyüş denendi.",
+          "say": "Tip iki diyabetli kırk bir kişide her öğünden sonra on dakika yürüyüş denendi."
+        },
+        {
+          "text": "Günde tek 30 dakikalık yürüyüşe göre şeker ortalama yüzde 12 daha düşük kaldı.",
+          "say": "Günde tek otuz dakikalık yürüyüşe göre şeker ortalama yüzde on iki daha düşük kaldı."
+        }
+      ]
+    },
+    {
+      "type": "bars",
+      "big": "−%24",
+      "label": "5 SAATLİK ŞEKER ARTIŞI · FAZLA KİLOLU YETİŞKİNLER",
+      "max": 110,
+      "items": [
+        {
+          "label": "KESİNTİSİZ OTURMA",
+          "value": 100,
+          "red": true,
+          "line": 0
+        },
+        {
+          "label": "HER 20 DK'DA 2 DK HAFİF YÜRÜYÜŞ",
+          "value": 76,
+          "line": 0
+        }
+      ],
+      "source": "DUNSTAN ve ark. · DIABETES CARE 2012 · 19 KİŞİ · KISA DENEY",
+      "lines": [
+        {
+          "text": "Fazla kilolu 19 kişide, 2 dakikalık hafif yürüyüş molaları, oturmaya göre şeker artışını yüzde 24 azalttı.",
+          "say": "Fazla kilolu on dokuz kişide, iki dakikalık hafif yürüyüş molaları, kesintisiz oturmaya göre şeker artışını yüzde yirmi dört azalttı."
+        }
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "3 ADIM",
+      "title": "Eğriyi yumuşat",
+      "bullets": [
+        {
+          "text": "Yemekten sonra 10 dk yürü",
+          "line": 0
+        },
+        {
+          "text": "Uzun oturmayı hareketle böl",
+          "line": 1
+        },
+        {
+          "text": "Ölçerek kendi yanıtını öğren",
+          "line": 2
+        }
+      ],
+      "lines": [
+        "Yemekten sonra on dakika yürü.",
+        "Uzun oturmayı hareketle böl.",
+        "Ölçerek kendi yanıtını öğren."
+      ]
+    },
+    {
+      "type": "close",
+      "title": "ARALIKTA KAL",
+      "host": true,
+      "disclaimer": [
+        "BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR",
+        "HEDEFLER KİŞİYE GÖRE DEĞİŞİR · DOKTORUNA DANIŞ"
+      ],
+      "lines": [
+        "Hedefler kişiye göre değişir, doktoruna danış.",
+        "Bu akşam yemeğinden sonra on dakika dene."
+      ]
+    }
+  ],
+  "caption": "Yemekten sonra kan şekerin neden yükselir? 🌿\nGlikoz yiyeceklerden gelir; pankreasın salgıladığı insülin, glikozun hücrelere girmesine yardım eder. ADA, diyabetli yetişkinlerde yemek sonrası tepe değeri için 180 mg/dL altını hedefliyor (öğün başlangıcından 1–2 saat sonra). Tip 2 diyabetli 41 kişide her öğünden sonra 10 dakikalık yürüyüş, günde tek 30 dakikalık yürüyüşe göre yemek sonrası şekeri ortalama %12 daha düşük tuttu (akşam yemeğinden sonra %22). Fazla kilolu 19 yetişkinde her 20 dakikada 2 dakikalık hafif yürüyüş, 5 saatlik şeker artışını %24 azalttı (kısa deney). Bilgilendirme amaçlıdır; tıbbi tavsiye değildir. Hedefler kişiye göre değişir, doktoruna danış.\n🤖 Sunucu Ceren yapay zekâ ile oluşturulmuştur.",
+  "sources": [
+    "ADA, Standards of Care in Diabetes—2023, Glycemic Targets infographic (professional.diabetes.org): yemek sonrası tepe glikoz <180 mg/dL, öğün başlangıcından 1–2 saat sonra",
+    "Reynolds AN, Mann JI, Williams S ve ark., Diabetologia 2016, doi:10.1007/s00125-016-4085-2 (tip 2 diyabet, 41 kişi)",
+    "Dunstan DW ve ark., Breaking up prolonged sitting reduces postprandial glucose and insulin responses, Diabetes Care 2012 (PMID 22374636; 19 kişi)",
+    "NIDDK, What Is Diabetes? (glikoz yiyecekten gelir; insülin glikozun hücrelere girmesine yardım eder)"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#kanşekeri",
+    "#yemeksonrası",
+    "#yürüyüş",
+    "#diyabet",
+    "#insülindirenci",
+    "#sağlıklıyaşam"
+  ],
+  "notes": "Hook ve kapanış sunucu Ceren (AI) ile; ortası animasyonlu sahneler. Yürüyüş verisi Reynolds 2016: gün içinde tek 30 dk yürüyüşle karşılaştırma, ortalama %12, akşam %22. Dunstan 2012 kısa deney, diyabetsiz fazla kilolu/obez 19 kişi; %24 = 5 sa glukoz iAUC (hafif yürüyüş molası). ADA değeri 2023 infografiğinden; 2026 SoC bölüm 6 sayfası bu ortamda açılamadı, yayın öncesi yeniden doğrula. Yemek sırası (Shukla 2015) #001'de işlendiği için tekrarlanmadı.",
+  "theme": "krem",
+  "host": {
+    "name": "Ceren",
+    "note": "AI ile oluşturuldu",
+    "hook_scene": 0,
+    "close_scene": 6
+  },
+  "cta": {
+    "save": "Kaydet: yemekten sonra hatırlatıcı olarak lazım olacak.",
+    "comment": "Hangisi daha kolay: yürüyüş mü, mola mı?",
+    "share": "Yemekten sonra hemen oturan birine gönder."
+  }
+}
