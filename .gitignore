@@ -3,3 +3,4 @@ episodes/*/voice.mp3
 __pycache__/
 .DS_Store
 episodes/*/voice_full.mp3
+episodes/*/host/

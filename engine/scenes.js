@@ -640,6 +640,11 @@ function setup(episode, timing) {
     s.dur = s._end - s._start; s.L = s._lines.map(l => l.start - s._start);
   });
   TL.captions.forEach((c, i) => { c.end = i + 1 < TL.captions.length ? TL.captions[i + 1].start : TL.endStart + .2; });
+  // host clips (AI presenter video drawn behind captions): window = span of the listed scenes unless "end" is given
+  TL.host = ((episode.host && episode.host.clips) || []).map(c => {
+    const a = TL.scenes[c.scenes[0]], b = TL.scenes[c.scenes[c.scenes.length - 1]];
+    return Object.assign({}, c, { w0: c.start != null ? c.start : a._start, w1: c.end != null ? c.end : b._end, title: a.host ? a.title : null });
+  });
   return { scenes: TL.scenes.length, captions: TL.captions.length, total: TL.total };
 }
 function leaf(x, y, len, wid, ang, c1, c2) {
@@ -713,6 +718,44 @@ function drawCaptions(t) {
     lines.forEach((l, i) => text(l, 540, y0 + i * lh + dy, { font, color: C.ink, align: 'center', alpha: a }));
   }
 }
+
+// ---- HOST (AI presenter) ---------------------------------------------------
+let HOSTIMG = null;  // the video frame for the current t, set by the pipeline through setHost()
+function hostState(t) {
+  for (const c of (TL.host || [])) {
+    let a = fadeWin(t, c.w0, c.w1, .3); if (a <= 0) continue;
+    for (const [x, y] of (c.cutaways || [])) a *= 1 - fadeWin(t, x, y, .12);   // cut away to the animated scene
+    const idx = Math.max(0, Math.round((t - c.at) * 30));
+    return { c, a, frame: Math.min(idx, c.frames - 1) };
+  }
+  return null;
+}
+function hostNeed(t) { const h = hostState(t); return h ? { id: h.c.id, frame: h.frame } : null; }
+function setHost(url) {
+  return new Promise(res => { if (!url) { HOSTIMG = null; return res(); }
+    const im = new Image(); im.onload = () => { HOSTIMG = im; res(); }; im.onerror = () => { HOSTIMG = null; res(); }; im.src = url; });
+}
+function drawHost(t) {
+  const h = hostState(t); if (!h || !HOSTIMG) return;
+  const sc = H / HOSTIMG.height, dw = HOSTIMG.width * sc;
+  ctx.save(); ctx.globalAlpha = h.a; ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(HOSTIMG, (W - dw) / 2, 0, dw, H);
+  // soft top shade so the title pill and badge stay legible
+  const g = ctx.createLinearGradient(0, 0, 0, 520); g.addColorStop(0, 'rgba(0,0,0,.28)'); g.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, 520);
+  logoBadge(940, 352, 72, .7);
+  if (h.c.title) {
+    const f = '800 44px Sans', str = h.c.title.toLocaleUpperCase('tr-TR'), w = measure(str, f, 1) + 64;
+    ctx.save(); ctx.globalAlpha *= .9; ctx.fillStyle = '#FFFFFF'; roundRect(540 - w / 2, 1120, w, 84, 24); ctx.fill(); ctx.restore();
+    text(str, 540, 1178, { font: f, color: C.ink, align: 'center', spacing: 1 });
+  }
+  if (EP.host && EP.host.note) {
+    const f = '600 26px Sans', str = EP.host.note, w = measure(str, f) + 40;
+    ctx.save(); ctx.globalAlpha *= .8; ctx.fillStyle = 'rgba(30,30,25,.55)'; roundRect(48, 330, w, 46, 23); ctx.fill(); ctx.restore();
+    text(str, 68, 363, { font: f, color: '#FFFFFF' });
+  }
+  ctx.restore();
+}
 function render(t) {
   background.t = t; background();
   TL.scenes.forEach((s, i) => {
@@ -720,6 +763,7 @@ function render(t) {
     const a = fadeWin(t, s._start, s._end, isLast ? .8 : .45); if (a <= 0) return;
     ctx.save(); ctx.globalAlpha = a; SCENES[s.type].draw(s, t - s._start, a); ctx.restore();
   });
+  drawHost(t);
   drawCaptions(t);
   if (t > TL.endStart - .3) { ctx.save(); ctx.globalAlpha = fadeWin(t, TL.endStart, TL.total + 5, .4); drawEndcard(t - TL.endStart); ctx.restore(); }
   if (t > TL.total - .5) { ctx.save(); ctx.globalAlpha = prog(t, TL.total - .5, TL.total); ctx.fillStyle = C.fade; ctx.fillRect(0, 0, W, H); ctx.restore(); }
@@ -749,4 +793,5 @@ function renderCover() {
 }
 window.setup = setup; window.render = render; window.audioEvents = audioEvents; window.renderCover = renderCover;
 window.getTotal = () => TL.total;
+window.hostNeed = hostNeed; window.setHost = setHost;
 window.ready = Promise.all([LOGO_IMG.decode ? LOGO_IMG.decode().catch(() => {}) : Promise.resolve(), Promise.all(['800 150px Sans', '700 48px Sans', '600 28px Sans', '500 20px Sans', '500 150px Mono', '400 30px Mono', '300 50px Jost', '400 26px Jost', '400 40px Jost', '400 100px Serif', '500 60px Sans', '400 20px Sans'].map(f => document.fonts.load(f, 'AİŞĞÜÇÖıa1')))]);

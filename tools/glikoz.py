@@ -214,6 +214,22 @@ def ambient(events, total, path):
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes((out * 32767).astype(np.int16).tobytes())
 
 
+def prepare_host(e, ep):
+    """Extract the host (AI presenter) clips to out/host/<id>/NNNNN.jpg at FPS and record frame counts in the episode."""
+    clips = (e.get('host') or {}).get('clips') or []
+    for c in clips:
+        src = ep / c['file']
+        if not src.exists(): sys.exit(f'host clip missing: {src}')
+        d = ep / 'out' / 'host' / c['id']
+        if d.exists(): shutil.rmtree(d)
+        d.mkdir(parents=True)
+        cmd = ['ffmpeg', '-v', 'error', '-y', '-i', str(src)]
+        if c.get('dur'): cmd += ['-t', str(c['dur'])]
+        subprocess.run(cmd + ['-vf', f'fps={FPS}', '-q:v', '2', str(d / '%05d.jpg')], check=True)
+        c['frames'] = len(list(d.glob('*.jpg')))
+    return bool(clips)
+
+
 def cmd_render(ep, workers=6):
     e = load(ep)
     tpath = ep / 'timing.json'
@@ -222,13 +238,19 @@ def cmd_render(ep, workers=6):
     out = ep / 'out'; frames = out / 'frames'
     if frames.exists(): shutil.rmtree(frames)
     frames.mkdir(parents=True)
+    hostc = prepare_host(e, ep)
     async def job(page):
         pgs = [await page() for _ in range(workers)]
         n = int(timing['total'] * FPS)
         evs = await pgs[0].evaluate('audioEvents()')
         await _grab(pgs[0], 'renderCover()', out / 'kapak.jpg')
         async def work(k, pg):
-            for i in range(k, n, workers): await _grab(pg, f'render({i / FPS})', frames / f'{i:05d}.jpg')
+            for i in range(k, n, workers):
+                if hostc:
+                    need = await pg.evaluate(f'hostNeed({i / FPS})')
+                    url = (out / 'host' / need['id'] / f"{need['frame'] + 1:05d}.jpg").as_uri() if need else None
+                    await pg.evaluate('(u) => setHost(u)', url)
+                await _grab(pg, f'render({i / FPS})', frames / f'{i:05d}.jpg')
         await asyncio.gather(*(work(k, pg) for k, pg in enumerate(pgs)))
         return evs
     evs = asyncio.run(_browser_job(e, timing, job))

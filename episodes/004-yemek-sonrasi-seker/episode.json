@@ -168,8 +168,46 @@
   "host": {
     "name": "Ceren",
     "note": "AI ile oluşturuldu",
-    "hook_scene": 0,
-    "close_scene": 6
+    "clips": [
+      {
+        "id": "hook",
+        "file": "host/hook.mp4",
+        "scenes": [
+          0,
+          1
+        ],
+        "at": 0.6,
+        "dur": 12.7,
+        "end": 12.85,
+        "cutaways": [
+          [
+            9.05,
+            9.6
+          ],
+          [
+            11.15,
+            11.75
+          ]
+        ]
+      },
+      {
+        "id": "close",
+        "file": "host/close.mp4",
+        "scenes": [
+          6
+        ],
+        "at": 48.15,
+        "dur": 6.0,
+        "start": 47.95,
+        "end": 54.3,
+        "cutaways": [
+          [
+            49.6,
+            50.2
+          ]
+        ]
+      }
+    ]
   },
   "cta": {
     "save": "Kaydet: yemekten sonra hatırlatıcı olarak lazım olacak.",
