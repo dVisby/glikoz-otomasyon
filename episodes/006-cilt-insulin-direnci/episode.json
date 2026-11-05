@@ -1,0 +1,95 @@
+{
+  "id": "006",
+  "slug": "cilt-insulin-direnci",
+  "title": "Kan tahlilinden önce cilde bak",
+  "theme": "krem",
+  "coverTitle": "Tahlilden önce cildine bak",
+  "coverSub": "İnsülin direncinin cilt ipuçları",
+  "date": "2026-11-05",
+  "voice": {"name": "AURA VOX", "voice_id": "jk1pqab9OzEmS07w0u2T", "model": "eleven_v4"},
+  "scenes": [
+    {
+      "type": "statement",
+      "label": "CİLT İPUÇLARI",
+      "title": "Tahlilden önce cilde bak",
+      "bullets": [
+        {"text": "İpucu verir, teşhis koymaz", "line": 1}
+      ],
+      "lines": [
+        "Kan tahlilinden önce, cildin sana bir şey söyleyebilir.",
+        "Ama bunlar teşhis değil, sadece birer işaret."
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "İŞARET 1",
+      "title": "Koyu, kadifemsi cilt",
+      "bullets": [
+        {"text": "Boyun, koltuk altı, kasık", "line": 0},
+        {"text": "Dirsek, diz, parmak eklemleri", "line": 2},
+        {"text": "Prediyabet işareti olabilir", "line": 3}
+      ],
+      "source": "AMERİKAN DERMATOLOJİ AKADEMİSİ (AAD) · MAYO CLINIC",
+      "lines": [
+        "Birinci işaret: boyunda, koltuk altında ya da kasıkta koyu, kadifemsi bir cilt alanı.",
+        "Adı akantozis nigrikans.",
+        "Dirsek, diz ve parmak eklemlerinde de görülebilir.",
+        "Dermatoloji akademisine göre bu, prediyabetin bir işareti olabilir."
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "İŞARET 2",
+      "title": "Çok sayıda et beni",
+      "bullets": [
+        {"text": "Tek tek zararsız", "line": 1},
+        {"text": "Sayısı çoksa tip 2 diyabet işareti olabilir", "line": 2}
+      ],
+      "source": "AMERİKAN DERMATOLOJİ AKADEMİSİ (AAD)",
+      "lines": [
+        "İkinci işaret: çok sayıda et beni, yani küçük deri sarkıkları.",
+        "Tek tek zararsızdırlar.",
+        "Ama sayıları çoksa, tip 2 diyabetin bir işareti olabilir."
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "UNUTMA",
+      "title": "İşaret yok = sorun yok değil",
+      "bullets": [
+        {"text": "Bu belirtiler her zaman olmaz", "line": 0},
+        {"text": "Karar kan tahlilinde", "line": 1}
+      ],
+      "lines": [
+        "Bu işaretlerin olmaması, her şeyin yolunda olduğu anlamına gelmez.",
+        "Doğru cevabı kan tahlili verir: açlık şekeri ve HbA1c."
+      ]
+    },
+    {
+      "type": "close",
+      "title": "TAHLİL GÖSTERİR",
+      "disclaimer": [
+        "BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR",
+        "ŞÜPHELENİRSEN DOKTORUNA DANIŞ"
+      ],
+      "lines": [
+        "Cilt ipucu verir, tahlil gösterir.",
+        "Bu hafta aynada boynuna ve koltuk altına bir bak.",
+        "Bir şey görürsen doktoruna söyle."
+      ]
+    }
+  ],
+  "cta": {
+    "save": "Kaydet: aynada bakmayı unutma.",
+    "comment": "Boynuna hiç dikkatle baktın mı?",
+    "share": "Tahlili erteleyen birine gönder."
+  },
+  "caption": "Kan tahlilinden önce cildin ipucu verebilir 👀\nBoyun, koltuk altı ve kasıkta koyu, kadifemsi cilt (akantozis nigrikans) ve çok sayıda et beni, Amerikan Dermatoloji Akademisi'ne göre prediyabet ya da tip 2 diyabetin işareti olabilir. Bunlar teşhis değildir; karar için kan tahlili (açlık şekeri, HbA1c) ve doktor değerlendirmesi gerekir.",
+  "sources": [
+    "AAD: Acanthosis nigricans – signs and symptoms (aad.org)",
+    "AAD: Diabetes – 10 warning signs that can appear on your skin (aad.org)",
+    "Mayo Clinic: Acanthosis nigricans – symptoms & causes (mayoclinic.org)"
+  ],
+  "hashtags": ["#glikozgünlüğüm", "#insülindirenci", "#prediyabet", "#kanşekeri", "#diyabet", "#cildinsağlığı", "#sağlıklıyaşam"],
+  "notes": "Kullanıcı senaryosundan çıkarılanlar: ayak tüyü=insülin, peltek konuşma, benler büyür, şişkin ayak bileği, karın yağlanması — birincil kaynakta insülin bağı doğrulanamadı (peltek konuşma tipik olarak hipoglisemi/inme uyarısı). Ayak tüyü kaybı kaynaklarda dolaşım sorunlarıyla anılıyor."
+}
