@@ -4,6 +4,7 @@
   python3 tools/glikoz.py new <slug> "<Başlık>"     create episodes/NNN-<slug>/episode.json from the template
   python3 tools/glikoz.py voicetext <ep>             write episodes/<ep>/voice.txt (text to send to ElevenLabs)
   python3 tools/glikoz.py preview <ep>               estimated timing, contact sheet only (no voice needed)
+  python3 tools/glikoz.py silent <ep>                 voice-over olmadan okuma hızıyla timing.json (sessiz sürüm)
   python3 tools/glikoz.py align <ep> [voice.mp3]     detect sentence onsets in the voice -> timing.json
   python3 tools/glikoz.py render <ep>                frames + ambient + voice -> out/reels.mp4, kapak.jpg, aciklama.txt, contact.png
   python3 tools/glikoz.py cover <ep>                 only re-draw out/kapak.jpg
@@ -67,6 +68,17 @@ def estimate_timing(e):
         d = max(1.6, len(l['say']) / 14.5)
         lines.append({'start': round(t, 3), 'end': round(t + d, 3)}); t += d + .45
     return {'total': round(t + TAIL, 3), 'lines': lines, 'estimated': True}
+
+
+def cmd_silent(ep, cps=16.0):
+    """Sessiz (voice-over'sız) sürüm: satır süreleri okuma hızına göre; müzik/ses Instagram'da eklenir."""
+    e = load(ep); t = 0.6; lines = []
+    for l in spoken_lines(e):
+        d = max(1.8, len(l['say']) / cps)
+        lines.append({'start': round(t, 3), 'end': round(t + d, 3)}); t += d + .3
+    timing = {'voice_offset': 0, 'voice_duration': 0, 'silent': True, 'lines': lines, 'total': round(t + TAIL, 3)}
+    (ep / 'timing.json').write_text(json.dumps(timing, indent=1), encoding='utf-8')
+    print(f'silent timing: {len(lines)} lines, text ends {lines[-1]["end"]}s, total~{timing["total"] + 6.5:.1f}s with end card')
 
 
 def detect_onsets(mp3, n, expected=None):
@@ -256,9 +268,14 @@ def cmd_render(ep, workers=6):
     evs = asyncio.run(_browser_job(e, timing, job))
     krem = e.get('theme', 'krem') == 'krem'
     if krem: evs = []  # calm theme: no UI ticks; music is added in Instagram
-    ambient(evs, timing['total'], out / 'ambient.wav')
+    silent = timing.get('silent')
+    if not silent: ambient(evs, timing['total'], out / 'ambient.wav')
     delay = int(timing['voice_offset'] * 1000)
-    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-framerate', str(FPS), '-i', str(frames / '%05d.jpg'),
+    if silent:
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-framerate', str(FPS), '-i', str(frames / '%05d.jpg'), '-an',
+                        '-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-pix_fmt', 'yuv420p', '-movflags', '+faststart',
+                        str(out / 'reels.mp4')], check=True)
+    else: subprocess.run(['ffmpeg', '-v', 'error', '-y', '-framerate', str(FPS), '-i', str(frames / '%05d.jpg'),
                     '-i', str(out / 'ambient.wav'), '-i', str(ep / 'voice.mp3'), '-filter_complex',
                     f'[1:a]volume={0.22 if krem else 0.45}[amb];[2:a]adelay={delay}|{delay}[v];[amb][v]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[a]',
                     '-map', '0:v', '-map', '[a]', '-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-pix_fmt', 'yuv420p',
@@ -289,6 +306,7 @@ if __name__ == '__main__':
     elif c == 'voicetext': cmd_voicetext(ep_dir(a[1]))
     elif c == 'preview': cmd_preview(ep_dir(a[1]))
     elif c == 'align': cmd_align(ep_dir(a[1]), a[2] if len(a) > 2 else None)
+    elif c == 'silent': cmd_silent(ep_dir(a[1]))
     elif c == 'render': cmd_render(ep_dir(a[1]))
     elif c == 'cover': cmd_cover(ep_dir(a[1]))
     else: print(__doc__)
