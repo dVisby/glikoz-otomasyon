@@ -1,0 +1,135 @@
+{
+  "id": "007",
+  "slug": "5-besin-kanit",
+  "title": "5 besin: kanıt ne diyor?",
+  "theme": "krem",
+  "coverTitle": "Tersine çevirir mi?",
+  "coverSub": "İnsülin direnci ve 5 besin: kanıt ne diyor?",
+  "date": "2026-11-06",
+  "scenes": [
+    {
+      "type": "statement",
+      "label": "5 BESİN İDDİASI",
+      "title": "Tersine çevirir mi?",
+      "bullets": [
+        {"text": "Elma sirkesi · zencefil · çemen", "line": 0},
+        {"text": "Tarçın · chia", "line": 0},
+        {"text": "Kanıt ne diyor?", "line": 1}
+      ],
+      "lines": [
+        "İnsülin direncini tersine çeviren beş besin diye bir video dolaşıyor.",
+        "Kanıt gerçekten ne diyor?"
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "1 · ELMA SİRKESİ",
+      "title": "Açlık şekeri biraz düşük",
+      "bullets": [
+        {"text": "9 çalışmanın analizi", "line": 0},
+        {"text": "Açlık şekeri ort. 8 mg/dL düşük", "line": 0},
+        {"text": "Çalışmalar birbirinden çok farklı", "line": 1}
+      ],
+      "source": "ELMA SİRKESİ META-ANALİZİ · 9 ÇALIŞMA · 2021",
+      "lines": [
+        "Elma sirkesi: açlık şekeri ortalama sekiz mg/dL daha düşük çıktı.",
+        "Ama çalışmalar birbirinden çok farklı."
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "2 · ZENCEFİL",
+      "title": "Şeker ve HbA1c düşük",
+      "bullets": [
+        {"text": "10 çalışmanın analizi", "line": 0},
+        {"text": "Açlık şekeri ve HbA1c daha düşük", "line": 0}
+      ],
+      "source": "ZHU VE ARK. 2018 · 10 ÇALIŞMA (FRONT. PHARMACOL. 2025)",
+      "lines": [
+        "Zencefil: açlık şekeri ve HbA1c daha düşük bulundu."
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "3 · ÇEMEN",
+      "title": "Umut var, kalite düşük",
+      "bullets": [
+        {"text": "10 çalışma, 278 kişi", "line": 0},
+        {"text": "Çoğunun kalitesi düşük", "line": 0},
+        {"text": "Diyabetlilerde şekeri düşürdüğüne işaret ediyor", "line": 1}
+      ],
+      "source": "NEELAKANTAN VE ARK. · NUTR J 2014 · 10 ÇALIŞMA",
+      "lines": [
+        "Çemen: on çalışma var, çoğunun kalitesi düşük.",
+        "Yine de diyabetli kişilerde şekeri düşürdüğüne işaret ediyorlar."
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "4 · TARÇIN",
+      "title": "Sonuçlar tutarsız",
+      "bullets": [
+        {"text": "Çalışmalar küçük, kalitesi değişken", "line": 0},
+        {"text": "HbA1c düşüşü net gösterilemedi", "line": 0}
+      ],
+      "source": "TARÇIN META-ANALİZLERİ · 10 ÇALIŞMA, 543 KİŞİ",
+      "lines": [
+        "Tarçın: sonuçlar tutarsız, HbA1c düşüşü net değil."
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "5 · CHIA",
+      "title": "Anlamlı etki çıkmadı",
+      "bullets": [
+        {"text": "8 çalışma, 362 kişi", "line": 0},
+        {"text": "Şeker ve HbA1c'de anlamlı fark yok", "line": 0}
+      ],
+      "source": "CHIA META-ANALİZİ · 8 ÇALIŞMA, 362 KİŞİ · 2024",
+      "lines": [
+        "Chia: şeker ve HbA1c'ye anlamlı etki çıkmadı."
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "SONUÇ",
+      "title": "Kanıt yeterli değil",
+      "bullets": [
+        {"text": "\"Tersine çevirir\" için kanıt yetersiz", "line": 0},
+        {"text": "Çalışmalar küçük, kaliteleri değişken", "line": 1},
+        {"text": "İlaç kullanıyorsan doktoruna danış", "line": 2}
+      ],
+      "lines": [
+        "Yani \"tersine çevirir\" demek için kanıt yeterli değil.",
+        "Çalışmalar küçük, kaliteleri değişken.",
+        "Şeker ilacı kullanıyorsan, eklemeden önce doktoruna danış."
+      ]
+    },
+    {
+      "type": "close",
+      "title": "KANITA BAK",
+      "disclaimer": [
+        "BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR",
+        "ŞÜPHELENİRSEN DOKTORUNA DANIŞ"
+      ],
+      "lines": [
+        "Bir videoya değil, kanıta bak.",
+        "Bu hafta duyduğun bir besin iddiasının kaynağını sor."
+      ]
+    }
+  ],
+  "cta": {
+    "save": "Kaydet: mucize besin videolarında lazım olur.",
+    "comment": "En çok hangi besin için mucize duydun?",
+    "share": "Bu videoyu paylaşan birine gönder."
+  },
+  "caption": "\"İnsülin direncini tersine çeviren 5 besin\" videosunu kanıtla karşılaştırdım 👇\n\nElma sirkesi ve zencefilde açlık şekerinde küçük düşüşler, çemende umut verici ama düşük kaliteli çalışmalar var. Tarçında sonuçlar tutarsız, chia için sekiz çalışmanın analizinde anlamlı etki çıkmadı. \"Tersine çevirir\" demek için kanıt yeterli değil.\n\nŞeker ilacı kullanıyorsan, bunları düzenli eklemeden önce doktoruna danış.\n\nSen hangi \"mucize besin\" iddiasını duydun? Yorumlara yaz, birlikte bakalım.",
+  "sources": [
+    "Apple cider vinegar: lipid profiles and glycemic parameters, systematic review & meta-analysis of RCTs (2021; PMC8243436)",
+    "Zhu et al. 2018 ginger meta-analysis, via Paudel et al., Frontiers in Pharmacology 2025 (frontiersin.org)",
+    "Neelakantan et al., Fenugreek intake on glycemia: a meta-analysis of clinical trials, Nutrition Journal 2014 (nutritionj.biomedcentral.com/articles/10.1186/1475-2891-13-7)",
+    "Cinnamon supplements and glycemic control in T2DM, evidence summary of meta-analyses (The Hospitalist / MDedge)",
+    "The effectiveness of chia seed in improving glycemic status: a systematic review and meta-analysis (PubMed 38917708)"
+  ],
+  "hashtags": ["#glikozgünlüğüm", "#insülindirenci", "#kanşekeri", "#elmasirkesi", "#zencefil", "#tarçın", "#chia", "#sağlıklıyaşam"]
+}

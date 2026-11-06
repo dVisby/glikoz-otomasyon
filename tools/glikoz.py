@@ -70,7 +70,7 @@ def estimate_timing(e):
     return {'total': round(t + TAIL, 3), 'lines': lines, 'estimated': True}
 
 
-def cmd_silent(ep, cps=16.0):
+def cmd_silent(ep, cps=17.0):
     """Sessiz (voice-over'sız) sürüm: satır süreleri okuma hızına göre; müzik/ses Instagram'da eklenir."""
     e = load(ep); t = 0.6; lines = []
     for l in spoken_lines(e):
