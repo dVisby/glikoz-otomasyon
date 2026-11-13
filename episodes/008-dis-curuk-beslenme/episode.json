@@ -1,0 +1,101 @@
+{
+  "id": "008",
+  "slug": "dis-curuk-beslenme",
+  "title": "Dişlerin sana ne yemen gerektiğini söylüyor olabilir",
+  "theme": "krem",
+  "coverTitle": "Dişlerin ne diyor?",
+  "coverSub": "Çürük ve beslenme: bir teoriye göre",
+  "date": "2026-11-13",
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "scenes": [
+    {
+      "type": "statement",
+      "label": "DİŞ SAĞLIĞI",
+      "title": "Dişlerin ne diyor?",
+      "bullets": [
+        {
+          "text": "Çürük ve beslenme",
+          "line": 0
+        }
+      ],
+      "lines": [
+        "Dişlerin sana ne yemen gerektiğini söylüyor olabilir."
+      ]
+    },
+    {
+      "type": "statement",
+      "big": "2,5",
+      "unit": "milyar kişi",
+      "label": "ÇÜRÜK",
+      "title": "Dünyanın en yaygın sağlık sorunu: çürük",
+      "bullets": [
+        {
+          "text": "En yaygın bulaşıcı olmayan hastalık",
+          "line": 0
+        }
+      ],
+      "source": "DSÖ · ŞEKERLER VE DİŞ ÇÜRÜĞÜ BİLGİ NOTU · 2025",
+      "lines": [
+        "Çürük, dünyanın en yaygın sağlık sorunu."
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "BİR TEORİYE GÖRE",
+      "title": "Atalarımızda çürük daha seyrekti",
+      "bullets": [
+        {
+          "text": "Fosillerde çürük genelde daha seyrek",
+          "line": 0
+        },
+        {
+          "text": "Vücut tasarımı ile yediklerimiz uyumsuz olabilir",
+          "line": 1
+        }
+      ],
+      "source": "LIEBERMAN 2013 · HUMPHREY VE ARK. PNAS 2014",
+      "lines": [
+        "Atalarımızın fosillerinde çürük genellikle daha seyrekti.",
+        "Bir yazara göre bu, yediklerimizle vücudumuzun | tasarımı arasında bir uyumsuzluk olabilir."
+      ]
+    },
+    {
+      "type": "close",
+      "title": "SENCE BAĞLANTI VAR MI?",
+      "disclaimer": [
+        "BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR",
+        "DİŞ SORUNLARI İÇİN DİŞ HEKİMİNE DANIŞ"
+      ],
+      "lines": [
+        "Sence beslenme ile diş sağlığı arasında bağ var mı?",
+        "Yorumlara yaz."
+      ]
+    }
+  ],
+  "cta": {
+    "save": "Kaydet: bir dahaki diş hekimi randevundan önce lazım olur.",
+    "comment": "Sence beslenme ile diş sağlığı arasında bağ var mı?",
+    "share": "Dişlerini en çok kollayan arkadaşına gönder."
+  },
+  "caption": "Dişlerin sana ne yemen gerektiğini söylüyor olabilir 🦷\n\nDSÖ'ye göre diş çürüğü dünyada en yaygın sağlık sorunlarından biri; serbest şekerlerin tüketimi de çürük için en yaygın risk faktörü. Bazı araştırmacılar (ör. Daniel Lieberman) çürüğü, bedenimizin evrimleştiği beslenme ile bugünkü beslenmemiz arasındaki bir \"uyumsuzluk\" hastalığı olarak yorumluyor. Arkeolojik verilerde avcı-toplayıcılarda çürük ortalamada tarım toplumlarından daha seyrek, ama istisnalar var: tatlı ve nişastalı yabani besinlerle beslenen bazı eski topluluklarda çürük yüksekti. Yani mesele \"geçmişte yaşamak\" değil, şekerin ve nişastanın sıklığı ve miktarı.\n\nBu bir teori ve gözlemsel kanıt; kişiye özel tavsiye değildir. Diş sorunların için diş hekimine danış.\n\nSence beslenme ile diş sağlığı arasında bağ var mı? Yorumlara yaz 👇",
+  "sources": [
+    "WHO. Sugars and dental caries, fact sheet, 14 Aug 2025 (who.int/news-room/fact-sheets/detail/sugars-and-dental-caries)",
+    "WHO. Oral health, fact sheet, 17 Mar 2025 (who.int/news-room/fact-sheets/detail/oral-health)",
+    "Lieberman DE. The Story of the Human Body: Evolution, Health, and Disease. Pantheon, 2013 (mismatch hypothesis; cavities)",
+    "Humphrey LT et al. Earliest evidence for caries and exploitation of starchy plant foods in Pleistocene hunter-gatherers from Morocco. PNAS 2014 (PMC3903197)",
+    "Marklein KE et al. The Precarious State of Subsistence: Reevaluating Dental Pathological Lesions Associated with Agricultural and Hunter-Gatherer Lifeways. Current Anthropology 2019 (doi:10.1086/703376)"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#dişsağlığı",
+    "#çürük",
+    "#beslenme",
+    "#şeker",
+    "#sağlıklıyaşam"
+  ],
+  "notes": "Kullanıcı senaryosu (4 sahne). Değişiklikler: 'en yaygın hastalık' -> 'en yaygın sağlık sorunu' (DSÖ ifadesi); 'çürük çok nadir' -> 'genellikle daha seyrek' (Humphrey 2014 ve Marklein 2019 istisna/örtüşme gösteriyor). Talking-head kısımları (Ceren/gerçek çekim) yok; animasyonlu sahnelerle üretildi."
+}
