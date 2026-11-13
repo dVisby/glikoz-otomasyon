@@ -14,7 +14,8 @@ Her sahnede `lines` (cümleler) zorunlu. Satır metninde ` | ` altyazıyı ikiye
 | `compare` | İki yanıt eğrisi (A kırmızı, B altın) | `a:{amp,label}`, `b:{amp,label}`, `counter`, `prefix`, `suffix`, `bigLine`, `label`, `xLabels?` |
 | `flatten` | Eğrinin bir alışkanlıkla yumuşaması | `counter`, `unit`, `label`, `from`, `to`, `steps` |
 | `statement` | Genel metin sahnesi: büyük sayı/başlık + madde listesi (krem temada ✓ işaretli) | `big?`, `unit?`, `red?`, `label?`, `title?`, `bullets:[text | {text, line}]`, `bowls:[{n, label, red?}]` (tane sayısıyla iki kase karşılaştırması) |
-| `close` | Seri kapanışı + yasal not (her bölümde son sahne) | `title`, `disclaimer` |
+| `photo` | Tam ekran AI görsel arka plan + beyaz anahtar kelime hapı | `img` (episodes/<ep>/ altında yol), `keyword`, `red?` |
+| `close` | Seri kapanışı + yasal not (her bölümde son sahne) | `title`, `disclaimer`, `ask?` (grafik altı soru satırı) |
 
 ## Sunucu klibi (`host`)
 Sahne tipi değil, sahnelerin üstüne bindirilen video katmanı: yapay zekâ sunucunun (Ceren) konuşan klibi tam ekran arka plan olur; altyazı kutusu, logo rozeti, "AI ile oluşturuldu" etiketi ve (sahne `host:true` ise) başlık hapı üstünde çizilir. Altındaki sahneler yine hesaplanır; `cutaways` aralıklarında klip kısa süre gizlenip sahne görünür (klipteki göz kapanması/dudak büzülmesi gibi hataları örtmek için).

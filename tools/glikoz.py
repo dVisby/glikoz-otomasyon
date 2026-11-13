@@ -31,7 +31,14 @@ def ep_dir(arg):
 
 
 def load(ep):
-    return json.loads((ep / 'episode.json').read_text(encoding='utf-8'))
+    e = json.loads((ep / 'episode.json').read_text(encoding='utf-8'))
+    for sc in e['scenes']:   # photo scenes: embed the image so the headless page needs no file access
+        if sc.get('img'):
+            f = ep / sc['img']
+            if not f.exists(): sys.exit(f'image missing: {f}')
+            mime = 'image/jpeg' if f.suffix.lower() in ('.jpg', '.jpeg') else 'image/png'
+            sc['imgData'] = f'data:{mime};base64,' + base64.b64encode(f.read_bytes()).decode()
+    return e
 
 
 def spoken_lines(e):

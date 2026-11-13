@@ -1,0 +1,67 @@
+{
+  "id": "009",
+  "slug": "uyku-egzersiz-su",
+  "title": "Netflix'in en büyük rakibi: uyku",
+  "coverTitle": "Netflix'in rakibi: UYKU",
+  "coverSub": "Uyku, egzersiz, su",
+  "date": "2026-11-13",
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "UYKU",
+      "lines": [
+        "Netflix'in en büyük rakibi \"Uyku\"."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/s2.png",
+      "keyword": "EGZERSİZ",
+      "lines": [
+        "İlaç şirketlerinin en büyük rakibi \"EGZERSİZ\"."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/s3.png",
+      "keyword": "SU",
+      "lines": [
+        "Kolanın en büyük rakibi \"SU\"."
+      ]
+    },
+    {
+      "type": "close",
+      "title": "UYKU · EGZERSİZ · SU",
+      "ask": "Sen ne düşünüyorsun? Yorumlarda paylaş 👇",
+      "disclaimer": [
+        "BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR",
+        "SAĞLIK SORUNLARI İÇİN DOKTORUNA DANIŞ"
+      ],
+      "lines": [
+        "UYKU, EGZERSİZ, SU. Daha sağlıklı bedenin yapı taşları | ve hepsi kolayca uygulanabilir."
+      ]
+    }
+  ],
+  "caption": "Netflix'in en büyük rakibi uyku. İlaç şirketlerinin en büyük rakibi egzersiz. Kolanın en büyük rakibi su. 😴🏃‍♀️💧\n\nUyku, egzersiz ve su: daha sağlıklı bedenin yapı taşları ve hepsi kolayca uygulanabilir.\n\nBilgilendirme amaçlıdır; tıbbi tavsiye değildir.\n\nSen ne düşünüyorsun? Yorumlarda paylaş 👇",
+  "sources": [],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#uyku",
+    "#egzersiz",
+    "#su",
+    "#sağlıklıyaşam",
+    "#alışkanlık"
+  ],
+  "notes": "Kullanıcı senaryosu (4 sahne, yapay zekâ görselleri: Canva). Sayı yok; 'rakip' söylemleri slogan niteliğinde, kaynak gerektiren iddia içermiyor. Sahne görselleri 3 adet AI arka plan (img/s1-s3); şu an düşük çözünürlüklü yer tutucu.",
+  "cta": {
+    "save": "Kaydet: bu akşam uyumadan önce hatırlat.",
+    "comment": "En çok hangisinde zorlanıyorsun? Yorumlara yaz 👇",
+    "share": "Gece geç yatan arkadaşına gönder."
+  }
+}

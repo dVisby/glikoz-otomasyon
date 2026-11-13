@@ -480,6 +480,36 @@ SCENES.statement = {
   events(s) { return (s.bullets || []).map((b, i) => ({ t: b.line != null ? s.L[b.line] : s.L[0] + .6 + i * .5, f: 900, a: .12, d: .06 })); }
 };
 
+
+/* photo: full-bleed AI image (cover-fit, slow zoom) + keyword pill.  {type:'photo', img:'img/s1.png', keyword:'UYKU', lines:[...]}
+ * imgData (data URI) is injected by tools/glikoz.py from episodes/<ep>/<img>. */
+const PHOTOS = {};
+SCENES.photo = {
+  draw(s, lt, a) {
+    const im = PHOTOS[s.img]; if (!im) return;
+    const sc = Math.max(W / im.width, H / im.height) * (1.04 + .05 * prog(lt, 0, s.dur || 8));
+    const dw = im.width * sc, dh = im.height * sc;
+    ctx.save(); ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(im, (W - dw) / 2, (H - dh) / 2 - 20 * prog(lt, 0, s.dur || 8), dw, dh);
+    const g1 = ctx.createLinearGradient(0, 0, 0, 640); g1.addColorStop(0, 'rgba(20,20,12,.45)'); g1.addColorStop(1, 'rgba(20,20,12,0)');
+    ctx.fillStyle = g1; ctx.fillRect(0, 0, W, 640);
+    const g2 = ctx.createLinearGradient(0, 1180, 0, H); g2.addColorStop(0, 'rgba(20,20,12,0)'); g2.addColorStop(1, 'rgba(20,20,12,.5)');
+    ctx.fillStyle = g2; ctx.fillRect(0, 1180, W, H - 1180);
+    ctx.restore();
+    logoBadge(940, 352, 72, .7);
+    if (s.keyword) {
+      const f = '800 132px Sans', str = s.keyword.toLocaleUpperCase('tr-TR'), w = measure(str, f, 2) + 110;
+      const k = easeOut(prog(lt, s.L[0] + .15, s.L[0] + .75)), y = 640;
+      ctx.save(); ctx.globalAlpha *= k; ctx.translate(540, y); ctx.scale(.88 + .12 * k, .88 + .12 * k); ctx.translate(-540, -y);
+      ctx.shadowColor = 'rgba(0,0,0,.28)'; ctx.shadowBlur = 34; ctx.shadowOffsetY = 10;
+      ctx.fillStyle = '#FFFFFF'; roundRect(540 - w / 2, y - 112, w, 170, 40); ctx.fill(); ctx.shadowBlur = 0;
+      text(str, 540, y + 20, { font: f, color: s.red ? C.red : C.gold, align: 'center', spacing: 2 });
+      ctx.restore();
+    }
+  },
+  events(s) { return []; }
+};
+
 /* close: series sign-off.  {title:'ARALIKTA KAL', disclaimer:[...]} */
 SCENES.close = {
   draw(s, lt) {
@@ -487,6 +517,10 @@ SCENES.close = {
     const f = hh => 100 + 10 * Math.sin(hh * 1.3 + lt * .8) + 6 * Math.sin(hh * 3.1);
     strokeCurve(f, x0, w, 0, 24, Y, lerp(0, 24, ease(prog(lt, 0, 2.2))), () => C.gold, 4);
     text(s.title || 'ARALIKTA KAL', 540, 600, { font: '500 64px Mono', color: C.gold, align: 'center', spacing: 4, alpha: prog(lt, .4, 1), glow: `rgba(${C.gRGB},.6)` });
+    if (s.ask) {   // optional question line under the chart; fades in with the last spoken line
+      const f = '700 46px Sans', ls = wrapLines(s.ask, f, 860), ta = (s.L[0] || 0) + 1.6;
+      ls.forEach((l, i) => text(l, 540, 1100 + i * 62, { font: f, color: C.ink, align: 'center', alpha: prog(lt, ta, ta + .5) }));
+    }
     const d = s.disclaimer || ['BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR', 'TEDAVİ İÇİN DOKTORUNUZA DANIŞIN'];
     d.forEach((l, i) => small(l, 540, 1225 + i * 33, { align: 'center' }));
   },
@@ -614,7 +648,7 @@ function drawEndcard(lt) {
  * TIMELINE
  * ====================================================================== */
 let EP = null, TL = null;
-function setup(episode, timing) {
+async function setup(episode, timing) {
   EP = episode;
   Object.assign(C, THEMES[episode.theme || 'krem']);
   const endStart = timing.lines[timing.lines.length - 1].end + 0.9;
@@ -645,6 +679,8 @@ function setup(episode, timing) {
     const a = TL.scenes[c.scenes[0]], b = TL.scenes[c.scenes[c.scenes.length - 1]];
     return Object.assign({}, c, { w0: c.start != null ? c.start : a._start, w1: c.end != null ? c.end : b._end, title: a.host ? a.title : null });
   });
+  await Promise.all(episode.scenes.filter(sc => sc.imgData).map(sc => new Promise(res => {
+    const im = new Image(); im.onload = () => { PHOTOS[sc.img] = im; res(); }; im.onerror = res; im.src = sc.imgData; })));
   return { scenes: TL.scenes.length, captions: TL.captions.length, total: TL.total };
 }
 function leaf(x, y, len, wid, ang, c1, c2) {
