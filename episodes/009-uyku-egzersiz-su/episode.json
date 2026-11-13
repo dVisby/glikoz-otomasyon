@@ -38,7 +38,6 @@
     {
       "type": "close",
       "title": "UYKU · EGZERSİZ · SU",
-      "ask": "Sen ne düşünüyorsun? Yorumlarda paylaş 👇",
       "disclaimer": [],
       "lines": [
         "UYKU, EGZERSİZ, SU. Daha sağlıklı bedenin yapı taşları | ve hepsi kolayca uygulanabilir."
@@ -58,7 +57,7 @@
   "notes": "Kullanıcı senaryosu (4 sahne, yapay zekâ görselleri: Canva). Sayı yok; 'rakip' söylemleri slogan niteliğinde, kaynak gerektiren iddia içermiyor. Sahne görselleri 3 adet AI arka plan (img/s1-s3); şu an düşük çözünürlüklü yer tutucu.",
   "cta": {
     "save": "",
-    "comment": "En çok hangisinde zorlanıyorsun? Yorumlara yaz 👇",
+    "comment": "Sen ne düşünüyorsun? Yorumlarda paylaş 👇",
     "share": "Sağlığına önem verdiğin kişilerle paylaş."
   },
   "captionDisclaimer": false
