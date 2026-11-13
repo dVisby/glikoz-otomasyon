@@ -627,6 +627,7 @@ function drawEndcard(lt) {
     { k: 'share', txt: cta.share, t: 3.6, size: 42, font: '300 34px Jost', color: C.gray, txtColor: C.gray2 }
   ];
   const vis = rows.filter(r => r.txt !== '' && r.txt != null);   // cta.save:"" drops the Kaydet row
+  if (!vis.some(r => r.k === 'save')) vis.forEach((r, i) => { r.t = 1.4 + i * .5; });   // no Kaydet pill: rows appear sooner and stay longer
   let uni = 38;   // secondary rows share one font size (the smallest that fits the longest row)
   vis.filter(r => r.k !== 'save').forEach(r => { while (uni > 22 && measure(r.txt, `300 ${uni}px Jost`) > 720) uni--; });
   let y = 1215;
@@ -806,7 +807,7 @@ function render(t) {
   drawHost(t);
   drawCaptions(t);
   if (t > TL.endStart - .3) { ctx.save(); ctx.globalAlpha = fadeWin(t, TL.endStart, TL.total + 5, .4); drawEndcard(t - TL.endStart); ctx.restore(); }
-  if (t > TL.total - .5) { ctx.save(); ctx.globalAlpha = prog(t, TL.total - .5, TL.total); ctx.fillStyle = C.fade; ctx.fillRect(0, 0, W, H); ctx.restore(); }
+  if (t > TL.total - .5 && !EP.holdEnd) { ctx.save(); ctx.globalAlpha = prog(t, TL.total - .5, TL.total); ctx.fillStyle = C.fade; ctx.fillRect(0, 0, W, H); ctx.restore(); }
 }
 function audioEvents() {
   const ev = [];

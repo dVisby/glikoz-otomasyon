@@ -60,5 +60,6 @@
     "comment": "Sen ne düşünüyorsun? Yorumlarda paylaş 👇",
     "share": "Sağlığına önem verdiğin kişilerle paylaş."
   },
-  "captionDisclaimer": false
+  "captionDisclaimer": false,
+  "holdEnd": true
 }
