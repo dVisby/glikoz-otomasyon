@@ -291,7 +291,11 @@ def cmd_render(ep, workers=6):
     cap = e.get('caption', e['title']).strip()
     srcs = '\n'.join('• ' + s for s in e.get('sources', []))
     tags = ' '.join(e.get('hashtags', []))
-    (out / 'aciklama.txt').write_text(f"{cap}\n\nKaynaklar:\n{srcs}\n\nBilgilendirme amaçlıdır, tıbbi tavsiye değildir.\n\n{tags}\n", encoding='utf-8')
+    parts = [cap]
+    if srcs: parts.append(f'Kaynaklar:\n{srcs}')
+    if e.get('captionDisclaimer', True): parts.append('Bilgilendirme amaçlıdır, tıbbi tavsiye değildir.')
+    parts.append(tags)
+    (out / 'aciklama.txt').write_text('\n\n'.join(parts) + '\n', encoding='utf-8')
     contact_sheet(e, timing, out / 'contact.png', from_video=out / 'reels.mp4')
     print(out / 'reels.mp4', f'{timing["total"]:.1f}s')
 

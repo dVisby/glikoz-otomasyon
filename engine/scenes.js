@@ -626,21 +626,25 @@ function drawEndcard(lt) {
     { k: 'comment', txt: cta.comment, t: 3.1, size: 42, font: '300 34px Jost', color: C.gray, txtColor: C.gray2 },
     { k: 'share', txt: cta.share, t: 3.6, size: 42, font: '300 34px Jost', color: C.gray, txtColor: C.gray2 }
   ];
+  const vis = rows.filter(r => r.txt !== '' && r.txt != null);   // cta.save:"" drops the Kaydet row
+  let uni = 38;   // secondary rows share one font size (the smallest that fits the longest row)
+  vis.filter(r => r.k !== 'save').forEach(r => { while (uni > 22 && measure(r.txt, `300 ${uni}px Jost`) > 720) uni--; });
   let y = 1215;
-  rows.forEach((r, i) => {
+  vis.forEach((r, i) => {
     const a = easeOut(prog(lt, r.t, r.t + .5)), dx = (1 - a) * 20;
     ctx.save(); ctx.globalAlpha *= a;
-    if (i === 0) { // highlighted pill for the main CTA
+    if (r.k === 'save') { // highlighted pill for the main CTA
       ctx.fillStyle = `rgba(${C.gRGB},0.10)`; ctx.strokeStyle = `rgba(${C.gRGB},0.45)`; ctx.lineWidth = 2;
       roundRect(120, y - 58, 840, 104, 52); ctx.fill(); ctx.stroke();
       if (lt > r.t + .6) { const b = .5 + .5 * Math.sin((lt - r.t) * 4); icon('save', 200, y - 6, r.size * (1 + .05 * b), C.gold); }
       else icon('save', 200, y - 6, r.size, C.gold);
     } else icon(r.k, 200, y - 6, r.size, r.color);
     let font = r.font; const m = font.match(/^(\d+) (\d+)px (.+)$/);
-    for (let px = +m[2]; px > 22 && measure(r.txt, font) > 660; px -= 1) font = `${m[1]} ${px}px ${m[3]}`;
+    if (r.k !== 'save') font = `${m[1]} ${uni}px ${m[3]}`;
+    else for (let px = +m[2]; px > 22 && measure(r.txt, font) > 660; px -= 1) font = `${m[1]} ${px}px ${m[3]}`;
     text(r.txt, 260 + dx, y + 8, { font, color: r.txtColor });
     ctx.restore();
-    y += i === 0 ? 120 : 88;
+    y += r.k === 'save' ? 120 : 88;
   });
 }
 
