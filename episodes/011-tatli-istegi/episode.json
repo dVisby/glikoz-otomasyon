@@ -13,15 +13,9 @@
   },
   "scenes": [
     {
-      "type": "statement",
-      "label": "TATLI İSTEĞİ",
-      "title": "Canın tatlı mı çekiyor?",
-      "bullets": [
-        {
-          "text": "Sebep şeker olmayabilir",
-          "line": 1
-        }
-      ],
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "TATLI KRİZİ",
       "lines": [
         "Canın tatlı mı çekiyor?",
         "Sebep her zaman şeker olmayabilir."
@@ -43,62 +37,28 @@
       ]
     },
     {
-      "type": "statement",
-      "label": "STRES",
-      "title": "Stres hormonu ve tatlı",
-      "bullets": [
-        {
-          "text": "Kortizol yanıtı güçlü olanlar daha çok tatlı yedi",
-          "line": 1
-        }
-      ],
-      "source": "EPEL ve ark. · PSYCHONEUROENDOCRINOLOGY 2001 · 59 KADIN",
+      "type": "photo",
+      "img": "img/stres.png",
+      "keyword": "STRES",
       "lines": [
         "Stres de bir tetikleyici.",
         "Bir çalışmada strese daha güçlü kortizol yanıtı verenler | daha çok tatlı yedi."
-      ]
+      ],
+      "source": "EPEL ve ark. · PSYCHONEUROENDOCRINOLOGY 2001 · 59 KADIN"
     },
     {
-      "type": "statement",
-      "label": "DİĞER TETİKLEYİCİLER",
-      "title": "Bunlar da olabilir",
-      "bullets": [
-        {
-          "text": "Uzun süre aç kalmak",
-          "line": 0
-        },
-        {
-          "text": "Proteini az öğünler",
-          "line": 0
-        },
-        {
-          "text": "Susuzluk",
-          "line": 1
-        }
-      ],
+      "type": "photo",
+      "img": "img/aclik.png",
+      "keyword": "UZUN AÇLIK",
       "lines": [
         "Uzun süre aç kalmak ve proteini az öğünler | de tatlı krizini tetikleyebilir.",
         "Susuzluk bile bazen açlıkla karışabilir."
       ]
     },
     {
-      "type": "statement",
-      "label": "BİR SONRAKİ KRİZDE",
-      "title": "Önce bunlara bak",
-      "bullets": [
-        {
-          "text": "Bir bardak su iç, 10 dakika bekle",
-          "line": 0
-        },
-        {
-          "text": "Son öğününde protein var mıydı?",
-          "line": 1
-        },
-        {
-          "text": "Dün gece kaç saat uyudun?",
-          "line": 2
-        }
-      ],
+      "type": "photo",
+      "img": "img/su.png",
+      "keyword": "ÖNCE SU",
       "lines": [
         "Bir sonraki krizde önce bir bardak su iç ve biraz bekle.",
         "Son öğününde protein var mıydı, bak.",
@@ -122,7 +82,7 @@
     "comment": "Tatlı krizin en çok günün hangi saatinde geliyor?",
     "share": "Akşamları tatlısız yapamayan birine gönder."
   },
-  "caption": "Canın tatlı mı çekiyor? Sebep her zaman şeker olmayabilir. 🍫\n\nTatlı isteğinin arkasında bazen şunlar olabilir:\n😴 Kötü uyku: Bir çalışmada (12 kişi) iki gece 4'er saat uyuyan gençlerde kalorili, karbonhidratlı yiyecek isteği %33–45 arttı.\n😟 Stres: Bir çalışmada (59 kadın) strese daha güçlü kortizol yanıtı verenler daha çok tatlı yedi.\n🍽️ Uzun süre aç kalmak ve proteini az öğünler\n💧 Susuzluk (bazen açlıkla karışabilir)\n\nBir sonraki tatlı krizinde:\n1️⃣ Bir bardak su iç, biraz bekle\n2️⃣ Son öğününde protein var mıydı, bak\n3️⃣ Dün gece kaç saat uyuduğunu düşün\n\n💡 Her tatlı isteği gerçek açlık değildir.\n\nTatlı krizin en çok günün hangi saatinde geliyor? 👇",
+  "caption": "Canın tatlı mı çekiyor? Sebep her zaman şeker olmayabilir. 🍫\n\nTatlı isteğinin arkasında bazen şunlar olabilir:\n😴 Kötü uyku: Bir çalışmada (12 kişi) iki gece 4'er saat uyuyan gençlerde kalorili, karbonhidratlı yiyecek isteği %33–45 arttı.\n😟 Stres: Bir çalışmada (59 kadın) strese daha güçlü kortizol yanıtı verenler daha çok tatlı yedi.\n🍽️ Uzun süre aç kalmak ve proteini az öğünler\n💧 Susuzluk (bazen açlıkla karışabilir)\n\nBir sonraki tatlı krizinde:\n1️⃣ Bir bardak su iç, biraz bekle\n2️⃣ Son öğününde protein var mıydı, bak\n3️⃣ Dün gece kaç saat uyuduğunu düşün\n\n💡 Her tatlı isteği gerçek açlık değildir.\n\nTatlı krizin en çok günün hangi saatinde geliyor? 👇\n\n📸 Görseller yapay zekâ ile oluşturulmuştur.",
   "sources": [
     "Spiegel K ve ark., Ann Intern Med 2004;141(11):846-50 (12 sağlıklı genç erkek, 2 gece 4 saat uyku; karbonhidratlı yiyecek isteği %33–45 artış)",
     "Epel E ve ark., Psychoneuroendocrinology 2001;26(1):37-49 (59 kadın; yüksek kortizol yanıtı verenler daha çok tatlı yedi)"
@@ -136,5 +96,5 @@
     "#insülindirenci",
     "#sağlıklıbeslenme"
   ],
-  "notes": "Kullanıcının 3 numaralı fikri. Sessiz sürüm. İki küçük çalışma, örneklem kaynak satırında. Susuzluk-açlık karışması için güçlü kanıt yok; yumuşak 'bazen karışabilir' dili, sayı verilmedi."
+  "notes": "Kullanıcının 3 numaralı fikri. Sessiz sürüm. İki küçük çalışma, örneklem kaynak satırında. Susuzluk-açlık karışması için güçlü kanıt yok; yumuşak 'bazen karışabilir' dili, sayı verilmedi. Görseller: Canva AI (16 gerçekçi fotoğraf, img/), photo sahnesi."
 }

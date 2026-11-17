@@ -13,71 +13,54 @@
   },
   "scenes": [
     {
-      "type": "statement",
-      "label": "MARKET",
-      "title": "Sepetimden çıkardığım 6 ürün",
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "6 ÜRÜN",
       "lines": [
         "Kan şekerim için bu 6 ürünü market sepetimden çıkardım."
       ]
     },
     {
-      "type": "statement",
-      "big": "1",
-      "red": true,
-      "label": "SERBEST ŞEKER",
-      "title": "Meyve suyu",
-      "source": "DSÖ ŞEKER REHBERİ 2015",
+      "type": "photo",
+      "img": "img/u1.png",
+      "keyword": "MEYVE SUYU",
       "lines": [
         "Bir: meyve suyu. | Dünya Sağlık Örgütü onu serbest şeker sayar."
-      ]
+      ],
+      "red": true,
+      "source": "DSÖ ŞEKER REHBERİ 2015"
     },
     {
-      "type": "statement",
-      "big": "2",
-      "red": true,
-      "label": "İLAVE ŞEKER",
-      "title": "Aromalı yoğurt",
+      "type": "photo",
+      "img": "img/u2.png",
+      "keyword": "AROMALI YOĞURT",
       "lines": [
         "İki: aromalı yoğurt. | Sade yoğurda meyve katmak daha iyi."
-      ]
+      ],
+      "red": true
     },
     {
-      "type": "statement",
-      "big": "3",
-      "red": true,
-      "label": "SAĞLIKLI GÖRÜNÜR",
-      "title": "Granola bar",
+      "type": "photo",
+      "img": "img/u3.png",
+      "keyword": "GRANOLA BAR",
       "lines": [
         "Üç: granola bar. | Etiketinde çoğu zaman şeker ya da şurup var."
-      ]
+      ],
+      "red": true
     },
     {
-      "type": "statement",
-      "big": "4",
-      "red": true,
-      "label": "HAZIR KARIŞIM",
-      "title": "Şekerli kahve karışımları",
+      "type": "photo",
+      "img": "img/u4.png",
+      "keyword": "HAZIR KAHVE",
       "lines": [
         "Dört: şekerli hazır kahve karışımları. | Kahveni sade iç."
-      ]
+      ],
+      "red": true
     },
     {
-      "type": "statement",
-      "big": "5",
-      "red": true,
-      "label": "TEK KUTUDA ≈10 KÜP",
-      "title": "Şekerli gazlı içecekler",
-      "bullets": [
-        {
-          "text": "1 kutuda 40 grama kadar şeker",
-          "line": 0
-        },
-        {
-          "text": "Günlük ideal hedef: 25 g altı",
-          "line": 1
-        }
-      ],
-      "source": "DSÖ 2015 · 1 KUTU ≤ 40 g · İDEAL HEDEF < 25 g",
+      "type": "photo",
+      "img": "img/u5.png",
+      "keyword": "GAZLI İÇECEK",
       "lines": [
         {
           "text": "Beş: şekerli gazlı içecekler. | Bir kutuda 40 grama kadar şeker olabilir.",
@@ -87,40 +70,23 @@
           "text": "Dünya Sağlık Örgütü'nün ideal günlük hedefi 25 gramın altı.",
           "say": "Dünya Sağlık Örgütü'nün ideal günlük hedefi yirmi beş gramın altı."
         }
-      ]
+      ],
+      "red": true,
+      "source": "DSÖ 2015 · 1 KUTU ≤ 40 g · İDEAL HEDEF < 25 g"
     },
     {
-      "type": "statement",
-      "big": "6",
-      "red": true,
-      "label": "DURMASI ZOR",
-      "title": "Cips",
+      "type": "photo",
+      "img": "img/u6.png",
+      "keyword": "CİPS",
       "lines": [
         "Altı: cips. | Tuzu ve yağı yüksek, porsiyonu tutturmak zor."
-      ]
+      ],
+      "red": true
     },
     {
-      "type": "statement",
-      "label": "YERİNE",
-      "title": "Sepete bunları koyuyorum",
-      "bullets": [
-        {
-          "text": "Sade yoğurt + taze meyve",
-          "line": 0
-        },
-        {
-          "text": "Bir avuç çiğ kuruyemiş",
-          "line": 0
-        },
-        {
-          "text": "Su ve sade maden suyu",
-          "line": 0
-        },
-        {
-          "text": "Etiketi okumak",
-          "line": 1
-        }
-      ],
+      "type": "photo",
+      "img": "img/yerine.png",
+      "keyword": "YERİNE",
       "lines": [
         "Yerine sade yoğurt, taze meyve, kuruyemiş | ve maden suyu alıyorum.",
         "Ve içindekiler listesini mutlaka okuyorum."
@@ -143,7 +109,7 @@
     "comment": "Senin sepetinden çıkardığın ürün hangisi?",
     "share": "Alışverişi birlikte yaptığın kişiye gönder."
   },
-  "caption": "Kan şekerim için bu 6 ürünü market sepetimden çıkardım 🛒\n\n❌ Meyve suyu: DSÖ meyve suyunu \"serbest şeker\" sayar\n❌ Aromalı yoğurt: çoğuna şeker eklenir\n❌ Granola bar: sağlıklı görünür, etiketinde çoğu zaman şeker/şurup var\n❌ Şekerli hazır kahve karışımları\n❌ Şekerli gazlı içecekler: bir kutuda 40 grama (≈10 küp) kadar şeker olabilir. DSÖ'nün ideal günlük hedefi 25 g'ın altı\n❌ Cips: tuzu ve yağı yüksek, porsiyonu tutturmak zor\n\n✅ Yerine sade yoğurt + taze meyve, bir avuç çiğ kuruyemiş, su ve sade maden suyu alıyorum. Alışverişte içindekiler listesini mutlaka okuyorum.\n\nSenin sepetinden çıkardığın ürün hangisi? 👇\n📌 Kaydet: bir sonraki market alışverişinde lazım.",
+  "caption": "Kan şekerim için bu 6 ürünü market sepetimden çıkardım 🛒\n\n❌ Meyve suyu: DSÖ meyve suyunu \"serbest şeker\" sayar\n❌ Aromalı yoğurt: çoğuna şeker eklenir\n❌ Granola bar: sağlıklı görünür, etiketinde çoğu zaman şeker/şurup var\n❌ Şekerli hazır kahve karışımları\n❌ Şekerli gazlı içecekler: bir kutuda 40 grama (≈10 küp) kadar şeker olabilir. DSÖ'nün ideal günlük hedefi 25 g'ın altı\n❌ Cips: tuzu ve yağı yüksek, porsiyonu tutturmak zor\n\n✅ Yerine sade yoğurt + taze meyve, bir avuç çiğ kuruyemiş, su ve sade maden suyu alıyorum. Alışverişte içindekiler listesini mutlaka okuyorum.\n\nSenin sepetinden çıkardığın ürün hangisi? 👇\n📌 Kaydet: bir sonraki market alışverişinde lazım.\n\n📸 Görseller yapay zekâ ile oluşturulmuştur.",
   "sources": [
     "DSÖ (WHO), Guideline: Sugars intake for adults and children, 2015; DSÖ basın bülteni 4 Mart 2015 (meyve suyu serbest şekerdir; bir kutu şekerli gazlı içecekte 40 grama kadar serbest şeker; <%5 ≈ 25 g ek fayda)"
   ],
@@ -156,5 +122,5 @@
     "#insülindirenci",
     "#sağlıklıbeslenme"
   ],
-  "notes": "Kullanıcının 5 numaralı fikri. Sessiz sürüm. Sayılar yalnız DSÖ'den; diğer ürünler için marka/etiket değeri verilmedi (ürüne göre değişiyor). 'Gazlı içecekler' -> 'şekerli gazlı içecekler' düzeltmesi. Kriter: 1 küp ≈ 4 g."
+  "notes": "Kullanıcının 5 numaralı fikri. Sessiz sürüm. Sayılar yalnız DSÖ'den; diğer ürünler için marka/etiket değeri verilmedi (ürüne göre değişiyor). 'Gazlı içecekler' -> 'şekerli gazlı içecekler' düzeltmesi. Kriter: 1 küp ≈ 4 g. Görseller: Canva AI (16 gerçekçi fotoğraf, img/), photo sahnesi."
 }

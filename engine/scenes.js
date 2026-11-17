@@ -498,7 +498,7 @@ SCENES.photo = {
     ctx.restore();
     logoBadge(940, 352, 72, .7);
     if (s.keyword) {
-      const f = '800 132px Sans', str = s.keyword.toLocaleUpperCase('tr-TR'), w = measure(str, f, 2) + 110;
+      const str = s.keyword.toLocaleUpperCase('tr-TR'), fs = Math.min(132, Math.floor(132 * 860 / measure(str, '800 132px Sans', 2))), f = `800 ${fs}px Sans`, w = measure(str, f, 2) + 110;
       const k = easeOut(prog(lt, s.L[0] + .15, s.L[0] + .75)), y = 640;
       ctx.save(); ctx.globalAlpha *= k; ctx.translate(540, y); ctx.scale(.88 + .12 * k, .88 + .12 * k); ctx.translate(-540, -y);
       ctx.shadowColor = 'rgba(0,0,0,.28)'; ctx.shadowBlur = 34; ctx.shadowOffsetY = 10;
@@ -506,6 +506,7 @@ SCENES.photo = {
       text(str, 540, y + 20, { font: f, color: s.red ? C.red : C.gold, align: 'center', spacing: 2 });
       ctx.restore();
     }
+    if (s.source) { ctx.save(); ctx.shadowColor = 'rgba(0,0,0,.6)'; ctx.shadowBlur = 8; text(s.source, 76, 1262, { font: '500 21px Mono', color: 'rgba(255,255,255,.9)', spacing: 1.5 }); ctx.restore(); }
   },
   events(s) { return []; }
 };
