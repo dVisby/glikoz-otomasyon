@@ -391,7 +391,7 @@ SCENES.spike = {
     const L0 = s.L[0], f = h => 88 + bump(h - 13, s.amp || 92, .55);
     const head = lerp(12.5, 16, ease(prog(lt, L0, L0 + 2.4)));
     let peak = 0; for (let i = 0; i <= 60; i++) peak = Math.max(peak, f(12.5 + i * (head - 12.5) / 60));
-    bigNumber(String(Math.round(peak)), { color: peak > 140 ? C.red : C.gold });
+    if (!s.noBig) bigNumber(String(Math.round(peak)), { color: peak > 140 ? C.red : C.gold });
     label(s.label, 600);
     const x0 = 130, w = 860, y0 = 700, h = 300, Y = chart(x0, y0, w, h, 50, 200);
     strokeCurve(f, x0, w, 12.5, 16, Y, head, gcol(140));

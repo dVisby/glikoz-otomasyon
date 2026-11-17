@@ -10,7 +10,7 @@ Her sahnede `lines` (cümleler) zorunlu. Satır metninde ` | ` altyazıyı ikiye
 | `bars` | Yatay çubuk karşılaştırması (ör. besinlerdeki şeker) | `unit`, `label`, `items:[{label, value, dec?, red?, line?}]`, `limit?`, `limitLabel?`, `max?`, `big?` |
 | `sensor` | CGM sensör kesiti, ölçüm sayacı | `value`, `label` |
 | `day` | 24 saatlik glukoz eğrisi, öğün izleri | `label`, `meals:[{h, amp, tau?, label, red?}]`, `base?`, `band?`, `hi?` |
-| `spike` | Tek yükseliş + insülin çubukları + sonuç maddeleri | `amp`, `label`, `items`, `itemsLine` |
+| `spike` | Tek yükseliş + insülin çubukları + sonuç maddeleri | `amp`, `label`, `items`, `itemsLine`, `noBig?` (temsili eğride tepe sayısını gizler) |
 | `compare` | İki yanıt eğrisi (A kırmızı, B altın) | `a:{amp,label}`, `b:{amp,label}`, `counter`, `prefix`, `suffix`, `bigLine`, `label`, `xLabels?` |
 | `flatten` | Eğrinin bir alışkanlıkla yumuşaması | `counter`, `unit`, `label`, `from`, `to`, `steps` |
 | `statement` | Genel metin sahnesi: büyük sayı/başlık + madde listesi (krem temada ✓ işaretli) | `big?`, `unit?`, `red?`, `label?`, `title?`, `bullets:[text | {text, line}]`, `bowls:[{n, label, red?}]` (tane sayısıyla iki kase karşılaştırması) |

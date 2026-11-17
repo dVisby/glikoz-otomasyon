@@ -1,0 +1,142 @@
+{
+  "id": "010",
+  "slug": "kahvalti-tokluk",
+  "title": "Sağlıklı sandığın kahvaltı seni neden acıktırıyor?",
+  "theme": "krem",
+  "coverTitle": "Simit + meyve suyu = yine aç",
+  "coverSub": "Kahvaltıda en sık yapılan hata",
+  "date": "2026-11-17",
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "scenes": [
+    {
+      "type": "statement",
+      "label": "KAHVALTI",
+      "title": "Simit + meyve suyu = birkaç saat sonra yine aç",
+      "lines": [
+        "Simit ve meyve suyuyla başladın. | Birkaç saat sonra yine aç mısın?"
+      ]
+    },
+    {
+      "type": "spike",
+      "amp": 88,
+      "label": "YEMEK SONRASI ŞEKER · TEMSİLİ",
+      "items": [
+        "HIZLI DÜŞÜŞ",
+        "TATLI İSTEĞİ",
+        "ENERJİ DÜŞÜŞÜ"
+      ],
+      "itemsLine": 1,
+      "source": "TEMSİLİ EĞRİ · GERÇEK ÖLÇÜM DEĞİLDİR",
+      "lines": [
+        "Hızlı emilen karbonhidrat kan şekerini hızla yükseltir.",
+        "Ardından gelen düşüşte tatlı isteği ve yorgunluk başlayabilir."
+      ],
+      "noBig": true
+    },
+    {
+      "type": "statement",
+      "big": "≈4",
+      "unit": "küp şeker",
+      "label": "1 BARDAK PORTAKAL SUYU · 200 ml",
+      "title": "≈17 g şeker",
+      "bullets": [
+        {
+          "text": "DSÖ meyve suyunu serbest şeker sayar",
+          "line": 1
+        }
+      ],
+      "source": "USDA FDC · 8,4 g / 100 g · DSÖ ŞEKER REHBERİ 2015 · 1 KÜP ≈ 4 g",
+      "lines": [
+        {
+          "text": "Bir bardak portakal suyunda yaklaşık 17 gram şeker var.",
+          "say": "Bir bardak portakal suyunda yaklaşık on yedi gram şeker var."
+        },
+        "Dünya Sağlık Örgütü meyve suyunu serbest şeker sayar."
+      ]
+    },
+    {
+      "type": "bars",
+      "unit": "g",
+      "label": "PROTEİN · AYNI 350 KCAL KAHVALTI",
+      "max": 40,
+      "items": [
+        {
+          "label": "TAHIL GEVREĞİ KAHVALTI",
+          "value": 13,
+          "red": true,
+          "line": 0
+        },
+        {
+          "label": "YUMURTA + ET KAHVALTI",
+          "value": 35,
+          "line": 0
+        }
+      ],
+      "source": "LEIDY ve ark. · AJCN 2013 · 20 KİŞİ",
+      "lines": [
+        "Bir çalışmada aynı kalorideki iki kahvaltı karşılaştırıldı.",
+        "Proteini yüksek olan tokluğu artırdı | ve akşam atıştırmayı azalttı."
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "TOKLUK FORMÜLÜ",
+      "title": "Tabağa 3'lüyü ekle",
+      "bullets": [
+        {
+          "text": "Protein: yumurta, peynir",
+          "line": 0
+        },
+        {
+          "text": "Lif: domates, salatalık, yeşillik",
+          "line": 1
+        },
+        {
+          "text": "Sağlıklı yağ: zeytin, ceviz",
+          "line": 2
+        }
+      ],
+      "lines": [
+        "Tabağa protein ekle: yumurta ya da peynir.",
+        "Lif ekle: domates, salatalık, yeşillik.",
+        "Sağlıklı yağ ekle: zeytin ya da ceviz."
+      ]
+    },
+    {
+      "type": "close",
+      "title": "TABAĞINI TAMAMLA",
+      "disclaimer": [
+        "BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR",
+        "BESLENMENİ DEĞİŞTİRMEDEN ÖNCE DOKTORUNA DANIŞ"
+      ],
+      "lines": [
+        "Simidi yasaklamana gerek yok. | Sadece yalnız bırakma."
+      ]
+    }
+  ],
+  "cta": {
+    "save": "Kaydet: yarın sabah kahvaltıyı hazırlarken lazım.",
+    "comment": "Sabah kahvaltısında vazgeçemediğin şey ne?",
+    "share": "Her sabah simitle çıkan birine gönder."
+  },
+  "caption": "Simit + meyve suyu = birkaç saat sonra yine açlık 🥐🧃\n\nSadece hızlı emilen karbonhidratla başlayan bir kahvaltı, kan şekerini hızla yükseltip düşürebilir; ardından tatlı isteği ve enerji düşüşü gelebilir.\n\n🧃 1 bardak (200 ml) portakal suyunda ≈17 g şeker var, yani ≈4 küp. DSÖ meyve suyunu \"serbest şeker\" sayar.\n🥚 Bir çalışmada (20 kişi), aynı kalorideki iki kahvaltıdan proteini yüksek olanı tokluğu artırdı ve akşam atıştırmayı azalttı.\n\nTokluk formülü:\n🥚 Protein: yumurta, peynir\n🥒 Lif: domates, salatalık, yeşillik\n🫒 Sağlıklı yağ: zeytin, ceviz\n\nSimidi yasaklamana gerek yok, sadece yalnız bırakma. 💚\n\nSabah kahvaltısında vazgeçemediğin şey ne? 👇\n📌 Kaydet: yarın sabah lazım olacak.",
+  "sources": [
+    "USDA FoodData Central: portakal suyu, şeker 8,4 g/100 g (200 ml ≈ 17 g; 1 küp ≈ 4 g)",
+    "DSÖ (WHO), Guideline: Sugars intake for adults and children, 2015 (meyve suyu serbest şekerdir)",
+    "Leidy HJ ve ark., Am J Clin Nutr 2013;97(4):677-88 (20 kişi, 350 kcal; 35 g vs 13 g protein)"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#kanşekeri",
+    "#kahvaltı",
+    "#protein",
+    "#insülindirenci",
+    "#sağlıklıbeslenme",
+    "#tokluk"
+  ],
+  "notes": "Kullanıcının 1 numaralı fikri, düzeltilmiş hook. Sessiz sürüm (kullanıcı seslendirme istemedi). Leidy 2013 küçük çalışma (20 genç kadın, kahvaltı atlayan, kilolu); yumurta/et sektörü fonlu, 'bir çalışmada' dili korundu. Spike eğrisi temsili."
+}
