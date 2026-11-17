@@ -79,7 +79,7 @@
       "source": "LEIDY ve ark. · AJCN 2013 · 20 KİŞİ",
       "lines": [
         "Bir çalışmada aynı kalorideki iki kahvaltı karşılaştırıldı.",
-        "Proteini yüksek olan tokluğu artırdı | ve akşam atıştırmayı azalttı."
+        "Proteini yüksek olan tokluğu artırdı ve akşam atıştırmayı azalttı."
       ]
     },
     {
@@ -109,21 +109,18 @@
     {
       "type": "close",
       "title": "TABAĞINI TAMAMLA",
-      "disclaimer": [
-        "BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR",
-        "BESLENMENİ DEĞİŞTİRMEDEN ÖNCE DOKTORUNA DANIŞ"
-      ],
+      "disclaimer": [],
       "lines": [
-        "Simidi yasaklamana gerek yok. | Sadece yalnız bırakma."
+        "Simidi yasaklamana gerek yok. | Sadece yalnız bırakma, porsiyon kontrolü de yap."
       ]
     }
   ],
   "cta": {
-    "save": "Kaydet: yarın sabah kahvaltıyı hazırlarken lazım.",
+    "save": "",
     "comment": "Sabah kahvaltısında vazgeçemediğin şey ne?",
-    "share": "Her sabah simitle çıkan birine gönder."
+    "share": "Simit seven arkadaşınla paylaş."
   },
-  "caption": "Simit + meyve suyu = birkaç saat sonra yine açlık 🥐🧃\n\nSadece hızlı emilen karbonhidratla başlayan bir kahvaltı, kan şekerini hızla yükseltip düşürebilir; ardından tatlı isteği ve enerji düşüşü gelebilir.\n\n🧃 1 bardak (200 ml) portakal suyunda ≈17 g şeker var, yani ≈4 küp. DSÖ meyve suyunu \"serbest şeker\" sayar.\n🥚 Bir çalışmada (20 kişi), aynı kalorideki iki kahvaltıdan proteini yüksek olanı tokluğu artırdı ve akşam atıştırmayı azalttı.\n\nTokluk formülü:\n🥚 Protein: yumurta, peynir\n🥒 Lif: domates, salatalık, yeşillik\n🫒 Sağlıklı yağ: zeytin, ceviz\n\nSimidi yasaklamana gerek yok, sadece yalnız bırakma. 💚\n\nSabah kahvaltısında vazgeçemediğin şey ne? 👇\n📌 Kaydet: yarın sabah lazım olacak.\n\n📸 Görseller yapay zekâ ile oluşturulmuştur.",
+  "caption": "Simit + meyve suyu = birkaç saat sonra yine açlık 🥐🧃\n\nSadece hızlı emilen karbonhidratla başlayan bir kahvaltı, kan şekerini hızla yükseltip düşürebilir; ardından tatlı isteği ve enerji düşüşü gelebilir.\n\n🧃 1 bardak (200 ml) portakal suyunda ≈17 g şeker var, yani ≈4 küp. DSÖ meyve suyunu \"serbest şeker\" sayar.\n🥚 Bir çalışmada (20 kişi), aynı kalorideki iki kahvaltıdan proteini yüksek olanı tokluğu artırdı ve akşam atıştırmayı azalttı.\n\nTokluk formülü:\n🥚 Protein: yumurta, peynir\n🥒 Lif: domates, salatalık, yeşillik\n🫒 Sağlıklı yağ: zeytin, ceviz\n\nSimidi yasaklamana gerek yok; sadece yalnız bırakma, porsiyon kontrolü de yap. 💚\n\nSabah kahvaltısında vazgeçemediğin şey ne? 👇\n\n📸 Görseller yapay zekâ ile oluşturulmuştur.",
   "sources": [
     "USDA FoodData Central: portakal suyu, şeker 8,4 g/100 g (200 ml ≈ 17 g; 1 küp ≈ 4 g)",
     "DSÖ (WHO), Guideline: Sugars intake for adults and children, 2015 (meyve suyu serbest şekerdir)",
@@ -138,5 +135,5 @@
     "#sağlıklıbeslenme",
     "#tokluk"
   ],
-  "notes": "Kullanıcının 1 numaralı fikri, düzeltilmiş hook. Sessiz sürüm (kullanıcı seslendirme istemedi). Leidy 2013 küçük çalışma (20 genç kadın, kahvaltı atlayan, kilolu); yumurta/et sektörü fonlu, 'bir çalışmada' dili korundu. Spike eğrisi temsili. Görseller: Canva AI (16 gerçekçi fotoğraf, img/), photo sahnesi."
+  "notes": "Kullanıcının 1 numaralı fikri, düzeltilmiş hook. Sessiz sürüm (kullanıcı seslendirme istemedi). Leidy 2013 küçük çalışma (20 genç kadın, kahvaltı atlayan, kilolu); yumurta/et sektörü fonlu, 'bir çalışmada' dili korundu. Spike eğrisi temsili. Görseller: Canva AI (16 gerçekçi fotoğraf, img/), photo sahnesi. Kapanıştaki ekran içi yasal not kullanıcı isteğiyle kaldırıldı (caption'da yazılacak)."
 }
