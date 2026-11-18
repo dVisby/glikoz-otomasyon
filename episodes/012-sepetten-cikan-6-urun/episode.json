@@ -25,7 +25,7 @@
       "img": "img/u1.png",
       "keyword": "MEYVE SUYU",
       "lines": [
-        "Bir: meyve suyu. | Dünya Sağlık Örgütü onu serbest şeker sayar."
+        "Bir: meyve suyu. | Dünya Sağlık Örgütü içindeki şekeri serbest şeker sayar."
       ],
       "red": true,
       "source": "DSÖ ŞEKER REHBERİ 2015"
@@ -53,7 +53,7 @@
       "img": "img/u4.png",
       "keyword": "HAZIR KAHVE",
       "lines": [
-        "Dört: şekerli hazır kahve karışımları. | Suda eriyen kahve yerine çekirdek veya öğütülmüş kahve tercih et."
+        "Dört: şekerli hazır kahve karışımları. | Hazır karışım yerine sade kahve tercih et; | çekirdek ya da öğütülmüş kahve iyi bir seçenek."
       ],
       "red": true
     },
@@ -63,8 +63,8 @@
       "keyword": "GAZLI ŞEKERLİ İÇECEK",
       "lines": [
         {
-          "text": "Beş: şekerli gazlı içecekler. | Bir kutuda 40 grama kadar şeker olabilir.",
-          "say": "Beş: şekerli gazlı içecekler. Bir kutuda kırk grama kadar şeker olabilir."
+          "text": "Beş: gazlı şekerli içecekler. | Bir kutuda 40 grama kadar şeker olabilir.",
+          "say": "Beş: gazlı şekerli içecekler. Bir kutuda kırk grama kadar şeker olabilir."
         },
         {
           "text": "Dünya Sağlık Örgütü'nün ideal günlük hedefi 25 gramın altı.",
@@ -83,7 +83,7 @@
       "img": "img/u6.png",
       "keyword": "CİPS",
       "lines": [
-        "Altı: cips. | Tuzu ve yağı çok yüksek, ultra işlenmiş gıdalardan. | Mümkün olduğunca uzak dur."
+        "Altı: cips. | Yağı ve tuzu yüksek, ultra işlenmiş gıdalardan. | Mümkün olduğunca uzak dur."
       ],
       "red": true
     }
@@ -93,7 +93,7 @@
     "comment": "Sen de sepetinden çıkardığın ürünleri yorumlarda paylaş.",
     "share": "Alışveriş yapan arkadaşlarına gönder."
   },
-  "caption": "Sağlığım ve kan şekerim için bu 6 ürünü market sepetimden çıkardım 🛒\n\n❌ Meyve suyu: DSÖ meyve suyunu \"serbest şeker\" sayar\n❌ Aromalı yoğurt: sade yoğurda meyve katmak hem daha doğal hem daha sağlıklı\n❌ Granola bar: sağlıklı görünür, etiketinde çoğu zaman şeker/şurup var\n❌ Şekerli hazır kahve karışımları: çekirdek ya da öğütülmüş kahveyi tercih et\n❌ Gazlı şekerli içecekler: bir kutuda 40 grama (≈10 küp) kadar şeker olabilir; DSÖ'nün ideal günlük hedefi 25 g'ın altı\n❌ Cips: tuzu ve yağı çok yüksek, ultra işlenmiş bir gıda\n\nSen de sepetinden çıkardığın ürünleri yorumlarda paylaş 👇\n\n📸 Görseller yapay zekâ ile oluşturulmuştur.",
+  "caption": "Sağlığım ve kan şekerim için bu 6 ürünü market sepetimden çıkardım 🛒\n\n❌ Meyve suyu: DSÖ içindeki şekeri \"serbest şeker\" sayar\n❌ Aromalı yoğurt: sade yoğurda meyve katmak hem daha doğal hem daha sağlıklı\n❌ Granola bar: sağlıklı görünür, etiketinde çoğu zaman şeker/şurup var\n❌ Şekerli hazır kahve karışımları: hazır karışım yerine sade kahve; çekirdek ya da öğütülmüş kahve iyi bir seçenek\n❌ Gazlı şekerli içecekler: bir kutuda 40 grama (≈10 küp) kadar şeker olabilir; DSÖ'nün ideal günlük hedefi 25 g'ın altı\n❌ Cips: yağı ve tuzu yüksek, ultra işlenmiş bir gıda\n\nSen de sepetinden çıkardığın ürünleri yorumlarda paylaş 👇\n\n📸 Görseller yapay zekâ ile oluşturulmuştur.",
   "sources": [
     "DSÖ (WHO), Guideline: Sugars intake for adults and children, 2015; DSÖ basın bülteni 4 Mart 2015 (meyve suyu serbest şekerdir; bir kutu şekerli gazlı içecekte 40 grama kadar serbest şeker; <%5 ≈ 25 g ek fayda)"
   ],
