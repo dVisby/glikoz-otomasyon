@@ -31,3 +31,5 @@ Sahne tipi değil, sahnelerin üstüne bindirilen video katmanı: yapay zekâ su
 
 ## Logo ve çağrı kartı (otomatik)
 Son cümleden 0,9 sn sonra 5,6 sn süren kart eklenir: krem rozet üzerinde animasyonlu "Glikoz Günlüğüm" logosu (dalga çizilir, halka atar, G ve yazı belirir), altında üç satır: **Kaydet** (vurgulu), **Yorum**, **Paylaş**. Metinler episode.json `cta` alanından; yoksa genel varsayılanlar kullanılır. Uzun metin otomatik küçültülür.
+
+- Bölüm seviyesinde `ctaSize` (px): son karttaki yorum/paylaş satırlarını bu boyutta, gerekirse birden çok satıra kırarak yazar (Kaydet satırı yokken kullanışlı).

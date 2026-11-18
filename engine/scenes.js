@@ -640,8 +640,17 @@ function drawEndcard(lt) {
       roundRect(120, y - 58, 840, 104, 52); ctx.fill(); ctx.stroke();
       if (lt > r.t + .6) { const b = .5 + .5 * Math.sin((lt - r.t) * 4); icon('save', 200, y - 6, r.size * (1 + .05 * b), C.gold); }
       else icon('save', 200, y - 6, r.size, C.gold);
-    } else icon(r.k, 200, y - 6, r.size, r.color);
+    } else icon(r.k, 200, y - 6, EP.ctaSize ? EP.ctaSize * 1.15 : r.size, EP.ctaSize ? C.ink : r.color);
     let font = r.font; const m = font.match(/^(\d+) (\d+)px (.+)$/);
+    if (r.k !== 'save' && EP.ctaSize) {   // larger secondary rows, wrapped onto several lines (episode.ctaSize, px)
+      const cs = EP.ctaSize; font = `400 ${cs}px ${m[3]}`;
+      const words = r.txt.split(' '), lines = [''];
+      words.forEach(w => { const tr = lines[lines.length - 1] ? lines[lines.length - 1] + ' ' + w : w; if (measure(tr, font) > 700 && lines[lines.length - 1]) lines.push(w); else lines[lines.length - 1] = tr; });
+      lines.forEach((ln, j) => text(ln, 260 + dx, y + 8 + j * cs * 1.22, { font, color: C.ink }));
+      ctx.restore();
+      y += lines.length * cs * 1.22 + 46;
+      return;
+    }
     if (r.k !== 'save') font = `${m[1]} ${uni}px ${m[3]}`;
     else for (let px = +m[2]; px > 22 && measure(r.txt, font) > 660; px -= 1) font = `${m[1]} ${px}px ${m[3]}`;
     text(r.txt, 260 + dx, y + 8, { font, color: r.txtColor });

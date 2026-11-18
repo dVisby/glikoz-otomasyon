@@ -17,7 +17,7 @@
       "img": "img/s1.png",
       "keyword": "6 ÜRÜN",
       "lines": [
-        "Kan şekerim için bu 6 ürünü market sepetimden çıkardım."
+        "Sağlığım ve kan şekerim için bu 6 ürünü market sepetimden çıkardım."
       ]
     },
     {
@@ -35,7 +35,7 @@
       "img": "img/u2.png",
       "keyword": "AROMALI YOĞURT",
       "lines": [
-        "İki: aromalı yoğurt. | Sade yoğurda meyve katmak daha iyi."
+        "İki: aromalı yoğurt. | Sade yoğurda meyve katmak hem daha doğal hem de daha sağlıklı."
       ],
       "red": true
     },
@@ -53,14 +53,14 @@
       "img": "img/u4.png",
       "keyword": "HAZIR KAHVE",
       "lines": [
-        "Dört: şekerli hazır kahve karışımları. | Kahveni sade iç."
+        "Dört: şekerli hazır kahve karışımları. | Suda eriyen kahve yerine çekirdek veya öğütülmüş kahve tercih et."
       ],
       "red": true
     },
     {
       "type": "photo",
       "img": "img/u5.png",
-      "keyword": "GAZLI İÇECEK",
+      "keyword": "GAZLI ŞEKERLİ İÇECEK",
       "lines": [
         {
           "text": "Beş: şekerli gazlı içecekler. | Bir kutuda 40 grama kadar şeker olabilir.",
@@ -69,6 +69,10 @@
         {
           "text": "Dünya Sağlık Örgütü'nün ideal günlük hedefi 25 gramın altı.",
           "say": "Dünya Sağlık Örgütü'nün ideal günlük hedefi yirmi beş gramın altı."
+        },
+        {
+          "text": "1 kutusu bile bu hedefi fazlasıyla aşmana neden olabilir.",
+          "say": "Bir kutusu bile bu hedefi fazlasıyla aşmana neden olabilir."
         }
       ],
       "red": true,
@@ -79,37 +83,17 @@
       "img": "img/u6.png",
       "keyword": "CİPS",
       "lines": [
-        "Altı: cips. | Tuzu ve yağı yüksek, porsiyonu tutturmak zor."
+        "Altı: cips. | Tuzu ve yağı çok yüksek, ultra işlenmiş gıdalardan. | Mümkün olduğunca uzak dur."
       ],
       "red": true
-    },
-    {
-      "type": "photo",
-      "img": "img/yerine.png",
-      "keyword": "YERİNE",
-      "lines": [
-        "Yerine sade yoğurt, taze meyve, kuruyemiş | ve maden suyu alıyorum.",
-        "Ve içindekiler listesini mutlaka okuyorum."
-      ]
-    },
-    {
-      "type": "close",
-      "title": "ETİKETİ OKU",
-      "disclaimer": [
-        "BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR",
-        "MARKA ÖNERİSİ İÇERMEZ"
-      ],
-      "lines": [
-        "Sağlıklı görünen her ürün masum değil."
-      ]
     }
   ],
   "cta": {
-    "save": "Kaydet: bir sonraki market alışverişinde lazım.",
-    "comment": "Senin sepetinden çıkardığın ürün hangisi?",
-    "share": "Alışverişi birlikte yaptığın kişiye gönder."
+    "save": "",
+    "comment": "Sen de sepetinden çıkardığın ürünleri yorumlarda paylaş.",
+    "share": "Alışveriş yapan arkadaşlarına gönder."
   },
-  "caption": "Kan şekerim için bu 6 ürünü market sepetimden çıkardım 🛒\n\n❌ Meyve suyu: DSÖ meyve suyunu \"serbest şeker\" sayar\n❌ Aromalı yoğurt: çoğuna şeker eklenir\n❌ Granola bar: sağlıklı görünür, etiketinde çoğu zaman şeker/şurup var\n❌ Şekerli hazır kahve karışımları\n❌ Şekerli gazlı içecekler: bir kutuda 40 grama (≈10 küp) kadar şeker olabilir. DSÖ'nün ideal günlük hedefi 25 g'ın altı\n❌ Cips: tuzu ve yağı yüksek, porsiyonu tutturmak zor\n\n✅ Yerine sade yoğurt + taze meyve, bir avuç çiğ kuruyemiş, su ve sade maden suyu alıyorum. Alışverişte içindekiler listesini mutlaka okuyorum.\n\nSenin sepetinden çıkardığın ürün hangisi? 👇\n📌 Kaydet: bir sonraki market alışverişinde lazım.\n\n📸 Görseller yapay zekâ ile oluşturulmuştur.",
+  "caption": "Sağlığım ve kan şekerim için bu 6 ürünü market sepetimden çıkardım 🛒\n\n❌ Meyve suyu: DSÖ meyve suyunu \"serbest şeker\" sayar\n❌ Aromalı yoğurt: sade yoğurda meyve katmak hem daha doğal hem daha sağlıklı\n❌ Granola bar: sağlıklı görünür, etiketinde çoğu zaman şeker/şurup var\n❌ Şekerli hazır kahve karışımları: çekirdek ya da öğütülmüş kahveyi tercih et\n❌ Gazlı şekerli içecekler: bir kutuda 40 grama (≈10 küp) kadar şeker olabilir; DSÖ'nün ideal günlük hedefi 25 g'ın altı\n❌ Cips: tuzu ve yağı çok yüksek, ultra işlenmiş bir gıda\n\nSen de sepetinden çıkardığın ürünleri yorumlarda paylaş 👇\n\n📸 Görseller yapay zekâ ile oluşturulmuştur.",
   "sources": [
     "DSÖ (WHO), Guideline: Sugars intake for adults and children, 2015; DSÖ basın bülteni 4 Mart 2015 (meyve suyu serbest şekerdir; bir kutu şekerli gazlı içecekte 40 grama kadar serbest şeker; <%5 ≈ 25 g ek fayda)"
   ],
@@ -122,5 +106,6 @@
     "#insülindirenci",
     "#sağlıklıbeslenme"
   ],
-  "notes": "Kullanıcının 5 numaralı fikri. Sessiz sürüm. Sayılar yalnız DSÖ'den; diğer ürünler için marka/etiket değeri verilmedi (ürüne göre değişiyor). 'Gazlı içecekler' -> 'şekerli gazlı içecekler' düzeltmesi. Kriter: 1 küp ≈ 4 g. Görseller: Canva AI (16 gerçekçi fotoğraf, img/), photo sahnesi."
+  "notes": "Kullanıcının 5 numaralı fikri. Sessiz sürüm. Sayılar yalnız DSÖ'den; diğer ürünler için marka/etiket değeri verilmedi (ürüne göre değişiyor). 'Gazlı içecekler' -> 'şekerli gazlı içecekler' düzeltmesi. Kriter: 1 küp ≈ 4 g. Görseller: Canva AI (16 gerçekçi fotoğraf, img/), photo sahnesi. 18.11 kullanıcı düzeltmeleri: giriş metni/görseli (boş sepet + çıkarılmış ürünler), yoğurt/kahve/cips cümleleri, gazlı şekerli içecek başlığı + 'bu hedefi' cümlesi, YERİNE ve close sahneleri kaldırıldı (yasal not caption'da), Kaydet satırı yok, ctaSize 46.",
+  "ctaSize": 46
 }
