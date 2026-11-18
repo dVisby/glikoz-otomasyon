@@ -14,3 +14,7 @@
 - Her video logo + çağrı kartıyla biter (otomatik). `cta` metinleri konuya özel yazılır.
 - Ses: AURA VOX (ElevenLabs, eleven_v4), voice_offset 0,4 sn.
 - Teslimden önce contact sheet ve kapak gözle kontrol edilir.
+
+## Özen (gerçek kişi) kuralı
+- Özen'in görüntüsü (LoRA `ozen_v1`, klipler) ve klon sesi ("Kuju") yalnızca Muharrem o istekte açıkça Özen'i istediğinde kullanılır. İstenmediğinde kullanılmaz, önerilmez; önceki bölümde kullanılmış olması izin sayılmaz.
+- Kullanıldığında videoda "AI ile oluşturuldu" etiketi ve açıklamada görüntü/ses yapay zekâ notu zorunludur.
