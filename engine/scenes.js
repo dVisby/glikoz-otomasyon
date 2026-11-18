@@ -683,7 +683,7 @@ async function setup(episode, timing) {
   // host clips (AI presenter video drawn behind captions): window = span of the listed scenes unless "end" is given
   TL.host = ((episode.host && episode.host.clips) || []).map(c => {
     const a = TL.scenes[c.scenes[0]], b = TL.scenes[c.scenes[c.scenes.length - 1]];
-    return Object.assign({}, c, { w0: c.start != null ? c.start : a._start, w1: c.end != null ? c.end : b._end, title: a.host ? a.title : null });
+    return Object.assign({}, c, { w0: c.start != null ? c.start : a._start, w1: c.end != null ? c.end : b._end, title: a.host ? a.title : null, disclaimer: b.type === 'close' ? (b.disclaimer || ['BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR', 'TEDAVİ İÇİN DOKTORUNUZA DANIŞIN']) : null });
   });
   await Promise.all(episode.scenes.filter(sc => sc.imgData).map(sc => new Promise(res => {
     const im = new Image(); im.onload = () => { PHOTOS[sc.img] = im; res(); }; im.onerror = res; im.src = sc.imgData; })));
@@ -790,6 +790,11 @@ function drawHost(t) {
     const f = '800 44px Sans', str = h.c.title.toLocaleUpperCase('tr-TR'), w = measure(str, f, 1) + 64;
     ctx.save(); ctx.globalAlpha *= .9; ctx.fillStyle = '#FFFFFF'; roundRect(540 - w / 2, 1120, w, 84, 24); ctx.fill(); ctx.restore();
     text(str, 540, 1178, { font: f, color: C.ink, align: 'center', spacing: 1 });
+  }
+  if (h.c.disclaimer && h.c.disclaimer.length) {   // the close scene's medical note must stay visible over the presenter
+    const f = '700 24px Sans', ws = h.c.disclaimer.map(t => measure(t, f, 1)), w = Math.max(...ws) + 48, hh = 26 + 34 * h.c.disclaimer.length;
+    ctx.save(); ctx.globalAlpha *= .85; ctx.fillStyle = 'rgba(30,30,25,.6)'; roundRect(540 - w / 2, 1560, w, hh, 18); ctx.fill(); ctx.restore();
+    h.c.disclaimer.forEach((t, i) => text(t, 540, 1594 + 34 * i, { font: f, color: '#FFFFFF', align: 'center', spacing: 1 }));
   }
   if (EP.host && EP.host.note) {
     const f = '600 26px Sans', str = EP.host.note, w = measure(str, f) + 40;

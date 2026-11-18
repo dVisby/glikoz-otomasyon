@@ -13,6 +13,7 @@
 | 010 | 2026-11-17 | Sağlıklı sandığın kahvaltı seni neden acıktırıyor? (simit + meyve suyu) | 46,4 sn | Sessiz + 16 gerçekçi AI görsel (Canva, photo sahnesi) | contact sheet ✓ kapak ✓ | — | USDA portakal suyu 8,4 g/100 g → 200 ml ≈17 g ≈4 küp; DSÖ 2015 meyve suyu = serbest şeker; Leidy 2013 (20 kişi, sektör fonlu) 'bir çalışmada'. Spike temsili, `noBig`. |
 | 011 | 2026-11-17 | Canın tatlı mı çekiyor? Sebep şeker olmayabilir | 44,5 sn | Sessiz + 16 gerçekçi AI görsel (Canva, photo sahnesi) | contact sheet ✓ kapak ✓ | — | Spiegel 2004 (12 kişi, %33–45); Epel 2001 (59 kadın). Susuzluk iddiası kanıtı zayıf, yumuşak dil, sayı yok. |
 | 012 | 2026-11-17 | Market sepetimden çıkardığım 6 ürün | 47,1 sn | Sessiz + 16 gerçekçi AI görsel (Canva, photo sahnesi) | contact sheet ✓ kapak ✓ | — | Sayılar yalnız DSÖ 2015 (kutu ≤40 g, ideal <25 g). Ürün bazlı etiket değeri verilmedi. |
+| 013 | 2026-11-18 | Ne kadar yürümek yeterli? (DSÖ dakika, adım sayısı, yemek sonrası yürüyüş) | 60,3 sn | Kuju (Özen klon sesi) take 1, 1 cümle kesildi (53,7 sn) | contact sheet ✓ kapak ✓ | — | Özen'li ilk bölüm (onaylı gerçek kişi; görüntü+ses AI etiketi). Hook: Wan I2V yürüyüş, kapanış: InfiniteTalk. Paluch 2022 gözlemsel ('bulundu'); Reynolds 2016 #004 ile ortak. Kapanışta tıbbi not video üstünde (motor güncellendi). |
 
 ## Teslim öncesi kontrol listesi
 - [ ] Her sayı kaynakla eşleşiyor, öneri türü doğru

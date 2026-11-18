@@ -1,0 +1,199 @@
+{
+  "id": "013",
+  "slug": "yuruyus",
+  "title": "Ne kadar yürümek yeterli?",
+  "theme": "krem",
+  "coverTitle": "Ne kadar yürümek yeterli?",
+  "coverSub": "Dakika, adım ve doğru zaman",
+  "date": "2026-11-18",
+  "voice": {
+    "name": "Kuju (Özen klon sesi)",
+    "voice_id": "EuQXS0GthjEBfvEvx7qf",
+    "model": "eleven_v4"
+  },
+  "host": {
+    "name": "Özen",
+    "note": "AI ile oluşturuldu",
+    "clips": [
+      {
+        "id": "hook",
+        "file": "host/hook.mp4",
+        "scenes": [
+          0
+        ],
+        "at": 0.0,
+        "dur": 10.1
+      },
+      {
+        "id": "close",
+        "file": "host/close.mp4",
+        "scenes": [
+          5
+        ],
+        "at": 48.15,
+        "dur": 5.95,
+        "start": 47.9,
+        "end": 54.35
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "type": "statement",
+      "big": "?",
+      "label": "YÜRÜYÜŞ",
+      "title": "NE KADAR YETERLİ?",
+      "host": true,
+      "lines": [
+        "Yürümek, her gün yapabileceğin en kolay hareket.",
+        "Peki ne kadar yürümek yeterli?"
+      ]
+    },
+    {
+      "type": "statement",
+      "big": "150–300",
+      "unit": "dk/hafta",
+      "label": "DSÖ · YETİŞKİNLER",
+      "title": "ORTA TEMPOLU HAREKET",
+      "source": "DSÖ · FİZİKSEL AKTİVİTE REHBERİ 2020",
+      "lines": [
+        {
+          "text": "Dünya Sağlık Örgütü, yetişkinlere haftada 150 ile 300 dakika orta tempolu hareket öneriyor.",
+          "say": "Dünya Sağlık Örgütü, yetişkinlere haftada yüz elli ile üç yüz dakika orta tempolu hareket öneriyor."
+        },
+        {
+          "text": "Bu, haftada beş gün yarım saatlik yürüyüş demek.",
+          "say": "Bu, haftada beş gün yarım saatlik yürüyüş demek."
+        }
+      ]
+    },
+    {
+      "type": "bars",
+      "big": "6–10 bin",
+      "label": "GÜNLÜK ADIM · ERKEN ÖLÜM RİSKİ (GÖRELİ)",
+      "max": 110,
+      "items": [
+        {
+          "label": "≈3.600 ADIM",
+          "value": 100,
+          "red": true,
+          "line": 0
+        },
+        {
+          "label": "≈5.800 ADIM",
+          "value": 60,
+          "line": 0
+        },
+        {
+          "label": "≈7.800 ADIM",
+          "value": 55,
+          "line": 0
+        },
+        {
+          "label": "≈10.900 ADIM",
+          "value": 47,
+          "line": 0
+        }
+      ],
+      "source": "PALUCH ve ark. · LANCET PUBLIC HEALTH 2022 · 15 ÇALIŞMA · 47.471 KİŞİ · GÖZLEMSEL",
+      "lines": [
+        {
+          "text": "47 bin yetişkini izleyen 15 çalışmada, günlük adım arttıkça erken ölüm riski daha düşük bulundu.",
+          "say": "Kırk yedi bin yetişkini izleyen on beş çalışmada, günlük adım arttıkça erken ölüm riski daha düşük bulundu."
+        },
+        {
+          "text": "Fayda 60 yaş üstünde 6–8 bin, daha gençlerde 8–10 bin adımda dengelendi.",
+          "say": "Fayda altmış yaş üstünde altı ila sekiz bin, daha gençlerde sekiz ila on bin adımda dengelendi."
+        },
+        {
+          "text": "Yani 10 bin adım herkes için şart değil.",
+          "say": "Yani on bin adım herkes için şart değil."
+        }
+      ]
+    },
+    {
+      "type": "bars",
+      "big": "−%12",
+      "label": "YEMEK SONRASI ŞEKER · TİP 2 DİYABET",
+      "max": 110,
+      "items": [
+        {
+          "label": "GÜNDE TEK 30 DK YÜRÜYÜŞ",
+          "value": 100,
+          "red": true,
+          "line": 0
+        },
+        {
+          "label": "HER ÖĞÜNDEN SONRA 10 DK",
+          "value": 88,
+          "line": 0
+        }
+      ],
+      "source": "REYNOLDS ve ark. · DIABETOLOGIA 2016 · TİP 2 DİYABETLİ 41 KİŞİ",
+      "lines": [
+        {
+          "text": "Tip 2 diyabetli 41 kişide, her öğünden sonra 10 dakika yürümek, yemek sonrası şekeri tek 30 dakikalık yürüyüşe göre ortalama %12 daha düşük tuttu.",
+          "say": "Tip 2 diyabetli kırk bir kişide, her öğünden sonra on dakika yürümek, yemek sonrası şekeri tek otuz dakikalık yürüyüşe göre ortalama yüzde on iki daha düşük tuttu."
+        }
+      ]
+    },
+    {
+      "type": "statement",
+      "label": "3 KOLAY ADIM",
+      "title": "Yürüyüşü güne yay",
+      "bullets": [
+        {
+          "text": "Asansör yerine merdiven",
+          "line": 0
+        },
+        {
+          "text": "Telefonda konuşurken yürü",
+          "line": 1
+        },
+        {
+          "text": "Akşam yemeğinden sonra kısa tur",
+          "line": 2
+        }
+      ],
+      "lines": [
+        "Asansör yerine merdiveni seç.",
+        "Telefonla konuşurken yürü.",
+        "Akşam yemeğinden sonra kısa bir tur at."
+      ]
+    },
+    {
+      "type": "close",
+      "title": "BUGÜN BAŞLA",
+      "host": true,
+      "disclaimer": [
+        "BİLGİLENDİRME AMAÇLIDIR · TIBBİ TAVSİYE DEĞİLDİR",
+        "SAĞLIK SORUNUN VARSA DOKTORUNA DANIŞ"
+      ],
+      "lines": [
+        "Bir sağlık sorunun varsa önce doktoruna danış.",
+        "Bu akşam yemekten sonra on dakika yürü."
+      ]
+    }
+  ],
+  "cta": {
+    "save": "Kaydet: yürüyüş hedefini unutmamak için.",
+    "comment": "Sen günde kaç adım atıyorsun?",
+    "share": "Birlikte yürüyüşe çıkacağın kişiye gönder."
+  },
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#yürüyüş",
+    "#kanşekeri",
+    "#günlükadım",
+    "#hareket",
+    "#insülindirenci",
+    "#sağlıklıyaşam"
+  ],
+  "caption": "Ne kadar yürümek yeterli? 🚶‍♀️\nDünya Sağlık Örgütü yetişkinlere haftada 150–300 dakika orta tempolu fiziksel aktivite öneriyor; bu, haftada beş gün yaklaşık yarım saat yürüyüş demek. 15 çalışmada 47.471 yetişkin izlendiğinde günlük adım sayısı arttıkça erken ölüm riski daha düşük bulundu (gözlemsel); fayda 60 yaş üstünde günde 6–8 bin, daha gençlerde 8–10 bin adım civarında dengelendi. Tip 2 diyabetli 41 kişide her öğünden sonra 10 dakika yürüyüş, günde tek 30 dakikalık yürüyüşe göre yemek sonrası şekeri ortalama %12 daha düşük tuttu. Bilgilendirme amaçlıdır; tıbbi tavsiye değildir. Bir sağlık sorunun varsa doktoruna danış.\n🤖 Sunucu Özen'in görüntüsü ve sesi yapay zekâ ile oluşturulmuştur.",
+  "sources": [
+    "WHO guidelines on physical activity and sedentary behaviour, 2020; Bull FC ve ark., Br J Sports Med 2020;54:1451–1462 (yetişkinler: haftada 150–300 dk orta yoğunlukta aktivite)",
+    "Paluch AE ve ark., Daily steps and all-cause mortality: a meta-analysis of 15 international cohorts, Lancet Public Health 2022 (PMID 35247352; 47.471 kişi; gözlemsel; çeyrek medyanları 3.553/5.801/7.842/10.901 adım, HR 1/0,60/0,55/0,47)",
+    "Reynolds AN, Mann JI, Williams S ve ark., Diabetologia 2016, doi:10.1007/s00125-016-4085-2 (tip 2 diyabet, 41 kişi)"
+  ],
+  "notes": "Özen'li ilk bölüm (gerçek kişi, eşinin onayıyla; görüntü+ses AI etiketi zorunlu). Hook: hazır yürüyüş klibi (ozen_yuruyus_1+B, sessiz, dış ses). Kapanış: InfiniteTalk, yürüme B son karesinden, Kuju sesiyle. Paluch çubukları HR×100 (göreli risk, Q1=100); gözlemsel → 'bulundu' dili. #004 ile Reynolds ortak; 13 cümle. Ses: Kuju take 1 (55,5 sn); 'Ne zaman yürüdüğün de önemli.' süre için sesten kesildi (31,30–33,12) → 53,7 sn, 13 cümle."
+}

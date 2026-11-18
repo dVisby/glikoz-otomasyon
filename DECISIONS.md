@@ -19,3 +19,4 @@
 
 - 2026-11-17 — `spike` sahnesine `noBig` seçeneği eklendi: temsili eğride tepe değeri (ör. 176) gerçek ölçüm gibi okunmasın diye büyük sayı gizlenebilir.
 - 2026-11-17 — `photo` sahnesi: `source` satırı (beyaz, gölgeli) ve uzun anahtar kelimelerde otomatik font küçültme. AI görseller yalnız giriş/ipucu/ürün sahnelerinde; sayı/kaynak sahneleri grafik kalır. Açıklamaya 'Görseller yapay zekâ ile oluşturulmuştur' notu eklenir.
+- 2026-11-18 — Host klibi close sahnesini kapladığında sahnenin `disclaimer` satırları video üstünde (y≈1560, koyu kutu) çizilir; kapanış notu kuralı sunuculu bölümlerde de geçerli.
