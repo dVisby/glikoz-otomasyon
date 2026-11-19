@@ -22,3 +22,4 @@
 - 2026-11-18 — Host klibi close sahnesini kapladığında sahnenin `disclaimer` satırları video üstünde (y≈1560, koyu kutu) çizilir; kapanış notu kuralı sunuculu bölümlerde de geçerli.
 - 2026-11-18 — Özen yalnızca açık istekle kullanılır (RULES.md). Varsayılan: sunucusuz animasyonlu bölüm, AURA VOX ya da sessiz.
 - 2026-11-18 — Son kart: `ctaSize` seçeneği (büyük, sarılı yorum/paylaş satırları). 012'de kullanıcı isteğiyle close sahnesi kaldırıldı; yasal not caption'da.
+- 2026-11-19 — `capSize` (altyazı boyutu) eklendi; capSize varken photo kaynak satırı ekranın altına (y=1800) iner, altyazıyla çakışmaz.

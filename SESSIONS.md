@@ -18,3 +18,4 @@
 - 2026-11-17 — #010 düzeltmeleri (kullanıcı): protein cümlesi tek altyazı; kapanıştaki ekran içi yasal not kaldırıldı (caption'da); kapanış cümlesine 'porsiyon kontrolü de yap'; Kaydet satırı kaldırıldı, paylaş = 'Simit seven arkadaşınla paylaş.' (46,4 sn)
 - 2026-11-18 — #013 yürüyüş (Özen, klon ses) tamamlandı: pod MCP ile açıldı/kapatıldı (4500 stokta yoktu, sonra çıktı), kapanış klibi klon sesle; host katmanına close-scene tıbbi notu eklendi.
 - 2026-11-18 — #012 kullanıcı düzeltmeleri + mantık kontrolü: yeni giriş görseli (boş sepet + çıkarılmış ürünler, Canva AI), metin güncellemeleri, YERİNE ve close kaldırıldı, son kart Kaydet'siz + ctaSize 46. 50,5 sn.
+- 2026-11-19 — #011 sessiz/müzikli sürüm: sade metinler, 6 sahnenin hepsi AI fotoğraf (2 yeni: uyku, kapanış), capSize 62, ctaSize 46, close yok, yasal/AI notu ekranda ve açıklamada yok (kullanıcı caption'da yazacak). 40,7 sn.
