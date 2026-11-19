@@ -22,3 +22,4 @@
 - 2026-11-19 — #011 kaynak hassasiyeti: 'üst üste 2 gece' (Spiegel), stres satırları 'tetikleyebilir' + 'kadınların… yediği görüldü' (Epel: tatlı tercihi her iki günde). 42,7 sn.
 - 2026-11-19 — #014 yerden kalkma, #015 merdiven, #016 yalnızlık: sessiz + Canva AI fotoğraflı (14 cv + 2 kadınla yeniden), capSize 62/ctaSize 46, ekranda/açıklamada yasal-AI notu yok. Ayrıca infografik/upf-5-saniye (tek sayfa PNG, NOVA + BMJ 2024).
 - 2026-11-19 — #015 '1 DAKİKADAN AZ' görseli değişti (inen adam yerine merdiven çıkan adam, kullanıcı geri bildirimi).
+- 2026-11-19 — #015 son sahne görseli: topuklu kadın yerine açık asansörü bırakıp merdivene yönelen sade kıyafetli kadın.
