@@ -506,7 +506,7 @@ SCENES.photo = {
       text(str, 540, y + 20, { font: f, color: s.red ? C.red : C.gold, align: 'center', spacing: 2 });
       ctx.restore();
     }
-    if (s.source) { ctx.save(); ctx.shadowColor = 'rgba(0,0,0,.6)'; ctx.shadowBlur = 8; text(s.source, 76, 1262, { font: '500 21px Mono', color: 'rgba(255,255,255,.9)', spacing: 1.5 }); ctx.restore(); }
+    if (s.source) { ctx.save(); ctx.shadowColor = 'rgba(0,0,0,.6)'; ctx.shadowBlur = 8; text(s.source, 76, EP.capSize ? 1800 : 1262, { font: '500 22px Mono', color: 'rgba(255,255,255,.9)', spacing: 1.5 }); ctx.restore(); }
   },
   events(s) { return []; }
 };
@@ -759,7 +759,7 @@ function background() {
 function drawCaptions(t) {
   for (const c of TL.captions) {
     const a = fadeWin(t, c.start, c.end, .25); if (a <= 0) continue;
-    const font = '300 50px Jost', lines = wrapLines(c.text, font, 860), lh = 66, y0 = 1385 - (lines.length - 1) * lh / 2;
+    const cs = EP.capSize || 50, font = `300 ${cs}px Jost`, lines = wrapLines(c.text, font, 880), lh = Math.round(cs * 1.32), y0 = 1385 - (lines.length - 1) * lh / 2;
     const dy = (1 - easeOut(prog(t, c.start, c.start + .4))) * 14;
     if (C.capBox) {
       const wmax = Math.max(...lines.map(l => measure(l, font)));
