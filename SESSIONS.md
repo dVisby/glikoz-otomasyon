@@ -21,3 +21,4 @@
 - 2026-11-19 — #011 sessiz/müzikli sürüm: sade metinler, 6 sahnenin hepsi AI fotoğraf (2 yeni: uyku, kapanış), capSize 62, ctaSize 46, close yok, yasal/AI notu ekranda ve açıklamada yok (kullanıcı caption'da yazacak). 40,7 sn.
 - 2026-11-19 — #011 kaynak hassasiyeti: 'üst üste 2 gece' (Spiegel), stres satırları 'tetikleyebilir' + 'kadınların… yediği görüldü' (Epel: tatlı tercihi her iki günde). 42,7 sn.
 - 2026-11-19 — #014 yerden kalkma, #015 merdiven, #016 yalnızlık: sessiz + Canva AI fotoğraflı (14 cv + 2 kadınla yeniden), capSize 62/ctaSize 46, ekranda/açıklamada yasal-AI notu yok. Ayrıca infografik/upf-5-saniye (tek sayfa PNG, NOVA + BMJ 2024).
+- 2026-11-19 — #015 '1 DAKİKADAN AZ' görseli değişti (inen adam yerine merdiven çıkan adam, kullanıcı geri bildirimi).
