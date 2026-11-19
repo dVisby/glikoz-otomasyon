@@ -14,6 +14,9 @@
 | 011 | 2026-11-17 | Canın tatlı mı çekiyor? Sebep şeker olmayabilir | 42,7 sn | Sessiz + 16 gerçekçi AI görsel (Canva, photo sahnesi) | contact sheet ✓ kapak ✓ | — | Spiegel 2004 (12 kişi, %33–45); Epel 2001 (59 kadın). Susuzluk iddiası kanıtı zayıf, yumuşak dil, sayı yok. |
 | 012 | 2026-11-17 | Market sepetimden çıkardığım 6 ürün | 50,5 sn | Sessiz + 16 gerçekçi AI görsel (Canva, photo sahnesi) | contact sheet ✓ kapak ✓ | — | Sayılar yalnız DSÖ 2015 (kutu ≤40 g, ideal <25 g). Ürün bazlı etiket değeri verilmedi. |
 | 013 | 2026-11-18 | Ne kadar yürümek yeterli? (DSÖ dakika, adım sayısı, yemek sonrası yürüyüş) | 60,3 sn | Kuju (Özen klon sesi) take 1, 1 cümle kesildi (53,7 sn) | contact sheet ✓ kapak ✓ | — | Özen'li ilk bölüm (onaylı gerçek kişi; görüntü+ses AI etiketi). Hook: Wan I2V yürüyüş, kapanış: InfiniteTalk. Paluch 2022 gözlemsel ('bulundu'); Reynolds 2016 #004 ile ortak. Kapanışta tıbbi not video üstünde (motor güncellendi). |
+| 014 | 2026-11-19 | Elini kullanmadan yerden kalkabiliyor musun? (oturup kalkma testi) | 49,3 sn | Sessiz + 5 AI fotoğraf (capSize 62) | contact ✓ | — | de Brito/Araújo EJPC 2012: 2002 kişi, her 1 puan %21; 6,5x basın rakamı kullanılmadı. Ağrı uyarısı ekranda. |
+| 015 | 2026-11-19 | 4 kat merdiveni 1 dakikada çıkabiliyor musun? | 42,1 sn | Sessiz + 5 AI fotoğraf | contact ✓ | — | ESC 2020 (Peteiro, 165 semptomatik hasta, 60 basamak; 40–45 sn → 9–10 MET; >1,5 dk doktora). Güvenlik uyarısı ekranda. |
+| 016 | 2026-11-19 | Yalnızlık da bir risk faktörü | 40,3 sn | Sessiz + 5 AI fotoğraf | contact ✓ | — | DSÖ Sosyal Bağlantı Komisyonu 2025 (1/6, 871 bin); Holt-Lunstad 2010 (148 çalışma, %50; 15 sigara kıyası yazar açıklaması). |
 
 ## Teslim öncesi kontrol listesi
 - [ ] Her sayı kaynakla eşleşiyor, öneri türü doğru
