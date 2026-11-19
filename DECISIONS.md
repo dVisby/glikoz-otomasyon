@@ -23,3 +23,10 @@
 - 2026-11-18 — Özen yalnızca açık istekle kullanılır (RULES.md). Varsayılan: sunucusuz animasyonlu bölüm, AURA VOX ya da sessiz.
 - 2026-11-18 — Son kart: `ctaSize` seçeneği (büyük, sarılı yorum/paylaş satırları). 012'de kullanıcı isteğiyle close sahnesi kaldırıldı; yasal not caption'da.
 - 2026-11-19 — `capSize` (altyazı boyutu) eklendi; capSize varken photo kaynak satırı ekranın altına (y=1800) iner, altyazıyla çakışmaz.
+
+## 2026-11-19 — Marka fotoğrafı arka planı (brandBg)
+- Krem temada çizili dekor (zeytin dalı, kiremit güneş, tepeler) yerine Muharrem'in verdiği marka fotoğrafı (`engine/assets/bg.jpg`, defter + zeytin dalı + limonlu çay; `engine/bg.js` olarak gömülü) kullanılıyor. Açılış/geçişlerde görünen arka plan, logo/çağrı kartı ve kapak bu fotoğrafla çiziliyor.
+- Fotoğraf logoyu (defter) zaten taşıdığı için bu modda köşe rozeti, #id, kapanış kartındaki büyük logo diski ve kapaktaki rozet çizilmiyor; çağrı satırları ve kapak başlığı defterin üstündeki boş krem alanda yarı saydam krem panelde.
+- Bundan sonraki tüm paylaşımlar için varsayılan. Eski dekor için episode.json'a `"brandBg": false`.
+- Kaynak görsel 510×908 geldi; 1080×1920'ye Lanczos + hafif keskinleştirme ile büyütüldü. Daha yüksek çözünürlüklü sürüm gelirse `bg.jpg`/`bg.js` yenilenecek.
+- Photo sahnelerinin overlay'i `photoOverlay()` fonksiyonuna ayrıldı; host klipleri `overlay:'photo'` ile foto sahnesi gibi etiket/rozet/kaynak gösterebiliyor.

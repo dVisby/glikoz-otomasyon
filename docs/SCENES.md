@@ -34,3 +34,8 @@ Son cümleden 0,9 sn sonra 5,6 sn süren kart eklenir: krem rozet üzerinde anim
 
 - Bölüm seviyesinde `ctaSize` (px): son karttaki yorum/paylaş satırlarını bu boyutta, gerekirse birden çok satıra kırarak yazar (Kaydet satırı yokken kullanışlı).
 - Bölüm seviyesinde `capSize` (px, varsayılan 50): altyazı yazı boyutu; sessiz/müzikli kullanımda okunabilirlik için 60–64 önerilir.
+
+## Arka plan: marka fotoğrafı
+- Krem temada varsayılan arka plan `engine/assets/bg.jpg` (bg.js). Logo/çağrı kartı ve kapak bu fotoğrafla çizilir; köşe rozeti gizlenir.
+- `"brandBg": false` → eski çizili dekor (zeytin dalı, güneş, tepeler).
+- Host klibinde `"overlay": "photo"` → klip, bağlı olduğu photo sahnesinin etiket, rozet ve kaynak satırıyla çizilir (AI etiketi yok).

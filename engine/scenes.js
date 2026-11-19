@@ -484,13 +484,8 @@ SCENES.statement = {
 /* photo: full-bleed AI image (cover-fit, slow zoom) + keyword pill.  {type:'photo', img:'img/s1.png', keyword:'UYKU', lines:[...]}
  * imgData (data URI) is injected by tools/glikoz.py from episodes/<ep>/<img>. */
 const PHOTOS = {};
-SCENES.photo = {
-  draw(s, lt, a) {
-    const im = PHOTOS[s.img]; if (!im) return;
-    const sc = Math.max(W / im.width, H / im.height) * (1.04 + .05 * prog(lt, 0, s.dur || 8));
-    const dw = im.width * sc, dh = im.height * sc;
-    ctx.save(); ctx.imageSmoothingQuality = 'high';
-    ctx.drawImage(im, (W - dw) / 2, (H - dh) / 2 - 20 * prog(lt, 0, s.dur || 8), dw, dh);
+function photoOverlay(s, lt) {   // gradients + logo badge + keyword pill + source line (photo scenes and video-backed host clips)
+    ctx.save();
     const g1 = ctx.createLinearGradient(0, 0, 0, 640); g1.addColorStop(0, 'rgba(20,20,12,.45)'); g1.addColorStop(1, 'rgba(20,20,12,0)');
     ctx.fillStyle = g1; ctx.fillRect(0, 0, W, 640);
     const g2 = ctx.createLinearGradient(0, 1180, 0, H); g2.addColorStop(0, 'rgba(20,20,12,0)'); g2.addColorStop(1, 'rgba(20,20,12,.5)');
@@ -507,6 +502,17 @@ SCENES.photo = {
       ctx.restore();
     }
     if (s.source) { ctx.save(); ctx.shadowColor = 'rgba(0,0,0,.6)'; ctx.shadowBlur = 8; text(s.source, 76, EP.capSize ? 1800 : 1262, { font: '500 22px Mono', color: 'rgba(255,255,255,.9)', spacing: 1.5 }); ctx.restore(); }
+}
+
+SCENES.photo = {
+  draw(s, lt, a) {
+    const im = PHOTOS[s.img]; if (!im) return;
+    const sc = Math.max(W / im.width, H / im.height) * (1.04 + .05 * prog(lt, 0, s.dur || 8));
+    const dw = im.width * sc, dh = im.height * sc;
+    ctx.save(); ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(im, (W - dw) / 2, (H - dh) / 2 - 20 * prog(lt, 0, s.dur || 8), dw, dh);
+    ctx.restore();
+    photoOverlay(s, lt);
   },
   events(s) { return []; }
 };
@@ -608,6 +614,9 @@ function icon(kind, x, y, s, color) {
 }
 const LOGO_IMG = new Image();
 if (window.LOGO_SRC) LOGO_IMG.src = window.LOGO_SRC;
+const BG_IMG = new Image();   // brand photo (engine/assets/bg.jpg via bg.js): replaces the drawn cream decor; EP.brandBg:false keeps the old decor
+if (window.BG_SRC) BG_IMG.src = window.BG_SRC;
+const useBg = () => C.decor && EP.brandBg !== false && BG_IMG.complete && BG_IMG.naturalWidth > 0;
 function logoBadge(cx, cy, r, shadow = 1) { // the real logo artwork (cream disc), drawn as a badge
   if (!LOGO_IMG.complete || !LOGO_IMG.naturalWidth) { drawLogo(cx, cy, r, 10); return; }
   ctx.save();
@@ -616,11 +625,11 @@ function logoBadge(cx, cy, r, shadow = 1) { // the real logo artwork (cream disc
   ctx.restore();
 }
 function drawEndcard(lt) {
-  const R = 300, cx = 540, cy = 780;
+  const R = 300, cx = 540, cy = 780, bg = useBg();
   const a0 = easeOut(prog(lt, 0, .7)), sc = .9 + .1 * a0;
-  ctx.save(); ctx.globalAlpha *= a0; logoBadge(cx, cy, R * sc, 1); ctx.restore();
+  if (!bg) { ctx.save(); ctx.globalAlpha *= a0; logoBadge(cx, cy, R * sc, 1); ctx.restore(); }   // the brand photo already carries the logo (notebook)
   const pp = prog(lt, .9, 1.9);   // one soft ring pulse around the badge
-  if (pp > 0 && pp < 1) { ctx.save(); ctx.strokeStyle = `rgba(94,107,59,${(1 - pp) * .45})`; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(cx, cy, R + 10 + pp * 60, 0, Math.PI * 2); ctx.stroke(); ctx.restore(); }
+  if (!bg && pp > 0 && pp < 1) { ctx.save(); ctx.strokeStyle = `rgba(94,107,59,${(1 - pp) * .45})`; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(cx, cy, R + 10 + pp * 60, 0, Math.PI * 2); ctx.stroke(); ctx.restore(); }
   const cta = Object.assign({}, CTA_DEFAULT, EP.cta || {});
   const rows = [
     { k: 'save', txt: cta.save, t: 2.5, size: 56, font: '400 40px Jost', color: C.gold, txtColor: C.ink },
@@ -631,7 +640,13 @@ function drawEndcard(lt) {
   if (!vis.some(r => r.k === 'save')) vis.forEach((r, i) => { r.t = 1.4 + i * .5; });   // no Kaydet pill: rows appear sooner and stay longer
   let uni = 38;   // secondary rows share one font size (the smallest that fits the longest row)
   vis.filter(r => r.k !== 'save').forEach(r => { while (uni > 22 && measure(r.txt, `300 ${uni}px Jost`) > 720) uni--; });
-  let y = 1215;
+  let y = bg ? 640 : 1215;   // with the brand photo the rows sit in the empty cream area above the notebook
+  const IX = bg ? 130 : 200, TX = bg ? 190 : 260, WRAP = bg ? 620 : 700;
+  if (bg) {   // soft cream panel behind the rows so they read over the leaf shadows
+    const pa = easeOut(prog(lt, .9, 1.5));
+    ctx.save(); ctx.globalAlpha *= pa * .78; ctx.fillStyle = '#FBF8F2'; ctx.shadowColor = 'rgba(80,70,50,.12)'; ctx.shadowBlur = 30;
+    roundRect(70, 560, 780, 400, 34); ctx.fill(); ctx.restore();
+  }
   vis.forEach((r, i) => {
     const a = easeOut(prog(lt, r.t, r.t + .5)), dx = (1 - a) * 20;
     ctx.save(); ctx.globalAlpha *= a;
@@ -640,20 +655,20 @@ function drawEndcard(lt) {
       roundRect(120, y - 58, 840, 104, 52); ctx.fill(); ctx.stroke();
       if (lt > r.t + .6) { const b = .5 + .5 * Math.sin((lt - r.t) * 4); icon('save', 200, y - 6, r.size * (1 + .05 * b), C.gold); }
       else icon('save', 200, y - 6, r.size, C.gold);
-    } else icon(r.k, 200, y - 6, EP.ctaSize ? EP.ctaSize * 1.15 : r.size, EP.ctaSize ? C.ink : r.color);
+    } else icon(r.k, IX, y - 6, EP.ctaSize ? EP.ctaSize * 1.15 : r.size, EP.ctaSize ? C.ink : r.color);
     let font = r.font; const m = font.match(/^(\d+) (\d+)px (.+)$/);
     if (r.k !== 'save' && EP.ctaSize) {   // larger secondary rows, wrapped onto several lines (episode.ctaSize, px)
       const cs = EP.ctaSize; font = `400 ${cs}px ${m[3]}`;
       const words = r.txt.split(' '), lines = [''];
-      words.forEach(w => { const tr = lines[lines.length - 1] ? lines[lines.length - 1] + ' ' + w : w; if (measure(tr, font) > 700 && lines[lines.length - 1]) lines.push(w); else lines[lines.length - 1] = tr; });
-      lines.forEach((ln, j) => text(ln, 260 + dx, y + 8 + j * cs * 1.22, { font, color: C.ink }));
+      words.forEach(w => { const tr = lines[lines.length - 1] ? lines[lines.length - 1] + ' ' + w : w; if (measure(tr, font) > WRAP && lines[lines.length - 1]) lines.push(w); else lines[lines.length - 1] = tr; });
+      lines.forEach((ln, j) => text(ln, TX + dx, y + 8 + j * cs * 1.22, { font, color: C.ink }));
       ctx.restore();
       y += lines.length * cs * 1.22 + 46;
       return;
     }
     if (r.k !== 'save') font = `${m[1]} ${uni}px ${m[3]}`;
     else for (let px = +m[2]; px > 22 && measure(r.txt, font) > 660; px -= 1) font = `${m[1]} ${px}px ${m[3]}`;
-    text(r.txt, 260 + dx, y + 8, { font, color: r.txtColor });
+    text(r.txt, TX + dx, y + 8, { font, color: r.txtColor });
     ctx.restore();
     y += r.k === 'save' ? 120 : 88;
   });
@@ -747,14 +762,18 @@ function decor(t) {
 function background() {
   ctx.globalAlpha = 1; ctx.shadowBlur = 0; ctx.filter = 'none';
   ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H);
-  if (C.decor) decor(background.t || 0);
+  if (useBg()) {   // brand photo, cover-fit, very slow zoom
+    const t = background.t || 0, z = 1 + .03 * Math.min(1, t / 60), sc = Math.max(W / BG_IMG.width, H / BG_IMG.height) * z;
+    const dw = BG_IMG.width * sc, dh = BG_IMG.height * sc;
+    ctx.save(); ctx.imageSmoothingQuality = 'high'; ctx.drawImage(BG_IMG, (W - dw) / 2, (H - dh) / 2, dw, dh); ctx.restore();
+  } else if (C.decor) decor(background.t || 0);
   else {
     const g = ctx.createRadialGradient(540, 900, 50, 540, 900, 900);
     g.addColorStop(0, 'rgba(40,36,30,0.35)'); g.addColorStop(1, 'rgba(0,0,0,0)'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
   }
   const ba = TL && TL.endStart != null && background.t != null ? 1 - prog(background.t, TL.endStart - .2, TL.endStart + .3) : 1;
-  if (ba > 0 && !background.noCorner) { ctx.save(); ctx.globalAlpha *= ba; logoBadge(940, 352, 72, .7); ctx.restore(); }
-  if (EP.id) text('#' + EP.id, 1012, 462, { font: '400 20px Mono', color: C.grayDim, align: 'right', spacing: 2, alpha: ba });
+  if (ba > 0 && !background.noCorner && !useBg()) { ctx.save(); ctx.globalAlpha *= ba; logoBadge(940, 352, 72, .7); ctx.restore(); }
+  if (EP.id && !useBg()) text('#' + EP.id, 1012, 462, { font: '400 20px Mono', color: C.grayDim, align: 'right', spacing: 2, alpha: ba });
 }
 function drawCaptions(t) {
   for (const c of TL.captions) {
@@ -794,6 +813,7 @@ function drawHost(t) {
   // soft top shade so the title pill and badge stay legible
   const g = ctx.createLinearGradient(0, 0, 0, 520); g.addColorStop(0, 'rgba(0,0,0,.28)'); g.addColorStop(1, 'rgba(0,0,0,0)');
   ctx.fillStyle = g; ctx.fillRect(0, 0, W, 520);
+  if (h.c.overlay === 'photo') { const s = TL.scenes[h.c.scenes[0]]; photoOverlay(s, t - s._start); ctx.restore(); return; }
   logoBadge(940, 352, 72, .7);
   if (h.c.title) {
     const f = '800 44px Sans', str = h.c.title.toLocaleUpperCase('tr-TR'), w = measure(str, f, 1) + 64;
@@ -837,6 +857,16 @@ function audioEvents() {
 }
 function renderCover() {
   background.noCorner = true; background(); background.noCorner = false;
+  const bg = useBg();
+  if (bg) {   // brand photo cover: title on a cream panel in the empty area above the notebook
+    const t = EP.coverTitle || EP.title, font = '800 96px Sans', lines = wrapLines(t.toLocaleUpperCase('tr-TR'), font, 860);
+    const hh = lines.length * 112 + (EP.coverSub ? 90 : 0) + 90, y0 = 760 - hh / 2;
+    ctx.save(); ctx.globalAlpha = .82; ctx.fillStyle = '#FBF8F2'; ctx.shadowColor = 'rgba(80,70,50,.15)'; ctx.shadowBlur = 36;
+    roundRect(70, y0, 940, hh, 40); ctx.fill(); ctx.restore();
+    lines.forEach((l, i) => text(l, 540, y0 + 125 + i * 112, { font, color: '#4E5B34', align: 'center', spacing: 1 }));
+    if (EP.coverSub) text(EP.coverSub, 540, y0 + 125 + lines.length * 112 + 10, { font: '400 50px Jost', color: C.ink, align: 'center' });
+    return;
+  }
   // decorative day curve under the title
   const x0 = 130, w = 820, Y = chart(x0, 1060, w, 220, 50, 210);
   const f = h => 92 + bump(h - 8, 40, .7) + bump(h - 13, 85, .55) + bump(h - 20, 48, .75) + 3 * Math.sin(h * 1.7);
@@ -845,9 +875,9 @@ function renderCover() {
   const y0 = 820 - (lines.length - 1) * 55;
   lines.forEach((l, i) => text(l, 540, y0 + i * 110, { font, color: C.gold, align: 'center', glow: `rgba(${C.gRGB},.4)` }));
   if (EP.coverSub) text(EP.coverSub, 540, y0 + lines.length * 110 + 30, { font: '300 46px Jost', color: C.ink, align: 'center' });
-  logoBadge(540, 1490, 125, 1);
+  if (!useBg()) logoBadge(540, 1490, 125, 1);
 }
 window.setup = setup; window.render = render; window.audioEvents = audioEvents; window.renderCover = renderCover;
 window.getTotal = () => TL.total;
 window.hostNeed = hostNeed; window.setHost = setHost;
-window.ready = Promise.all([LOGO_IMG.decode ? LOGO_IMG.decode().catch(() => {}) : Promise.resolve(), Promise.all(['800 150px Sans', '700 48px Sans', '600 28px Sans', '500 20px Sans', '500 150px Mono', '400 30px Mono', '300 50px Jost', '400 26px Jost', '400 40px Jost', '400 100px Serif', '500 60px Sans', '400 20px Sans'].map(f => document.fonts.load(f, 'AİŞĞÜÇÖıa1')))]);
+window.ready = Promise.all([LOGO_IMG.decode ? LOGO_IMG.decode().catch(() => {}) : Promise.resolve(), BG_IMG.decode ? BG_IMG.decode().catch(() => {}) : Promise.resolve(), Promise.all(['800 150px Sans', '700 48px Sans', '600 28px Sans', '500 20px Sans', '500 150px Mono', '400 30px Mono', '300 50px Jost', '400 26px Jost', '400 40px Jost', '400 100px Serif', '500 60px Sans', '400 20px Sans'].map(f => document.fonts.load(f, 'AİŞĞÜÇÖıa1')))]);
