@@ -1,0 +1,86 @@
+{
+  "theme": "krem",
+  "date": "2026-11-19",
+  "capSize": 62,
+  "ctaSize": 46,
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "id": "015",
+  "slug": "merdiven-testi",
+  "title": "4 kat merdiveni 1 dakikada çıkabiliyor musun?",
+  "coverTitle": "Merdiven testi",
+  "coverSub": "4 kat, 1 dakika",
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "MERDİVEN TESTİ",
+      "lines": [
+        "4 kat merdiveni 1 dakikadan kısa sürede çıkabiliyor musun?",
+        "Bu, kalp sağlığın hakkında ipucu verebilir."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/nasil.png",
+      "keyword": "NASIL YAPILIR?",
+      "lines": [
+        "Önce 15–20 dakika dinlen.",
+        "60 basamağı, yani yaklaşık 4 katı hızlı tempoda çık.",
+        "Durma ama koşma.",
+        "Göğüs ağrısı ya da baş dönmesi olursa hemen dur."
+      ],
+      "source": "ESC · EACVI BEST OF IMAGING 2020"
+    },
+    {
+      "type": "photo",
+      "img": "img/iyi.png",
+      "keyword": "1 DAKİKADAN AZ",
+      "lines": [
+        "1 dakikadan kısa sürede çıkmak, iyi kalp sağlığının işareti olabilir.",
+        "Bir çalışmada 40–45 saniyede çıkanların egzersiz kapasitesi yüksek bulundu."
+      ],
+      "source": "PETEIRO ve ark. · ESC 2020 · 165 HASTA"
+    },
+    {
+      "type": "photo",
+      "img": "img/uyari.png",
+      "keyword": "1,5 DAKİKADAN FAZLA",
+      "lines": [
+        "1,5 dakikadan uzun sürüyorsa bir doktora danışmak iyi olur."
+      ],
+      "source": "PETEIRO ve ark. · ESC 2020",
+      "red": true
+    },
+    {
+      "type": "photo",
+      "img": "img/gunluk.png",
+      "keyword": "HER GÜN MERDİVEN",
+      "lines": [
+        "Asansör yerine merdiveni seç.",
+        "Her gün atılan küçük adımlar kalbini güçlendirir."
+      ]
+    }
+  ],
+  "cta": {
+    "save": "",
+    "comment": "Kaç saniyede çıktın? Yorumlara yaz.",
+    "share": "Her gün asansöre binen arkadaşına gönder."
+  },
+  "caption": "4 kat merdiveni 1 dakikadan kısa sürede çıkabiliyor musun? 🏃\n\nAvrupa Kardiyoloji Derneği'nde sunulan bir çalışmada, merdiven çıkma süresi laboratuvardaki egzersiz testi sonuçlarıyla karşılaştırıldı. 1 dakikanın altı iyi bir işaret; 1,5 dakikanın üstü ise doktora danışmak için bir neden.\n\nKaç saniyede çıktın? 👇",
+  "sources": [
+    "Avrupa Kardiyoloji Derneği (ESC) basın bülteni, 11 Aralık 2020: Test your heart health by climbing stairs (Peteiro J ve ark., EACVI Best of Imaging 2020; 165 hasta, 60 basamak; 40–45 sn → 9–10 MET; >1,5 dk → doktora danışın)"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#kalpsağlığı",
+    "#merdiventesti",
+    "#longevity",
+    "#egzersiz",
+    "#sağlıklıyaşam"
+  ],
+  "notes": "Çalışma, koroner hastalık şüphesiyle sevk edilmiş 165 semptomatik hastada; yazar genel popülasyonda da benzer olacağını belirtti. Ekranda güvenlik uyarısı var."
+}

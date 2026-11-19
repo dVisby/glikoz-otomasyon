@@ -1,0 +1,87 @@
+{
+  "theme": "krem",
+  "date": "2026-11-19",
+  "capSize": 62,
+  "ctaSize": 46,
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "id": "016",
+  "slug": "yalnizlik",
+  "title": "Yalnızlık da bir risk faktörü",
+  "coverTitle": "Yalnızlık",
+  "coverSub": "Sigara kadar zararlı olabilir mi?",
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "YALNIZLIK",
+      "lines": [
+        "Sigara kadar zararlı olabilen bir şey daha var:",
+        "Yalnızlık."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/kalabalik.png",
+      "keyword": "HER 6 KİŞİDEN 1",
+      "lines": [
+        "Dünya Sağlık Örgütü'ne göre her 6 kişiden 1'i yalnızlık yaşıyor.",
+        "Yalnızlık, her yıl 871 binden fazla ölümle ilişkili."
+      ],
+      "source": "DSÖ SOSYAL BAĞLANTI KOMİSYONU · 2025",
+      "red": true
+    },
+    {
+      "type": "photo",
+      "img": "img/baglar.png",
+      "keyword": "%50",
+      "lines": [
+        "148 çalışmalık bir analize göre:",
+        "Güçlü sosyal bağları olanların hayatta kalma olasılığı %50 daha yüksek.",
+        "Bu etki, günde 15 sigara içmeyle kıyaslandı."
+      ],
+      "source": "HOLT-LUNSTAD ve ark. · PLOS MED 2010 · 148 ÇALIŞMA"
+    },
+    {
+      "type": "photo",
+      "img": "img/ara.png",
+      "keyword": "BUGÜN",
+      "lines": [
+        "Bugün uzun zamandır konuşmadığın birini ara.",
+        "Bir arkadaşınla yürüyüşe çık.",
+        "Bir kulübe ya da gönüllü gruba katıl."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/kapanis.png",
+      "keyword": "BAĞ KUR",
+      "lines": [
+        "Sağlıklı yaşam sadece tabakta değil, sofrandaki insanlarda da."
+      ]
+    }
+  ],
+  "cta": {
+    "save": "",
+    "comment": "En son kiminle uzun uzun sohbet ettin?",
+    "share": "Uzun zamandır görmediğin birine gönder."
+  },
+  "caption": "Sigara kadar zararlı olabilen bir şey: yalnızlık. 🤝\n\nDünya Sağlık Örgütü'ne göre her 6 kişiden 1'i yalnızlık yaşıyor. Güçlü sosyal bağlar ise daha uzun ve sağlıklı bir yaşamla ilişkili.\n\nBugün uzun zamandır konuşmadığın birini ara. 💚\n\nEn son kiminle uzun uzun sohbet ettin? 👇",
+  "sources": [
+    "DSÖ (WHO) Sosyal Bağlantı Komisyonu raporu ve basın bülteni, 30 Haziran 2025 (her 6 kişiden 1'i yalnızlık yaşıyor; yılda 871 binden fazla ölümle ilişkili)",
+    "Holt-Lunstad J, Smith TB, Layton JB. PLoS Med 2010;7(7):e1000316 (148 çalışma, 308.849 kişi; güçlü sosyal ilişkilerde hayatta kalma olasılığı %50 yüksek; etkisi sigara gibi yerleşik risk faktörleriyle karşılaştırılabilir, '15 sigara' kıyası yazarın açıklaması)"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#yalnızlık",
+    "#sosyalbağ",
+    "#longevity",
+    "#ruhsağlığı",
+    "#sağlıklıyaşam",
+    "#wellness"
+  ],
+  "notes": "'15 sigara' kıyası çalışmadaki etki büyüklüklerinin karşılaştırılmasından gelir (yazar açıklaması); 'kıyaslandı' dili kullanıldı. Hook 'olabilen' ile yumuşatıldı."
+}
