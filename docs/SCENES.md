@@ -14,7 +14,7 @@ Her sahnede `lines` (cümleler) zorunlu. Satır metninde ` | ` altyazıyı ikiye
 | `compare` | İki yanıt eğrisi (A kırmızı, B altın) | `a:{amp,label}`, `b:{amp,label}`, `counter`, `prefix`, `suffix`, `bigLine`, `label`, `xLabels?` |
 | `flatten` | Eğrinin bir alışkanlıkla yumuşaması | `counter`, `unit`, `label`, `from`, `to`, `steps` |
 | `statement` | Genel metin sahnesi: büyük sayı/başlık + madde listesi (krem temada ✓ işaretli) | `big?`, `unit?`, `red?`, `label?`, `title?`, `bullets:[text | {text, line}]`, `bowls:[{n, label, red?}]` (tane sayısıyla iki kase karşılaştırması) |
-| `photo` | Tam ekran AI görsel arka plan + beyaz anahtar kelime hapı | `img` (episodes/<ep>/ altında yol), `keyword`, `red?`, `source?` (beyaz, gölgeli kaynak satırı) |
+| `photo` | Tam ekran AI görsel arka plan + beyaz anahtar kelime hapı | `img` (episodes/<ep>/ altında yol), `keyword`, `red?`, `source?` (beyaz, gölgeli kaynak satırı), `hook?` (hap ilk karede hazır; açılış hook'u için, timing'de ilk satır ~ -0.15 sn'den başlatılır) |
 | `close` | Seri kapanışı + yasal not (her bölümde son sahne) | `title`, `disclaimer`, `ask?` (grafik altı soru satırı) |
 
 ## Sunucu klibi (`host`)

@@ -24,3 +24,4 @@
 - 2026-11-19 — #015 '1 DAKİKADAN AZ' görseli değişti (inen adam yerine merdiven çıkan adam, kullanıcı geri bildirimi).
 - 2026-11-19 — #015 son sahne görseli: topuklu kadın yerine açık asansörü bırakıp merdivene yönelen sade kıyafetli kadın.
 - 2026-11-19: Krem tema arka planı marka fotoğrafıyla değiştirildi (açılış, logo/çağrı kartı, kapak); photoOverlay + host overlay:'photo'; 015 yeniden render edildi. Ceren klipleri RunPod volume'da (ep015v), pod kapatıldı.
+- 2026-11-20: 016'ya açılış hook'u eklendi (photo hook:true), marka fotoğraflı arka planla yeniden render.

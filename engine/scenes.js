@@ -494,7 +494,7 @@ function photoOverlay(s, lt) {   // gradients + logo badge + keyword pill + sour
     logoBadge(940, 352, 72, .7);
     if (s.keyword) {
       const str = s.keyword.toLocaleUpperCase('tr-TR'), fs = Math.min(132, Math.floor(132 * 860 / measure(str, '800 132px Sans', 2))), f = `800 ${fs}px Sans`, w = measure(str, f, 2) + 110;
-      const k = easeOut(prog(lt, s.L[0] + .15, s.L[0] + .75)), y = 640;
+      const k = s.hook ? easeOut(prog(lt, 0, .35)) : easeOut(prog(lt, s.L[0] + .15, s.L[0] + .75)), y = 640;   // hook: pill is up from the first frame
       ctx.save(); ctx.globalAlpha *= k; ctx.translate(540, y); ctx.scale(.88 + .12 * k, .88 + .12 * k); ctx.translate(-540, -y);
       ctx.shadowColor = 'rgba(0,0,0,.28)'; ctx.shadowBlur = 34; ctx.shadowOffsetY = 10;
       ctx.fillStyle = '#FFFFFF'; roundRect(540 - w / 2, y - 112, w, 170, 40); ctx.fill(); ctx.shadowBlur = 0;

@@ -17,10 +17,21 @@
     {
       "type": "photo",
       "img": "img/s1.png",
+      "keyword": "GÜNDE 15 SİGARA",
+      "red": true,
+      "lines": [
+        "Hiç sigara içmesen bile…",
+        "Sağlığını sigara kadar etkileyebilecek bir şey var."
+      ],
+      "source": "HOLT-LUNSTAD ve ark. · PLOS MED 2010 · 148 ÇALIŞMA",
+      "hook": true
+    },
+    {
+      "type": "photo",
+      "img": "img/s1.png",
       "keyword": "YALNIZLIK",
       "lines": [
-        "Sigara kadar zararlı olabilen bir şey daha var:",
-        "Yalnızlık."
+        "Adı: Yalnızlık."
       ]
     },
     {
@@ -69,7 +80,7 @@
     "comment": "En son kiminle uzun uzun sohbet ettin?",
     "share": "Uzun zamandır görmediğin birine gönder."
   },
-  "caption": "Sigara kadar zararlı olabilen bir şey: yalnızlık. 🤝\n\nDünya Sağlık Örgütü'ne göre her 6 kişiden 1'i yalnızlık yaşıyor. Güçlü sosyal bağlar ise daha uzun ve sağlıklı bir yaşamla ilişkili.\n\nBugün uzun zamandır konuşmadığın birini ara. 💚\n\nEn son kiminle uzun uzun sohbet ettin? 👇",
+  "caption": "Hiç sigara içmesen bile sağlığını sigara kadar etkileyebilecek bir şey var: yalnızlık. 🤝\n\nDünya Sağlık Örgütü'ne göre her 6 kişiden 1'i yalnızlık yaşıyor. Güçlü sosyal bağlar ise daha uzun ve sağlıklı bir yaşamla ilişkili.\n\nBugün uzun zamandır konuşmadığın birini ara. 💚\n\nEn son kiminle uzun uzun sohbet ettin? 👇",
   "sources": [
     "DSÖ (WHO) Sosyal Bağlantı Komisyonu raporu ve basın bülteni, 30 Haziran 2025 (her 6 kişiden 1'i yalnızlık yaşıyor; yılda 871 binden fazla ölümle ilişkili)",
     "Holt-Lunstad J, Smith TB, Layton JB. PLoS Med 2010;7(7):e1000316 (148 çalışma, 308.849 kişi; güçlü sosyal ilişkilerde hayatta kalma olasılığı %50 yüksek; etkisi sigara gibi yerleşik risk faktörleriyle karşılaştırılabilir, '15 sigara' kıyası yazarın açıklaması)"

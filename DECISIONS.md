@@ -30,3 +30,7 @@
 - Bundan sonraki tüm paylaşımlar için varsayılan. Eski dekor için episode.json'a `"brandBg": false`.
 - Kaynak görsel 510×908 geldi; 1080×1920'ye Lanczos + hafif keskinleştirme ile büyütüldü. Daha yüksek çözünürlüklü sürüm gelirse `bg.jpg`/`bg.js` yenilenecek.
 - Photo sahnelerinin overlay'i `photoOverlay()` fonksiyonuna ayrıldı; host klipleri `overlay:'photo'` ile foto sahnesi gibi etiket/rozet/kaynak gösterebiliyor.
+
+## 2026-11-20 — Açılış hook'u
+- Reels ilk karede boş arka planla değil, doğrudan hook sahnesiyle açılır: photo sahnesinde `hook:true` (anahtar kelime hapı ilk karede), timing.json'da ilk satır -0.15 sn'den başlar.
+- 016: "GÜNDE 15 SİGARA" / "Hiç sigara içmesen bile… sağlığını sigara kadar etkileyebilecek bir şey var." → ardından "Adı: Yalnızlık." (kıyas Holt-Lunstad 2010 yazarlarının açıklaması; kaynak satırı ekranda).
