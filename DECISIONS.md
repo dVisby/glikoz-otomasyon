@@ -36,3 +36,4 @@
 - 016: "GÜNDE 15 SİGARA" / "Hiç sigara içmesen bile… sağlığını sigara kadar etkileyebilecek bir şey var." → ardından "Adı: Yalnızlık." (kıyas Holt-Lunstad 2010 yazarlarının açıklaması; kaynak satırı ekranda).
 - Kapak (marka arka planı): başlık ve alt başlık aynı font, boyut (76px'ten sığana kadar küçülür) ve renkte (#4E5B34), büyük harf. (2026-11-20)
 - Photo sahnesi anahtar kelime hapı: kapak başlığıyla aynı boyut (76px, gerekirse küçülür; `pillSize` ile değişir). 016 altyazı boyutu 62→54. (2026-11-20)
+- Sahne geçişi: sonraki sahne photo ise önceki sahne alttan opak kalır, gelen sahne üstüne çapraz geçer; geçişlerde marka arka planı görünmez. (2026-11-20)

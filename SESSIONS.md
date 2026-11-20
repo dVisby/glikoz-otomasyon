@@ -27,3 +27,4 @@
 - 2026-11-20: 016'ya açılış hook'u eklendi (photo hook:true), marka fotoğraflı arka planla yeniden render.
 - 2026-11-20: 016: 'HER 6 KİŞİDEN 1'İ', hap 76px, altyazı 54px; yeniden render.
 - 2026-11-20: 016: '148 araştırmanın sonuçları birleştirildiğinde…' (satır süresi +0,9 sn).
+- 2026-11-20: Geçişlerde arka plan sızması giderildi; 015 ve 016 yeniden render.

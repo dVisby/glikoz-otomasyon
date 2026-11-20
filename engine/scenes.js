@@ -837,7 +837,13 @@ function render(t) {
   background.t = t; background();
   TL.scenes.forEach((s, i) => {
     const isLast = i === TL.scenes.length - 1;
-    const a = fadeWin(t, s._start, s._end, isLast ? .8 : .45); if (a <= 0) return;
+    const nx = TL.scenes[i + 1];
+    // a full-bleed photo scene crossfades over the previous scene, which stays opaque underneath, so the background
+    // (brand photo) never flashes between scenes; other scene types keep the plain fade
+    const a = nx && nx.type === 'photo' && t <= s._end + .5
+      ? fadeWin(t, s._start, 1e9, .45)
+      : fadeWin(t, s._start, s._end, isLast ? .8 : .45);
+    if (a <= 0) return;
     ctx.save(); ctx.globalAlpha = a; SCENES[s.type].draw(s, t - s._start, a); ctx.restore();
   });
   drawHost(t);
