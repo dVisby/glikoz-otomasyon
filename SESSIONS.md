@@ -26,3 +26,4 @@
 - 2026-11-19: Krem tema arka planı marka fotoğrafıyla değiştirildi (açılış, logo/çağrı kartı, kapak); photoOverlay + host overlay:'photo'; 015 yeniden render edildi. Ceren klipleri RunPod volume'da (ep015v), pod kapatıldı.
 - 2026-11-20: 016'ya açılış hook'u eklendi (photo hook:true), marka fotoğraflı arka planla yeniden render.
 - 2026-11-20: 016: 'HER 6 KİŞİDEN 1'İ', hap 76px, altyazı 54px; yeniden render.
+- 2026-11-20: 016: '148 araştırmanın sonuçları birleştirildiğinde…' (satır süresi +0,9 sn).
