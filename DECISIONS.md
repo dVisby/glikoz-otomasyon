@@ -35,3 +35,4 @@
 - Reels ilk karede boş arka planla değil, doğrudan hook sahnesiyle açılır: photo sahnesinde `hook:true` (anahtar kelime hapı ilk karede), timing.json'da ilk satır -0.15 sn'den başlar.
 - 016: "GÜNDE 15 SİGARA" / "Hiç sigara içmesen bile… sağlığını sigara kadar etkileyebilecek bir şey var." → ardından "Adı: Yalnızlık." (kıyas Holt-Lunstad 2010 yazarlarının açıklaması; kaynak satırı ekranda).
 - Kapak (marka arka planı): başlık ve alt başlık aynı font, boyut (76px'ten sığana kadar küçülür) ve renkte (#4E5B34), büyük harf. (2026-11-20)
+- Photo sahnesi anahtar kelime hapı: kapak başlığıyla aynı boyut (76px, gerekirse küçülür; `pillSize` ile değişir). 016 altyazı boyutu 62→54. (2026-11-20)

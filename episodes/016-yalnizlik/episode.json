@@ -1,7 +1,7 @@
 {
   "theme": "krem",
   "date": "2026-11-19",
-  "capSize": 62,
+  "capSize": 54,
   "ctaSize": 46,
   "voice": {
     "name": "AURA VOX",
@@ -37,7 +37,7 @@
     {
       "type": "photo",
       "img": "img/kalabalik.png",
-      "keyword": "HER 6 KİŞİDEN 1",
+      "keyword": "HER 6 KİŞİDEN 1'İ",
       "lines": [
         "Dünya Sağlık Örgütü'ne göre her 6 kişiden 1'i yalnızlık yaşıyor.",
         "Yalnızlık, her yıl 871 binden fazla ölümle ilişkili."
