@@ -859,12 +859,14 @@ function renderCover() {
   background.noCorner = true; background(); background.noCorner = false;
   const bg = useBg();
   if (bg) {   // brand photo cover: title on a cream panel in the empty area above the notebook
-    const t = EP.coverTitle || EP.title, font = '800 96px Sans', lines = wrapLines(t.toLocaleUpperCase('tr-TR'), font, 860);
-    const hh = lines.length * 112 + (EP.coverSub ? 90 : 0) + 90, y0 = 760 - hh / 2;
+    // title and subtitle share one font, size and colour (Muharrem, 2026-11-20)
+    const t = (EP.coverTitle || EP.title).toLocaleUpperCase('tr-TR'), sub = EP.coverSub ? EP.coverSub.toLocaleUpperCase('tr-TR') : '';
+    let fs = 76, font = () => `800 ${fs}px Sans`, all = () => [...wrapLines(t, font(), 860), ...(sub ? wrapLines(sub, font(), 860) : [])];
+    while (fs > 52 && all().length > 4) fs -= 4;
+    const lines = all(), lh = Math.round(fs * 1.22), hh = lines.length * lh + 110, y0 = 760 - hh / 2;
     ctx.save(); ctx.globalAlpha = .82; ctx.fillStyle = '#FBF8F2'; ctx.shadowColor = 'rgba(80,70,50,.15)'; ctx.shadowBlur = 36;
     roundRect(70, y0, 940, hh, 40); ctx.fill(); ctx.restore();
-    lines.forEach((l, i) => text(l, 540, y0 + 125 + i * 112, { font, color: '#4E5B34', align: 'center', spacing: 1 }));
-    if (EP.coverSub) text(EP.coverSub, 540, y0 + 125 + lines.length * 112 + 10, { font: '400 50px Jost', color: C.ink, align: 'center' });
+    lines.forEach((l, i) => text(l, 540, y0 + 55 + fs * .82 + i * lh, { font: font(), color: '#4E5B34', align: 'center', spacing: 1 }));
     return;
   }
   // decorative day curve under the title
