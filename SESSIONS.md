@@ -29,3 +29,4 @@
 - 2026-11-20: 016: '148 araştırmanın sonuçları birleştirildiğinde…' (satır süresi +0,9 sn).
 - 2026-11-20: Geçişlerde arka plan sızması giderildi; 015 ve 016 yeniden render.
 - 2026-11-20: 016: 'Zayıf sosyal bağların sağlığa etkisi, günde 15 sigara içmekle kıyaslanacak düzeyde.' (45,5 sn).
+- 2026-11-20: 014: sahneler cümlelere göre bölündü (9 sahne, 6 yeni görsel), %21 cümlesi netleştirildi, altyazı 54, marka arka planı; 50,5 sn.

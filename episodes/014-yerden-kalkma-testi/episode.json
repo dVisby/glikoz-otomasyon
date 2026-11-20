@@ -1,7 +1,7 @@
 {
   "theme": "krem",
   "date": "2026-11-19",
-  "capSize": 62,
+  "capSize": 54,
   "ctaSize": 46,
   "voice": {
     "name": "AURA VOX",
@@ -29,36 +29,69 @@
       "keyword": "NASIL YAPILIR?",
       "lines": [
         "Ayakkabısız, düz bir zeminde dur.",
-        "Bacaklarını çaprazla ve yere otur.",
-        "Sonra aynı şekilde ayağa kalk.",
+        "Bacaklarını çaprazla ve yere otur."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/kalk.png",
+      "keyword": "ŞİMDİ KALK",
+      "lines": [
+        "Sonra aynı şekilde ayağa kalk."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/agri.png",
+      "keyword": "ZORLAMA",
+      "red": true,
+      "lines": [
         "Dizinde ya da belinde ağrı varsa zorlama."
       ]
     },
     {
       "type": "photo",
-      "img": "img/puan.png",
+      "img": "img/puan10.png",
       "keyword": "PUANLAMA",
+      "source": "DE BRITO ve ark. · EUR J PREV CARDIOL 2012",
       "lines": [
-        "Oturmak 5, kalkmak 5 puan: toplam 10.",
-        "Elinden, dizinden ya da kolundan her destek için 1 puan düş.",
-        "Dengeni kaybedersen yarım puan düş."
-      ],
-      "source": "DE BRITO ve ark. · EUR J PREV CARDIOL 2012"
+        "Oturmak 5, kalkmak 5 puan: toplam 10."
+      ]
     },
     {
       "type": "photo",
-      "img": "img/sonuc.png",
+      "img": "img/puan.png",
+      "keyword": "−1 PUAN",
+      "lines": [
+        "Elinden, dizinden ya da kolundan her destek için 1 puan düş."
+      ],
+      "source": "DE BRITO ve ark. · EUR J PREV CARDIOL 2012",
+      "red": true
+    },
+    {
+      "type": "photo",
+      "img": "img/denge.png",
+      "keyword": "−0,5 PUAN",
+      "red": true,
+      "source": "DE BRITO ve ark. · EUR J PREV CARDIOL 2012",
+      "lines": [
+        "Dengeni kaybedersen yarım puan düş."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/arastirma.png",
       "keyword": "PUAN ÖNEMLİ",
       "lines": [
         "Bir çalışmada 51–80 yaş arası 2002 kişi yaklaşık 6 yıl izlendi.",
         "Düşük puan alanlarda ölüm riski belirgin şekilde daha yüksekti.",
-        "Puandaki her 1 artış, %21 daha iyi hayatta kalmayla ilişkiliydi."
+        "Testten alınan her ekstra 1 puan, ölüm riskinin %21 daha düşük olmasıyla ilişkiliydi."
       ],
       "source": "DE BRITO ve ark. · EUR J PREV CARDIOL 2012 · 2002 KİŞİ"
     },
     {
       "type": "photo",
-      "img": "img/kapanis.png",
+      "img": "img/squat.png",
       "keyword": "GELİŞTİREBİLİRSİN",
       "lines": [
         "İyi haber: bu beceri çalışarak gelişir.",
@@ -71,7 +104,7 @@
     "comment": "Kaç puan aldın? Yorumlara yaz.",
     "share": "Bu testi birlikte deneyeceğin birine gönder."
   },
-  "caption": "Elini kullanmadan yere oturup kalkabiliyor musun? 🧘\n\nBu basit test kas gücünü, esnekliği ve dengeyi aynı anda ölçüyor. Bir çalışmada 51–80 yaş arası 2002 kişide, puandaki her 1 artış %21 daha iyi hayatta kalmayla ilişkili bulundu.\n\nDene, puanını yorumlara yaz 👇",
+  "caption": "Elini kullanmadan yere oturup kalkabiliyor musun? 🧘\n\nBu basit test kas gücünü, esnekliği ve dengeyi aynı anda ölçüyor. Bir çalışmada 51–80 yaş arası 2002 kişide, testten alınan her ekstra 1 puan, ölüm riskinin %21 daha düşük olmasıyla ilişkili bulundu.\n\nDene, puanını yorumlara yaz 👇",
   "sources": [
     "de Brito LBB, Araújo CGS ve ark., Eur J Prev Cardiol 2014;21(7):892-898 (çevrimiçi 2012). 2002 kişi, 51–80 yaş, medyan 6,3 yıl izlem; her 1 puan artışı %21 daha iyi sağkalım."
   ],
