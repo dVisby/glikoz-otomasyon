@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>
+:root{--bg:#F5EFE3;--ink:#2E2A22;--olive:#4E5B34;--tile:#D2643F;--card:#FFFDF8;--mute:#5a5345}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1350px;font-family:'Inter';color:var(--ink);position:relative;overflow:hidden;background:url(bg.jpg) center/cover}
+.veil{position:absolute;inset:0;background:rgba(245,239,227,.86)}
+.wrap{position:relative;z-index:1}
+header{padding:60px 72px 0}
+.tag{display:inline-block;font:700 21px Inter;letter-spacing:4px;color:#fff;background:var(--olive);padding:9px 16px;border-radius:10px}
+h1{font:800 62px/1.06 Inter;margin-top:20px;letter-spacing:-1px}
+h1 em{font-style:normal;color:var(--tile)}
+.sub{font:400 26px/1.38 Inter;margin-top:16px;color:#4a4436;max-width:900px}
+.sub b{color:var(--olive)}
+.card{margin:26px 72px 0;background:var(--card);border-radius:24px;padding:24px 28px;box-shadow:0 6px 18px rgba(80,70,50,.08)}
+.card h2{font:800 26px/1.2 Inter}
+.card h2 small{font:500 19px Inter;color:#7B7464;margin-left:6px}
+.bars{margin-top:16px;display:flex;flex-direction:column;gap:11px}
+.row{display:grid;grid-template-columns:280px 1fr;align-items:center;gap:14px}
+.row .l{font:600 22px Inter}
+.bar{height:40px;border-radius:10px;display:flex;align-items:center;justify-content:flex-end;padding-right:12px;font:800 22px Inter;color:#fff}
+.b0{background:#B8AE97}.b1{background:var(--olive)}
+.note{margin-top:14px;font:400 20px/1.35 Inter;color:var(--mute)}
+.rice{display:flex;gap:18px;align-items:center}
+.rice .pct{flex:0 0 120px;height:88px;border-radius:18px;background:var(--olive);color:#fff;font:800 36px Inter;display:flex;align-items:center;justify-content:center}
+.rice p{font:400 22px/1.35 Inter;color:var(--mute)} .rice p b{color:var(--ink)}
+.verdict{margin:26px 72px 0;border:3px solid var(--tile);background:var(--card);border-radius:24px;padding:22px 28px}
+.verdict h2{font:800 30px Inter;color:var(--tile)} .verdict h2 span{color:var(--ink)}
+.verdict ul{list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:7px}
+.verdict li{font:400 22px/1.32 Inter;padding-left:28px;position:relative}
+.verdict li:before{content:'';position:absolute;left:4px;top:11px;width:11px;height:11px;border-radius:50%;background:var(--olive)}
+.src{position:absolute;left:72px;bottom:38px;font:400 14px/1.45 'DejaVu Sans Mono',monospace;color:#3d3a2f;max-width:800px;z-index:2}
+.logo{position:absolute;right:58px;bottom:30px;width:112px;height:112px;border-radius:50%;background:#FFFDF8;display:flex;align-items:center;justify-content:center;z-index:2;box-shadow:0 4px 14px rgba(0,0,0,.12)}
+.logo img{width:98px}
+</style></head><body>
+<div class="veil"></div>
+<div class="wrap">
+<header>
+  <div class="tag">GERÇEK Mİ, ABARTI MI?</div>
+  <h1>Ekmeği <em>dondurup kızartınca</em><br>ne değişir?</h1>
+  <p class="sub">Pişmiş nişasta soğuyunca bir kısmı <b>dirençli nişastaya</b> dönüşür. Lif gibi davranır, daha yavaş sindirilir.</p>
+</header>
+<div class="card">
+  <h2>Kan şekeri yükselişi ne kadar azaldı?<small>ev yapımı beyaz ekmek · 10 kişi</small></h2>
+  <div class="bars">
+    <div class="row"><div class="l">Taze ekmek</div><div class="bar b0" style="width:100%">referans</div></div>
+    <div class="row"><div class="l">Kızartılmış</div><div class="bar b1" style="width:74.5%">−%25</div></div>
+    <div class="row"><div class="l">Dondurulup çözülmüş</div><div class="bar b1" style="width:69.1%">−%31</div></div>
+    <div class="row"><div class="l">Dondur + çöz + kızart</div><div class="bar b1" style="width:60.6%">−%39</div></div>
+  </div>
+  <p class="note">Market ekmeğinde: kızartma −%28, dondurup kızartma −%26.</p>
+</div>
+<div class="card rice">
+  <div class="pct">−%18</div>
+  <p><b>Pilavda da benzer:</b> 24 saat buzdolabında bekletip ısıtılan pilav, taze pilava göre kan şekerini daha az yükseltti (15 kişi). Ama başka bir çalışmada (21 kişi) belirgin fark çıkmadı.</p>
+</div>
+<div class="verdict">
+  <h2>KARAR: <span>Gerçek, ama küçük bir etki.</span></h2>
+  <ul>
+    <li>Çalışmalar az sayıda sağlıklı yetişkinle yapıldı.</li>
+    <li>Beyaz ekmek dondurunca tam tahıllı ekmeğe dönüşmez; porsiyon hâlâ en önemlisi.</li>
+    <li>Kolay bir ek adım: dilimle, dondur, yerken kızart. Yanına protein ve sebze ekle.</li>
+  </ul>
+</div>
+</div>
+<div class="src">BURTON &amp; LIGHTOWLER · EUR J CLIN NUTR 2008 · 10 KİŞİ<br>SONIA ve ark. · ASIA PAC J CLIN NUTR 2015 · 15 KİŞİ</div>
+<div class="logo"><img src="../../engine/assets/logo.png"></div>
+</body></html>
