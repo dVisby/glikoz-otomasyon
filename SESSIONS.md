@@ -32,3 +32,4 @@
 - 2026-11-20: 014: sahneler cümlelere göre bölündü (9 sahne, 6 yeni görsel), %21 cümlesi netleştirildi, altyazı 54, marka arka planı; 50,5 sn.
 - 2026-11-20: Infografik 'Ekmeği dondurup kızartınca ne değişir?' (dirençli nişasta; Burton 2008, Sonia 2015), marka fotoğrafı zeminli.
 - 2026-11-20: Ekmek infografiği: pilav çıkarıldı, sıcak ekmek renkleri, taze/donmuş/kızarmış ekmek fotoğrafı, market ekmeği cümlesi netleştirildi.
+- 2026-11-21: Ekmek infografiği yeşil tema (A), etiket ve karar kutusu kaldırıldı, yazılar büyütüldü.
