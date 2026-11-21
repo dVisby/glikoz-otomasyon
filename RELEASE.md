@@ -20,7 +20,7 @@
 | 017 | 2026-11-21 | Tartıyı bırak, bir ip al (bel/boy oranı) | 46,0 sn | Sessiz + 1 Canva AI görsel (3 kırpım) | contact ✓ kapak ✓ | — | NICE NG246 (2025): bel < boy/2. BKİ ≥35 ve hamilelik uyarısı ekranda. |
 | 018 | 2026-11-21 | Öğlen yediğin mercimek bir sonraki öğününü etkiliyor | 45,4 sn | Sessiz + 1 Canva AI görsel | contact ✓ kapak ✓ | — | Mollard Br J Nutr 2012 (24 erkek; 0–340 dk toplam eğri); hook 'sonraki öğün' olarak yumuşatıldı. |
 | 019 | 2026-11-21 | Fin saunası mı, Türk hamamı mı? | 44,3 sn | Sessiz + 1 Canva AI görsel | contact ✓ kapak ✓ | — | Laukkanen JAMA IM 2015 (2.315 erkek, 4–7/hafta HR 0,50). Sonuçlar hamama atfedilmedi; güvenlik uyarısı ekranda. |
-| 020 | 2026-11-21 | Bugün en son ne zaman kahkaha attın? | 27,9 sn | Sessiz + 1 Canva AI görsel | contact ✓ kapak ✓ | — | Kramer & Leitao PLOS ONE 2023 (8 çalışma, 315 kişi, kortizol −%31,9). |
+| 020 | 2026-11-21 | Bugün en son ne zaman kahkaha attın? | 24,5 sn | Sessiz + 1 Canva AI görsel | contact ✓ kapak ✓ | — | Kramer & Leitao PLOS ONE 2023 (8 çalışma, 315 kişi, kortizol −%31,9). |
 | 021 | 2026-11-21 | Gürültü yorgunluğu / 10 dakika sessizlik | 39,2 sn | Sessiz + 1 Canva AI görsel | contact ✓ kapak ✓ | — | DSÖ Avrupa gürültü notu (yatak odası <30 dB). '10 dk sessizlik' öneri, kaynaklı bulgu değil. |
 
 ## Teslim öncesi kontrol listesi
