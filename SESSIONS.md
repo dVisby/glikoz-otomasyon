@@ -37,3 +37,4 @@
 - 2026-11-21: 020 kahkaha: başa hook cümlesi eklendi; 'Çalışmalar küçük' yerine 'Reçete gerekmiyor, denemesi bedava' (küçük çalışma notu kaynak satırında).
 - 2026-11-21: 020 kahkaha: hook cümlesi altyazıdan alınıp KAHKAHA hapının altına aynı boyutta taşındı (yeni photo alanı keywordSub).
 - 2026-11-21: 020 kahkaha: hook sahnesi altyazısız (nocap), soru ayrı sahneye alındı.
+- 2026-11-21: 020 kahkaha: hook ve BUGÜNÜN ÖDEVİ dışındaki başlık hapları kaldırıldı.

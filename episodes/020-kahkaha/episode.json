@@ -37,7 +37,6 @@
     {
       "type": "photo",
       "img": "img/z1.png",
-      "keyword": "8 ÇALIŞMA",
       "lines": [
         "8 çalışmanın sonuçları birleştirildi: toplam 315 kişi."
       ],
@@ -46,7 +45,6 @@
     {
       "type": "photo",
       "img": "img/z2.png",
-      "keyword": "KORTİZOL %32 ↓",
       "lines": [
         "Gülmek, stres hormonu kortizolde ortalama %32 daha fazla düşüşle ilişkili bulundu.",
         "Komedi izlemek bile yetiyordu."
@@ -56,7 +54,6 @@
     {
       "type": "photo",
       "img": "img/z1.png",
-      "keyword": "REÇETESİZ",
       "lines": [
         "Reçete gerekmiyor, denemesi bedava."
       ],
