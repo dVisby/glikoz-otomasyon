@@ -20,6 +20,7 @@
       "keyword": "KAHKAHA",
       "hook": true,
       "lines": [
+        "Stres hormonunu düşürmenin en eğlenceli yolu olabilir.",
         "Bugün en son ne zaman kahkaha attın?"
       ]
     },
@@ -45,11 +46,11 @@
     {
       "type": "photo",
       "img": "img/z1.png",
-      "keyword": "KÜÇÜK ÇALIŞMALAR",
-      "red": true,
+      "keyword": "REÇETESİZ",
       "lines": [
-        "Çalışmalar küçük, ama denemesi bedava."
-      ]
+        "Reçete gerekmiyor, denemesi bedava."
+      ],
+      "source": "KRAMER & LEITAO · PLOS ONE 2023 · 8 KÜÇÜK ÇALIŞMA, 315 KİŞİ"
     },
     {
       "type": "photo",
@@ -65,7 +66,7 @@
     "comment": "Seni en çok kim güldürür? Etiketle!",
     "share": "Seni güldüren o kişiye gönder."
   },
-  "caption": "Bugün en son ne zaman kahkaha attın? 😄\n\n8 çalışmanın birleştirildiği bir analizde (PLOS ONE, 2023), komedi izlemek ya da gülme seansları gibi kendiliğinden gülme, stres hormonu kortizolde normal aktivitelere göre ortalama %32 daha fazla düşüşle ilişkili bulundu. Çalışmalar küçük, ama denemesi bedava.\n\nBugünün ödevi: seni en çok güldüren kişiyi ara. 💚\n\nSeni en çok kim güldürür? Etiketle 👇",
+  "caption": "Bugün en son ne zaman kahkaha attın? 😄\n\n8 çalışmanın birleştirildiği bir analizde (PLOS ONE, 2023), komedi izlemek ya da gülme seansları gibi kendiliğinden gülme, stres hormonu kortizolde normal aktivitelere göre ortalama %32 daha fazla düşüşle ilişkili bulundu. Çalışmalar küçük; ama reçete gerekmiyor, denemesi bedava.\n\nBugünün ödevi: seni en çok güldüren kişiyi ara. 💚\n\nSeni en çok kim güldürür? Etiketle 👇",
   "sources": [
     "Kramer CK, Leitao CB. Laughter as medicine: systematic review and meta-analysis. PLoS One 2023;18(5):e0286260 (8 çalışma, 315 katılımcı; kortizolde %31,9 daha fazla düşüş, %95 GA −47,7 ile −16,3)"
   ],
