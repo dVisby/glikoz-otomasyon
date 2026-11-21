@@ -17,6 +17,11 @@
 | 014 | 2026-11-19 | Elini kullanmadan yerden kalkabiliyor musun? (oturup kalkma testi) | 49,3 sn | Sessiz + 5 AI fotoğraf (capSize 62) | contact ✓ | — | de Brito/Araújo EJPC 2012: 2002 kişi, her 1 puan %21; 6,5x basın rakamı kullanılmadı. Ağrı uyarısı ekranda. |
 | 015 | 2026-11-19 | 4 kat merdiveni 1 dakikada çıkabiliyor musun? | 42,1 sn | Sessiz + 5 AI fotoğraf | contact ✓ | — | ESC 2020 (Peteiro, 165 semptomatik hasta, 60 basamak; 40–45 sn → 9–10 MET; >1,5 dk doktora). Güvenlik uyarısı ekranda. |
 | 016 | 2026-11-19 | Yalnızlık da bir risk faktörü | 40,3 sn | Sessiz + 5 AI fotoğraf | contact ✓ | — | DSÖ Sosyal Bağlantı Komisyonu 2025 (1/6, 871 bin); Holt-Lunstad 2010 (148 çalışma, %50; 15 sigara kıyası yazar açıklaması). |
+| 017 | 2026-11-21 | Tartıyı bırak, bir ip al (bel/boy oranı) | 46,0 sn | Sessiz + 1 Canva AI görsel (3 kırpım) | contact ✓ kapak ✓ | — | NICE NG246 (2025): bel < boy/2. BKİ ≥35 ve hamilelik uyarısı ekranda. |
+| 018 | 2026-11-21 | Öğlen yediğin mercimek bir sonraki öğününü etkiliyor | 45,4 sn | Sessiz + 1 Canva AI görsel | contact ✓ kapak ✓ | — | Mollard Br J Nutr 2012 (24 erkek; 0–340 dk toplam eğri); hook 'sonraki öğün' olarak yumuşatıldı. |
+| 019 | 2026-11-21 | Fin saunası mı, Türk hamamı mı? | 44,3 sn | Sessiz + 1 Canva AI görsel | contact ✓ kapak ✓ | — | Laukkanen JAMA IM 2015 (2.315 erkek, 4–7/hafta HR 0,50). Sonuçlar hamama atfedilmedi; güvenlik uyarısı ekranda. |
+| 020 | 2026-11-21 | Bugün en son ne zaman kahkaha attın? | 24,6 sn | Sessiz + 1 Canva AI görsel | contact ✓ kapak ✓ | — | Kramer & Leitao PLOS ONE 2023 (8 çalışma, 315 kişi, kortizol −%31,9). |
+| 021 | 2026-11-21 | Gürültü yorgunluğu / 10 dakika sessizlik | 39,2 sn | Sessiz + 1 Canva AI görsel | contact ✓ kapak ✓ | — | DSÖ Avrupa gürültü notu (yatak odası <30 dB). '10 dk sessizlik' öneri, kaynaklı bulgu değil. |
 
 ## Teslim öncesi kontrol listesi
 - [ ] Her sayı kaynakla eşleşiyor, öneri türü doğru

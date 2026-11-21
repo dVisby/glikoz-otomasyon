@@ -1,0 +1,32 @@
+{
+ "voice_offset": 0,
+ "voice_duration": 0,
+ "silent": true,
+ "lines": [
+  {
+   "start": 0.6,
+   "end": 2.718
+  },
+  {
+   "start": 3.018,
+   "end": 6.194
+  },
+  {
+   "start": 6.494,
+   "end": 11.318
+  },
+  {
+   "start": 11.618,
+   "end": 13.418
+  },
+  {
+   "start": 13.718,
+   "end": 15.953
+  },
+  {
+   "start": 16.253,
+   "end": 18.135
+  }
+ ],
+ "total": 20.435
+}

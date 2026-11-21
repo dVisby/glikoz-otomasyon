@@ -1,0 +1,82 @@
+{
+  "theme": "krem",
+  "ctaSize": 46,
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "date": "2026-11-21",
+  "capSize": 58,
+  "id": "020",
+  "slug": "kahkaha",
+  "title": "Bugün en son ne zaman kahkaha attın?",
+  "coverTitle": "Kahkaha",
+  "coverSub": "Stres hormonuna iyi gelebilir",
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "KAHKAHA",
+      "hook": true,
+      "lines": [
+        "Bugün en son ne zaman kahkaha attın?"
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/z1.png",
+      "keyword": "8 ÇALIŞMA",
+      "lines": [
+        "8 çalışmanın sonuçları birleştirildi: toplam 315 kişi."
+      ],
+      "source": "KRAMER & LEITAO · PLOS ONE 2023 · 8 ÇALIŞMA, 315 KİŞİ"
+    },
+    {
+      "type": "photo",
+      "img": "img/z2.png",
+      "keyword": "KORTİZOL %32 ↓",
+      "lines": [
+        "Gülmek, stres hormonu kortizolde ortalama %32 daha fazla düşüşle ilişkili bulundu.",
+        "Komedi izlemek bile yetiyordu."
+      ],
+      "source": "KRAMER & LEITAO · PLOS ONE 2023 · 8 ÇALIŞMA, 315 KİŞİ"
+    },
+    {
+      "type": "photo",
+      "img": "img/z1.png",
+      "keyword": "KÜÇÜK ÇALIŞMALAR",
+      "red": true,
+      "lines": [
+        "Çalışmalar küçük, ama denemesi bedava."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "BUGÜNÜN ÖDEVİ",
+      "lines": [
+        "Seni en çok güldüren kişiyi ara."
+      ]
+    }
+  ],
+  "cta": {
+    "save": "",
+    "comment": "Seni en çok kim güldürür? Etiketle!",
+    "share": "Seni güldüren o kişiye gönder."
+  },
+  "caption": "Bugün en son ne zaman kahkaha attın? 😄\n\n8 çalışmanın birleştirildiği bir analizde (PLOS ONE, 2023), komedi izlemek ya da gülme seansları gibi kendiliğinden gülme, stres hormonu kortizolde normal aktivitelere göre ortalama %32 daha fazla düşüşle ilişkili bulundu. Çalışmalar küçük, ama denemesi bedava.\n\nBugünün ödevi: seni en çok güldüren kişiyi ara. 💚\n\nSeni en çok kim güldürür? Etiketle 👇",
+  "sources": [
+    "Kramer CK, Leitao CB. Laughter as medicine: systematic review and meta-analysis. PLoS One 2023;18(5):e0286260 (8 çalışma, 315 katılımcı; kortizolde %31,9 daha fazla düşüş, %95 GA −47,7 ile −16,3)"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#kahkaha",
+    "#stres",
+    "#kortizol",
+    "#mutluluk",
+    "#wellness"
+  ],
+  "notes": "Kısa sessiz Reels. 'Sosyal bağ' iddiası kaynak taranmadığı için kullanılmadı.",
+  "captionDisclaimer": false
+}

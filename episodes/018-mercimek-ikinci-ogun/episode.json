@@ -1,0 +1,97 @@
+{
+  "theme": "krem",
+  "ctaSize": 46,
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "date": "2026-11-21",
+  "capSize": 54,
+  "id": "018",
+  "slug": "mercimek-ikinci-ogun",
+  "title": "Öğlen yediğin mercimek bir sonraki öğününü etkiliyor",
+  "coverTitle": "İkinci öğün etkisi",
+  "coverSub": "Sonraki öğünü de etkiliyor",
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "ÖĞLEN MERCİMEK",
+      "hook": true,
+      "lines": [
+        "Öğlen yediğin mercimek…",
+        "…bir sonraki öğününü de etkiliyor."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/z1.png",
+      "keyword": "İKİNCİ ÖĞÜN ETKİSİ",
+      "lines": [
+        "Buna “ikinci öğün etkisi” deniyor.",
+        "Baklagiller, kan şekerini yendikleri öğünden sonra da etkileyebiliyor."
+      ],
+      "source": "HIGGINS · J NUTR METAB 2012 · DERLEME"
+    },
+    {
+      "type": "photo",
+      "img": "img/z2.png",
+      "keyword": "BİR ÇALIŞMADA",
+      "lines": [
+        "Bir çalışmada öğlen mercimek ya da nohut yiyenler, 4 saat sonra pizza yedi.",
+        "Yaklaşık 6 saat boyunca kan şekerleri, makarna yiyenlere göre daha düşük seyretti."
+      ],
+      "source": "MOLLARD ve ark. · BR J NUTR 2012 · 24 ERKEK"
+    },
+    {
+      "type": "photo",
+      "img": "img/z1.png",
+      "keyword": "NEDEN?",
+      "lines": [
+        "Sebebi lif ve yavaş sindirilen nişasta.",
+        "Bağırsakta yavaş işleniyor, etkisi sonraki öğüne taşınıyor."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "KÜÇÜK ÇALIŞMALAR",
+      "red": true,
+      "lines": [
+        "Çalışmalar küçük ve sağlıklı genç yetişkinlerle yapıldı."
+      ],
+      "source": "MOLLARD ve ark. · BR J NUTR 2012 · 24 ERKEK"
+    },
+    {
+      "type": "photo",
+      "img": "img/z2.png",
+      "keyword": "BUGÜN DENE",
+      "lines": [
+        "Öğle yemeğine bir kase mercimek çorbası ya da bir tabak nohut ekle.",
+        "Akşam yemeğinden sonra kendini nasıl hissettiğine bak."
+      ]
+    }
+  ],
+  "cta": {
+    "save": "",
+    "comment": "En sevdiğin baklagil yemeği ne?",
+    "share": "Öğle yemeğini atlayan birine gönder."
+  },
+  "caption": "Öğlen yediğin mercimek, bir sonraki öğününü de etkiliyor. 🥣\n\nBuna “ikinci öğün etkisi” deniyor. Bir çalışmada öğlen mercimek ya da nohut yiyen 24 genç erkeğin kan şekeri, 4 saat sonra yenen pizzayla birlikte yaklaşık 6 saat boyunca makarna yiyenlere göre daha düşük seyretti.\n\nSebebi lif ve yavaş sindirilen nişasta. Çalışmalar küçük, ama sofraya baklagil eklemek için güzel bir neden.\n\nEn sevdiğin baklagil yemeği ne? 👇",
+  "sources": [
+    "Mollard RC ve ark., Br J Nutr 2012 (24 sağlıklı erkek; mercimek, nohut, kuru fasulye, sarı bezelye ve makarna öğünü; 0–340 dk toplam kan şekeri tüm baklagillerde makarnaya göre daha düşük; 4 saat sonra pizza öğünü) — PubMed 22054112",
+    "Mollard RC ve ark., Appl Physiol Nutr Metab 2014 (baklagiller, 2 saat sonraki sabit öğün sonrası kan şekerini beyaz ekmeğe göre düşürdü) — PubMed 24797207",
+    "Higgins JA, J Nutr Metab 2012 (derleme: tam tahıl ve baklagillerde sonraki öğün etkisi) — PubMed 22132324"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#mercimek",
+    "#baklagil",
+    "#kanşekeri",
+    "#ikinciöğünetkisi",
+    "#sağlıklıbeslenme"
+  ],
+  "notes": "Hook ekstrapolasyon riski nedeniyle 'bir sonraki öğün' olarak yumuşatıldı. Pizza sonrası tek başına fark yalnız nohutta (diğer baklagillere göre); bu yüzden 0–340 dk toplam eğri kullanıldı.",
+  "captionDisclaimer": false
+}

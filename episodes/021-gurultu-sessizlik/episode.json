@@ -1,0 +1,94 @@
+{
+  "theme": "krem",
+  "ctaSize": 46,
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "date": "2026-11-21",
+  "capSize": 54,
+  "id": "021",
+  "slug": "gurultu-sessizlik",
+  "title": "Hiçbir şey yapmadan yorgun mu hissediyorsun?",
+  "coverTitle": "Gürültü yorgunluğu",
+  "coverSub": "Kendine 10 dakika sessizlik ver",
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "HEP YORGUN MUSUN?",
+      "hook": true,
+      "lines": [
+        "Hiçbir şey yapmadan yorgun hissediyor musun?",
+        "Belki suçlu, hiç susmayan arka plan sesi."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/z1.png",
+      "keyword": "ARKA PLAN SESİ",
+      "lines": [
+        "Açık TV, trafik, telefon bildirimleri…"
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/z2.png",
+      "keyword": "HAFİFE ALINAN TEHDİT",
+      "red": true,
+      "lines": [
+        "Dünya Sağlık Örgütü gürültüyü hafife alınan bir sağlık tehdidi olarak tanımlıyor.",
+        "Uyku bozukluğu ve kalp-damar etkileriyle ilişkili."
+      ],
+      "source": "DSÖ AVRUPA · GÜRÜLTÜ BİLGİ NOTU"
+    },
+    {
+      "type": "photo",
+      "img": "img/z1.png",
+      "keyword": "30 DESİBEL ALTI",
+      "lines": [
+        "İyi bir uyku için yatak odasında gece 30 desibelin altı öneriliyor.",
+        "Yani fısıltıdan daha sessiz bir ortam."
+      ],
+      "source": "DSÖ AVRUPA · GÜRÜLTÜ BİLGİ NOTU"
+    },
+    {
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "10 DAKİKA SESSİZLİK",
+      "lines": [
+        "Önerimiz: bugün kendine 10 dakika sessizlik ver.",
+        "Televizyonu kapat, telefonu sessize al, sadece dinle."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/z2.png",
+      "keyword": "SESSİZ YATAK ODASI",
+      "lines": [
+        "Akşam da yatak odanı sessiz bir yer yap."
+      ]
+    }
+  ],
+  "cta": {
+    "save": "",
+    "comment": "Gün içinde seni en çok hangi ses yoruyor?",
+    "share": "Açık ofiste çalışan birine gönder."
+  },
+  "caption": "Hiçbir şey yapmadan yorgun hissediyor musun? 🔇\n\nDünya Sağlık Örgütü gürültüyü hafife alınan bir sağlık tehdidi olarak tanımlıyor: uyku bozukluğu ve kalp-damar etkileriyle ilişkili. İyi bir uyku için yatak odasında gece 30 desibelin altı, yani fısıltıdan daha sessiz bir ortam öneriliyor.\n\nÖnerimiz: bugün kendine 10 dakika sessizlik ver. TV kapalı, telefon sessizde. 🌿\n\nGün içinde seni en çok hangi ses yoruyor? 👇",
+  "sources": [
+    "DSÖ Avrupa Bölge Ofisi, Noise bilgi notu (gürültü: uyku bozukluğu, kalp-damar etkileri, performans, işitme; yatak odasında gece <30 dB(A))",
+    "DSÖ Environmental Noise Guidelines for the European Region, 2018"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#gürültü",
+    "#sessizlik",
+    "#uyku",
+    "#stres",
+    "#wellness"
+  ],
+  "notes": "'10 dakika sessizlik' kaynaklı bulgu değil, öneri olarak sunuldu. 'Fısıltı ~30 dB' genel bilgi.",
+  "captionDisclaimer": false
+}

@@ -1,0 +1,96 @@
+{
+  "theme": "krem",
+  "ctaSize": 46,
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "date": "2026-11-21",
+  "capSize": 54,
+  "id": "019",
+  "slug": "hamam-sauna",
+  "title": "Fin saunası mı, Türk hamamı mı?",
+  "coverTitle": "Sauna ve kalp",
+  "coverSub": "Fin saunası mı, Türk hamamı mı?",
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "SAUNA MI, HAMAM MI?",
+      "hook": true,
+      "lines": [
+        "Finlandiya'da insanlar haftada birkaç kez saunaya giriyor.",
+        "Bilim insanları bunun kalbe etkisine baktı."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/z1.png",
+      "keyword": "20 YIL TAKİP",
+      "lines": [
+        "2.315 orta yaşlı erkek yaklaşık 20 yıl izlendi."
+      ],
+      "source": "LAUKKANEN ve ark. · JAMA INTERN MED 2015 · 2.315 ERKEK"
+    },
+    {
+      "type": "photo",
+      "img": "img/z2.png",
+      "keyword": "HAFTADA 4–7 KEZ",
+      "lines": [
+        "Haftada 4–7 kez saunaya girenlerde kalp-damar kaynaklı ölüm…",
+        "…haftada bir kez girenlere göre yaklaşık yarı yarıya daha düşük bulundu."
+      ],
+      "source": "LAUKKANEN ve ark. · JAMA INTERN MED 2015 · 2.315 ERKEK"
+    },
+    {
+      "type": "photo",
+      "img": "img/z1.png",
+      "keyword": "İLİŞKİ, NEDEN DEĞİL",
+      "red": true,
+      "lines": [
+        "Bu bir ilişki; sauna tek başına ömrü uzatıyor demek değil."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "PEKİ HAMAM?",
+      "lines": [
+        "Bizim kültürümüzde de sıcakla dost bir gelenek var: hamam.",
+        "Ama hamam daha nemli ve daha az sıcak; bu sonuçlar hamamda ayrıca araştırılmadı."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/z2.png",
+      "keyword": "GÜVENLİ SICAK",
+      "red": true,
+      "lines": [
+        "Alkolden sonra girme, bol su iç, başın dönerse hemen çık.",
+        "Kalp ya da tansiyon sorunun varsa önce doktoruna sor."
+      ]
+    }
+  ],
+  "cta": {
+    "save": "",
+    "comment": "Hamam mı, sauna mı?",
+    "share": "Hamam sefası arkadaşına gönder."
+  },
+  "caption": "Fin saunası mı, Türk hamamı mı? 🧖\n\nFinlandiya'da 2.315 orta yaşlı erkek yaklaşık 20 yıl izlendi. Haftada 4–7 kez saunaya girenlerde kalp-damar kaynaklı ölüm, haftada bir kez girenlere göre yaklaşık yarı yarıya daha düşük bulundu. Bu bir ilişki; neden-sonuç değil.\n\nHamam bizim sıcak banyo geleneğimiz, ama nemli ve daha az sıcak olduğu için bu sonuçlar hamamda ayrıca test edilmedi.\n\n⚠️ Alkolden sonra girme, bol su iç, başın dönerse hemen çık. Kalp ya da tansiyon sorunun varsa önce doktoruna danış.\n\nHamam mı, sauna mı? 👇",
+  "sources": [
+    "Laukkanen T ve ark., JAMA Intern Med 2015;175(4):542-548 (Kuopio, 2.315 erkek, ~20 yıl; haftada 4–7 kez vs 1 kez: kalp-damar ölümü HR 0,50) — PubMed 25705824",
+    "Laukkanen T ve ark., BMC Med 2018 (kadın ve erkekte benzer ilişki)",
+    "van der Wall EE, Neth Heart J 2015 (sauna ölümlerinin yaklaşık yarısında alkol)"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#sauna",
+    "#hamam",
+    "#kalpsağlığı",
+    "#longevity",
+    "#sağlıklıyaşam"
+  ],
+  "notes": "Fin saunası bulguları hamama atfedilmedi; ekranda açıkça belirtiliyor. Güvenlik uyarısı ekranda.",
+  "captionDisclaimer": false
+}

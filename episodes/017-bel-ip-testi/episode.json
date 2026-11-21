@@ -1,0 +1,104 @@
+{
+  "theme": "krem",
+  "date": "2026-11-21",
+  "capSize": 54,
+  "ctaSize": 46,
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "id": "017",
+  "slug": "bel-ip-testi",
+  "title": "Tartıyı bırak, bir ip al",
+  "coverTitle": "Bel çevresi testi",
+  "coverSub": "Tartıyı bırak, ip al",
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "TARTIYI BIRAK",
+      "hook": true,
+      "lines": [
+        "Tartıyı bırak, bir ip al.",
+        "10 saniyede yapabileceğin bir test var."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/z2.png",
+      "keyword": "1. BOYUN KADAR KES",
+      "lines": [
+        "İpi boyun kadar kes.",
+        "İkiye katla: elinde boyunun yarısı var."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/z1.png",
+      "keyword": "2. BELİNE SAR",
+      "lines": [
+        "Göbeğinin hemen üstünden beline sar.",
+        "Nefesini rahatça ver ve uçlara bak."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "UÇLAR BULUŞUYOR MU?",
+      "lines": [
+        "Uçlar buluşuyorsa, bel çevren boyunun yarısından az.",
+        "Buluşmuyorsa, karın bölgesinde yağlanma olabilir."
+      ],
+      "source": "NICE (İNGİLTERE) · NG246 · 2025"
+    },
+    {
+      "type": "photo",
+      "img": "img/z2.png",
+      "keyword": "BEL ÷ BOY < 0,5",
+      "lines": [
+        "İngiltere'nin sağlık otoritesi NICE, bel çevresinin boyun yarısından az olmasını öneriyor.",
+        "Bu oran tip 2 diyabet, tansiyon ve kalp hastalığı riskiyle ilişkili."
+      ],
+      "source": "NICE (İNGİLTERE) · NG246 · 2025"
+    },
+    {
+      "type": "photo",
+      "img": "img/z1.png",
+      "keyword": "PANİK YOK",
+      "lines": [
+        "Uçlar buluşmadıysa bu bir tanı değil.",
+        "Doktoruna bir kontrol için gitmen yeterli."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/s1.png",
+      "keyword": "DİKKAT",
+      "red": true,
+      "lines": [
+        "BKİ 35 üstünde ve hamilelikte bu test geçerli değil."
+      ]
+    }
+  ],
+  "cta": {
+    "save": "",
+    "comment": "Uçlar buluştu mu? Yorumlara yaz.",
+    "share": "Tartıya küsen birine gönder."
+  },
+  "caption": "Tartıyı bırak, bir ip al. 🧵\n\nİpi boyun kadar kes, ikiye katla, göbeğinin hemen üstünden beline sar. Uçlar buluşuyorsa bel çevren boyunun yarısından az demektir.\n\nİngiltere'nin sağlık otoritesi NICE, bel çevresinin boyun yarısından az tutulmasını öneriyor. Bu oran karın bölgesindeki yağlanmayı gösteriyor ve tip 2 diyabet, tansiyon ve kalp hastalığı riskiyle ilişkili.\n\nUçlar buluşmadıysa bu bir tanı değil; doktoruna danışman için bir işaret. (BKİ 35 üstünde ve hamilelikte geçerli değil.)\n\nUçlar buluştu mu? 👇",
+  "sources": [
+    "NICE, Overweight and obesity management (NG246), 2025: BKİ 35 altındaki yetişkinler bel/boy oranını kendisi ölçmeli; bel çevresi boyun yarısından az tutulmalı (ölçüm: alt kaburga ile kalça kemiği arası ortası)",
+    "NICE haber bülteni: Keep the size of your waist to less than half of your height"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#belçevresi",
+    "#insülindirenci",
+    "#kanşekeri",
+    "#sağlıklıyaşam",
+    "#longevity"
+  ],
+  "notes": "Görsel: Canva AI (1 görsel, kırpılmış varyantlar). Sessiz sürüm.",
+  "captionDisclaimer": false
+}
