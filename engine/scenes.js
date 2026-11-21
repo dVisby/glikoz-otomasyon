@@ -699,6 +699,7 @@ async function setup(episode, timing) {
     TL.scenes.push(Object.assign({}, sc, { _start: start, _lines: lines }));
     sc.lines.forEach((ln, k) => {
       const t = typeof ln === 'string' ? ln : ln.text;
+      if (ln.nocap) return;   // timed line with no subtitle (e.g. a hook already shown in the keyword pill)
       const parts = t.split(' | '), tl = lines[k];
       const total = parts.reduce((a, p) => a + p.length, 0); let acc = 0;
       parts.forEach(p => {

@@ -20,9 +20,19 @@
       "keyword": "KAHKAHA",
       "hook": true,
       "lines": [
-        "Bugün en son ne zaman kahkaha attın?"
+        {
+          "text": "Stres hormonunu düşürmenin en eğlenceli yolu olabilir.",
+          "nocap": true
+        }
       ],
       "keywordSub": "Stres hormonunu düşürmenin en eğlenceli yolu olabilir."
+    },
+    {
+      "type": "photo",
+      "img": "img/z2.png",
+      "lines": [
+        "Bugün en son ne zaman kahkaha attın?"
+      ]
     },
     {
       "type": "photo",
