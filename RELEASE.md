@@ -22,6 +22,7 @@
 | 019 | 2026-11-21 | Fin saunası mı, Türk hamamı mı? | 44,3 sn | Sessiz + 1 Canva AI görsel | contact ✓ kapak ✓ | — | Laukkanen JAMA IM 2015 (2.315 erkek, 4–7/hafta HR 0,50). Sonuçlar hamama atfedilmedi; güvenlik uyarısı ekranda. |
 | 020 | 2026-11-21 | Bugün en son ne zaman kahkaha attın? | 27,9 sn | Sessiz + 1 Canva AI görsel | contact ✓ kapak ✓ | — | Kramer & Leitao PLOS ONE 2023 (8 çalışma, 315 kişi, kortizol −%31,9). |
 | 021 | 2026-11-21 | Gürültü yorgunluğu / 10 dakika sessizlik | 39,1 sn | Sessiz + 1 Canva AI görsel | contact ✓ kapak ✓ | — | DSÖ Avrupa gürültü notu (yatak odası <30 dB). '10 dk sessizlik' öneri, kaynaklı bulgu değil. |
+| 025 | 2026-11-22 | Zeytinyağıyla kızartma yapılır mı? (doğru mu yanlış mı) | 52,9 sn | Sessiz + 1 Canva AI görsel, yazılar üst yarıda | contact ✓ kapak ✓ | — | IOC duman noktası; De Alzaa 2018 (sektör laboratuvarı, kaynakta belirtildi); Ramírez-Anaya Food Chem 2015. |
 
 ## Teslim öncesi kontrol listesi
 - [ ] Her sayı kaynakla eşleşiyor, öneri türü doğru

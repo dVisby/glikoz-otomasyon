@@ -1,0 +1,149 @@
+{
+  "id": "025",
+  "slug": "zeytinyagi-kizartma",
+  "title": "Zeytinyağıyla kızartma yapılır mı?",
+  "coverTitle": "Zeytinyağıyla kızartma",
+  "coverSub": "yapılır mı?",
+  "date": "2026-11-22",
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "ZEYTİNYAĞIYLA KIZARTMA",
+      "hook": true,
+      "lines": [
+        "Doğru mu, yanlış mı? 5 soruda bakalım."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "DOĞRU MU?",
+      "lines": [
+        "Zeytinyağı kızartmada hemen yanar, kullanılmaz."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "keyword": "YANLIŞ",
+      "lines": [
+        "Sızma zeytinyağı yaklaşık 190–210 °C'de dumanlanır; evde kızartma 160–180 °C'de yapılır."
+      ],
+      "red": true,
+      "source": "IOC (ULUSLARARASI ZEYTİN KONSEYİ) · DUMAN NOKTASI ~210 °C"
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "DOĞRU MU?",
+      "lines": [
+        "Duman noktası yüksek yağ, en güvenli kızartma yağıdır."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "keyword": "YANLIŞ",
+      "lines": [
+        "10 yağın ısıtıldığı bir çalışmada en az zararlı bileşik sızma zeytinyağında oluştu."
+      ],
+      "red": true,
+      "source": "DE ALZAA ve ark. · ACTA SCI NUTR HEALTH 2018 · ZEYTİNYAĞI SEKTÖRÜ LAB."
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "DOĞRU MU?",
+      "lines": [
+        "Zeytinyağında kızartılan sebze antioksidan kazanabilir."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "keyword": "DOĞRU",
+      "lines": [
+        "Sızma zeytinyağında kızartılan sebzelerin fenolik bileşikleri (antioksidanları) arttı."
+      ],
+      "source": "RAMÍREZ-ANAYA ve ark. · FOOD CHEM 2015"
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "DOĞRU MU?",
+      "lines": [
+        "O zaman kızartma artık sağlıklı."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "keyword": "YANLIŞ",
+      "lines": [
+        "Kızartma yine yağ ve kalori ekler; her gün değil, ara sıra yap."
+      ],
+      "red": true
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "DOĞRU MU?",
+      "lines": [
+        "Kızartma yağını tekrar tekrar kullanmak sorun değil."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "keyword": "YANLIŞ",
+      "lines": [
+        "Yağ ısıtıldıkça bozulur; koyulaşan, köpüren yağı dök."
+      ],
+      "red": true,
+      "source": "DE ALZAA ve ark. · INTECHOPEN 2021"
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "ÖZETLE",
+      "lines": [
+        "Sızma zeytinyağıyla kızartma yapılabilir; ama kızartmayı arada bir yap."
+      ]
+    }
+  ],
+  "caption": "Zeytinyağıyla kızartma yapılır mı? 🫒\n\nSızma zeytinyağı yaklaşık 190–210 °C'de dumanlanmaya başlar; evde kızartma ise genelde 160–180 °C'de yapılır. 10 yağın ısıtıldığı bir çalışmada en az zararlı bileşik sızma zeytinyağında oluştu. Zeytinyağında kızartılan sebzelerin antioksidan içeriği de artabiliyor.\n\nAma kızartma yine yağ ve kalori ekler; her gün değil, ara sıra yap. Koyulaşan, köpüren yağı da tekrar kullanma.\n\nKaçını doğru bildin? 👇",
+  "sources": [
+    "Uluslararası Zeytin Konseyi (IOC): zeytinyağının duman noktası ~210 °C, ideal kızartma sıcaklığı ~180 °C",
+    "De Alzaa F, Guillaume C, Ravetti L. Evaluation of Chemical and Physical Changes in Different Commercial Oils during Heating. Acta Scientific Nutritional Health 2018;2(6):2-11 (10 yağ; en az polar bileşik sızma zeytinyağında; Avustralyalı zeytinyağı üreticisinin laboratuvarı)",
+    "Ramírez-Anaya JP ve ark. Phenols and the antioxidant capacity of Mediterranean vegetables prepared with extra virgin olive oil using different domestic cooking techniques. Food Chem 2015;188:430-8",
+    "De Alzaa F ve ark. Cooking with Extra Virgin Olive Oil. IntechOpen 2021 (ısıtılan yağda koyulaşma, renk koyulaşması, köpürme; duman noktası düşer)"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#zeytinyağı",
+    "#kızartma",
+    "#mitgerçek",
+    "#akdenizdiyeti",
+    "#sağlıklıbeslenme"
+  ],
+  "notes": "Doğru mu yanlış mı formatı: soru sahnesi (DOĞRU MU?) + cevap sahnesi (DOĞRU/YANLIŞ). Görsel: Canva AI tava. Yazılar üst yarıda.",
+  "theme": "krem",
+  "ctaSize": 46,
+  "capSize": 54,
+  "captionDisclaimer": false,
+  "pillY": 315,
+  "capY": 605,
+  "badgeY": 130,
+  "srcDark": true,
+  "cta": {
+    "save": "",
+    "comment": "Kaçını doğru bildin? Yorumlara yaz.",
+    "share": "Zeytinyağıyla kızartma yapılmaz diyen birine gönder."
+  }
+}
