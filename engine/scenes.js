@@ -510,7 +510,8 @@ function photoOverlay(s, lt) {   // gradients + logo badge + keyword pill + sour
       }
       ctx.restore();
     }
-    if (s.source) { ctx.save(); ctx.shadowColor = EP.srcDark ? 'rgba(255,255,255,.6)' : 'rgba(0,0,0,.6)'; ctx.shadowBlur = 8; text(s.source, 76, EP.srcY || (EP.capSize ? 1800 : 1262), { font: '500 22px Mono', color: EP.srcDark ? 'rgba(60,56,44,.85)' : 'rgba(255,255,255,.9)', spacing: 1.5 }); ctx.restore(); }
+    if (s.source) { if (EP.srcDark) { const sy = EP.srcY || (EP.capSize ? 1800 : 1262), sw = measure(s.source, '500 22px Mono', 1.5); ctx.save(); ctx.globalAlpha *= .82; ctx.fillStyle = '#FBFAF5'; roundRect(56, sy - 30, sw + 40, 44, 14); ctx.fill(); ctx.restore(); }
+      ctx.save(); ctx.shadowColor = EP.srcDark ? 'rgba(255,255,255,.6)' : 'rgba(0,0,0,.6)'; ctx.shadowBlur = 8; text(s.source, 76, EP.srcY || (EP.capSize ? 1800 : 1262), { font: '500 22px Mono', color: EP.srcDark ? 'rgba(60,56,44,.85)' : 'rgba(255,255,255,.9)', spacing: 1.5 }); ctx.restore(); }
 }
 
 SCENES.photo = {

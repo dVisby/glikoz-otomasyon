@@ -41,4 +41,4 @@ Son cümleden 0,9 sn sonra 5,6 sn süren kart eklenir: krem rozet üzerinde anim
 - Host klibinde `"overlay": "photo"` → klip, bağlı olduğu photo sahnesinin etiket, rozet ve kaynak satırıyla çizilir (AI etiketi yok).
 
 
-**Bölüm düzeyi yerleşim (2026-11-22):** `capY` (altyazı merkezi, varsayılan 1385), `pillY` (photo anahtar kelime hapı, varsayılan 640), `srcY` (photo kaynak satırı, varsayılan 1800), `badgeY` (photo logo rozeti, varsayılan 352), `srcDark` (kaynak satırı koyu renk; açık zeminde). Görselin üst yarısı boşsa yazılar oraya alınır (ör. 018: pillY 330, capY 585, srcY 790, badgeY 130, srcDark).
+**Bölüm düzeyi yerleşim (2026-11-22):** `capY` (altyazı merkezi, varsayılan 1385), `pillY` (photo anahtar kelime hapı, varsayılan 640), `srcY` (photo kaynak satırı, varsayılan 1800), `badgeY` (photo logo rozeti, varsayılan 352), `srcDark` (kaynak satırı koyu renk; açık zeminde). Görselin üst yarısı boşsa yazılar oraya alınır (ör. 018: pillY 315, capY 605, badgeY 130, srcDark — kaynak satırı altta, açık kutu içinde).
