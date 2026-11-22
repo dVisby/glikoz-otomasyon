@@ -47,3 +47,4 @@
 - 2026-11-22: 025 zeytinyağıyla kızartma: 'Doğru mu yanlış mı' formatında sessiz Reels (soru/cevap sahne çiftleri).
 - 2026-11-22: 025: açılış başlığı '5 soruda zeytinyağıyla kızartma doğru mu, yanlış mı?' tek hapta.
 - 2026-11-22: 025: iddia ve cevap aynı sahnede (üstte numaralı iddia, altında DOĞRU/YANLIŞ rozeti ve cevap); 53,7 sn.
+- 2026-11-22: 025: başlık hapındaki yazılar düz siyah (Inter 700, yazıldığı gibi) — `pillPlain`.

@@ -494,19 +494,20 @@ function photoOverlay(s, lt) {   // gradients + logo badge + keyword pill + sour
     logoBadge(940, EP.badgeY || 352, 72, .7);
     if (s.keyword) {
       const P = EP.pillSize || 76;   // keyword pill matches the cover title size (76px, 2026-11-20); shrinks only if too wide
-      const str = s.keyword.toLocaleUpperCase('tr-TR'), fs = Math.min(P, Math.floor(P * 860 / measure(str, `800 ${P}px Sans`, 2))), f = `800 ${fs}px Sans`, w = measure(str, f, 2) + 90;
+      const PL = !!EP.pillPlain, UP = x => PL ? x : x.toLocaleUpperCase('tr-TR'), PW = PL ? 700 : 800, SP = PL ? 0 : 2, PC = PL ? '#111111' : null;   // EP.pillPlain: plain black Inter 700, as written (no caps/spacing)
+      const str = UP(s.keyword), fs = Math.min(P, Math.floor(P * 860 / measure(str, `${PW} ${P}px Sans`, SP))), f = `${PW} ${fs}px Sans`, w = measure(str, f, SP) + 90;
       const k = s.hook ? easeOut(prog(lt, 0, .35)) : easeOut(prog(lt, s.L[0] + .15, s.L[0] + .75)), y = EP.pillY || 640, ph = Math.round(fs * 1.3 + 50);
       ctx.save(); ctx.globalAlpha *= k; ctx.translate(540, y); ctx.scale(.88 + .12 * k, .88 + .12 * k); ctx.translate(-540, -y);
       ctx.shadowColor = 'rgba(0,0,0,.28)'; ctx.shadowBlur = 34; ctx.shadowOffsetY = 10;
       if (s.keywordSub) {   // optional continuation lines under the keyword, same font size, inside the same pill (grows downward)
-        const sub = wrapLines(s.keywordSub.toLocaleUpperCase('tr-TR'), f, 900), lh = Math.round(fs * 1.22);
-        const ww = Math.max(w, ...sub.map(l => measure(l, f, 2) + 90)), top = y - ph / 2, hh = ph + sub.length * lh;
+        const sub = wrapLines(UP(s.keywordSub), f, 900), lh = Math.round(fs * 1.22);
+        const ww = Math.max(w, ...sub.map(l => measure(l, f, SP) + 90)), top = y - ph / 2, hh = ph + sub.length * lh;
         ctx.fillStyle = '#FFFFFF'; roundRect(540 - ww / 2, top, ww, hh, 34); ctx.fill(); ctx.shadowBlur = 0;
-        text(str, 540, y + fs * .36, { font: f, color: s.red ? C.red : C.gold, align: 'center', spacing: 2 });
-        sub.forEach((l, i) => text(l, 540, y + fs * .36 + (i + 1) * lh, { font: f, color: s.red ? C.red : C.gold, align: 'center', spacing: 2 }));
+        text(str, 540, y + fs * .36, { font: f, color: PC || (s.red ? C.red : C.gold), align: 'center', spacing: SP });
+        sub.forEach((l, i) => text(l, 540, y + fs * .36 + (i + 1) * lh, { font: f, color: PC || (s.red ? C.red : C.gold), align: 'center', spacing: SP }));
       } else {
       ctx.fillStyle = '#FFFFFF'; roundRect(540 - w / 2, y - ph / 2, w, ph, 34); ctx.fill(); ctx.shadowBlur = 0;
-      text(str, 540, y + fs * .36, { font: f, color: s.red ? C.red : C.gold, align: 'center', spacing: 2 });
+      text(str, 540, y + fs * .36, { font: f, color: PC || (s.red ? C.red : C.gold), align: 'center', spacing: SP });
       }
       ctx.restore();
     }

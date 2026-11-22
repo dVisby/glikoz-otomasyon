@@ -137,5 +137,6 @@
     "share": "Zeytinyağıyla kızartma yapılmaz diyen birine gönder."
   },
   "pillSize": 54,
-  "verdictY": 655
+  "verdictY": 655,
+  "pillPlain": true
 }
