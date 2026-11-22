@@ -39,7 +39,7 @@
       "red": true,
       "lines": [
         "Dünya Sağlık Örgütü gürültüyü hafife alınan bir sağlık tehdidi olarak tanımlıyor.",
-        "Uyku bozukluğu ve kalp-damar etkileriyle ilişkili."
+        "Uyku bozukluğu ve kalp hastalığı riskiyle ilişkili."
       ],
       "source": "DSÖ AVRUPA · GÜRÜLTÜ BİLGİ NOTU"
     },
@@ -76,10 +76,11 @@
     "comment": "Gün içinde seni en çok hangi ses yoruyor?",
     "share": "Açık ofiste çalışan birine gönder."
   },
-  "caption": "Hiçbir şey yapmadan yorgun hissediyor musun? 🔇\n\nDünya Sağlık Örgütü gürültüyü hafife alınan bir sağlık tehdidi olarak tanımlıyor: uyku bozukluğu ve kalp-damar etkileriyle ilişkili. İyi bir uyku için yatak odasında gece 30 desibelin altı, yani fısıltıdan daha sessiz bir ortam öneriliyor.\n\nÖnerimiz: bugün kendine 10 dakika sessizlik ver. TV kapalı, telefon sessizde. 🌿\n\nGün içinde seni en çok hangi ses yoruyor? 👇",
+  "caption": "Hiçbir şey yapmadan yorgun hissediyor musun? 🔇\n\nDünya Sağlık Örgütü gürültüyü hafife alınan bir sağlık tehdidi olarak tanımlıyor: uyku bozukluğu ve kalp hastalığı riskiyle ilişkili. İyi bir uyku için yatak odasında gece 30 desibelin altı, yani fısıltıdan daha sessiz bir ortam öneriliyor.\n\nÖnerimiz: bugün kendine 10 dakika sessizlik ver. TV kapalı, telefon sessizde. 🌿\n\nGün içinde seni en çok hangi ses yoruyor? 👇",
   "sources": [
-    "DSÖ Avrupa Bölge Ofisi, Noise bilgi notu (gürültü: uyku bozukluğu, kalp-damar etkileri, performans, işitme; yatak odasında gece <30 dB(A))",
-    "DSÖ Environmental Noise Guidelines for the European Region, 2018"
+    "DSÖ Avrupa Bölge Ofisi, Noise bilgi notu (gürültü: uyku bozukluğu, kalp-damar hastalıkları, performans, işitme; yatak odasında gece <30 dB(A))",
+    "DSÖ Environmental Noise Guidelines for the European Region, 2018",
+    "van Kempen E ve ark., Int J Environ Res Public Health 2018 (DSÖ kılavuzu için sistematik derleme: trafik gürültüsünde her 10 dB artış iskemik kalp hastalığı insidansında RR 1,08)"
   ],
   "hashtags": [
     "#glikozgünlüğüm",
