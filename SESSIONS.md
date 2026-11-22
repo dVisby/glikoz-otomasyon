@@ -43,3 +43,4 @@
 - 2026-11-22: 018 mercimek: kaynak satırları yeniden alta alındı; srcDark açık zeminde küçük krem kutu içinde.
 - 2026-11-22: 021 gürültü: 'kalp-damar etkileri' yerine 'kalp hastalığı riski' (van Kempen 2018, IHD RR 1,08/10 dB).
 - 2026-11-22: 021 gürültü: 'Önerimiz: …' yerine 'Bugün kendine 10 dakika sessizlik molası ver.'
+- 2026-11-22: gizli-tuz infografiği: etiket kaldırıldı, yazılar büyütüldü, DSÖ/dünya/Türkiye karşılaştırması (10,8 g / 10,2 g TBSA 2017); SALTURK 15 g yerine güncel resmi rakam.

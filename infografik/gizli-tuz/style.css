@@ -43,3 +43,28 @@ h1 em{font-style:normal;color:var(--tile)}
 .fill{height:100%;border-radius:10px;background:linear-gradient(90deg,#E59A78,#C8573A)}
 .fill.t{background:linear-gradient(90deg,#C8573A,#9E3D24)}
 .brow.tot .l{font-size:25px}
+/* 2026-11-22 revizyon: daha büyük yazılar */
+.hero{padding-top:56px;grid-template-columns:1fr 290px}
+.hero .pic{height:330px}
+h1{font-size:72px;margin-top:0}
+.sub{font-size:31px;line-height:1.36}
+.card{padding:22px 30px;margin-top:24px}
+.card h2{font-size:31px}
+.brow{grid-template-columns:270px 1fr 130px;padding:12px 0}
+.brow .l{font-size:27px}.brow .l span{font-size:21px}
+.brow.tot .l{font-size:29px}
+.v{font-size:31px}
+.cnote{font:400 22px/1.35 Inter;color:var(--mute);margin-top:6px}
+.cmp{margin:16px 72px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cmp div{border-radius:18px;padding:14px 10px;text-align:center;font:600 21px/1.25 Inter}
+.cmp b{display:block;font:800 40px Inter;margin-bottom:4px}
+.cmp .ok{background:var(--olive);color:#fff}
+.cmp .bad{background:var(--card);color:var(--ink);border:3px solid var(--tile)}
+.cmp .bad b{color:var(--tile)}
+.tips{padding:16px 28px;margin-top:16px}
+.tips h2{font-size:30px}
+.tips li{font-size:25px;line-height:1.3;padding-left:28px}
+.tips li:before{top:11px;width:12px;height:12px}
+.src{font-size:15.5px;bottom:26px;max-width:800px}
+h1{font-size:68px;letter-spacing:-1.5px}
+.hero .pic{height:300px}
