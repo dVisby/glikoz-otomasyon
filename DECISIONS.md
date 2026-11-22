@@ -40,3 +40,4 @@
 - 2026-11-21: Tek AI görselle Reels: aynı görselin 2 kırpımı (z1/z2) sahne çeşitliliği için kullanılır. `statement` sahnesi marka fotoğrafı zemininde okunaksız kaldığı için photo sahneleri tercih edildi. Açıklamada tıbbi not satırı `captionDisclaimer:false` ile kapatılır (Muharrem Instagram'da kendisi yazıyor). Infografik/carousel 1080×1350, krem veil + marka fotoğrafı zemin, Playwright ekran görüntüsü.
 - 2026-11-21: photo sahnesine `keywordSub` eklendi: anahtar kelimenin altında, aynı hapta, aynı boyutta devam satırları (uzun hook başlıkları için).
 - 2026-11-21: Satır seviyesinde `nocap`: süre ayrılır, altyazı çıkmaz (hook yalnız başlık hapında gösterilirken).
+- 2026-11-22: Bölüm düzeyi yerleşim alanları: pillY, capY, srcY, badgeY, srcDark (görselin boş bölgesine yazı yerleştirmek için).

@@ -16,7 +16,7 @@
   "scenes": [
     {
       "type": "photo",
-      "img": "img/s1.png",
+      "img": "img/m1.png",
       "keyword": "ÖĞLEN MERCİMEK",
       "hook": true,
       "lines": [
@@ -26,7 +26,7 @@
     },
     {
       "type": "photo",
-      "img": "img/z1.png",
+      "img": "img/m1.png",
       "keyword": "İKİNCİ ÖĞÜN ETKİSİ",
       "lines": [
         "Buna “ikinci öğün etkisi” deniyor.",
@@ -36,17 +36,17 @@
     },
     {
       "type": "photo",
-      "img": "img/z2.png",
+      "img": "img/m1.png",
       "keyword": "BİR ÇALIŞMADA",
       "lines": [
-        "Bir çalışmada öğlen mercimek ya da nohut yiyenler, 4 saat sonra pizza yedi.",
-        "Yaklaşık 6 saat boyunca kan şekerleri, makarna yiyenlere göre daha düşük seyretti."
+        "Bir çalışmada makarnalarına bütün mercimek ya da nohut eklenenler, 4 saat sonra pizza yedi.",
+        "Yaklaşık 6 saat boyunca kan şekerleri, sadece makarna yiyenlere göre daha düşük seyretti."
       ],
       "source": "MOLLARD ve ark. · BR J NUTR 2012 · 24 ERKEK"
     },
     {
       "type": "photo",
-      "img": "img/z1.png",
+      "img": "img/m2.png",
       "keyword": "NEDEN?",
       "lines": [
         "Sebebi lif ve yavaş sindirilen nişasta.",
@@ -55,7 +55,7 @@
     },
     {
       "type": "photo",
-      "img": "img/s1.png",
+      "img": "img/m1.png",
       "keyword": "KÜÇÜK ÇALIŞMALAR",
       "red": true,
       "lines": [
@@ -65,10 +65,10 @@
     },
     {
       "type": "photo",
-      "img": "img/z2.png",
+      "img": "img/m2.png",
       "keyword": "BUGÜN DENE",
       "lines": [
-        "Öğle yemeğine bir kase mercimek çorbası ya da bir tabak nohut ekle.",
+        "Öğle yemeğine bir tabak yeşil mercimek ya da nohut yemeği ekle.",
         "Akşam yemeğinden sonra kendini nasıl hissettiğine bak."
       ]
     }
@@ -78,7 +78,7 @@
     "comment": "En sevdiğin baklagil yemeği ne?",
     "share": "Öğle yemeğini atlayan birine gönder."
   },
-  "caption": "Öğlen yediğin mercimek, bir sonraki öğününü de etkiliyor. 🥣\n\nBuna “ikinci öğün etkisi” deniyor. Bir çalışmada öğlen mercimek ya da nohut yiyen 24 genç erkeğin kan şekeri, 4 saat sonra yenen pizzayla birlikte yaklaşık 6 saat boyunca makarna yiyenlere göre daha düşük seyretti.\n\nSebebi lif ve yavaş sindirilen nişasta. Çalışmalar küçük, ama sofraya baklagil eklemek için güzel bir neden.\n\nEn sevdiğin baklagil yemeği ne? 👇",
+  "caption": "Öğlen yediğin mercimek, bir sonraki öğününü de etkiliyor. 🫘\n\nBuna “ikinci öğün etkisi” deniyor. Bir çalışmada domates soslu makarnasına bütün mercimek ya da nohut eklenen 24 genç erkeğin kan şekeri, 4 saat sonra yenen pizzayla birlikte yaklaşık 6 saat boyunca sadece makarna yiyenlere göre daha düşük seyretti.\n\nSebebi lif ve yavaş sindirilen nişasta. Çalışmada çorba değil bütün taneler kullanıldı; bu yüzden öğlen bir tabak yeşil mercimek ya da nohut yemeği iyi bir seçenek. Çalışmalar küçük, ama sofraya baklagil eklemek için güzel bir neden.\n\nEn sevdiğin baklagil yemeği ne? 👇",
   "sources": [
     "Mollard RC ve ark., Br J Nutr 2012 (24 sağlıklı erkek; mercimek, nohut, kuru fasulye, sarı bezelye ve makarna öğünü; 0–340 dk toplam kan şekeri tüm baklagillerde makarnaya göre daha düşük; 4 saat sonra pizza öğünü) — PubMed 22054112",
     "Mollard RC ve ark., Appl Physiol Nutr Metab 2014 (baklagiller, 2 saat sonraki sabit öğün sonrası kan şekerini beyaz ekmeğe göre düşürdü) — PubMed 24797207",
@@ -92,6 +92,11 @@
     "#ikinciöğünetkisi",
     "#sağlıklıbeslenme"
   ],
-  "notes": "Hook ekstrapolasyon riski nedeniyle 'bir sonraki öğün' olarak yumuşatıldı. Pizza sonrası tek başına fark yalnız nohutta (diğer baklagillere göre); bu yüzden 0–340 dk toplam eğri kullanıldı.",
-  "captionDisclaimer": false
+  "notes": "Hook ekstrapolasyon riski nedeniyle 'bir sonraki öğün' olarak yumuşatıldı. Pizza sonrası tek başına fark yalnız nohutta (diğer baklagillere göre); bu yüzden 0–340 dk toplam eğri kullanıldı. 22.11: görsel kırmızı mercimek çorbası yerine bütün yeşil mercimek taneleri (çalışmada bütün taneler kullanıldı); yazılar görselin boş üst yarısına alındı (pillY/capY/srcY).",
+  "captionDisclaimer": false,
+  "pillY": 315,
+  "capY": 605,
+  "srcY": 805,
+  "badgeY": 130,
+  "srcDark": true
 }

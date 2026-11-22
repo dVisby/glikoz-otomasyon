@@ -491,11 +491,11 @@ function photoOverlay(s, lt) {   // gradients + logo badge + keyword pill + sour
     const g2 = ctx.createLinearGradient(0, 1180, 0, H); g2.addColorStop(0, 'rgba(20,20,12,0)'); g2.addColorStop(1, 'rgba(20,20,12,.5)');
     ctx.fillStyle = g2; ctx.fillRect(0, 1180, W, H - 1180);
     ctx.restore();
-    logoBadge(940, 352, 72, .7);
+    logoBadge(940, EP.badgeY || 352, 72, .7);
     if (s.keyword) {
       const P = EP.pillSize || 76;   // keyword pill matches the cover title size (76px, 2026-11-20); shrinks only if too wide
       const str = s.keyword.toLocaleUpperCase('tr-TR'), fs = Math.min(P, Math.floor(P * 860 / measure(str, `800 ${P}px Sans`, 2))), f = `800 ${fs}px Sans`, w = measure(str, f, 2) + 90;
-      const k = s.hook ? easeOut(prog(lt, 0, .35)) : easeOut(prog(lt, s.L[0] + .15, s.L[0] + .75)), y = 640, ph = Math.round(fs * 1.3 + 50);
+      const k = s.hook ? easeOut(prog(lt, 0, .35)) : easeOut(prog(lt, s.L[0] + .15, s.L[0] + .75)), y = EP.pillY || 640, ph = Math.round(fs * 1.3 + 50);
       ctx.save(); ctx.globalAlpha *= k; ctx.translate(540, y); ctx.scale(.88 + .12 * k, .88 + .12 * k); ctx.translate(-540, -y);
       ctx.shadowColor = 'rgba(0,0,0,.28)'; ctx.shadowBlur = 34; ctx.shadowOffsetY = 10;
       if (s.keywordSub) {   // optional continuation lines under the keyword, same font size, inside the same pill (grows downward)
@@ -510,7 +510,7 @@ function photoOverlay(s, lt) {   // gradients + logo badge + keyword pill + sour
       }
       ctx.restore();
     }
-    if (s.source) { ctx.save(); ctx.shadowColor = 'rgba(0,0,0,.6)'; ctx.shadowBlur = 8; text(s.source, 76, EP.capSize ? 1800 : 1262, { font: '500 22px Mono', color: 'rgba(255,255,255,.9)', spacing: 1.5 }); ctx.restore(); }
+    if (s.source) { ctx.save(); ctx.shadowColor = EP.srcDark ? 'rgba(255,255,255,.6)' : 'rgba(0,0,0,.6)'; ctx.shadowBlur = 8; text(s.source, 76, EP.srcY || (EP.capSize ? 1800 : 1262), { font: '500 22px Mono', color: EP.srcDark ? 'rgba(60,56,44,.85)' : 'rgba(255,255,255,.9)', spacing: 1.5 }); ctx.restore(); }
 }
 
 SCENES.photo = {
@@ -788,7 +788,7 @@ function background() {
 function drawCaptions(t) {
   for (const c of TL.captions) {
     const a = fadeWin(t, c.start, c.end, .25); if (a <= 0) continue;
-    const cs = EP.capSize || 50, font = `300 ${cs}px Jost`, lines = wrapLines(c.text, font, 880), lh = Math.round(cs * 1.32), y0 = 1385 - (lines.length - 1) * lh / 2;
+    const cs = EP.capSize || 50, font = `300 ${cs}px Jost`, lines = wrapLines(c.text, font, 880), lh = Math.round(cs * 1.32), y0 = (EP.capY || 1385) - (lines.length - 1) * lh / 2;   // EP.capY moves subtitles (e.g. into an empty upper half)
     const dy = (1 - easeOut(prog(t, c.start, c.start + .4))) * 14;
     if (C.capBox) {
       const wmax = Math.max(...lines.map(l => measure(l, font)));
