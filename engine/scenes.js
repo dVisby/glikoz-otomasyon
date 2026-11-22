@@ -722,6 +722,7 @@ async function setup(episode, timing) {
   });
   await Promise.all(episode.scenes.filter(sc => sc.imgData).map(sc => new Promise(res => {
     const im = new Image(); im.onload = () => { PHOTOS[sc.img] = im; res(); }; im.onerror = res; im.src = sc.imgData; })));
+  if (episode.coverImgData) await new Promise(res => { const im = new Image(); im.onload = () => { PHOTOS.__cover = im; res(); }; im.onerror = res; im.src = episode.coverImgData; });
   return { scenes: TL.scenes.length, captions: TL.captions.length, total: TL.total };
 }
 function leaf(x, y, len, wid, ang, c1, c2) {
@@ -874,13 +875,17 @@ function audioEvents() {
 }
 function renderCover() {
   background.noCorner = true; background(); background.noCorner = false;
-  const bg = useBg();
+  const bg = useBg() || PHOTOS.__cover;
+  if (PHOTOS.__cover) {   // EP.coverImg: topic photo instead of the brand photo (cover-fit)
+    const im = PHOTOS.__cover, k = Math.max(W / im.naturalWidth, H / im.naturalHeight);
+    ctx.drawImage(im, (W - im.naturalWidth * k) / 2, (H - im.naturalHeight * k) / 2, im.naturalWidth * k, im.naturalHeight * k);
+  }
   if (bg) {   // brand photo cover: title on a cream panel in the empty area above the notebook
     // title and subtitle share one font, size and colour (Muharrem, 2026-11-20)
     const t = (EP.coverTitle || EP.title).toLocaleUpperCase('tr-TR'), sub = EP.coverSub ? EP.coverSub.toLocaleUpperCase('tr-TR') : '';
     let fs = 76, font = () => `800 ${fs}px Sans`, all = () => [...wrapLines(t, font(), 860), ...(sub ? wrapLines(sub, font(), 860) : [])];
     while (fs > 52 && all().length > 4) fs -= 4;
-    const lines = all(), lh = Math.round(fs * 1.22), hh = lines.length * lh + 110, y0 = 760 - hh / 2;
+    const lines = all(), lh = Math.round(fs * 1.22), hh = lines.length * lh + 110, y0 = (EP.coverY || 760) - hh / 2;
     ctx.save(); ctx.globalAlpha = .82; ctx.fillStyle = '#FBF8F2'; ctx.shadowColor = 'rgba(80,70,50,.15)'; ctx.shadowBlur = 36;
     roundRect(70, y0, 940, hh, 40); ctx.fill(); ctx.restore();
     lines.forEach((l, i) => text(l, 540, y0 + 55 + fs * .82 + i * lh, { font: font(), color: '#4E5B34', align: 'center', spacing: 1 }));

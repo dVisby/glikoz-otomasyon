@@ -38,6 +38,11 @@ def load(ep):
             if not f.exists(): sys.exit(f'image missing: {f}')
             mime = 'image/jpeg' if f.suffix.lower() in ('.jpg', '.jpeg') else 'image/png'
             sc['imgData'] = f'data:{mime};base64,' + base64.b64encode(f.read_bytes()).decode()
+    if e.get('coverImg'):   # optional cover background photo (replaces the brand photo on the cover only)
+        f = ep / e['coverImg']
+        if not f.exists(): sys.exit(f'cover image missing: {f}')
+        mime = 'image/jpeg' if f.suffix.lower() in ('.jpg', '.jpeg') else 'image/png'
+        e['coverImgData'] = f'data:{mime};base64,' + base64.b64encode(f.read_bytes()).decode()
     return e
 
 
