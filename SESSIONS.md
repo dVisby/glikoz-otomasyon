@@ -39,3 +39,4 @@
 - 2026-11-21: 020 kahkaha: hook sahnesi altyazısız (nocap), soru ayrı sahneye alındı.
 - 2026-11-21: 020 kahkaha: hook ve BUGÜNÜN ÖDEVİ dışındaki başlık hapları kaldırıldı.
 - 2026-11-22: 018 mercimek: görsel bütün yeşil mercimek tanelerine çevrildi (çalışmada çorba değil bütün taneler); cümle/öneri düzeltildi; yazılar boş üst yarıya alındı (yeni pillY/capY/srcY/badgeY/srcDark).
+- 2026-11-22: 018 mercimek: hook cümlesi tek altyazıda birleştirildi.
