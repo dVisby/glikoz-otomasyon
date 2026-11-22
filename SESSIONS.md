@@ -42,3 +42,4 @@
 - 2026-11-22: 018 mercimek: hook cümlesi tek altyazıda birleştirildi.
 - 2026-11-22: 018 mercimek: kaynak satırları yeniden alta alındı; srcDark açık zeminde küçük krem kutu içinde.
 - 2026-11-22: 021 gürültü: 'kalp-damar etkileri' yerine 'kalp hastalığı riski' (van Kempen 2018, IHD RR 1,08/10 dB).
+- 2026-11-22: 021 gürültü: 'Önerimiz: …' yerine 'Bugün kendine 10 dakika sessizlik molası ver.'
