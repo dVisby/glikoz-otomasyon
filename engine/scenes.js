@@ -502,11 +502,11 @@ function photoOverlay(s, lt) {   // gradients + logo badge + keyword pill + sour
       if (s.keywordSub) {   // optional continuation lines under the keyword, same font size, inside the same pill (grows downward)
         const sub = wrapLines(UP(s.keywordSub), f, 900), lh = Math.round(fs * 1.22);
         const ww = Math.max(w, ...sub.map(l => measure(l, f, SP) + 90)), top = y - ph / 2, hh = ph + sub.length * lh;
-        ctx.fillStyle = '#FFFFFF'; roundRect(540 - ww / 2, top, ww, hh, 34); ctx.fill(); ctx.shadowBlur = 0;
+        ctx.fillStyle = '#FFFFFF'; roundRect(540 - ww / 2, top, ww, hh, 34); ctx.fill(); ctx.shadowBlur = 0; ctx.shadowOffsetY = 0; ctx.shadowColor = "transparent";
         text(str, 540, y + fs * .36, { font: f, color: PC || (s.red ? C.red : C.gold), align: 'center', spacing: SP });
         sub.forEach((l, i) => text(l, 540, y + fs * .36 + (i + 1) * lh, { font: f, color: PC || (s.red ? C.red : C.gold), align: 'center', spacing: SP }));
       } else {
-      ctx.fillStyle = '#FFFFFF'; roundRect(540 - w / 2, y - ph / 2, w, ph, 34); ctx.fill(); ctx.shadowBlur = 0;
+      ctx.fillStyle = '#FFFFFF'; roundRect(540 - w / 2, y - ph / 2, w, ph, 34); ctx.fill(); ctx.shadowBlur = 0; ctx.shadowOffsetY = 0; ctx.shadowColor = "transparent";
       text(str, 540, y + fs * .36, { font: f, color: PC || (s.red ? C.red : C.gold), align: 'center', spacing: SP });
       }
       ctx.restore();
@@ -517,7 +517,7 @@ function photoOverlay(s, lt) {   // gradients + logo badge + keyword pill + sour
         const ok = /^DO/.test(s.verdict.toLocaleUpperCase('tr-TR')), vs = s.verdict.toLocaleUpperCase('tr-TR'), vf = '800 58px Sans', vw = measure(vs, vf, 3) + 80, vy = EP.verdictY || 700;
         ctx.save(); ctx.globalAlpha *= k; ctx.translate(540, vy); ctx.scale(.8 + .2 * k, .8 + .2 * k); ctx.translate(-540, -vy);
         ctx.shadowColor = 'rgba(0,0,0,.25)'; ctx.shadowBlur = 24; ctx.shadowOffsetY = 6;
-        ctx.fillStyle = ok ? '#4E6B45' : C.red; roundRect(540 - vw / 2, vy - 50, vw, 100, 50); ctx.fill(); ctx.shadowBlur = 0;
+        ctx.fillStyle = ok ? '#4E6B45' : C.red; roundRect(540 - vw / 2, vy - 50, vw, 100, 50); ctx.fill(); ctx.shadowBlur = 0; ctx.shadowOffsetY = 0; ctx.shadowColor = "transparent";
         text(vs, 540, vy + 21, { font: vf, color: '#FFFFFF', align: 'center', spacing: 3 }); ctx.restore();
       }
     }
