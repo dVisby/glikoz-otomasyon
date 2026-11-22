@@ -41,3 +41,4 @@
 - 2026-11-21: photo sahnesine `keywordSub` eklendi: anahtar kelimenin altında, aynı hapta, aynı boyutta devam satırları (uzun hook başlıkları için).
 - 2026-11-21: Satır seviyesinde `nocap`: süre ayrılır, altyazı çıkmaz (hook yalnız başlık hapında gösterilirken).
 - 2026-11-22: Bölüm düzeyi yerleşim alanları: pillY, capY, srcY, badgeY, srcDark (görselin boş bölgesine yazı yerleştirmek için).
+- 2026-11-22: photo sahnesine `verdict` rozeti (DOĞRU yeşil / YANLIŞ kiremit), `verdictLine` ile açılış satırı, bölüm düzeyi `verdictY`.

@@ -44,3 +44,5 @@ Son cümleden 0,9 sn sonra 5,6 sn süren kart eklenir: krem rozet üzerinde anim
 **Bölüm düzeyi yerleşim (2026-11-22):** `capY` (altyazı merkezi, varsayılan 1385), `pillY` (photo anahtar kelime hapı, varsayılan 640), `srcY` (photo kaynak satırı, varsayılan 1800), `badgeY` (photo logo rozeti, varsayılan 352), `srcDark` (kaynak satırı koyu renk; açık zeminde). Görselin üst yarısı boşsa yazılar oraya alınır (ör. 018: pillY 315, capY 605, badgeY 130, srcDark — kaynak satırı altta, açık kutu içinde).
 
 **Kapak (2026-11-22):** `coverImg` (bölüm klasöründe görsel yolu; marka fotoğrafı yerine kapak zemini), `coverY` (başlık panelinin dikey merkezi, varsayılan 760).
+
+**Doğru/yanlış sahnesi (2026-11-22):** photo sahnesine `verdict` ("DOĞRU"/"YANLIŞ") verilirse, cevap satırı (`verdictLine`, varsayılan 1) başlarken iddia hapının altında renkli rozet çıkar (yeşil/kiremit). Konum `EP.verdictY` (varsayılan 700). Kalıp: keyword "1." + keywordSub iddia, 1. satır nocap (okuma süresi), 2. satır cevap altyazısı.

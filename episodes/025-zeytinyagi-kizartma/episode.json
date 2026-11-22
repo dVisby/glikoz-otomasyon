@@ -27,89 +27,75 @@
     {
       "type": "photo",
       "img": "img/m1.png",
-      "keyword": "DOĞRU MU?",
+      "keyword": "1.",
+      "keywordSub": "Zeytinyağı kızartmada hemen yanar, kullanılmaz.",
+      "verdict": "YANLIŞ",
       "lines": [
-        "Zeytinyağı kızartmada hemen yanar, kullanılmaz."
-      ]
-    },
-    {
-      "type": "photo",
-      "img": "img/m2.png",
-      "keyword": "YANLIŞ",
-      "lines": [
+        {
+          "text": "Zeytinyağı kızartmada hemen yanar, kullanılmaz.",
+          "nocap": true
+        },
         "Sızma zeytinyağı yaklaşık 190–210 °C'de dumanlanır; evde kızartma 160–180 °C'de yapılır."
       ],
-      "red": true,
       "source": "IOC (ULUSLARARASI ZEYTİN KONSEYİ) · DUMAN NOKTASI ~210 °C"
     },
     {
       "type": "photo",
-      "img": "img/m1.png",
-      "keyword": "DOĞRU MU?",
-      "lines": [
-        "Duman noktası yüksek yağ, en güvenli kızartma yağıdır."
-      ]
-    },
-    {
-      "type": "photo",
       "img": "img/m2.png",
-      "keyword": "YANLIŞ",
+      "keyword": "2.",
+      "keywordSub": "Duman noktası yüksek yağ, en güvenli kızartma yağıdır.",
+      "verdict": "YANLIŞ",
       "lines": [
+        {
+          "text": "Duman noktası yüksek yağ, en güvenli kızartma yağıdır.",
+          "nocap": true
+        },
         "10 yağın ısıtıldığı bir çalışmada en az zararlı bileşik sızma zeytinyağında oluştu."
       ],
-      "red": true,
       "source": "DE ALZAA ve ark. · ACTA SCI NUTR HEALTH 2018 · ZEYTİNYAĞI SEKTÖRÜ LAB."
     },
     {
       "type": "photo",
       "img": "img/m1.png",
-      "keyword": "DOĞRU MU?",
+      "keyword": "3.",
+      "keywordSub": "Zeytinyağında kızartılan sebze antioksidan kazanabilir.",
+      "verdict": "DOĞRU",
       "lines": [
-        "Zeytinyağında kızartılan sebze antioksidan kazanabilir."
-      ]
-    },
-    {
-      "type": "photo",
-      "img": "img/m2.png",
-      "keyword": "DOĞRU",
-      "lines": [
+        {
+          "text": "Zeytinyağında kızartılan sebze antioksidan kazanabilir.",
+          "nocap": true
+        },
         "Sızma zeytinyağında kızartılan sebzelerin fenolik bileşikleri (antioksidanları) arttı."
       ],
       "source": "RAMÍREZ-ANAYA ve ark. · FOOD CHEM 2015"
     },
     {
       "type": "photo",
-      "img": "img/m1.png",
-      "keyword": "DOĞRU MU?",
-      "lines": [
-        "O zaman kızartma artık sağlıklı."
-      ]
-    },
-    {
-      "type": "photo",
       "img": "img/m2.png",
-      "keyword": "YANLIŞ",
+      "keyword": "4.",
+      "keywordSub": "O zaman kızartma artık sağlıklı.",
+      "verdict": "YANLIŞ",
       "lines": [
+        {
+          "text": "O zaman kızartma artık sağlıklı.",
+          "nocap": true
+        },
         "Kızartma yine yağ ve kalori ekler; her gün değil, ara sıra yap."
-      ],
-      "red": true
-    },
-    {
-      "type": "photo",
-      "img": "img/m1.png",
-      "keyword": "DOĞRU MU?",
-      "lines": [
-        "Kızartma yağını tekrar tekrar kullanmak sorun değil."
       ]
     },
     {
       "type": "photo",
-      "img": "img/m2.png",
-      "keyword": "YANLIŞ",
+      "img": "img/m1.png",
+      "keyword": "5.",
+      "keywordSub": "Kızartma yağını tekrar tekrar kullanmak sorun değil.",
+      "verdict": "YANLIŞ",
       "lines": [
+        {
+          "text": "Kızartma yağını tekrar tekrar kullanmak sorun değil.",
+          "nocap": true
+        },
         "Yağ ısıtıldıkça bozulur; koyulaşan, köpüren yağı dök."
       ],
-      "red": true,
       "source": "DE ALZAA ve ark. · INTECHOPEN 2021"
     },
     {
@@ -141,13 +127,15 @@
   "ctaSize": 46,
   "capSize": 54,
   "captionDisclaimer": false,
-  "pillY": 315,
-  "capY": 605,
+  "pillY": 300,
+  "capY": 875,
   "badgeY": 130,
   "srcDark": true,
   "cta": {
     "save": "",
     "comment": "Kaçını doğru bildin? Yorumlara yaz.",
     "share": "Zeytinyağıyla kızartma yapılmaz diyen birine gönder."
-  }
+  },
+  "pillSize": 54,
+  "verdictY": 655
 }

@@ -510,6 +510,16 @@ function photoOverlay(s, lt) {   // gradients + logo badge + keyword pill + sour
       }
       ctx.restore();
     }
+    if (s.verdict) {   // DOĞRU/YANLIŞ badge under the claim pill; appears with the answer line (s.verdictLine, default 1)
+      const vl = s.verdictLine != null ? s.verdictLine : 1, t0 = s.L[Math.min(vl, s.L.length - 1)], k = easeOut(prog(lt, t0, t0 + .35));
+      if (k > 0) {
+        const ok = /^DO/.test(s.verdict.toLocaleUpperCase('tr-TR')), vs = s.verdict.toLocaleUpperCase('tr-TR'), vf = '800 58px Sans', vw = measure(vs, vf, 3) + 80, vy = EP.verdictY || 700;
+        ctx.save(); ctx.globalAlpha *= k; ctx.translate(540, vy); ctx.scale(.8 + .2 * k, .8 + .2 * k); ctx.translate(-540, -vy);
+        ctx.shadowColor = 'rgba(0,0,0,.25)'; ctx.shadowBlur = 24; ctx.shadowOffsetY = 6;
+        ctx.fillStyle = ok ? '#4E6B45' : C.red; roundRect(540 - vw / 2, vy - 50, vw, 100, 50); ctx.fill(); ctx.shadowBlur = 0;
+        text(vs, 540, vy + 21, { font: vf, color: '#FFFFFF', align: 'center', spacing: 3 }); ctx.restore();
+      }
+    }
     if (s.source) { if (EP.srcDark) { const sy = EP.srcY || (EP.capSize ? 1800 : 1262), sw = measure(s.source, '500 22px Mono', 1.5); ctx.save(); ctx.globalAlpha *= .82; ctx.fillStyle = '#FBFAF5'; roundRect(56, sy - 30, sw + 40, 44, 14); ctx.fill(); ctx.restore(); }
       ctx.save(); ctx.shadowColor = EP.srcDark ? 'rgba(255,255,255,.6)' : 'rgba(0,0,0,.6)'; ctx.shadowBlur = 8; text(s.source, 76, EP.srcY || (EP.capSize ? 1800 : 1262), { font: '500 22px Mono', color: EP.srcDark ? 'rgba(60,56,44,.85)' : 'rgba(255,255,255,.9)', spacing: 1.5 }); ctx.restore(); }
 }
