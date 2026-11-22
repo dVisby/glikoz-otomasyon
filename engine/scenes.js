@@ -494,7 +494,7 @@ function photoOverlay(s, lt) {   // gradients + logo badge + keyword pill + sour
     logoBadge(940, EP.badgeY || 352, 72, .7);
     if (s.keyword) {
       const P = EP.pillSize || 76;   // keyword pill matches the cover title size (76px, 2026-11-20); shrinks only if too wide
-      const PL = !!EP.pillPlain, UP = x => PL ? x : x.toLocaleUpperCase('tr-TR'), PW = PL ? 700 : 800, SP = PL ? 0 : 2, PC = PL ? '#111111' : null;   // EP.pillPlain: plain black Inter 700, as written (no caps/spacing)
+      const PL = EP.pillPlain !== false, UP = x => PL ? x : x.toLocaleUpperCase('tr-TR'), PW = PL ? 700 : 800, SP = PL ? 0 : 2, PC = PL ? '#111111' : null;   // EP.pillPlain: plain black Inter 700, as written (no caps/spacing)
       const str = UP(s.keyword), fs = Math.min(P, Math.floor(P * 860 / measure(str, `${PW} ${P}px Sans`, SP))), f = `${PW} ${fs}px Sans`, w = measure(str, f, SP) + 90;
       const k = s.hook ? easeOut(prog(lt, 0, .35)) : easeOut(prog(lt, s.L[0] + .15, s.L[0] + .75)), y = EP.pillY || 640, ph = Math.round(fs * 1.3 + 50);
       ctx.save(); ctx.globalAlpha *= k; ctx.translate(540, y); ctx.scale(.88 + .12 * k, .88 + .12 * k); ctx.translate(-540, -y);
