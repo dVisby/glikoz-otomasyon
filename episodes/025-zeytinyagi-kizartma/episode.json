@@ -14,11 +14,15 @@
     {
       "type": "photo",
       "img": "img/m1.png",
-      "keyword": "ZEYTİNYAĞIYLA KIZARTMA",
+      "keyword": "5 SORUDA",
       "hook": true,
       "lines": [
-        "Doğru mu, yanlış mı? 5 soruda bakalım."
-      ]
+        {
+          "text": "5 soruda zeytinyağıyla kızartma doğru mu, yanlış mı?",
+          "nocap": true
+        }
+      ],
+      "keywordSub": "zeytinyağıyla kızartma doğru mu, yanlış mı?"
     },
     {
       "type": "photo",

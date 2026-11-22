@@ -45,3 +45,4 @@
 - 2026-11-22: 021 gürültü: 'Önerimiz: …' yerine 'Bugün kendine 10 dakika sessizlik molası ver.'
 - 2026-11-22: gizli-tuz infografiği: etiket kaldırıldı, yazılar büyütüldü, DSÖ/dünya/Türkiye karşılaştırması (10,8 g / 10,2 g TBSA 2017); SALTURK 15 g yerine güncel resmi rakam.
 - 2026-11-22: 025 zeytinyağıyla kızartma: 'Doğru mu yanlış mı' formatında sessiz Reels (soru/cevap sahne çiftleri).
+- 2026-11-22: 025: açılış başlığı '5 soruda zeytinyağıyla kızartma doğru mu, yanlış mı?' tek hapta.
