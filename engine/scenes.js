@@ -512,7 +512,7 @@ function photoOverlay(s, lt) {   // gradients + logo badge + keyword pill + sour
       ctx.restore();
     }
     if (s.verdict) {   // DOĞRU/YANLIŞ badge under the claim pill; appears with the answer line (s.verdictLine, default 1)
-      const vl = s.verdictLine != null ? s.verdictLine : 1, t0 = s.L[Math.min(vl, s.L.length - 1)], k = easeOut(prog(lt, t0, t0 + .35));
+      const vl = s.verdictLine != null ? s.verdictLine : 1, t0 = s.L[Math.min(vl, s.L.length - 1)] - LEAD, k = easeOut(prog(lt, t0, t0 + .35));
       if (k > 0) {
         const ok = /^DO/.test(s.verdict.toLocaleUpperCase('tr-TR')), vs = s.verdict.toLocaleUpperCase('tr-TR'), vf = '800 58px Sans', vw = measure(vs, vf, 3) + 80, vy = EP.verdictY || 700;
         ctx.save(); ctx.globalAlpha *= k; ctx.translate(540, vy); ctx.scale(.8 + .2 * k, .8 + .2 * k); ctx.translate(-540, -vy);
@@ -716,7 +716,7 @@ async function setup(episode, timing) {
       const total = parts.reduce((a, p) => a + p.length, 0); let acc = 0;
       parts.forEach(p => {
         const ps = tl.start + (tl.end - tl.start) * acc / total; acc += p.length;
-        TL.captions.push({ start: ps - LEAD, text: p });
+        TL.captions.push({ start: ps - LEAD, text: p, _sc: TL.scenes.length - 1 });
       });
     });
     li += n;
@@ -725,7 +725,8 @@ async function setup(episode, timing) {
     s._end = i + 1 < TL.scenes.length ? TL.scenes[i + 1]._start + .35 : TL.endStart + .4;
     s.dur = s._end - s._start; s.L = s._lines.map(l => l.start - s._start);
   });
-  TL.captions.forEach((c, i) => { c.end = i + 1 < TL.captions.length ? TL.captions[i + 1].start : TL.endStart + .2; });
+  TL.captions.forEach((c, i) => { c.end = i + 1 < TL.captions.length ? TL.captions[i + 1].start : TL.endStart + .2;
+    const ns = TL.scenes[c._sc + 1]; if (ns) c.end = Math.min(c.end, ns._start + .1); });   // a caption never spills into the next scene
   // host clips (AI presenter video drawn behind captions): window = span of the listed scenes unless "end" is given
   TL.host = ((episode.host && episode.host.clips) || []).map(c => {
     const a = TL.scenes[c.scenes[0]], b = TL.scenes[c.scenes[c.scenes.length - 1]];

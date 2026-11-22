@@ -43,3 +43,4 @@
 - 2026-11-22: Bölüm düzeyi yerleşim alanları: pillY, capY, srcY, badgeY, srcDark (görselin boş bölgesine yazı yerleştirmek için).
 - 2026-11-22: photo sahnesine `verdict` rozeti (DOĞRU yeşil / YANLIŞ kiremit), `verdictLine` ile açılış satırı, bölüm düzeyi `verdictY`.
 - 2026-11-22: Bölüm düzeyi `pillPlain`: başlık hapı yazısı düz siyah Inter 700, büyük harf/aralık yok (kullanıcı yeşil kalın büyük harfi sevmedi).
+- 2026-11-22: Altyazı kendi sahnesinin dışına taşmaz (bitiş = min(sonraki altyazı, sonraki sahne başı)); verdict rozeti altyazıyla aynı anda (L - LEAD).
