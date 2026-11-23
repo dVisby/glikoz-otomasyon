@@ -22,7 +22,10 @@
       "type": "photo",
       "img": "img/m2.png",
       "lines": [
-        "Hollanda'da 3 bin kişi, her duşun sonunda 30–90 saniye soğuk su açtı."
+        {
+          "text": "Hollanda'da 3 bin kişi, her duşun sonunda 30–90 saniye soğuk su açtı.",
+          "say": "Hollanda'da üç bin kişi, her duşun sonunda otuz ila doksan saniye soğuk su açtı."
+        }
       ],
       "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
     },
@@ -38,7 +41,11 @@
       "type": "photo",
       "img": "img/m2.png",
       "lines": [
-        "Ama hastalık yüzünden işe gitmedikleri günler %29 daha azdı."
+        {
+          "text": "Ama hastalık yüzünden işe gitmedikleri günler %29 daha azdı.",
+          "say": "Ama hastalık yüzünden işe gitmedikleri günler yüzde yirmi dokuz daha azdı."
+        },
+        "Yani daha az hastalanmadılar; hasta olduklarında daha az iş kaçırdılar."
       ],
       "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
     },
@@ -46,7 +53,10 @@
       "type": "photo",
       "img": "img/m1.png",
       "lines": [
-        "30, 60 ya da 90 saniye arasında fark görülmedi."
+        {
+          "text": "30, 60 ya da 90 saniye arasında fark görülmedi.",
+          "say": "Otuz, altmış ya da doksan saniye arasında fark görülmedi."
+        }
       ],
       "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
     },
@@ -71,7 +81,10 @@
       "type": "photo",
       "img": "img/m2.png",
       "lines": [
-        "Duşunun son 30 saniyesini soğuk suyla bitirmeyi dene."
+        {
+          "text": "Duşunun son 30 saniyesini soğuk suyla bitirmeyi dene.",
+          "say": "Duşunun son otuz saniyesini soğuk suyla bitirmeyi dene."
+        }
       ]
     }
   ],
@@ -89,7 +102,7 @@
     "#mitgerçek",
     "#wellness"
   ],
-  "notes": "026 ile aynı içerik, klasik akış (başlık hapı + altyazı). Görsel: Canva AI duş.",
+  "notes": "026 ile aynı içerik, klasik akış; sesli (AURA VOX), sunucu Ceren (AI) açılış ve kapanışta.",
   "theme": "krem",
   "ctaSize": 46,
   "capSize": 54,
@@ -104,5 +117,31 @@
     "save": "",
     "comment": "Sen soğuk duş alıyor musun? Yorumlara yaz.",
     "share": "Soğuk duş alan birine gönder."
+  },
+  "host": {
+    "name": "Ceren",
+    "note": "AI ile oluşturuldu",
+    "capY": 1450,
+    "clips": [
+      {
+        "id": "hook",
+        "file": "host/hook.mp4",
+        "scenes": [
+          0,
+          1
+        ],
+        "at": 0.4,
+        "dur": 9.0
+      },
+      {
+        "id": "close",
+        "file": "host/close.mp4",
+        "scenes": [
+          7
+        ],
+        "at": 30.75,
+        "dur": 9.0
+      }
+    ]
   }
 }

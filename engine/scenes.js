@@ -802,7 +802,7 @@ function background() {
 function drawCaptions(t) {
   for (const c of TL.captions) {
     const a = fadeWin(t, c.start, c.end, .25); if (a <= 0) continue;
-    const cs = EP.capSize || 50, font = `300 ${cs}px Jost`, lines = wrapLines(c.text, font, 880), lh = Math.round(cs * 1.32), y0 = (EP.capY || 1385) - (lines.length - 1) * lh / 2;   // EP.capY moves subtitles (e.g. into an empty upper half)
+    const cs = EP.capSize || 50, font = `300 ${cs}px Jost`, lines = wrapLines(c.text, font, 880), lh = Math.round(cs * 1.32), y0 = ((EP.host && EP.host.capY && hostState(c.start + .3)) ? EP.host.capY : (EP.capY || 1385)) - (lines.length - 1) * lh / 2;   // host.capY: subtitle height while the presenter clip is on screen   // EP.capY moves subtitles (e.g. into an empty upper half)
     const dy = (1 - easeOut(prog(t, c.start, c.start + .4))) * 14;
     if (C.capBox) {
       const wmax = Math.max(...lines.map(l => measure(l, font)));
