@@ -45,3 +45,4 @@
 - 2026-11-22: Bölüm düzeyi `pillPlain`: başlık hapı yazısı düz siyah Inter 700, büyük harf/aralık yok (kullanıcı yeşil kalın büyük harfi sevmedi).
 - 2026-11-22: Altyazı kendi sahnesinin dışına taşmaz (bitiş = min(sonraki altyazı, sonraki sahne başı)); verdict rozeti altyazıyla aynı anda (L - LEAD).
 - 2026-11-22: Hap yazısı varsayılanı düz siyah (pillPlain varsayılan açık); kullanıcı tüm yeni videolar için istedi.
+- 2026-11-23: coverSub içinde ' | ' zorunlu satır kırma (kapakta tek kelimelik yetim satırı önlemek için).

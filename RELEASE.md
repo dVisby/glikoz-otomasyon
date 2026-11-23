@@ -23,6 +23,7 @@
 | 020 | 2026-11-21 | Bugün en son ne zaman kahkaha attın? | 27,9 sn | Sessiz + 1 Canva AI görsel | contact ✓ kapak ✓ | — | Kramer & Leitao PLOS ONE 2023 (8 çalışma, 315 kişi, kortizol −%31,9). |
 | 021 | 2026-11-21 | Gürültü yorgunluğu / 10 dakika sessizlik | 39,1 sn | Sessiz + 1 Canva AI görsel | contact ✓ kapak ✓ | — | DSÖ Avrupa gürültü notu (yatak odası <30 dB). '10 dk sessizlik' öneri, kaynaklı bulgu değil. |
 | 025 | 2026-11-22 | Zeytinyağıyla kızartma yapılır mı? (doğru mu yanlış mı) | 53,7 sn | Sessiz + 1 Canva AI görsel; iddia + DOĞRU/YANLIŞ rozeti + cevap aynı sahnede | contact ✓ kapak ✓ | — | IOC duman noktası; De Alzaa 2018 (sektör laboratuvarı, kaynakta belirtildi); Ramírez-Anaya Food Chem 2015. |
+| 026 | 2026-11-23 | Soğuk duş: doğru mu yanlış mı? | 47,9 sn | Sessiz + 1 Canva AI görsel; iddia + rozet + cevap aynı sahnede | contact ✓ kapak ✓ | — | Buijze PLOS One 2016 (3.018 kişi, RKÇ, kendi bildirimi: devamsızlık −%29, hastalık günü fark yok); Cain PLOS One 2025 (11 çalışma); AHA 2022 soğuk şok. |
 
 ## Teslim öncesi kontrol listesi
 - [ ] Her sayı kaynakla eşleşiyor, öneri türü doğru

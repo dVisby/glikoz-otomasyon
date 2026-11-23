@@ -50,3 +50,4 @@
 - 2026-11-22: 025: başlık hapındaki yazılar düz siyah (Inter 700, yazıldığı gibi) — `pillPlain`.
 - 2026-11-22: Hata düzeltme: hap/rozet yazılarında istenmeyen sert gölge (shadowOffsetY sıfırlanmıyordu) kaldırıldı; 025 yeniden render.
 - 2026-11-22: 025: önceki cevabın bir sonraki iddiaya taşması düzeltildi (altyazı sahne sonunda biter); DOĞRU/YANLIŞ rozeti cevapla aynı anda gelir.
+- 2026-11-23: 026 soğuk duş: doğru-yanlış formatında sessiz Reels (5 iddia), Canva duş görseli; kapak alt satırında ' | ' ile satır kırma.
