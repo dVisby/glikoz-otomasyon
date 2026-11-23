@@ -1,9 +1,9 @@
 {
   "id": "027",
   "slug": "soguk-dus-klasik",
-  "title": "Soğuk duş seni daha az hasta eder mi?",
+  "title": "Soğuk duş gerçekten faydalı mı?",
   "coverTitle": "Soğuk duş",
-  "coverSub": "seni daha az | hasta eder mi?",
+  "coverSub": "gerçekten | faydalı mı?",
   "date": "2026-11-23",
   "voice": {
     "name": "AURA VOX",
@@ -15,7 +15,7 @@
       "type": "photo",
       "img": "img/m1.png",
       "lines": [
-        "Soğuk duş seni daha az hasta eder mi?"
+        "Soğuk duş gerçekten faydalı mı?"
       ]
     },
     {
@@ -75,7 +75,7 @@
       ]
     }
   ],
-  "caption": "Soğuk duş seni daha az hasta eder mi? 🚿\n\nHollanda'da 3 bin kişi 30 gün boyunca her duşun sonunda 30–90 saniye soğuk su açtı. Hasta hissettikleri gün sayısı değişmedi; ama hastalık yüzünden işe gitmedikleri günler %29 daha azdı. 30 saniye de 90 saniye kadar işe yaradı.\n\nBağışıklık ve ruh hali iddialarını destekleyen kanıt ise az. Kalp ya da tansiyon sorunun varsa önce hekimine danış.\n\nSen soğuk duş alıyor musun? 👇",
+  "caption": "Soğuk duş gerçekten faydalı mı? 🚿\n\nHollanda'da 3 bin kişi 30 gün boyunca her duşun sonunda 30–90 saniye soğuk su açtı. Hasta hissettikleri gün sayısı değişmedi; ama hastalık yüzünden işe gitmedikleri günler %29 daha azdı. 30 saniye de 90 saniye kadar işe yaradı.\n\nBağışıklık ve ruh hali iddialarını destekleyen kanıt ise az. Kalp ya da tansiyon sorunun varsa önce hekimine danış.\n\nSen soğuk duş alıyor musun? 👇",
   "sources": [
     "Buijze ve ark., PLOS One 2016",
     "Cain ve ark., PLOS One 2025",
