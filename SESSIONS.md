@@ -55,3 +55,4 @@
 - 2026-11-23: 027: 'Dikkat' dışındaki başlık hapları kaldırıldı; yazılar orta-üste (capY 720, pillY 505).
 - 2026-11-23: 027: 'fark görülmedi', paylaş satırı 'Soğuk duş alan birine gönder.'
 - 2026-11-23: 027 Ceren'li sesli sürüm: AURA VOX (37,4 sn), Ceren (ceren_v1, banyo/bornoz karesi) açılış (sahne 0–1) ve kapanış (sahne 7) InfiniteTalk 3 parça; RTX 4090 pod (PRO 4500 stokta yoktu) kapatıldı. Toplam 44,0 sn.
+- 2026-11-23: 027 Ceren'li sesli deneme kullanıcı isteğiyle silindi; sessiz klasik sürüme (33,7 sn) dönüldü.

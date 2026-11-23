@@ -1,43 +1,40 @@
 {
- "voice_offset": 0.4,
- "voice_duration": 37.36,
+ "voice_offset": 0,
+ "voice_duration": 0,
+ "silent": true,
  "lines": [
   {
-   "start": 0.44,
-   "end": 2.9
+   "start": 0.6,
+   "end": 2.776
   },
   {
-   "start": 3.4,
-   "end": 9.0
+   "start": 3.076,
+   "end": 7.135
   },
   {
-   "start": 9.24,
-   "end": 11.74
+   "start": 7.435,
+   "end": 9.847
   },
   {
-   "start": 12.17,
-   "end": 16.89
+   "start": 10.147,
+   "end": 13.676
   },
   {
-   "start": 17.35,
-   "end": 22.02
+   "start": 13.976,
+   "end": 16.741
   },
   {
-   "start": 22.26,
-   "end": 26.22
+   "start": 17.041,
+   "end": 20.335
   },
   {
-   "start": 26.43,
-   "end": 30.11
+   "start": 20.635,
+   "end": 23.812
   },
   {
-   "start": 30.55,
-   "end": 33.85
-  },
-  {
-   "start": 34.07,
-   "end": 37.53
+   "start": 24.112,
+   "end": 27.229
   }
  ],
- "total": 39.53
+ "total": 29.529
 }
