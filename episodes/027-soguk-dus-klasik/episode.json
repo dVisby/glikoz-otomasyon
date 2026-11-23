@@ -46,7 +46,7 @@
       "type": "photo",
       "img": "img/m1.png",
       "lines": [
-        "30, 60 ya da 90 saniye arasında fark yoktu."
+        "30, 60 ya da 90 saniye arasında fark görülmedi."
       ],
       "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
     },
@@ -103,6 +103,6 @@
   "cta": {
     "save": "",
     "comment": "Sen soğuk duş alıyor musun? Yorumlara yaz.",
-    "share": "Her sabah soğuk duş alan birine gönder."
+    "share": "Soğuk duş alan birine gönder."
   }
 }
