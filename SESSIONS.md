@@ -52,3 +52,4 @@
 - 2026-11-22: 025: önceki cevabın bir sonraki iddiaya taşması düzeltildi (altyazı sahne sonunda biter); DOĞRU/YANLIŞ rozeti cevapla aynı anda gelir.
 - 2026-11-23: 026 soğuk duş: doğru-yanlış formatında sessiz Reels (5 iddia), Canva duş görseli; kapak alt satırında ' | ' ile satır kırma.
 - 2026-11-23: 027 soğuk duş klasik akış sürümü (026'nın alternatifi), 33,5 sn.
+- 2026-11-23: 027: 'Dikkat' dışındaki başlık hapları kaldırıldı; yazılar orta-üste (capY 720, pillY 505).
