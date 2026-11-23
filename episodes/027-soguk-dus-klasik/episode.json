@@ -1,0 +1,120 @@
+{
+  "id": "027",
+  "slug": "soguk-dus-klasik",
+  "title": "Soğuk duş seni daha az hasta eder mi?",
+  "coverTitle": "Soğuk duş",
+  "coverSub": "seni daha az | hasta eder mi?",
+  "date": "2026-11-23",
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "Soğuk duş",
+      "keywordSub": "seni daha az hasta eder mi?",
+      "hook": true,
+      "lines": [
+        {
+          "text": "Soğuk duş seni daha az hasta eder mi?",
+          "nocap": true
+        }
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "keyword": "3 bin kişi, 30 gün",
+      "lines": [
+        "Hollanda'da 3 bin kişi, her duşun sonunda 30–90 saniye soğuk su açtı."
+      ],
+      "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "Hastalanma aynı",
+      "lines": [
+        "Hasta hissettikleri gün sayısı değişmedi."
+      ],
+      "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "keyword": "%29 daha az",
+      "lines": [
+        "Ama hastalık yüzünden işe gitmedikleri günler %29 daha azdı."
+      ],
+      "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "30 saniye yetti",
+      "lines": [
+        "30, 60 ya da 90 saniye arasında fark yoktu."
+      ],
+      "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "keyword": "Abartı kısmı",
+      "lines": [
+        "Bağışıklık ve ruh hali iddialarını destekleyen kanıt az."
+      ],
+      "source": "Cain ve ark., PLOS One 2025 · 11 çalışma · 3.177 kişi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "Dikkat",
+      "lines": [
+        "Kalp ya da tansiyon sorunun varsa önce hekimine danış."
+      ],
+      "source": "American Heart Association, 2022 · soğuk şok tepkisi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "keyword": "Bugünün ödevi",
+      "lines": [
+        "Duşunun son 30 saniyesini soğuk suyla bitirmeyi dene."
+      ]
+    }
+  ],
+  "caption": "Soğuk duş seni daha az hasta eder mi? 🚿\n\nHollanda'da 3 bin kişi 30 gün boyunca her duşun sonunda 30–90 saniye soğuk su açtı. Hasta hissettikleri gün sayısı değişmedi; ama hastalık yüzünden işe gitmedikleri günler %29 daha azdı. 30 saniye de 90 saniye kadar işe yaradı.\n\nBağışıklık ve ruh hali iddialarını destekleyen kanıt ise az. Kalp ya da tansiyon sorunun varsa önce hekimine danış.\n\nSen soğuk duş alıyor musun? 👇",
+  "sources": [
+    "Buijze ve ark., PLOS One 2016",
+    "Cain ve ark., PLOS One 2025",
+    "American Heart Association, 2022"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#soğukduş",
+    "#sağlıklıyaşam",
+    "#bağışıklık",
+    "#mitgerçek",
+    "#wellness"
+  ],
+  "notes": "026 ile aynı içerik, klasik akış (başlık hapı + altyazı). Görsel: Canva AI duş.",
+  "theme": "krem",
+  "ctaSize": 46,
+  "capSize": 54,
+  "captionDisclaimer": false,
+  "pillY": 300,
+  "badgeY": 130,
+  "srcDark": true,
+  "pillSize": 54,
+  "pillPlain": true,
+  "capY": 560,
+  "cta": {
+    "save": "",
+    "comment": "Sen soğuk duş alıyor musun? Yorumlara yaz.",
+    "share": "Her sabah soğuk duş alan birine gönder."
+  }
+}
