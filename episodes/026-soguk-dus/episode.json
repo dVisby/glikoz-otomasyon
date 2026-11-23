@@ -1,0 +1,142 @@
+{
+  "id": "026",
+  "slug": "soguk-dus",
+  "title": "Soğuk duş: doğru mu yanlış mı?",
+  "coverTitle": "Soğuk duş",
+  "coverSub": "doğru mu, yanlış mı?",
+  "date": "2026-11-23",
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "5 soruda",
+      "keywordSub": "soğuk duş doğru mu, yanlış mı?",
+      "hook": true,
+      "lines": [
+        {
+          "text": "5 soruda soğuk duş doğru mu, yanlış mı?",
+          "nocap": true
+        }
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "1.",
+      "keywordSub": "Soğuk duş seni daha az hasta eder.",
+      "verdict": "YANLIŞ",
+      "lines": [
+        {
+          "text": "Soğuk duş seni daha az hasta eder.",
+          "nocap": true
+        },
+        "3 bin kişilik bir çalışmada hasta hissedilen gün sayısı değişmedi."
+      ],
+      "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "keyword": "2.",
+      "keywordSub": "Hastalık yüzünden iş kaçırmayı azaltabilir.",
+      "verdict": "DOĞRU",
+      "lines": [
+        {
+          "text": "Hastalık yüzünden iş kaçırmayı azaltabilir.",
+          "nocap": true
+        },
+        "Soğuk duş alanların hastalık nedeniyle işe gitmediği günler %29 daha azdı."
+      ],
+      "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "3.",
+      "keywordSub": "Ne kadar uzun, o kadar faydalı.",
+      "verdict": "YANLIŞ",
+      "lines": [
+        {
+          "text": "Ne kadar uzun, o kadar faydalı.",
+          "nocap": true
+        },
+        "30, 60 ya da 90 saniye arasında fark çıkmadı."
+      ],
+      "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "keyword": "4.",
+      "keywordSub": "Bağışıklığı güçlendirdiği kanıtlandı.",
+      "verdict": "YANLIŞ",
+      "lines": [
+        {
+          "text": "Bağışıklığı güçlendirdiği kanıtlandı.",
+          "nocap": true
+        },
+        "11 çalışmanın derlemesinde bağışıklık ve ruh hali için kanıt az bulundu."
+      ],
+      "source": "Cain ve ark., PLOS One 2025 · 11 çalışma · 3.177 kişi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "5.",
+      "keywordSub": "Herkes için güvenli.",
+      "verdict": "YANLIŞ",
+      "lines": [
+        {
+          "text": "Herkes için güvenli.",
+          "nocap": true
+        },
+        "Ani soğuk, kalp hızını ve tansiyonu yükseltir; kalp ya da tansiyon sorunun varsa önce hekimine danış."
+      ],
+      "source": "American Heart Association, 2022 · soğuk şok tepkisi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "keyword": "Özetle",
+      "lines": [
+        "Son 30 saniyeyi soğuk yapmayı deneyebilirsin; ama mucize bekleme."
+      ]
+    }
+  ],
+  "caption": "Soğuk duş seni daha az hasta eder mi? 🚿\n\nHollanda'da 3 bin kişi 30 gün boyunca her duşun sonunda 30–90 saniye soğuk su açtı. Hasta hissettikleri gün sayısı değişmedi; ama hastalık yüzünden işe gitmedikleri günler %29 daha azdı. 30 saniye de 90 saniye kadar işe yaradı.\n\nBağışıklık ve ruh hali iddialarını destekleyen kanıt ise az. Kalp ya da tansiyon sorunun varsa önce hekimine danış.\n\nKaçını doğru bildin? 👇",
+  "sources": [
+    "Buijze ve ark., PLOS One 2016",
+    "Cain ve ark., PLOS One 2025",
+    "American Heart Association, 2022"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#soğukduş",
+    "#sağlıklıyaşam",
+    "#bağışıklık",
+    "#mitgerçek",
+    "#wellness"
+  ],
+  "notes": "Doğru mu yanlış mı: iddia + rozet + cevap aynı sahnede. Görsel: Canva AI duş (MAHbueiyi2Y).",
+  "theme": "krem",
+  "ctaSize": 46,
+  "capSize": 54,
+  "captionDisclaimer": false,
+  "pillY": 300,
+  "capY": 875,
+  "badgeY": 130,
+  "srcDark": true,
+  "pillSize": 54,
+  "verdictY": 655,
+  "pillPlain": true,
+  "cta": {
+    "save": "",
+    "comment": "Kaçını doğru bildin? Yorumlara yaz.",
+    "share": "Her sabah soğuk duş alan birine gönder."
+  }
+}
