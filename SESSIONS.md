@@ -58,3 +58,4 @@
 - 2026-11-23: 027 Ceren'li sesli deneme kullanıcı isteğiyle silindi; sessiz klasik sürüme (33,7 sn) dönüldü.
 - 2026-11-23: 027 giriş/kapak/açıklama: 'Soğuk duş gerçekten faydalı mı?'
 - 2026-11-23: 027 abartı sahnesi: 'Bağışıklığı güçlendirdiği ise kanıtlanmadı.' (video + açıklama)
+- 2026-11-23: 027 %29 cümlesi karşılaştırmalı: 'soğuk duş alanlarda, normal duş alanlara göre' (video + açıklama)

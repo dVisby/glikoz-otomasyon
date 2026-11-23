@@ -38,7 +38,7 @@
       "type": "photo",
       "img": "img/m2.png",
       "lines": [
-        "Ama hastalık yüzünden işe gitmedikleri günler %29 daha azdı."
+        "Hastalık yüzünden işe gidemedikleri gün sayısı; soğuk duş alanlarda, normal duş alanlara göre %29 daha azdı."
       ],
       "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
     },
@@ -75,7 +75,7 @@
       ]
     }
   ],
-  "caption": "Soğuk duş gerçekten faydalı mı? 🚿\n\nHollanda'da 3 bin kişi 30 gün boyunca her duşun sonunda 30–90 saniye soğuk su açtı. Hasta hissettikleri gün sayısı değişmedi; ama hastalık yüzünden işe gitmedikleri günler %29 daha azdı. 30 saniye de 90 saniye kadar işe yaradı.\n\nBağışıklığı güçlendirdiği ise kanıtlanmadı. Kalp ya da tansiyon sorunun varsa önce hekimine danış.\n\nSen soğuk duş alıyor musun? 👇",
+  "caption": "Soğuk duş gerçekten faydalı mı? 🚿\n\nHollanda'da 3 bin kişi 30 gün boyunca her duşun sonunda 30–90 saniye soğuk su açtı. Hasta hissettikleri gün sayısı değişmedi. Hastalık yüzünden işe gidemedikleri gün sayısı ise soğuk duş alanlarda, normal duş alanlara göre %29 daha azdı. 30 saniye de 90 saniye kadar işe yaradı.\n\nBağışıklığı güçlendirdiği ise kanıtlanmadı. Kalp ya da tansiyon sorunun varsa önce hekimine danış.\n\nSen soğuk duş alıyor musun? 👇",
   "sources": [
     "Buijze ve ark., PLOS One 2016",
     "Cain ve ark., PLOS One 2025",
