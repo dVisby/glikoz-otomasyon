@@ -59,3 +59,4 @@
 - 2026-11-23: 027 giriş/kapak/açıklama: 'Soğuk duş gerçekten faydalı mı?'
 - 2026-11-23: 027 abartı sahnesi: 'Bağışıklığı güçlendirdiği ise kanıtlanmadı.' (video + açıklama)
 - 2026-11-23: 027 %29 cümlesi karşılaştırmalı: 'soğuk duş alanlarda, normal duş alanlara göre' (video + açıklama)
+- 2026-11-25: 028 Kışın D vitamini (Reels, sessiz, 40,2 sn); doz/tedavi yok, hekim+tahlil vurgusu.

@@ -1,0 +1,111 @@
+{
+  "id": "028",
+  "slug": "kisin-d-vitamini",
+  "title": "Kışın güneş D vitamini için yeterli mi?",
+  "coverTitle": "Kışın D vitamini",
+  "coverSub": "güneş | yeter mi?",
+  "date": "2026-11-25",
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "lines": [
+        "Kışın güneş, D vitamini için yeterli mi?"
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "lines": [
+        "Boston'da, kasımdan şubata kadar güneş ışığı ciltte anlamlı miktarda D vitamini üretmedi."
+      ],
+      "source": "Webb ve ark., J Clin Endocrinol Metab 1988 · Holick, Am J Clin Nutr 1995 · 42°K"
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "lines": [
+        "Türkiye de 36–42° kuzey enlemleri arasında. Kışın güneş tek başına yetmeyebilir."
+      ],
+      "source": "Çıkarım: Boston 42°K; Türkiye için doğrudan ölçüm değil"
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "lines": [
+        "İstanbul'da yetişkinlerde D vitamini ortalaması en düşük kışta, en düşük ay ocaktı."
+      ],
+      "source": "Ülfer, J Med Biochem 2025 · İstanbul · hastane başvuruları · 18–65 yaş"
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "lines": [
+        "Tokat'ta 2.225 yetişkinin yaklaşık %85'inde D vitamini 20 ng/mL'nin altındaydı."
+      ],
+      "source": "Katar ve ark., Acta Biochim Pol 2026 · nüfus temelli · 2.225 kişi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "lines": [
+        "Cam arkasından gelen güneş de D vitamini üretmiyor."
+      ],
+      "source": "NIH Diyet Takviyeleri Ofisi (ODS)"
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "Dikkat",
+      "lines": [
+        "Fazlası da zararlı olabilir. Takviyeden önce hekimine danış."
+      ],
+      "source": "NIH Diyet Takviyeleri Ofisi (ODS)"
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "lines": [
+        "Eksik mi, yeter mi? Bunu kan tahlili gösterir."
+      ],
+      "source": "NIH ODS · serum 25(OH)D testi"
+    }
+  ],
+  "caption": "Kışın güneş, D vitamini için yeterli mi? ☀️\n\nBoston'da yapılan ölçümlerde kasımdan şubata kadar güneş ışığı ciltte anlamlı miktarda D vitamini üretmedi. Türkiye de 36–42° kuzey enlemleri arasında yer alıyor; kışın güneş tek başına yetmeyebilir. Bu bir çıkarım, Türkiye için doğrudan ölçüm değil.\n\nİstanbul'da yetişkinlerde D vitamini ortalaması en düşük kışta, en düşük ay ocaktı. Tokat'ta 2.225 yetişkinin yaklaşık %85'inde D vitamini 20 ng/mL'nin altındaydı. Cam arkasından gelen güneş de D vitamini üretmiyor.\n\nFazlası da zararlı olabilir; takviyeden önce hekimine danış. Eksik mi, yeter mi? Bunu kan tahlili gösterir.\n\nSen bu kış D vitamini düzeyine baktırdın mı? 👇",
+  "sources": [
+    "Webb AR, Kline L, Holick MF. J Clin Endocrinol Metab 1988",
+    "Holick MF. Am J Clin Nutr 1995",
+    "Ülfer G. J Med Biochem 2025 (İstanbul)",
+    "Katar M ve ark. Acta Biochim Pol 2026 (Tokat)",
+    "NIH Office of Dietary Supplements, Vitamin D fact sheet"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#dvitamini",
+    "#kışbeslenmesi",
+    "#sağlıklıyaşam",
+    "#mitgerçek",
+    "#wellness"
+  ],
+  "notes": "Reels (sessiz) — 8. konu. Görseller geçici yer tutucu olabilir; Canva AI görselleri gelince yeniden render.",
+  "theme": "krem",
+  "ctaSize": 46,
+  "capSize": 54,
+  "captionDisclaimer": false,
+  "pillY": 505,
+  "badgeY": 130,
+  "srcDark": true,
+  "pillSize": 54,
+  "pillPlain": true,
+  "capY": 720,
+  "cta": {
+    "save": "",
+    "comment": "Bu kış D vitamini düzeyine baktırdın mı? Yorumlara yaz.",
+    "share": "Kışın güneşe güvenen birine gönder."
+  }
+}
