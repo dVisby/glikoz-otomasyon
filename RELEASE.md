@@ -25,7 +25,7 @@
 | 025 | 2026-11-22 | Zeytinyağıyla kızartma yapılır mı? (doğru mu yanlış mı) | 53,7 sn | Sessiz + 1 Canva AI görsel; iddia + DOĞRU/YANLIŞ rozeti + cevap aynı sahnede | contact ✓ kapak ✓ | — | IOC duman noktası; De Alzaa 2018 (sektör laboratuvarı, kaynakta belirtildi); Ramírez-Anaya Food Chem 2015. |
 | 026 | 2026-11-23 | Soğuk duş: doğru mu yanlış mı? | 47,9 sn | Sessiz + 1 Canva AI görsel; iddia + rozet + cevap aynı sahnede | contact ✓ kapak ✓ | — | Buijze PLOS One 2016 (3.018 kişi, RKÇ, kendi bildirimi: devamsızlık −%29, hastalık günü fark yok); Cain PLOS One 2025 (11 çalışma); AHA 2022 soğuk şok. |
 | 027 | 2026-11-23 | Soğuk duş gerçekten faydalı mı? (klasik akış) | 35,4 sn | Sessiz + 026 ile aynı Canva görseli (Ceren'li sesli deneme silindi) | contact ✓ kapak ✓ | — | 026 ile aynı kaynaklar (Buijze 2016, Cain 2025, AHA 2022). |
-| 028 | 2026-11-25 | Kışın güneş D vitamini için yeterli mi? | 40,2 sn | Sessiz; tek Canva görseli (kış penceresi) iki kırpımla | contact ✓ kapak ✓ | — | Webb 1988, Holick 1995, Ülfer 2025 (İstanbul), Katar 2026 (Tokat), NIH ODS. 'Türkiye 36–42°K' çıkarım olarak etiketli. |
+| 028 | 2026-11-25 | Kışın güneş D vitamini için yeterli mi? | 40,1 sn | Sessiz; tek Canva görseli (kış penceresi) iki kırpımla | contact ✓ kapak ✓ | — | Webb 1988 (deney), Holick 1995, Ülfer 2025 (İstanbul, 9.778 kişi), NIH ODS, Endocrine Society 2024. Tokat çalışması çıkarıldı (veri Nisan–Haziran 2013, kış değil). |
 
 ## Teslim öncesi kontrol listesi
 - [ ] Her sayı kaynakla eşleşiyor, öneri türü doğru

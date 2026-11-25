@@ -666,7 +666,7 @@ function drawEndcard(lt) {
   if (bg) {   // soft cream panel behind the rows so they read over the leaf shadows
     const pa = easeOut(prog(lt, .9, 1.5));
     ctx.save(); ctx.globalAlpha *= pa * .78; ctx.fillStyle = '#FBF8F2'; ctx.shadowColor = 'rgba(80,70,50,.12)'; ctx.shadowBlur = 30;
-    roundRect(70, 560, 780, 400, 34); ctx.fill(); ctx.restore();
+    roundRect(70, 560, 780, EP.ctaNote ? 470 : 400, 34); ctx.fill(); ctx.restore();
   }
   vis.forEach((r, i) => {
     const a = easeOut(prog(lt, r.t, r.t + .5)), dx = (1 - a) * 20;
@@ -693,6 +693,13 @@ function drawEndcard(lt) {
     ctx.restore();
     y += r.k === 'save' ? 120 : 88;
   });
+  if (EP.ctaNote) {   // small note under the CTA rows (episode.ctaNote), e.g. "Detaylar açıklamada"
+    const nt = vis.length ? (vis[vis.length - 1].t + .6) : 2;
+    const a = easeOut(prog(lt, nt, nt + .5));
+    ctx.save(); ctx.globalAlpha *= a;
+    text(EP.ctaNote, TX, y + 4, { font: `400 ${EP.ctaNoteSize || 34}px Jost`, color: C.gray2 });
+    ctx.restore();
+  }
 }
 
 /* ======================================================================

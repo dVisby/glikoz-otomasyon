@@ -47,3 +47,4 @@
 - 2026-11-22: Hap yazısı varsayılanı düz siyah (pillPlain varsayılan açık); kullanıcı tüm yeni videolar için istedi.
 - 2026-11-23: coverSub içinde ' | ' zorunlu satır kırma (kapakta tek kelimelik yetim satırı önlemek için).
 - 2026-11-23: host.capY: sunucu klibi ekrandayken altyazı yüksekliği (yazılar üst yarıdayken yüzü kapatmasın).
+- 2026-11-25: Yeni `ctaNote` alanı: son karttaki çağrı satırlarının altına not (ör. 'Detaylar açıklamada'); 028 için istendi.
