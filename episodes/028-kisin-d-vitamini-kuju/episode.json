@@ -20,7 +20,7 @@
   },
   {
    "type": "photo",
-   "img": "img/m2.png",
+   "img": "img/boston.png",
    "lines": [
     "Boston'da, Kasımdan Şubata kadar güneş ışığının ciltte anlamlı miktarda D vitamini üretmediği deneysel olarak görüldü."
    ],
@@ -28,7 +28,7 @@
   },
   {
    "type": "photo",
-   "img": "img/m1.png",
+   "img": "img/m2.png",
    "lines": [
     {
      "text": "İstanbul, Boston'la yaklaşık aynı enlemde: 41°K ve 42°K. Kışın güneş tek başına yetmeyebilir.",
@@ -39,7 +39,7 @@
   },
   {
    "type": "photo",
-   "img": "img/m2.png",
+   "img": "img/m1.png",
    "lines": [
     "İstanbul'da yetişkinlerde D vitamini ortalaması en düşük ay Ocak ayıydı."
    ],
@@ -47,7 +47,7 @@
   },
   {
    "type": "photo",
-   "img": "img/m1.png",
+   "img": "img/window.png",
    "lines": [
     "Cam arkasından gelen güneş de D vitamini üretimine katkı sağlamıyor."
    ],
@@ -55,7 +55,7 @@
   },
   {
    "type": "photo",
-   "img": "img/m2.png",
+   "img": "img/tubes.png",
    "lines": [
     "Eksik mi, fazla mı, normal mi? Kışa girerken tahlilini yaptırdın mı?"
    ],
@@ -63,7 +63,7 @@
   },
   {
    "type": "photo",
-   "img": "img/m1.png",
+   "img": "img/supp.png",
    "lines": [
     "Rastgele takviye alma. Fazlası da zararlı olabilir; önce hekimine danış."
    ],
