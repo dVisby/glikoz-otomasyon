@@ -26,6 +26,7 @@
 | 026 | 2026-11-23 | Soğuk duş: doğru mu yanlış mı? | 47,9 sn | Sessiz + 1 Canva AI görsel; iddia + rozet + cevap aynı sahnede | contact ✓ kapak ✓ | — | Buijze PLOS One 2016 (3.018 kişi, RKÇ, kendi bildirimi: devamsızlık −%29, hastalık günü fark yok); Cain PLOS One 2025 (11 çalışma); AHA 2022 soğuk şok. |
 | 027 | 2026-11-23 | Soğuk duş gerçekten faydalı mı? (klasik akış) | 35,4 sn | Sessiz + 026 ile aynı Canva görseli (Ceren'li sesli deneme silindi) | contact ✓ kapak ✓ | — | 026 ile aynı kaynaklar (Buijze 2016, Cain 2025, AHA 2022). |
 | 028 | 2026-11-25 | Kışın güneş D vitamini için yeterli mi? | 40,1 sn | Sessiz; tek Canva görseli (kış penceresi) iki kırpımla | contact ✓ kapak ✓ | — | Webb 1988 (deney), Holick 1995, Ülfer 2025 (İstanbul, 9.778 kişi), NIH ODS, Endocrine Society 2024. Tokat çalışması çıkarıldı (veri Nisan–Haziran 2013, kış değil). |
+| 028b | 2026-11-25 | Kışın D vitamini — Kuju sesli sürüm | 45,8 sn | 028 ile aynı görsel; ElevenLabs Kuju (eleven_v4), sahne 3'te enlem 'say' ile okunuyor | contact ✓ kapak ✓ | — | 028 ile aynı kaynaklar. Kuju yalnızca kullanıcı istediği için. |
 
 ## Teslim öncesi kontrol listesi
 - [ ] Her sayı kaynakla eşleşiyor, öneri türü doğru
