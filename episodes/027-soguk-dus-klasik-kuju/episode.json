@@ -20,7 +20,7 @@
     },
     {
       "type": "photo",
-      "img": "img/m2.png",
+      "img": "img/tap.png",
       "lines": [
         "Hollanda'da 3 bin kişi, her duşun sonunda 30–90 saniye soğuk su açtı."
       ],
@@ -28,7 +28,7 @@
     },
     {
       "type": "photo",
-      "img": "img/m1.png",
+      "img": "img/sick.png",
       "lines": [
         "Hasta hissettikleri gün sayısı değişmedi."
       ],
@@ -36,7 +36,7 @@
     },
     {
       "type": "photo",
-      "img": "img/m2.png",
+      "img": "img/desk.png",
       "lines": [
         {
           "text": "Hastalık yüzünden işe gidemedikleri gün sayısı; soğuk duş alanlarda, normal duş alanlara göre %29 daha azdı.",
@@ -47,7 +47,7 @@
     },
     {
       "type": "photo",
-      "img": "img/m1.png",
+      "img": "img/stopwatch.png",
       "lines": [
         "30, 60 ya da 90 saniye arasında fark görülmedi."
       ],
@@ -72,7 +72,7 @@
     },
     {
       "type": "photo",
-      "img": "img/m2.png",
+      "img": "img/tap.png",
       "lines": [
         "Duşunun son 30 saniyesini soğuk suyla bitirmeyi dene."
       ]

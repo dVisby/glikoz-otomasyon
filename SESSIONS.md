@@ -67,3 +67,4 @@
 - 2026-11-25: 028/028b: İstanbul Boğaz'ı görseli sahne 3-4'e eklendi (nihai görsel seti).
 - 2026-11-25: 028c: Özen anlatımlı sürüm üretildi (hook 4 parça, kapanış 2 parça; ses RunPod'a base64 parçalarla taşındı, klipler dd/base64 ile alındı).
 - 2026-11-25: 027b: soğuk duş klasik akışın Kuju sesli sürümü (ambient kapalı, motor sesi yok); ses kısa pod ile indirildi.
+- 2026-11-25: 027c: soğuk duş Kuju sesli sürümü 028 tarzı farklı Canva görselleriyle yeniden render edildi (ses/zamanlama aynı).
