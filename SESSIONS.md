@@ -64,3 +64,4 @@
 - 2026-11-25: 028b Kuju sesli sürüm (episodes/028-kisin-d-vitamini-kuju), 45,8 sn; kullanıcı Kuju sesini açıkça istedi.
 - 2026-11-25: 028b: arka plan uğultusu (motor sesi gibi) kaldırıldı; glikoz.py krem temada ambient varsayılan kapalı.
 - 2026-11-25: 028/028b: 4 yeni Canva görseli (Boston, cam, tahlil, takviye) eklendi; İstanbul Boğaz'ı görseli indirilmedi, sahne 3-4'te pencere görseli kullanılıyor.
+- 2026-11-25: 028/028b: İstanbul Boğaz'ı görseli sahne 3-4'e eklendi (nihai görsel seti).
