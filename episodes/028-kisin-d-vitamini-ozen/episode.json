@@ -1,0 +1,136 @@
+{
+  "id": "028",
+  "slug": "kisin-d-vitamini-ozen",
+  "title": "Kışın güneş D vitamini için yeterli mi?",
+  "coverTitle": "Kışın D vitamini",
+  "coverSub": "güneş | yeter mi?",
+  "date": "2026-11-25",
+  "voice": {
+    "name": "Kuju",
+    "voice_id": "EuQXS0GthjEBfvEvx7qf",
+    "model": "eleven_v4"
+  },
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "lines": [
+        "Kışın güneş, D vitamini için yeterli mi?"
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/boston.png",
+      "lines": [
+        "Boston'da, Kasımdan Şubata kadar güneş ışığının ciltte anlamlı miktarda D vitamini üretmediği deneysel olarak görüldü."
+      ],
+      "source": "Webb ve ark., JCEM 1988 (deney) · Holick 1995 · 42°K"
+    },
+    {
+      "type": "photo",
+      "img": "img/istanbul.png",
+      "lines": [
+        {
+          "text": "İstanbul, Boston'la yaklaşık aynı enlemde: 41°K ve 42°K. Kışın güneş tek başına yetmeyebilir.",
+          "say": "İstanbul, Boston'la yaklaşık aynı enlemde: kırk bir derece kuzey ve kırk iki derece kuzey. Kışın güneş tek başına yetmeyebilir."
+        }
+      ],
+      "source": "Çıkarım: enlem benzerliği; İstanbul için doğrudan ölçüm değil"
+    },
+    {
+      "type": "photo",
+      "img": "img/istanbul.png",
+      "lines": [
+        "İstanbul'da yetişkinlerde D vitamini ortalaması en düşük ay Ocak ayıydı."
+      ],
+      "source": "Ülfer, J Med Biochem 2025 · 9.778 kişi · 2022–2023 · hastane"
+    },
+    {
+      "type": "photo",
+      "img": "img/window.png",
+      "lines": [
+        "Cam arkasından gelen güneş de D vitamini üretimine katkı sağlamıyor."
+      ],
+      "source": "NIH Diyet Takviyeleri Ofisi (ODS)"
+    },
+    {
+      "type": "photo",
+      "img": "img/tubes.png",
+      "lines": [
+        "Eksik mi, fazla mı, normal mi? Kışa girerken tahlilini yaptırdın mı?"
+      ],
+      "source": "NIH ODS · serum 25(OH)D testi"
+    },
+    {
+      "type": "photo",
+      "img": "img/supp.png",
+      "lines": [
+        "Rastgele takviye alma. Fazlası da zararlı olabilir; önce hekimine danış."
+      ],
+      "keyword": "Dikkat",
+      "source": "NIH Diyet Takviyeleri Ofisi (ODS)"
+    }
+  ],
+  "caption": "Kışın güneşli bir günde cam kenarında oturmak içimizi ısıtabilir ama D vitamini sentezi için maalesef yeterli değil. ☀️❄️\n\nD vitamini, vücutta hem eksikliği hem de fazlalığı ciddiye alınması gereken, yağda çözünen bir vitamin:\n\n🔻 Eksikliğinde ne olur?\n• Sürekli yorgunluk, halsizlik ve kas güçsüzlüğü\n• Kemik ve eklem ağrıları, uzun vadede kemik erimesi (osteoporoz) riski\n• Bağışıklık sisteminin zayıflaması ve sık enfeksiyon geçirme\n\n🔺 Fazlalığında (toksisite) ne olur?\n• Kanda kalsiyum düzeyinin tehlikeli şekilde yükselmesi (hiperkalsemi)\n• Mide bulantısı, iştahsızlık, aşırı susama ve sık idrara çıkma\n• Böbrek taşı oluşumu ve böbrek hasarı riski\n\nBu yüzden \"kış geldi, ben bir takviye başlayayım\" demek yerine önce basit bir kan tahlili (25(OH)D) ile mevcut düzeyini görmek ve dozu hekim kontrolünde belirlemek en güvenli yol.\n\n📏 Düzey kaç olmalı? (ng/mL = kandaki 25(OH)D'nin birimi; 1 ng/mL = 2,5 nmol/L)\n• ABD Ulusal Akademiler (FNB): 20 ng/mL ve üzeri çoğu kişi için yeterli; 12'nin altı eksiklikle ilişkili; 50'nin üzeri olası zararlarla ilişkili.\n• Endocrine Society 2011 kılavuzu 30 ng/mL üzerini önermişti; 2024 kılavuzu ise sağlıklı kişilerde rutin tahlil önermiyor ve hastalıktan korunma için kanıta dayalı bir hedef değer belirleyemedi.\n• \"Uzun yaşam için ideal aralık\" konusunda kesin bir kanıt yok; hedef değeri hekimin kişisel duruma göre belirler.\n\n🔎 Videodaki verilerin detayı:\n• Boston: Güneş ışığına tutulan insan derisi ve provitamin D3 deneyi; Kasım–Şubat arasında previtamin D3 oluşmadı (hasta ölçümü değil, deney).\n• İstanbul: Bir hastanenin check-up polikliniğine başvuran 9.778 sağlıklı yetişkinin (18–65 yaş) 2022–2023 tahlilleri. Aylık ortalaması en düşük ay Ocak (16,65 ng/mL) idi. Nüfus temelli değil, hastane verisi.\n• İstanbul (41°K) ile Boston (42°K) yaklaşık aynı enlemde; bu bir çıkarımdır, İstanbul için doğrudan ölçüm değil.\n\nSen bu kış D vitamini düzeyine baktırdın mı? Yorumlarda buluşalım 👇 Kışın güneşe güvenen bir arkadaşın varsa bu videoyu ona göndermeyi unutma!\n\n🤖 Sunucu Özen'in görüntüsü ve sesi yapay zekâ ile oluşturulmuştur.",
+  "sources": [
+    "Webb AR, Kline L, Holick MF. J Clin Endocrinol Metab 1988",
+    "Holick MF. Am J Clin Nutr 1995",
+    "Ülfer G. J Med Biochem 2025 (İstanbul)",
+    "NIH Office of Dietary Supplements, Vitamin D fact sheet",
+    "Demay MB ve ark. Endocrine Society kılavuzu, J Clin Endocrinol Metab 2024"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#dvitamini",
+    "#kışbeslenmesi",
+    "#sağlıklıyaşam",
+    "#mitgerçek",
+    "#wellness"
+  ],
+  "notes": "Reels (sessiz) — 8. konu. Görseller geçici yer tutucu olabilir; Canva AI görselleri gelince yeniden render.",
+  "theme": "krem",
+  "ctaSize": 46,
+  "capSize": 50,
+  "captionDisclaimer": false,
+  "pillY": 505,
+  "badgeY": 130,
+  "srcDark": true,
+  "pillSize": 54,
+  "pillPlain": true,
+  "capY": 720,
+  "cta": {
+    "save": "",
+    "comment": "Sen bu kış D vitaminine baktırdın mı? Yorumlarda buluşalım.",
+    "share": "Kışın güneşe güvenen birine gönder."
+  },
+  "ctaNote": "Detaylar açıklamada",
+  "ctaNoteSize": 38,
+  "host": {
+    "name": "Özen",
+    "note": "AI ile oluşturuldu",
+    "clips": [
+      {
+        "id": "hook",
+        "file": "host/hook.mp4",
+        "scenes": [
+          0,
+          1
+        ],
+        "at": 0.4,
+        "dur": 11.0,
+        "end": 11.9
+      },
+      {
+        "id": "close",
+        "file": "host/close.mp4",
+        "scenes": [
+          6
+        ],
+        "at": 34.6,
+        "dur": 5.6,
+        "start": 35.0,
+        "end": 40.4
+      }
+    ]
+  }
+}
