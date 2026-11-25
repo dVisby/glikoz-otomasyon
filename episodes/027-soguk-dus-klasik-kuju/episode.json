@@ -1,0 +1,111 @@
+{
+  "id": "027",
+  "slug": "soguk-dus-klasik-kuju",
+  "title": "Soğuk duş gerçekten faydalı mı?",
+  "coverTitle": "Soğuk duş",
+  "coverSub": "gerçekten | faydalı mı?",
+  "date": "2026-11-23",
+  "voice": {
+    "name": "Kuju",
+    "voice_id": "EuQXS0GthjEBfvEvx7qf",
+    "model": "eleven_v4"
+  },
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "lines": [
+        "Soğuk duş gerçekten faydalı mı?"
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "lines": [
+        "Hollanda'da 3 bin kişi, her duşun sonunda 30–90 saniye soğuk su açtı."
+      ],
+      "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "lines": [
+        "Hasta hissettikleri gün sayısı değişmedi."
+      ],
+      "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "lines": [
+        {
+          "text": "Hastalık yüzünden işe gidemedikleri gün sayısı; soğuk duş alanlarda, normal duş alanlara göre %29 daha azdı.",
+          "say": "Hastalık yüzünden işe gidemedikleri gün sayısı; soğuk duş alanlarda, normal duş alanlara göre yüzde yirmi dokuz daha azdı."
+        }
+      ],
+      "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "lines": [
+        "30, 60 ya da 90 saniye arasında fark görülmedi."
+      ],
+      "source": "Buijze ve ark., PLOS One 2016 · 3.018 kişi · randomize · kendi bildirimi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "lines": [
+        "Bağışıklığı güçlendirdiği ise kanıtlanmadı."
+      ],
+      "source": "Cain ve ark., PLOS One 2025 · 11 çalışma · 3.177 kişi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m1.png",
+      "keyword": "Dikkat",
+      "lines": [
+        "Kalp ya da tansiyon sorunun varsa önce hekimine danış."
+      ],
+      "source": "American Heart Association, 2022 · soğuk şok tepkisi"
+    },
+    {
+      "type": "photo",
+      "img": "img/m2.png",
+      "lines": [
+        "Duşunun son 30 saniyesini soğuk suyla bitirmeyi dene."
+      ]
+    }
+  ],
+  "caption": "Soğuk duş gerçekten faydalı mı? 🚿\n\nHollanda'da 3 bin kişi 30 gün boyunca her duşun sonunda 30–90 saniye soğuk su açtı. Hasta hissettikleri gün sayısı değişmedi. Hastalık yüzünden işe gidemedikleri gün sayısı ise soğuk duş alanlarda, normal duş alanlara göre %29 daha azdı. 30 saniye de 90 saniye kadar işe yaradı.\n\nBağışıklığı güçlendirdiği ise kanıtlanmadı. Kalp ya da tansiyon sorunun varsa önce hekimine danış.\n\nSen soğuk duş alıyor musun? 👇",
+  "sources": [
+    "Buijze ve ark., PLOS One 2016",
+    "Cain ve ark., PLOS One 2025",
+    "American Heart Association, 2022"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#soğukduş",
+    "#sağlıklıyaşam",
+    "#bağışıklık",
+    "#mitgerçek",
+    "#wellness"
+  ],
+  "notes": "026 ile aynı içerik, klasik akış (sessiz). Ceren'li sesli deneme kullanıcı isteğiyle silindi.",
+  "theme": "krem",
+  "ctaSize": 46,
+  "capSize": 54,
+  "captionDisclaimer": false,
+  "pillY": 505,
+  "badgeY": 130,
+  "srcDark": true,
+  "pillSize": 54,
+  "pillPlain": true,
+  "capY": 720,
+  "cta": {
+    "save": "",
+    "comment": "Sen soğuk duş alıyor musun? Yorumlara yaz.",
+    "share": "Soğuk duş alan birine gönder."
+  }
+}

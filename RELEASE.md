@@ -28,6 +28,7 @@
 | 028 | 2026-11-25 | Kışın güneş D vitamini için yeterli mi? | 40,1 sn | Sessiz; tek Canva görseli (kış penceresi) iki kırpımla | contact ✓ kapak ✓ | — | Webb 1988 (deney), Holick 1995, Ülfer 2025 (İstanbul, 9.778 kişi), NIH ODS, Endocrine Society 2024. Tokat çalışması çıkarıldı (veri Nisan–Haziran 2013, kış değil). |
 | 028b | 2026-11-25 | Kışın D vitamini — Kuju sesli sürüm | 45,8 sn | 028 ile aynı görsel; ElevenLabs Kuju (eleven_v4), sahne 3'te enlem 'say' ile okunuyor | contact ✓ kapak ✓ | — | 028 ile aynı kaynaklar. Kuju yalnızca kullanıcı istediği için. |
 | 028c | 2026-11-25 | Kışın D vitamini — Özen anlatımlı sürüm | 45,8 sn | Sahne 1–2 ve 7'de Özen (InfiniteTalk, Kuju sesi, 'AI ile oluşturuldu'), ara sahneler 028 ile aynı | contact ✓ kapak ✓ | — | Özen yalnızca kullanıcı istediği için. Pod RTX 4090 ($0.89/sa) ~25 dk, terminate edildi. Anahtar kare: ozen_yuruyus_B_son (bahar yeşilliği). |
+| 027b | 2026-11-25 | Soğuk duş klasik akış — Kuju sesli sürüm | 39,5 sn | 027 ile aynı görsel (tek Canva görseli); ElevenLabs Kuju (eleven_v4), %29 'say' ile okunuyor; ambient kapalı | contact ✓ | — | 027 ile aynı kaynaklar. Ses pod üzerinden indirildi (sandbox engelli), pod silindi. |
 
 ## Teslim öncesi kontrol listesi
 - [ ] Her sayı kaynakla eşleşiyor, öneri türü doğru
