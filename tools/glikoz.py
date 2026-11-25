@@ -281,12 +281,17 @@ def cmd_render(ep, workers=6):
     krem = e.get('theme', 'krem') == 'krem'
     if krem: evs = []  # calm theme: no UI ticks; music is added in Instagram
     silent = timing.get('silent')
-    if not silent: ambient(evs, timing['total'], out / 'ambient.wav')
+    amb_on = bool(e.get('ambient', not krem))   # krem theme: no background drone by default (clean voice; music is added in Instagram)
+    if not silent and amb_on: ambient(evs, timing['total'], out / 'ambient.wav')
     delay = int(timing['voice_offset'] * 1000)
     if silent:
         subprocess.run(['ffmpeg', '-v', 'error', '-y', '-framerate', str(FPS), '-i', str(frames / '%05d.jpg'), '-an',
                         '-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-pix_fmt', 'yuv420p', '-movflags', '+faststart',
                         str(out / 'reels.mp4')], check=True)
+    elif not amb_on: subprocess.run(['ffmpeg', '-v', 'error', '-y', '-framerate', str(FPS), '-i', str(frames / '%05d.jpg'),
+                    '-i', str(ep / 'voice.mp3'), '-filter_complex', f'[1:a]adelay={delay}|{delay},alimiter=limit=0.95,apad[a]',
+                    '-map', '0:v', '-map', '[a]', '-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-pix_fmt', 'yuv420p',
+                    '-c:a', 'aac', '-b:a', '192k', '-t', f"{timing['total']:.3f}", '-movflags', '+faststart', str(out / 'reels.mp4')], check=True)
     else: subprocess.run(['ffmpeg', '-v', 'error', '-y', '-framerate', str(FPS), '-i', str(frames / '%05d.jpg'),
                     '-i', str(out / 'ambient.wav'), '-i', str(ep / 'voice.mp3'), '-filter_complex',
                     f'[1:a]volume={0.22 if krem else 0.45}[amb];[2:a]adelay={delay}|{delay}[v];[amb][v]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[a]',

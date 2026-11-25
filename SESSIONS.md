@@ -62,3 +62,4 @@
 - 2026-11-25: 028 Kışın D vitamini (Reels, sessiz, 40,2 sn); doz/tedavi yok, hekim+tahlil vurgusu.
 - 2026-11-25: 028 güncellendi: Tokat çıkarıldı (bahar verisi), Boston 'deneysel' ifadesi, İstanbul 41°K/Boston 42°K, ctaNote 'Detaylar açıklamada', açıklamaya düzey aralıkları.
 - 2026-11-25: 028b Kuju sesli sürüm (episodes/028-kisin-d-vitamini-kuju), 45,8 sn; kullanıcı Kuju sesini açıkça istedi.
+- 2026-11-25: 028b: arka plan uğultusu (motor sesi gibi) kaldırıldı; glikoz.py krem temada ambient varsayılan kapalı.
