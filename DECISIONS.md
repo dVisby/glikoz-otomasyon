@@ -49,3 +49,4 @@
 - 2026-11-23: host.capY: sunucu klibi ekrandayken altyazı yüksekliği (yazılar üst yarıdayken yüzü kapatmasın).
 - 2026-11-25: Yeni `ctaNote` alanı: son karttaki çağrı satırlarının altına not (ör. 'Detaylar açıklamada'); 028 için istendi.
 - 2026-11-25: Krem temada arka plan uğultusu (ambient) varsayılan KAPALI; temiz ses istendi (motor sesi gibi duyuluyordu). Açmak için episode.json `"ambient": true`.
+- 2026-11-27: `verdict` rozeti 'KISMEN ...' ile başlıyorsa kehribar (#C98A2B); karışık sonuçlu mit/gerçek iddiaları için (029 tuz/su).

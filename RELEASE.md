@@ -39,3 +39,7 @@
 - [ ] Kapanış notu var
 - [ ] Logo kartı ve çağrı metinleri doğru, taşma yok
 - [ ] aciklama.txt kaynakları ve hashtag'leri içeriyor
+| 029 | Bol su tuzun zararını siler mi? (Mit mi gerçek mi) | 2026-11-27 | 39,5 sn sessiz Reels, "KISMEN DOĞRU" rozeti; Kanbay (n=10) |
+| 030 | Hayatta amaç / ikigai | 2026-11-27 | 27,7 sn sessiz Reels; Cohen 2016 (RR 0,83, gözlemsel) |
+| 031 | "Light" ürün tuzağı | 2026-11-27 | Tek sayfa infografik 1080x1350; Nguyen 2016 / USDA 2014 (ABD) |
+| 032 | Diş eti kanaması ve kan şekeri | 2026-11-27 | 7 kartlık carousel 1080x1350; Stohr 2021, Wang 2014, Umezaki 2025 |

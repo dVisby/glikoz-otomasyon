@@ -1,0 +1,63 @@
+{
+ "cards": [
+  {
+   "kind": "cover",
+   "tag": "DİŞ ETİ + KAN ŞEKERİ",
+   "title": "Diş fırçalarken kanama, kan şekerinden de haber veriyor olabilir.",
+   "sub": "Kaydırarak oku →"
+  },
+  {
+   "kind": "text",
+   "title": "Önce gerçek: çoğu zaman sebebi plak",
+   "items": [
+    "Diş eti kanamasının en yaygın nedeni, dişlerde biriken plak ve yetersiz ağız bakımı.",
+    "Diyabet, diş eti hastalığı riskini artıran faktörlerden biri."
+   ],
+   "source": "HSE (İrlanda) · NHS 111 Wales: diş eti hastalığı risk faktörleri"
+  },
+  {
+   "kind": "big",
+   "kicker": "DİŞ ETİ HASTALIĞI → DİYABET",
+   "big": "%26",
+   "title": "daha yüksek diyabet riski",
+   "body": "10 çalışmanın analizinde, ileri diş eti hastalığı (periodontitis) olanlarda sonradan diyabet gelişme riski %26 daha yüksekti.",
+   "source": "Stohr ve ark. 2021 meta-analizi (RR 1,26) · J Dent Res 2025 derlemesi · gözlemsel; neden-sonuç kanıtı değil"
+  },
+  {
+   "kind": "text",
+   "title": "İlişki iki yönlü",
+   "items": [
+    "Diyabette diş eti hastalığı daha sık görülüyor.",
+    "Diş eti hastalığı ise kan şekeri kontrolünü zorlaştırabiliyor."
+   ],
+   "source": "Umezaki ve ark., Front Clin Diabetes Healthc 2025 (sistematik derleme)"
+  },
+  {
+   "kind": "big",
+   "kicker": "DİŞ ETİ TEDAVİSİ SONRASI, 3 AY",
+   "big": "−0,36",
+   "title": "puan HbA1c düşüşü",
+   "body": "Diyabetli kişilerde diş eti tedavisi, tedavi edilmeyenlere göre HbA1c'yi ortalama 0,36 puan düşürdü. Küçük bir fark; bazı derlemeler kanıtı belirsiz buluyor.",
+   "source": "Wang ve ark., PLOS One 2014 (meta-analiz) · Canadian Dental Hygienists Association derlemesi 2021"
+  },
+  {
+   "kind": "text",
+   "title": "Ne yapmalı?",
+   "items": [
+    "Dişlerini ve diş aralarını düzenli temizle.",
+    "Kanama sürüyorsa diş hekimine git.",
+    "Diyabetin varsa diş kontrolünü atlama.",
+    "Kanama diyabet demek değil; şüphen varsa doktoruna danış."
+   ],
+   "source": "NHS: diş eti hastalığı, özellikle tip 2 diyabette düzenli diş kontrolü"
+  },
+  {
+   "kind": "cta",
+   "title": "Kaydet: bir sonraki diş randevunu hatırla",
+   "items": [
+    "Yorumla: En son ne zaman diş kontrolüne gittin?",
+    "Gönder: Dişleri kanayan birine."
+   ]
+  }
+ ]
+}

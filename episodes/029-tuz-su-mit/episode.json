@@ -1,0 +1,113 @@
+{
+  "id": "029",
+  "slug": "tuz-su-mit",
+  "title": "Bol su içmek tuzun zararını siler mi?",
+  "coverTitle": "Tuz + su",
+  "coverSub": "mit mi, | gerçek mi?",
+  "date": "2026-11-27",
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/su.png",
+      "keyword": "Mit mi, gerçek mi?",
+      "hook": true,
+      "keywordSub": "Tuzlu yedim, 2 litre su içerim, sorun yok… Öyle mi?",
+      "lines": [
+        {
+          "text": "Tuzlu yedim, 2 litre su içerim, sorun yok… Öyle mi?",
+          "nocap": true
+        }
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/mercimek.png",
+      "keyword": "Bir çalışmada",
+      "lines": [
+        "İstanbul'da 10 sağlıklı kişiye, 3 gram tuz eklenmiş mercimek çorbası verildi."
+      ],
+      "source": "Kanbay ve ark., J Clin Hypertens 2018 · 10 sağlıklı kişi · küçük çalışma"
+    },
+    {
+      "type": "photo",
+      "img": "img/bp.png",
+      "keyword": "2 saat sonra",
+      "lines": [
+        "Üst tansiyon ortalama 10 mmHg yükseldi."
+      ],
+      "source": "Kanbay ve ark., J Clin Hypertens 2018 · 10 sağlıklı kişi · küçük çalışma"
+    },
+    {
+      "type": "photo",
+      "img": "img/su.png",
+      "keyword": "Aynı çorba + su",
+      "lines": [
+        "Çorbayla birlikte yarım litre ya da daha fazla su içenlerde bu yükselme önlendi."
+      ],
+      "source": "Kanbay ve ark., J Clin Hypertens 2018 · 10 sağlıklı kişi · küçük çalışma"
+    },
+    {
+      "type": "photo",
+      "img": "img/bp.png",
+      "keyword": "Su, tuzun zararını siler.",
+      "verdict": "KISMEN DOĞRU",
+      "verdictLine": 1,
+      "lines": [
+        {
+          "text": "Su, tuzun zararını siler.",
+          "nocap": true
+        },
+        "Kısa vadede tansiyon yükselişini azalttı; ama çalışma yalnızca birkaç saati ölçtü."
+      ],
+      "source": "Kanbay ve ark., J Clin Hypertens 2018 · 10 sağlıklı kişi · küçük çalışma"
+    },
+    {
+      "type": "photo",
+      "img": "img/mercimek.png",
+      "keyword": "Uzun vadede?",
+      "lines": [
+        "Uzun vadeli tuz fazlasında su içmenin zararı sildiği gösterilmedi.",
+        "DSÖ günde 5 gramdan az tuz öneriyor."
+      ],
+      "source": "Kanbay ve ark. 2018 (yalnızca akut etki) · DSÖ tuz bilgi notu"
+    },
+    {
+      "type": "photo",
+      "img": "img/su.png",
+      "keyword": "Özetle",
+      "lines": [
+        "Asıl hedef tuzu azaltmak; su ona eşlik edebilir."
+      ]
+    }
+  ],
+  "caption": "Tuzlu yedim, 2 litre su içerim, sorun yok… Öyle mi? 🧂💧\n\nİstanbul'da 10 sağlıklı kişiyle yapılan küçük bir çalışmada, 3 gram tuz eklenmiş mercimek çorbası içmek 2 saat sonra üst tansiyonu ortalama 10 mmHg yükseltti. Aynı çorbayla birlikte yarım litre ya da daha fazla su içenlerde bu yükselme önlendi (J Clin Hypertens, 2018).\n\nAma çalışma çok küçük, yalnızca sağlıklı kişilerle yapıldı ve sadece birkaç saatlik etkiyi ölçtü. Uzun vadede fazla tuzun zararını suyun sildiğini gösteren bir şey yok. DSÖ günde 5 gramdan az tuz öneriyor (yaklaşık 1 çay kaşığı).\n\nYani: su iyi bir eşlikçi, ama asıl hedef tuzu azaltmak.\n\nTuzlu yedikten sonra sen ne yaparsın? 👇",
+  "sources": [
+    "Kanbay M ve ark. Acute effects of salt on blood pressure are mediated by serum osmolality. J Clin Hypertens 2018;20(10):1447-1454 (10 sağlıklı yetişkin, 300 mL mercimek çorbası, 3 g tuz; 2. saatte üst tansiyon ≈ +10 mmHg; su ile birlikte önlendi; yalnızca akut etki)",
+    "DSÖ, Salt reduction fact sheet: https://www.who.int/news-room/fact-sheets/detail/salt-reduction",
+    "Aynı grubun 2024 çalışması (44 sağlıklı kişi, 500 mL tuzlu çorba, 30. dakikada üst tansiyon +4,2 mmHg): Hypertens Res 2024, doi:10.1038/s41440-024-01686-8"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#tuz",
+    "#tansiyon",
+    "#sağlıklıbeslenme",
+    "#mitmigerçekmi",
+    "#wellness"
+  ],
+  "notes": "Mit/gerçek: KISMEN DOĞRU (kehribar rozet). Çalışma n=10, sağlıklı, akut. 'Uzun vadede su tuzun yerini tutmaz' kesin iddiası kurulmadı; 'gösterilmedi' dendi. Görseller depodan yeniden kullanıldı (su: 011, mercimek: 018, tansiyon aleti: Pexels/Mikhail Nilov 027c); çorba/tuz fotoğrafı üretilemedi (Canva kotası).",
+  "theme": "krem",
+  "capSize": 58,
+  "ctaSize": 46,
+  "verdictY": 775,
+  "cta": {
+    "save": "",
+    "comment": "Tuzlu yedikten sonra sen ne yaparsın?",
+    "share": "Yemeğe tuzla başlayan birine gönder."
+  },
+  "captionDisclaimer": false
+}

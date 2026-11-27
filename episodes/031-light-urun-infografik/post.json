@@ -1,0 +1,40 @@
+{
+ "cards": [
+  {
+   "kind": "bars",
+   "title": "“Light” yazıyor diye şekeri az değil",
+   "sub": "Aynı ürünün normal ve yağı azaltılmış (light) hâli, 100 g'da şeker",
+   "max": 40,
+   "la": "Normal",
+   "lb": "Light",
+   "rows": [
+    {
+     "name": "Sade yoğurt",
+     "a": 4.7,
+     "b": 7.0,
+     "note": "+2,3 g"
+    },
+    {
+     "name": "Sezar salata sosu",
+     "a": 2.8,
+     "b": 16.3,
+     "note": "+13,5 g"
+    },
+    {
+     "name": "Thousand Island sos",
+     "a": 15.2,
+     "b": 17.3,
+     "note": "+2,1 g"
+    },
+    {
+     "name": "Bisküvi (Vienna Fingers)",
+     "a": 33.6,
+     "b": 37.2,
+     "note": "+3,6 g"
+    }
+   ],
+   "foot": "Her üründe böyle değil: ranch sosta light daha düşüktü (4,7 → 3,8 g). Etikette “şekerler” satırına bak.",
+   "source": "Nguyen ve ark., Nutr Diabetes 2016 · ABD USDA veri tabanı (2014), 100 g başına; yoğurtta süt şekeri de dahil · Türkiye'deki ürünler farklı olabilir"
+  }
+ ]
+}

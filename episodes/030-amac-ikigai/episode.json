@@ -1,0 +1,93 @@
+{
+  "id": "030",
+  "slug": "amac-ikigai",
+  "title": "Sabah kalkma sebebin ne?",
+  "coverTitle": "İkigai",
+  "coverSub": "Amaç duygusu | ve uzun yaşam",
+  "date": "2026-11-27",
+  "voice": {
+    "name": "AURA VOX",
+    "voice_id": "jk1pqab9OzEmS07w0u2T",
+    "model": "eleven_v4"
+  },
+  "scenes": [
+    {
+      "type": "photo",
+      "img": "img/ara.png",
+      "keyword": "İKİGAİ",
+      "hook": true,
+      "keywordSub": "Sabah kalkma sebebin ne?",
+      "lines": [
+        {
+          "text": "Sabah kalkma sebebin ne?",
+          "nocap": true
+        }
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/baglar.png",
+      "keyword": "İKİGAİ",
+      "lines": [
+        "Japonlar buna ikigai diyor: yaşamaya değer bir hayat."
+      ]
+    },
+    {
+      "type": "photo",
+      "img": "img/ara.png",
+      "keyword": "10 ÇALIŞMA",
+      "lines": [
+        "10 çalışma, yaklaşık 136 bin kişi, ortalama 7 yıl takip."
+      ],
+      "source": "Cohen ve ark., Psychosom Med 2016 · 10 çalışma, ≈136 bin kişi"
+    },
+    {
+      "type": "photo",
+      "img": "img/baglar.png",
+      "keyword": "%17",
+      "lines": [
+        "Güçlü bir amaç duygusu, ölüm riskinin yaklaşık %17 daha düşük olmasıyla ilişkili bulundu."
+      ],
+      "source": "Cohen ve ark., Psychosom Med 2016 · 10 çalışma, ≈136 bin kişi"
+    },
+    {
+      "type": "photo",
+      "img": "img/ara.png",
+      "keyword": "İLİŞKİ",
+      "lines": [
+        "Bu gözlemsel bir ilişki; amaç tek başına ömür uzatır demek değil."
+      ],
+      "source": "Cohen ve ark., Psychosom Med 2016 · 10 çalışma, ≈136 bin kişi"
+    },
+    {
+      "type": "photo",
+      "img": "img/baglar.png",
+      "keyword": "BUGÜNÜN SORUSU",
+      "lines": [
+        "Seni yataktan kaldıran şey ne?"
+      ]
+    }
+  ],
+  "caption": "Sabah kalkma sebebin ne? 🌅\n\nJaponların \"ikigai\" dediği şey, kabaca yaşamaya değer bir hayat demek. 10 gözlemsel çalışmanın birleştirildiği bir analizde (yaklaşık 136 bin kişi, ortalama 7 yıl takip; Psychosomatic Medicine, 2016), güçlü bir amaç duygusu ölüm riskinin yaklaşık %17 daha düşük olmasıyla ilişkili bulundu.\n\nBu bir ilişki; amaç tek başına ömrü uzatıyor demek değil. Yine de sormaya değer: seni yataktan kaldıran şey ne?\n\nSenin ikigain ne? Yorumlara yaz 👇",
+  "sources": [
+    "Cohen R, Bavishi C, Rozanski A. Purpose in life and its relationship to all-cause mortality and cardiovascular events: a meta-analysis. Psychosom Med 2016;78(2):122-133 (10 prospektif çalışma, 136.265 kişi, ort. 7,3 yıl; ölüm RR 0,83 [0,75–0,91]; yüksek heterojenlik, gözlemsel)"
+  ],
+  "hashtags": [
+    "#glikozgünlüğüm",
+    "#ikigai",
+    "#uzunyaşam",
+    "#amaç",
+    "#wellness",
+    "#longevity"
+  ],
+  "notes": "Kısa sessiz Reels. RR 0,83 → '%17 daha düşük, ilişkili'. Görseller 016'dan yeniden kullanıldı (ara, baglar); ikigai'ye özel görsel Canva kotası nedeniyle üretilemedi.",
+  "theme": "krem",
+  "capSize": 58,
+  "ctaSize": 46,
+  "cta": {
+    "save": "",
+    "comment": "Senin ikigain ne? Yorumlara yaz.",
+    "share": "Amacını yeni bulan birine gönder."
+  },
+  "captionDisclaimer": false
+}

@@ -514,10 +514,10 @@ function photoOverlay(s, lt) {   // gradients + logo badge + keyword pill + sour
     if (s.verdict) {   // DOĞRU/YANLIŞ badge under the claim pill; appears with the answer line (s.verdictLine, default 1)
       const vl = s.verdictLine != null ? s.verdictLine : 1, t0 = s.L[Math.min(vl, s.L.length - 1)] - LEAD, k = easeOut(prog(lt, t0, t0 + .35));
       if (k > 0) {
-        const ok = /^DO/.test(s.verdict.toLocaleUpperCase('tr-TR')), vs = s.verdict.toLocaleUpperCase('tr-TR'), vf = '800 58px Sans', vw = measure(vs, vf, 3) + 80, vy = EP.verdictY || 700;
+        const ok = /^DO/.test(s.verdict.toLocaleUpperCase('tr-TR')), part = /^KISMEN/.test(s.verdict.toLocaleUpperCase('tr-TR')), vs = s.verdict.toLocaleUpperCase('tr-TR'), vf = '800 58px Sans', vw = measure(vs, vf, 3) + 80, vy = EP.verdictY || 700;
         ctx.save(); ctx.globalAlpha *= k; ctx.translate(540, vy); ctx.scale(.8 + .2 * k, .8 + .2 * k); ctx.translate(-540, -vy);
         ctx.shadowColor = 'rgba(0,0,0,.25)'; ctx.shadowBlur = 24; ctx.shadowOffsetY = 6;
-        ctx.fillStyle = ok ? '#4E6B45' : C.red; roundRect(540 - vw / 2, vy - 50, vw, 100, 50); ctx.fill(); ctx.shadowBlur = 0; ctx.shadowOffsetY = 0; ctx.shadowColor = "transparent";
+        ctx.fillStyle = ok ? '#4E6B45' : part ? '#C98A2B' : C.red; roundRect(540 - vw / 2, vy - 50, vw, 100, 50); ctx.fill(); ctx.shadowBlur = 0; ctx.shadowOffsetY = 0; ctx.shadowColor = "transparent";
         text(vs, 540, vy + 21, { font: vf, color: '#FFFFFF', align: 'center', spacing: 3 }); ctx.restore();
       }
     }

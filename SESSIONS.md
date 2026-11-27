@@ -68,3 +68,4 @@
 - 2026-11-25: 028c: Özen anlatımlı sürüm üretildi (hook 4 parça, kapanış 2 parça; ses RunPod'a base64 parçalarla taşındı, klipler dd/base64 ile alındı).
 - 2026-11-25: 027b: soğuk duş klasik akışın Kuju sesli sürümü (ambient kapalı, motor sesi yok); ses kısa pod ile indirildi.
 - 2026-11-25: 027c: soğuk duş Kuju sesli sürümü 028 tarzı farklı Canva görselleriyle yeniden render edildi (ses/zamanlama aynı).
+- 2026-11-27: 029–032: tuz/su Reels, ikigai Reels (ikisi sessiz), "light" infografik, diş eti carousel; yeni `tools/posts.py` (statik gönderi üretici) ve kehribar "KISMEN" rozeti eklendi; görseller Canva kotası nedeniyle depodan yeniden kullanıldı.
